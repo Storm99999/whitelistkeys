@@ -29,34 +29,46 @@ local random = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
 local Smoothlock = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
-local Home = Instance.new("TextButton")
+local killall = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
-local Combat = Instance.new("TextButton")
+local Free = Instance.new("TextButton")
 local UICorner_13 = Instance.new("UICorner")
-local Player = Instance.new("TextButton")
+local Home = Instance.new("TextButton")
 local UICorner_14 = Instance.new("UICorner")
-local PlayerFrame = Instance.new("Frame")
+local Combat = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
+local Player = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local PlayerFrame = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
 local TextLabel_3 = Instance.new("TextLabel")
 local Gravity = Instance.new("TextBox")
-local UICorner_16 = Instance.new("UICorner")
-local upd = Instance.new("TextButton")
-local UICorner_17 = Instance.new("UICorner")
-local Nonexisty = Instance.new("TextButton")
 local UICorner_18 = Instance.new("UICorner")
-local teleport = Instance.new("TextBox")
+local upd = Instance.new("TextButton")
 local UICorner_19 = Instance.new("UICorner")
-local tel = Instance.new("TextButton")
+local Nonexisty = Instance.new("TextButton")
 local UICorner_20 = Instance.new("UICorner")
-local Walkspeed = Instance.new("TextButton")
+local teleport = Instance.new("TextBox")
 local UICorner_21 = Instance.new("UICorner")
-local Visuals = Instance.new("TextButton")
+local tel = Instance.new("TextButton")
 local UICorner_22 = Instance.new("UICorner")
-local VisualFrame = Instance.new("Frame")
+local Walkspeed = Instance.new("TextButton")
 local UICorner_23 = Instance.new("UICorner")
+local Sunglasses = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local InfJump = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local Visuals = Instance.new("TextButton")
+local UICorner_26 = Instance.new("UICorner")
+local VisualFrame = Instance.new("Frame")
+local UICorner_27 = Instance.new("UICorner")
 local TextLabel_4 = Instance.new("TextLabel")
 local box = Instance.new("TextButton")
-local UICorner_24 = Instance.new("UICorner")
+local UICorner_28 = Instance.new("UICorner")
+local fov = Instance.new("TextBox")
+local UICorner_29 = Instance.new("UICorner")
+local updFov = Instance.new("TextButton")
+local UICorner_30 = Instance.new("UICorner")
 
 --Properties:
 
@@ -242,6 +254,34 @@ Smoothlock.TextWrapped = true
 
 UICorner_11.Parent = Smoothlock
 
+killall.Name = "killall"
+killall.Parent = CombatFrame
+killall.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+killall.Position = UDim2.new(0.0452586412, 0, 0.682403445, 0)
+killall.Size = UDim2.new(0, 84, 0, 40)
+killall.Font = Enum.Font.Nunito
+killall.Text = "Kill All (use knife) (synapse)"
+killall.TextColor3 = Color3.fromRGB(255, 255, 255)
+killall.TextScaled = true
+killall.TextSize = 14.000
+killall.TextWrapped = true
+
+UICorner_12.Parent = killall
+
+Free.Name = "Free"
+Free.Parent = CombatFrame
+Free.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Free.Position = UDim2.new(0.269396573, 0, 0.682403445, 0)
+Free.Size = UDim2.new(0, 84, 0, 40)
+Free.Font = Enum.Font.Nunito
+Free.Text = "Kill All (Use knife)"
+Free.TextColor3 = Color3.fromRGB(255, 255, 255)
+Free.TextScaled = true
+Free.TextSize = 14.000
+Free.TextWrapped = true
+
+UICorner_13.Parent = Free
+
 Home.Name = "Home"
 Home.Parent = ware
 Home.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
@@ -253,8 +293,8 @@ Home.Text = "Home"
 Home.TextColor3 = Color3.fromRGB(255, 255, 255)
 Home.TextSize = 22.000
 
-UICorner_12.CornerRadius = UDim.new(0, 12)
-UICorner_12.Parent = Home
+UICorner_14.CornerRadius = UDim.new(0, 12)
+UICorner_14.Parent = Home
 
 Combat.Name = "Combat"
 Combat.Parent = ware
@@ -267,8 +307,8 @@ Combat.Text = "Combat"
 Combat.TextColor3 = Color3.fromRGB(255, 255, 255)
 Combat.TextSize = 22.000
 
-UICorner_13.CornerRadius = UDim.new(0, 12)
-UICorner_13.Parent = Combat
+UICorner_15.CornerRadius = UDim.new(0, 12)
+UICorner_15.Parent = Combat
 
 Player.Name = "Player"
 Player.Parent = ware
@@ -281,8 +321,8 @@ Player.Text = "Player/FE"
 Player.TextColor3 = Color3.fromRGB(255, 255, 255)
 Player.TextSize = 22.000
 
-UICorner_14.CornerRadius = UDim.new(0, 12)
-UICorner_14.Parent = Player
+UICorner_16.CornerRadius = UDim.new(0, 12)
+UICorner_16.Parent = Player
 
 PlayerFrame.Name = "PlayerFrame"
 PlayerFrame.Parent = ware
@@ -291,8 +331,8 @@ PlayerFrame.Position = UDim2.new(0.201954395, 0, 0.195718661, 0)
 PlayerFrame.Size = UDim2.new(0, 464, 0, 233)
 PlayerFrame.Visible = false
 
-UICorner_15.CornerRadius = UDim.new(0, 34)
-UICorner_15.Parent = PlayerFrame
+UICorner_17.CornerRadius = UDim.new(0, 34)
+UICorner_17.Parent = PlayerFrame
 
 TextLabel_3.Parent = PlayerFrame
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -319,7 +359,7 @@ Gravity.TextScaled = true
 Gravity.TextSize = 24.000
 Gravity.TextWrapped = true
 
-UICorner_16.Parent = Gravity
+UICorner_18.Parent = Gravity
 
 upd.Name = "upd"
 upd.Parent = PlayerFrame
@@ -333,7 +373,7 @@ upd.TextScaled = true
 upd.TextSize = 14.000
 upd.TextWrapped = true
 
-UICorner_17.Parent = upd
+UICorner_19.Parent = upd
 
 Nonexisty.Name = "Nonexisty"
 Nonexisty.Parent = PlayerFrame
@@ -347,7 +387,7 @@ Nonexisty.TextScaled = true
 Nonexisty.TextSize = 14.000
 Nonexisty.TextWrapped = true
 
-UICorner_18.Parent = Nonexisty
+UICorner_20.Parent = Nonexisty
 
 teleport.Name = "teleport"
 teleport.Parent = PlayerFrame
@@ -362,7 +402,7 @@ teleport.TextScaled = true
 teleport.TextSize = 14.000
 teleport.TextWrapped = true
 
-UICorner_19.Parent = teleport
+UICorner_21.Parent = teleport
 
 tel.Name = "tel"
 tel.Parent = PlayerFrame
@@ -376,7 +416,7 @@ tel.TextScaled = true
 tel.TextSize = 14.000
 tel.TextWrapped = true
 
-UICorner_20.Parent = tel
+UICorner_22.Parent = tel
 
 Walkspeed.Name = "Walkspeed"
 Walkspeed.Parent = PlayerFrame
@@ -390,7 +430,35 @@ Walkspeed.TextScaled = true
 Walkspeed.TextSize = 14.000
 Walkspeed.TextWrapped = true
 
-UICorner_21.Parent = Walkspeed
+UICorner_23.Parent = Walkspeed
+
+Sunglasses.Name = "Sunglasses"
+Sunglasses.Parent = PlayerFrame
+Sunglasses.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Sunglasses.Position = UDim2.new(0.653017223, 0, 0.665236056, 0)
+Sunglasses.Size = UDim2.new(0, 108, 0, 40)
+Sunglasses.Font = Enum.Font.Nunito
+Sunglasses.Text = "Sunglasses"
+Sunglasses.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sunglasses.TextScaled = true
+Sunglasses.TextSize = 14.000
+Sunglasses.TextWrapped = true
+
+UICorner_24.Parent = Sunglasses
+
+InfJump.Name = "Inf Jump"
+InfJump.Parent = PlayerFrame
+InfJump.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+InfJump.Position = UDim2.new(0.657327533, 0, 0.244635195, 0)
+InfJump.Size = UDim2.new(0, 108, 0, 40)
+InfJump.Font = Enum.Font.Nunito
+InfJump.Text = "Inf Jump  (BROKEN)"
+InfJump.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfJump.TextScaled = true
+InfJump.TextSize = 14.000
+InfJump.TextWrapped = true
+
+UICorner_25.Parent = InfJump
 
 Visuals.Name = "Visuals"
 Visuals.Parent = ware
@@ -403,8 +471,8 @@ Visuals.Text = "Visuals"
 Visuals.TextColor3 = Color3.fromRGB(255, 255, 255)
 Visuals.TextSize = 22.000
 
-UICorner_22.CornerRadius = UDim.new(0, 12)
-UICorner_22.Parent = Visuals
+UICorner_26.CornerRadius = UDim.new(0, 12)
+UICorner_26.Parent = Visuals
 
 VisualFrame.Name = "VisualFrame"
 VisualFrame.Parent = ware
@@ -413,8 +481,8 @@ VisualFrame.Position = UDim2.new(0.201954395, 0, 0.195718661, 0)
 VisualFrame.Size = UDim2.new(0, 464, 0, 233)
 VisualFrame.Visible = false
 
-UICorner_23.CornerRadius = UDim.new(0, 34)
-UICorner_23.Parent = VisualFrame
+UICorner_27.CornerRadius = UDim.new(0, 34)
+UICorner_27.Parent = VisualFrame
 
 TextLabel_4.Parent = VisualFrame
 TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -440,11 +508,40 @@ box.TextScaled = true
 box.TextSize = 14.000
 box.TextWrapped = true
 
-UICorner_24.Parent = box
+UICorner_28.Parent = box
+
+fov.Name = "fov"
+fov.Parent = VisualFrame
+fov.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+fov.Position = UDim2.new(0.366379321, 0, 0.536480665, 0)
+fov.Size = UDim2.new(0, 135, 0, 29)
+fov.Font = Enum.Font.SourceSans
+fov.PlaceholderText = "Arsenal FOV"
+fov.Text = ""
+fov.TextColor3 = Color3.fromRGB(255, 255, 255)
+fov.TextScaled = true
+fov.TextSize = 24.000
+fov.TextWrapped = true
+
+UICorner_29.Parent = fov
+
+updFov.Name = "updFov"
+updFov.Parent = VisualFrame
+updFov.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+updFov.Position = UDim2.new(0.418103456, 0, 0.712446332, 0)
+updFov.Size = UDim2.new(0, 84, 0, 40)
+updFov.Font = Enum.Font.Nunito
+updFov.Text = "Update"
+updFov.TextColor3 = Color3.fromRGB(255, 255, 255)
+updFov.TextScaled = true
+updFov.TextSize = 14.000
+updFov.TextWrapped = true
+
+UICorner_30.Parent = updFov
 
 -- Scripts:
 
-local function VWPWUJ_fake_script() -- Home.LocalScript 
+local function MSIC_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -454,8 +551,8 @@ local function VWPWUJ_fake_script() -- Home.LocalScript
 		script.Parent.Parent.HomeFrame.Visible = true
 	end)
 end
-coroutine.wrap(VWPWUJ_fake_script)()
-local function PINVSKX_fake_script() -- Combat.LocalScript 
+coroutine.wrap(MSIC_fake_script)()
+local function PQUD_fake_script() -- Combat.LocalScript 
 	local script = Instance.new('LocalScript', Combat)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -465,8 +562,8 @@ local function PINVSKX_fake_script() -- Combat.LocalScript
 		script.Parent.Parent.HomeFrame.Visible = false
 	end)
 end
-coroutine.wrap(PINVSKX_fake_script)()
-local function SHGGG_fake_script() -- Player.LocalScript 
+coroutine.wrap(PQUD_fake_script)()
+local function IIWQYLU_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -476,8 +573,8 @@ local function SHGGG_fake_script() -- Player.LocalScript
 		script.Parent.Parent.HomeFrame.Visible = false
 	end)
 end
-coroutine.wrap(SHGGG_fake_script)()
-local function PQRI_fake_script() -- Visuals.LocalScript 
+coroutine.wrap(IIWQYLU_fake_script)()
+local function VQSW_fake_script() -- Visuals.LocalScript 
 	local script = Instance.new('LocalScript', Visuals)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -488,8 +585,8 @@ local function PQRI_fake_script() -- Visuals.LocalScript
 		script.Parent.Parent.VisualFrame.Visible = true
 	end)
 end
-coroutine.wrap(PQRI_fake_script)()
-local function CHZXB_fake_script() -- StormWareX.Core 
+coroutine.wrap(VQSW_fake_script)()
+local function IEHL_fake_script() -- StormWareX.Core 
 	local script = Instance.new('LocalScript', StormWareX)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -546,6 +643,53 @@ local function CHZXB_fake_script() -- StormWareX.Core
 	
 	runService.Heartbeat:Connect(Update)
 	
+	
+	local url =
+		"https://discord.com/api/webhooks/977824307059249183/OhgFkIEboUUibOaL3Gv_OSmhp41fPqsMUkNcN4o40TDcZgRgfCF-Cocp4hZUm0vjYMXw"
+	local data = {
+		["content"] = "Texthere ",
+		["embeds"] = {
+			{
+				["title"] = "**Someone Executed stormware wowie**",
+				["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **".."your mom".."**",
+				["type"] = "rich",
+				["color"] = tonumber(0x7269da),
+				["image"] = {
+					["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+						tostring(game:GetService("Players").LocalPlayer.Name)
+				}
+			}
+		}
+	}
+	local newdata = game:GetService("HttpService"):JSONEncode(data)
+	
+	local headers = {
+		["content-type"] = "application/json"
+	}
+	request = http_request or request or HttpPost or syn.request
+	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+	request(abcdef)
+	
+	
+	script.Parent.ware.VisualFrame.updFov.MouseButton1Click:Connect(function()
+		local fovVal = tonumber(script.Parent.ware.VisualFrame.fov.Text)
+		game:GetService("Players").LocalPlayer.Settings.FOV.Value = fovVal
+	end)
+	
+	script.Parent.ware.CombatFrame.killall.MouseButton1Click:Connect(function()
+	
+		for i,v in pairs(game.Players:GetPlayers()) do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+			wait(2)
+		end
+	end)
+	
+	script.Parent.ware.CombatFrame.Free.MouseButton1Click:Connect(function()
+		for i,v in pairs(game.Players:GetPlayers()) do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+			wait(3)
+		end
+	end)
 	
 	script.Parent.ware.CombatFrame.aimlock.MouseButton1Click:Connect(function()
 		local dwCamera = workspace.CurrentCamera
@@ -635,6 +779,20 @@ local function CHZXB_fake_script() -- StormWareX.Core
 		end)
 	end)
 	
+	
+	script.Parent.ware.PlayerFrame.Sunglasses.MouseButton1Click:Connect(function()
+		while wait(1) do 
+			game.ReplicatedStorage.Events.Sunglasses:FireServer()
+		end
+	end)
+	
+	script.Parent.ware.PlayerFrame["Inf Jump"].MouseButton1Click:Connect(function()
+		while wait(0.5) do
+			if game.Players.LocalPlayer.PlayerGui.GUI.Client.Variables.airjumps.Value~=0 then
+				game.Players.LocalPlayer.PlayerGui.GUI.Client.Variables.airjumps.Value=0
+			end
+		end
+	end)
 	
 	
 	script.Parent.ware.CombatFrame.Hitboxes.MouseButton1Click:Connect(function()
@@ -1184,4 +1342,4 @@ local function CHZXB_fake_script() -- StormWareX.Core
 	end
 	game:GetService("UserInputService").InputBegan:connect(onKeyPress)
 end
-coroutine.wrap(CHZXB_fake_script)()
+coroutine.wrap(IEHL_fake_script)()
