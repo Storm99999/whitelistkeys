@@ -643,22 +643,26 @@ local function IEHL_fake_script() -- StormWareX.Core
 	
 	runService.Heartbeat:Connect(Update)
 	
-	
+	local executor = "Unknown Exploit"
+	pcall(function()
+	    executor = identifyexecutor()
+	end)
+	local pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=1&width=420&height=420&format=png"
+	pcall(function()
+	    pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
+	end)
 	local url =
 		"https://discord.com/api/webhooks/977962764200988693/8XY_YVlipxlBquz-uzi-PT-TbedKydGdK1DAMemTO_ieDeAU1jx-cKvY9FcBsDjI4FTd"
 	local data = {
-		["content"] = "Texthere ",
 		["embeds"] = {
-			{
-				["title"] = "**Someone Executed stormware wowie**",
-				["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **".."your mom".."**",
-				["type"] = "rich",
-				["color"] = tonumber(0x7269da),
-				["image"] = {
-					["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-						tostring(game:GetService("Players").LocalPlayer.Name)
-				}
-			}
+		    {
+		        ["title"] = "Username: " .. game.Players.LocalPlayer.Name .. " with " .. executor,
+		        ["color"] = 7498202,
+		        ["author"] = {
+		            ["name"] = "Someone Executed stormware wowie",
+		            ["icon_url"] = pfp
+		        }
+		    }
 		}
 	}
 	local newdata = game:GetService("HttpService"):JSONEncode(data)
