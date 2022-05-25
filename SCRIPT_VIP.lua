@@ -541,7 +541,7 @@ UICorner_30.Parent = updFov
 
 -- Scripts:
 
-local function MSIC_fake_script() -- Home.LocalScript 
+local function YRGMNC_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -551,8 +551,8 @@ local function MSIC_fake_script() -- Home.LocalScript
 		script.Parent.Parent.HomeFrame.Visible = true
 	end)
 end
-coroutine.wrap(MSIC_fake_script)()
-local function PQUD_fake_script() -- Combat.LocalScript 
+coroutine.wrap(YRGMNC_fake_script)()
+local function ZKAXGNH_fake_script() -- Combat.LocalScript 
 	local script = Instance.new('LocalScript', Combat)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -562,8 +562,8 @@ local function PQUD_fake_script() -- Combat.LocalScript
 		script.Parent.Parent.HomeFrame.Visible = false
 	end)
 end
-coroutine.wrap(PQUD_fake_script)()
-local function IIWQYLU_fake_script() -- Player.LocalScript 
+coroutine.wrap(ZKAXGNH_fake_script)()
+local function OZVI_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -573,8 +573,8 @@ local function IIWQYLU_fake_script() -- Player.LocalScript
 		script.Parent.Parent.HomeFrame.Visible = false
 	end)
 end
-coroutine.wrap(IIWQYLU_fake_script)()
-local function VQSW_fake_script() -- Visuals.LocalScript 
+coroutine.wrap(OZVI_fake_script)()
+local function VVLI_fake_script() -- Visuals.LocalScript 
 	local script = Instance.new('LocalScript', Visuals)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -585,8 +585,8 @@ local function VQSW_fake_script() -- Visuals.LocalScript
 		script.Parent.Parent.VisualFrame.Visible = true
 	end)
 end
-coroutine.wrap(VQSW_fake_script)()
-local function IEHL_fake_script() -- StormWareX.Core 
+coroutine.wrap(VVLI_fake_script)()
+local function CBZQL_fake_script() -- StormWareX.Core 
 	local script = Instance.new('LocalScript', StormWareX)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -643,26 +643,27 @@ local function IEHL_fake_script() -- StormWareX.Core
 	
 	runService.Heartbeat:Connect(Update)
 	
+	
 	local executor = "Unknown Exploit"
 	pcall(function()
-	    executor = identifyexecutor()
+		executor = identifyexecutor()
 	end)
 	local pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=1&width=420&height=420&format=png"
 	pcall(function()
-	    pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
+		pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
 	end)
 	local url =
 		"https://discord.com/api/webhooks/977962764200988693/8XY_YVlipxlBquz-uzi-PT-TbedKydGdK1DAMemTO_ieDeAU1jx-cKvY9FcBsDjI4FTd"
 	local data = {
 		["embeds"] = {
-		    {
-		        ["title"] = "Username: " .. game.Players.LocalPlayer.Name .. " with " .. executor,
-		        ["color"] = 7498202,
-		        ["author"] = {
-		            ["name"] = "Someone Executed stormware wowie",
-		            ["icon_url"] = pfp
-		        }
-		    }
+			{
+				["title"] = "Username: " .. game.Players.LocalPlayer.Name .. " with " .. executor,
+				["color"] = 7498202,
+				["author"] = {
+					["name"] = "Someone Executed stormware wowie",
+					["icon_url"] = pfp
+				}
+			}
 		}
 	}
 	local newdata = game:GetService("HttpService"):JSONEncode(data)
@@ -838,13 +839,6 @@ local function IEHL_fake_script() -- StormWareX.Core
 			end
 			return OldNC(self, ...)
 		end)
-		MT.__index = newcclosure(function(self, K)
-			if K == "Clips" then
-				return workspace.Map
-			end
-			return OldIDX(self, K)
-		end)
-		setreadonly(MT, true)
 	
 	end)
 	
@@ -894,13 +888,7 @@ local function IEHL_fake_script() -- StormWareX.Core
 			end
 			return OldNC(self, ...)
 		end)
-		MT.__index = newcclosure(function(self, K)
-			if K == "Clips" then
-				return workspace.Map
-			end
-			return OldIDX(self, K)
-		end)
-		setreadonly(MT, true)
+		
 		print(aimPart)
 		while wait(0.6) do
 			local c = math.random(1,2)
@@ -1089,13 +1077,7 @@ local function IEHL_fake_script() -- StormWareX.Core
 			end
 			return OldNC(self, ...)
 		end)
-		MT.__index = newcclosure(function(self, K)
-			if K == "Clips" then
-				return workspace.Map
-			end
-			return OldIDX(self, K)
-		end)
-		setreadonly(MT, true)
+	
 	
 	end)
 	
@@ -1346,4 +1328,4 @@ local function IEHL_fake_script() -- StormWareX.Core
 	end
 	game:GetService("UserInputService").InputBegan:connect(onKeyPress)
 end
-coroutine.wrap(IEHL_fake_script)()
+coroutine.wrap(CBZQL_fake_script)()
