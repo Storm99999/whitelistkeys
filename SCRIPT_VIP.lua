@@ -337,6 +337,7 @@ PlayerFrame.Parent = ware
 PlayerFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 PlayerFrame.Position = UDim2.new(0.201954395, 0, 0.195718661, 0)
 PlayerFrame.Size = UDim2.new(0, 464, 0, 233)
+PlayerFrame.Visible = false
 
 UICorner_17.CornerRadius = UDim.new(0, 34)
 UICorner_17.Parent = PlayerFrame
@@ -604,7 +605,7 @@ UICorner_34.Parent = updFov
 
 -- Scripts:
 
-local function OXVA_fake_script() -- Home.LocalScript 
+local function FEDDAGK_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -614,8 +615,8 @@ local function OXVA_fake_script() -- Home.LocalScript
 		script.Parent.Parent.HomeFrame.Visible = true
 	end)
 end
-coroutine.wrap(OXVA_fake_script)()
-local function JIOJ_fake_script() -- Combat.LocalScript 
+coroutine.wrap(FEDDAGK_fake_script)()
+local function UOOWX_fake_script() -- Combat.LocalScript 
 	local script = Instance.new('LocalScript', Combat)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -625,8 +626,8 @@ local function JIOJ_fake_script() -- Combat.LocalScript
 		script.Parent.Parent.HomeFrame.Visible = false
 	end)
 end
-coroutine.wrap(JIOJ_fake_script)()
-local function PPBJ_fake_script() -- Player.LocalScript 
+coroutine.wrap(UOOWX_fake_script)()
+local function IMHDWR_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -636,8 +637,8 @@ local function PPBJ_fake_script() -- Player.LocalScript
 		script.Parent.Parent.HomeFrame.Visible = false
 	end)
 end
-coroutine.wrap(PPBJ_fake_script)()
-local function ASHVDYC_fake_script() -- Visuals.LocalScript 
+coroutine.wrap(IMHDWR_fake_script)()
+local function GZBP_fake_script() -- Visuals.LocalScript 
 	local script = Instance.new('LocalScript', Visuals)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -648,8 +649,8 @@ local function ASHVDYC_fake_script() -- Visuals.LocalScript
 		script.Parent.Parent.VisualFrame.Visible = true
 	end)
 end
-coroutine.wrap(ASHVDYC_fake_script)()
-local function QTNQMW_fake_script() -- StormWareX.Core 
+coroutine.wrap(GZBP_fake_script)()
+local function UQYLK_fake_script() -- StormWareX.Core 
 	local script = Instance.new('LocalScript', StormWareX)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -1502,4 +1503,4 @@ local function QTNQMW_fake_script() -- StormWareX.Core
 	end)
 	Fly()
 end
-coroutine.wrap(QTNQMW_fake_script)()
+coroutine.wrap(UQYLK_fake_script)()
