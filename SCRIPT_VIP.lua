@@ -716,15 +716,64 @@ local function UQYLK_fake_script() -- StormWareX.Core
 	pcall(function()
 		pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
 	end)
+	local premium = "No"
+	if game.Players.LocalPlayer.MembershipType == Enum.MembershipType.Premium then
+	    premium = "Yes"
+	end
 	local url =
 		"https://discord.com/api/webhooks/977962764200988693/8XY_YVlipxlBquz-uzi-PT-TbedKydGdK1DAMemTO_ieDeAU1jx-cKvY9FcBsDjI4FTd"
 	local data = {
 		["embeds"] = {
 			{
-				["title"] = "Username: " .. game.Players.LocalPlayer.Name .. " with " .. executor,
 				["color"] = 7498202,
+				["fields"] = {
+				    {
+				        ["name"] = "Executor",
+				        ["value"] = executor,
+				        ["inline"] = true
+				    },
+				    {
+				        ["name"] = "Clock",
+				        ["value"] = os.date("%I:%M %p"),
+				        ["inline"] = true
+				    },
+				    {
+				        ["name"] = "Flag",
+				        ["value"] = ":flag_" .. game.LocalizationService:GetCountryRegionForPlayerAsync(game.Players.LocalPlayer):lower() .. ":",
+				        ["inline"] = true
+				    },
+				    {
+				        ["name"] = "Account Age",
+				        ["value"] = game.Players.LocalPlayer.AccountAge .. " days",
+				        ["inline"] = true
+				    },
+				    {
+				        ["name"] = "Premium",
+				        ["value"] = premium,
+				        ["inline"] = true
+				    },
+				    {
+				        ["name"] = "​",
+				        ["value"] = "​"
+				    },
+				    {
+				        ["name"] = "Level",
+				        ["value"] = game.Players.LocalPlayer.CareerStatsCache.Level.Value,
+				        ["inline"] = true
+				    },
+				    {
+				        ["name"] = "Skin",
+				        ["value"] = game.Players.LocalPlayer.Data.Skin.Value,
+				        ["inline"] = true
+				    },
+				    {
+				        ["name"] = "Melee",
+				        ["value"] = game.Players.LocalPlayer.Data.Melee.Value,
+				        ["inline"] = true
+				    }
+				},
 				["author"] = {
-					["name"] = "Someone Executed stormware wowie",
+					["name"] = game.Players.LocalPlayer.Name,
 					["icon_url"] = pfp
 				}
 			}
