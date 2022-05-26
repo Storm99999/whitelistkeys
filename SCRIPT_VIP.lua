@@ -56,24 +56,32 @@ local Walkspeed = Instance.new("TextButton")
 local UICorner_23 = Instance.new("UICorner")
 local Sunglasses = Instance.new("TextButton")
 local UICorner_24 = Instance.new("UICorner")
-local InfJump = Instance.new("TextButton")
+local Fly = Instance.new("TextButton")
 local UICorner_25 = Instance.new("UICorner")
-local Visuals = Instance.new("TextButton")
+local mobile = Instance.new("TextButton")
 local UICorner_26 = Instance.new("UICorner")
-local VisualFrame = Instance.new("Frame")
+local console = Instance.new("TextButton")
 local UICorner_27 = Instance.new("UICorner")
+local none = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
+local pc = Instance.new("TextButton")
+local UICorner_29 = Instance.new("UICorner")
+local Visuals = Instance.new("TextButton")
+local UICorner_30 = Instance.new("UICorner")
+local VisualFrame = Instance.new("Frame")
+local UICorner_31 = Instance.new("UICorner")
 local TextLabel_4 = Instance.new("TextLabel")
 local box = Instance.new("TextButton")
-local UICorner_28 = Instance.new("UICorner")
+local UICorner_32 = Instance.new("UICorner")
 local fov = Instance.new("TextBox")
-local UICorner_29 = Instance.new("UICorner")
+local UICorner_33 = Instance.new("UICorner")
 local updFov = Instance.new("TextButton")
-local UICorner_30 = Instance.new("UICorner")
+local UICorner_34 = Instance.new("UICorner")
 
 --Properties:
 
 StormWareX.Name = "StormWare X"
-StormWareX.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+StormWareX.Parent = game:WaitForChild("CoreGui")
 StormWareX.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 StormWareX.DisplayOrder = 999
 
@@ -329,7 +337,6 @@ PlayerFrame.Parent = ware
 PlayerFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 PlayerFrame.Position = UDim2.new(0.201954395, 0, 0.195718661, 0)
 PlayerFrame.Size = UDim2.new(0, 464, 0, 233)
-PlayerFrame.Visible = false
 
 UICorner_17.CornerRadius = UDim.new(0, 34)
 UICorner_17.Parent = PlayerFrame
@@ -364,8 +371,8 @@ UICorner_18.Parent = Gravity
 upd.Name = "upd"
 upd.Parent = PlayerFrame
 upd.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-upd.Position = UDim2.new(0.0711206943, 0, 0.442060113, 0)
-upd.Size = UDim2.new(0, 84, 0, 40)
+upd.Position = UDim2.new(0.0646551698, 0, 0.442060083, 0)
+upd.Size = UDim2.new(0, 89, 0, 22)
 upd.Font = Enum.Font.Nunito
 upd.Text = "Update"
 upd.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -378,8 +385,8 @@ UICorner_19.Parent = upd
 Nonexisty.Name = "Nonexisty"
 Nonexisty.Parent = PlayerFrame
 Nonexisty.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-Nonexisty.Position = UDim2.new(0.366379291, 0, 0.442060083, 0)
-Nonexisty.Size = UDim2.new(0, 108, 0, 40)
+Nonexisty.Position = UDim2.new(0.366379321, 0, 0.442060083, 0)
+Nonexisty.Size = UDim2.new(0, 99, 0, 30)
 Nonexisty.Font = Enum.Font.Nunito
 Nonexisty.Text = "Turn Invisible"
 Nonexisty.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -421,8 +428,8 @@ UICorner_22.Parent = tel
 Walkspeed.Name = "Walkspeed"
 Walkspeed.Parent = PlayerFrame
 Walkspeed.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-Walkspeed.Position = UDim2.new(0.657327533, 0, 0.442060083, 0)
-Walkspeed.Size = UDim2.new(0, 108, 0, 40)
+Walkspeed.Position = UDim2.new(0.657327592, 0, 0.442060083, 0)
+Walkspeed.Size = UDim2.new(0, 106, 0, 30)
 Walkspeed.Font = Enum.Font.Nunito
 Walkspeed.Text = "Walkspeed"
 Walkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -446,19 +453,75 @@ Sunglasses.TextWrapped = true
 
 UICorner_24.Parent = Sunglasses
 
-InfJump.Name = "Inf Jump"
-InfJump.Parent = PlayerFrame
-InfJump.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-InfJump.Position = UDim2.new(0.657327533, 0, 0.244635195, 0)
-InfJump.Size = UDim2.new(0, 108, 0, 40)
-InfJump.Font = Enum.Font.Nunito
-InfJump.Text = "Inf Jump  (BROKEN)"
-InfJump.TextColor3 = Color3.fromRGB(255, 255, 255)
-InfJump.TextScaled = true
-InfJump.TextSize = 14.000
-InfJump.TextWrapped = true
+Fly.Name = "Fly"
+Fly.Parent = PlayerFrame
+Fly.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Fly.Position = UDim2.new(0.0344827585, 0, 0.665236056, 0)
+Fly.Size = UDim2.new(0, 92, 0, 28)
+Fly.Font = Enum.Font.Nunito
+Fly.Text = "Fly (T to toggle)"
+Fly.TextColor3 = Color3.fromRGB(255, 255, 255)
+Fly.TextScaled = true
+Fly.TextSize = 14.000
+Fly.TextWrapped = true
 
-UICorner_25.Parent = InfJump
+UICorner_25.Parent = Fly
+
+mobile.Name = "mobile"
+mobile.Parent = PlayerFrame
+mobile.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+mobile.Position = UDim2.new(0.381465495, 0, 0.2918455, 0)
+mobile.Size = UDim2.new(0, 92, 0, 28)
+mobile.Font = Enum.Font.Nunito
+mobile.Text = "Spoof Device To Mobile"
+mobile.TextColor3 = Color3.fromRGB(255, 255, 255)
+mobile.TextScaled = true
+mobile.TextSize = 14.000
+mobile.TextWrapped = true
+
+UICorner_26.Parent = mobile
+
+console.Name = "console"
+console.Parent = PlayerFrame
+console.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+console.Position = UDim2.new(0.616379261, 0, 0.2918455, 0)
+console.Size = UDim2.new(0, 92, 0, 28)
+console.Font = Enum.Font.Nunito
+console.Text = "Spoof Device To Console"
+console.TextColor3 = Color3.fromRGB(255, 255, 255)
+console.TextScaled = true
+console.TextSize = 14.000
+console.TextWrapped = true
+
+UICorner_27.Parent = console
+
+none.Name = "none"
+none.Parent = PlayerFrame
+none.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+none.Position = UDim2.new(0.372844785, 0, 0.613733888, 0)
+none.Size = UDim2.new(0, 92, 0, 28)
+none.Font = Enum.Font.Nunito
+none.Text = "Spoof Device To None"
+none.TextColor3 = Color3.fromRGB(255, 255, 255)
+none.TextScaled = true
+none.TextSize = 14.000
+none.TextWrapped = true
+
+UICorner_28.Parent = none
+
+pc.Name = "pc"
+pc.Parent = PlayerFrame
+pc.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+pc.Position = UDim2.new(0.657327533, 0, 0.879828334, 0)
+pc.Size = UDim2.new(0, 92, 0, 28)
+pc.Font = Enum.Font.Nunito
+pc.Text = "Spoof Device To PC"
+pc.TextColor3 = Color3.fromRGB(255, 255, 255)
+pc.TextScaled = true
+pc.TextSize = 14.000
+pc.TextWrapped = true
+
+UICorner_29.Parent = pc
 
 Visuals.Name = "Visuals"
 Visuals.Parent = ware
@@ -471,8 +534,8 @@ Visuals.Text = "Visuals"
 Visuals.TextColor3 = Color3.fromRGB(255, 255, 255)
 Visuals.TextSize = 22.000
 
-UICorner_26.CornerRadius = UDim.new(0, 12)
-UICorner_26.Parent = Visuals
+UICorner_30.CornerRadius = UDim.new(0, 12)
+UICorner_30.Parent = Visuals
 
 VisualFrame.Name = "VisualFrame"
 VisualFrame.Parent = ware
@@ -481,8 +544,8 @@ VisualFrame.Position = UDim2.new(0.201954395, 0, 0.195718661, 0)
 VisualFrame.Size = UDim2.new(0, 464, 0, 233)
 VisualFrame.Visible = false
 
-UICorner_27.CornerRadius = UDim.new(0, 34)
-UICorner_27.Parent = VisualFrame
+UICorner_31.CornerRadius = UDim.new(0, 34)
+UICorner_31.Parent = VisualFrame
 
 TextLabel_4.Parent = VisualFrame
 TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -508,7 +571,7 @@ box.TextScaled = true
 box.TextSize = 14.000
 box.TextWrapped = true
 
-UICorner_28.Parent = box
+UICorner_32.Parent = box
 
 fov.Name = "fov"
 fov.Parent = VisualFrame
@@ -523,7 +586,7 @@ fov.TextScaled = true
 fov.TextSize = 24.000
 fov.TextWrapped = true
 
-UICorner_29.Parent = fov
+UICorner_33.Parent = fov
 
 updFov.Name = "updFov"
 updFov.Parent = VisualFrame
@@ -537,11 +600,11 @@ updFov.TextScaled = true
 updFov.TextSize = 14.000
 updFov.TextWrapped = true
 
-UICorner_30.Parent = updFov
+UICorner_34.Parent = updFov
 
 -- Scripts:
 
-local function YRGMNC_fake_script() -- Home.LocalScript 
+local function OXVA_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -551,8 +614,8 @@ local function YRGMNC_fake_script() -- Home.LocalScript
 		script.Parent.Parent.HomeFrame.Visible = true
 	end)
 end
-coroutine.wrap(YRGMNC_fake_script)()
-local function ZKAXGNH_fake_script() -- Combat.LocalScript 
+coroutine.wrap(OXVA_fake_script)()
+local function JIOJ_fake_script() -- Combat.LocalScript 
 	local script = Instance.new('LocalScript', Combat)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -562,8 +625,8 @@ local function ZKAXGNH_fake_script() -- Combat.LocalScript
 		script.Parent.Parent.HomeFrame.Visible = false
 	end)
 end
-coroutine.wrap(ZKAXGNH_fake_script)()
-local function OZVI_fake_script() -- Player.LocalScript 
+coroutine.wrap(JIOJ_fake_script)()
+local function PPBJ_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -573,8 +636,8 @@ local function OZVI_fake_script() -- Player.LocalScript
 		script.Parent.Parent.HomeFrame.Visible = false
 	end)
 end
-coroutine.wrap(OZVI_fake_script)()
-local function VVLI_fake_script() -- Visuals.LocalScript 
+coroutine.wrap(PPBJ_fake_script)()
+local function ASHVDYC_fake_script() -- Visuals.LocalScript 
 	local script = Instance.new('LocalScript', Visuals)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -585,8 +648,8 @@ local function VVLI_fake_script() -- Visuals.LocalScript
 		script.Parent.Parent.VisualFrame.Visible = true
 	end)
 end
-coroutine.wrap(VVLI_fake_script)()
-local function CBZQL_fake_script() -- StormWareX.Core 
+coroutine.wrap(ASHVDYC_fake_script)()
+local function QTNQMW_fake_script() -- StormWareX.Core 
 	local script = Instance.new('LocalScript', StormWareX)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -676,10 +739,26 @@ local function CBZQL_fake_script() -- StormWareX.Core
 	request(abcdef)
 	
 	
+	
+	
+	
+	
 	script.Parent.ware.VisualFrame.updFov.MouseButton1Click:Connect(function()
 		local fovVal = tonumber(script.Parent.ware.VisualFrame.fov.Text)
 		game:GetService("Players").LocalPlayer.Settings.FOV.Value = fovVal
 	end)
+	
+	
+	
+	
+	
+	
+	
+	script.Parent.ware.PlayerFrame.Fly.MouseButton1Click:Connect(function()
+		
+	end)
+	
+	
 	
 	script.Parent.ware.CombatFrame.killall.MouseButton1Click:Connect(function()
 	
@@ -791,13 +870,6 @@ local function CBZQL_fake_script() -- StormWareX.Core
 		end
 	end)
 	
-	script.Parent.ware.PlayerFrame["Inf Jump"].MouseButton1Click:Connect(function()
-		while wait(0.5) do
-			if game.Players.LocalPlayer.PlayerGui.GUI.Client.Variables.airjumps.Value~=0 then
-				game.Players.LocalPlayer.PlayerGui.GUI.Client.Variables.airjumps.Value=0
-			end
-		end
-	end)
 	
 	
 	script.Parent.ware.CombatFrame.Hitboxes.MouseButton1Click:Connect(function()
@@ -1125,12 +1197,32 @@ local function CBZQL_fake_script() -- StormWareX.Core
 	end)
 	
 	script.Parent.ware.PlayerFrame.Walkspeed.MouseButton1Click:Connect(function()
-		if game:GetService("ReplicatedStorage").wkspc.Arcade.Value == true then
-			game:GetService("ReplicatedStorage").wkspc.Arcade.Value = false
+		if game:GetService("ReplicatedStorage").Arcade.Value == true then
+			game:GetService("ReplicatedStorage").Arcade.Value = false
 		else
-			game:GetService("ReplicatedStorage").wkspc.Arcade.Value = true
+			game:GetService("ReplicatedStorage").Arcade.Value = true
 		end
 	end)
+	
+	script.Parent.ware.PlayerFrame.mobile.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.Events.CoolNewRemote:FireServer("Touch")
+	end)
+	
+	script.Parent.ware.PlayerFrame.console.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.Events.CoolNewRemote:FireServer("Gamepad1")
+	end)
+	
+	script.Parent.ware.PlayerFrame.none.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.Events.CoolNewRemote:FireServer("None")
+	end)
+	
+	script.Parent.ware.PlayerFrame.none.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.Events.CoolNewRemote:FireServer("MouseButton1")
+	end)
+	
+	
+	
+	
 	
 	script.Parent.ware.VisualFrame.box.MouseButton1Click:Connect(function()
 		-- This is using SXDL
@@ -1327,5 +1419,87 @@ local function CBZQL_fake_script() -- StormWareX.Core
 		end
 	end
 	game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+	
+	
+	repeat wait() 
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+	local mouse = game.Players.LocalPlayer:GetMouse() 
+	repeat wait() until mouse
+	local plr = game.Players.LocalPlayer 
+	local torso = plr.Character.Head 
+	local flying = false
+	local deb = true 
+	local ctrl = {f = 0, b = 0, l = 0, r = 0} 
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+	local maxspeed = 300
+	local speed = 0 
+	
+	function Fly() 
+		local bg = Instance.new("BodyGyro", torso) 
+		bg.P = 9e4 
+		bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+		bg.cframe = torso.CFrame 
+		local bv = Instance.new("BodyVelocity", torso) 
+		bv.velocity = Vector3.new(0,0.1,0) 
+		bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
+		repeat wait() 
+			plr.Character.Humanoid.PlatformStand = true 
+			if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
+				speed = speed+.5+(speed/maxspeed) 
+				if speed > maxspeed then 
+					speed = maxspeed 
+				end 
+			elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
+				speed = speed-1 
+				if speed < 0 then 
+					speed = 0 
+				end 
+			end 
+			if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+				lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
+			elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+			else 
+				bv.velocity = Vector3.new(0,0.1,0) 
+			end 
+			bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
+		until not flying 
+		ctrl = {f = 0, b = 0, l = 0, r = 0} 
+		lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+		speed = 0 
+		bg:Destroy() 
+		bv:Destroy() 
+		plr.Character.Humanoid.PlatformStand = false 
+	end 
+	mouse.KeyDown:connect(function(key) 
+		if key:lower() == "t" then 
+			if flying then flying = false 
+			else 
+				flying = true 
+				Fly() 
+			end 
+		elseif key:lower() == "w" then 
+			ctrl.f = 1 
+		elseif key:lower() == "s" then 
+			ctrl.b = -1 
+		elseif key:lower() == "a" then 
+			ctrl.l = -1 
+		elseif key:lower() == "d" then 
+			ctrl.r = 1 
+		end 
+	end) 
+	mouse.KeyUp:connect(function(key) 
+		if key:lower() == "w" then 
+			ctrl.f = 0 
+		elseif key:lower() == "s" then 
+			ctrl.b = 0 
+		elseif key:lower() == "a" then 
+			ctrl.l = 0 
+		elseif key:lower() == "d" then 
+			ctrl.r = 0 
+		end 
+	end)
+	Fly()
 end
-coroutine.wrap(CBZQL_fake_script)()
+coroutine.wrap(QTNQMW_fake_script)()
