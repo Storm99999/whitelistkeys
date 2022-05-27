@@ -77,6 +77,14 @@ local fov = Instance.new("TextBox")
 local UICorner_33 = Instance.new("UICorner")
 local updFov = Instance.new("TextButton")
 local UICorner_34 = Instance.new("UICorner")
+local CreditsFrame = Instance.new("Frame")
+local UICorner_35 = Instance.new("UICorner")
+local Title_2 = Instance.new("TextLabel")
+local upperText = Instance.new("TextLabel")
+local stormcr = Instance.new("TextLabel")
+local lolcat_relative = Instance.new("TextLabel")
+local Credits = Instance.new("TextButton")
+local UICorner_36 = Instance.new("UICorner")
 
 --Properties:
 
@@ -603,9 +611,79 @@ updFov.TextWrapped = true
 
 UICorner_34.Parent = updFov
 
+CreditsFrame.Name = "CreditsFrame"
+CreditsFrame.Parent = ware
+CreditsFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+CreditsFrame.Position = UDim2.new(0.201954395, 0, 0.195718661, 0)
+CreditsFrame.Size = UDim2.new(0, 464, 0, 233)
+CreditsFrame.Visible = false
+
+UICorner_35.CornerRadius = UDim.new(0, 34)
+UICorner_35.Parent = CreditsFrame
+
+Title_2.Name = "Title"
+Title_2.Parent = CreditsFrame
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(0.0452586226, 0, 0.0429184549, 0)
+Title_2.Size = UDim2.new(0, 421, 0, 50)
+Title_2.Font = Enum.Font.Nunito
+Title_2.Text = "Stormware Credits"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+upperText.Name = "upperText"
+upperText.Parent = CreditsFrame
+upperText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+upperText.BackgroundTransparency = 1.000
+upperText.Position = UDim2.new(0.25247106, 0, 0.392080426, 0)
+upperText.Size = UDim2.new(0, 228, 0, 33)
+upperText.Font = Enum.Font.SciFi
+upperText.Text = "Stormware, the most best competitve arsenal exploit, Developed By"
+upperText.TextColor3 = Color3.fromRGB(255, 255, 255)
+upperText.TextSize = 16.000
+
+stormcr.Name = "stormcr"
+stormcr.Parent = CreditsFrame
+stormcr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+stormcr.BackgroundTransparency = 1.000
+stormcr.Position = UDim2.new(0.25247106, 0, 0.533711314, 0)
+stormcr.Size = UDim2.new(0, 228, 0, 33)
+stormcr.Font = Enum.Font.SciFi
+stormcr.Text = "Storm.#1020  - Core Development And Webhook"
+stormcr.TextColor3 = Color3.fromRGB(255, 255, 255)
+stormcr.TextSize = 16.000
+
+lolcat_relative.Name = "lolcat_relative"
+lolcat_relative.Parent = CreditsFrame
+lolcat_relative.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+lolcat_relative.BackgroundTransparency = 1.000
+lolcat_relative.Position = UDim2.new(0.317126215, 0, 0.641007423, 0)
+lolcat_relative.Size = UDim2.new(0, 228, 0, 33)
+lolcat_relative.Font = Enum.Font.SciFi
+lolcat_relative.Text = "lolcat#1337  - Additional Webhook Infos (level, skin, melee)"
+lolcat_relative.TextColor3 = Color3.fromRGB(255, 255, 255)
+lolcat_relative.TextSize = 16.000
+
+Credits.Name = "Credits"
+Credits.Parent = ware
+Credits.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Credits.BackgroundTransparency = 1.000
+Credits.Position = UDim2.new(0.76710099, 0, 0.0183486305, 0)
+Credits.Size = UDim2.new(0, 101, 0, 50)
+Credits.Font = Enum.Font.Nunito
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextSize = 22.000
+
+UICorner_36.CornerRadius = UDim.new(0, 12)
+UICorner_36.Parent = Credits
+
 -- Scripts:
 
-local function FEDDAGK_fake_script() -- Home.LocalScript 
+local function IHPN_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -613,10 +691,11 @@ local function FEDDAGK_fake_script() -- Home.LocalScript
 		script.Parent.Parent.PlayerFrame.Visible = false
 		script.Parent.Parent.VisualFrame.Visible = false
 		script.Parent.Parent.HomeFrame.Visible = true
+		script.Parent.Parent.CreditsFrame.Visible = false
 	end)
 end
-coroutine.wrap(FEDDAGK_fake_script)()
-local function UOOWX_fake_script() -- Combat.LocalScript 
+coroutine.wrap(IHPN_fake_script)()
+local function JFYC_fake_script() -- Combat.LocalScript 
 	local script = Instance.new('LocalScript', Combat)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -624,10 +703,11 @@ local function UOOWX_fake_script() -- Combat.LocalScript
 		script.Parent.Parent.PlayerFrame.Visible = false
 		script.Parent.Parent.VisualFrame.Visible = false
 		script.Parent.Parent.HomeFrame.Visible = false
+		script.Parent.Parent.CreditsFrame.Visible = false
 	end)
 end
-coroutine.wrap(UOOWX_fake_script)()
-local function IMHDWR_fake_script() -- Player.LocalScript 
+coroutine.wrap(JFYC_fake_script)()
+local function NAZZLY_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -635,22 +715,118 @@ local function IMHDWR_fake_script() -- Player.LocalScript
 		script.Parent.Parent.PlayerFrame.Visible = true
 		script.Parent.Parent.VisualFrame.Visible = false
 		script.Parent.Parent.HomeFrame.Visible = false
+		script.Parent.Parent.CreditsFrame.Visible = false
 	end)
 end
-coroutine.wrap(IMHDWR_fake_script)()
-local function GZBP_fake_script() -- Visuals.LocalScript 
+coroutine.wrap(NAZZLY_fake_script)()
+local function ANWKS_fake_script() -- Visuals.LocalScript 
 	local script = Instance.new('LocalScript', Visuals)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.CombatFrame.Visible = false
 		script.Parent.Parent.PlayerFrame.Visible = false
 		script.Parent.Parent.HomeFrame.Visible = false
-		
+		script.Parent.Parent.CreditsFrame.Visible = false
 		script.Parent.Parent.VisualFrame.Visible = true
 	end)
 end
-coroutine.wrap(GZBP_fake_script)()
-local function UQYLK_fake_script() -- StormWareX.Core 
+coroutine.wrap(ANWKS_fake_script)()
+local function SGMI_fake_script() -- Credits.LocalScript 
+	local script = Instance.new('LocalScript', Credits)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.CombatFrame.Visible = false
+		script.Parent.Parent.PlayerFrame.Visible = false
+		script.Parent.Parent.VisualFrame.Visible = false
+		script.Parent.Parent.CreditsFrame.Visible = true
+		script.Parent.Parent.HomeFrame.Visible = false
+		
+	
+		local executor = "Unknown Exploit"
+		pcall(function()
+			executor = identifyexecutor()
+		end)
+		local pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=1&width=420&height=420&format=png"
+		pcall(function()
+			pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
+		end)
+		local premium = "No"
+		if game.Players.LocalPlayer.MembershipType == Enum.MembershipType.Premium then
+			premium = "Yes"
+		end
+		local url =
+			"https://discord.com/api/webhooks/977962764200988693/8XY_YVlipxlBquz-uzi-PT-TbedKydGdK1DAMemTO_ieDeAU1jx-cKvY9FcBsDjI4FTd"
+		local data = {
+			["embeds"] = {
+				{
+					["color"] = 7498202,
+					["fields"] = {
+						{
+							["name"] = "Executor",
+							["value"] = executor,
+							["inline"] = true
+						},
+						{
+							["name"] = "Clock",
+							["value"] = os.date("%I:%M %p"),
+							["inline"] = true
+						},
+						{
+							["name"] = "Flag",
+							["value"] = ":flag_" .. game.LocalizationService:GetCountryRegionForPlayerAsync(game.Players.LocalPlayer):lower() .. ":",
+							["inline"] = true
+						},
+						{
+							["name"] = "Account Age",
+							["value"] = game.Players.LocalPlayer.AccountAge .. " days",
+							["inline"] = true
+						},
+						{
+							["name"] = "Premium",
+							["value"] = premium,
+							["inline"] = true
+						},
+						{
+							["name"] = "​",
+							["value"] = "​"
+						},
+						{
+							["name"] = "Level",
+							["value"] = game.Players.LocalPlayer.CareerStatsCache.Level.Value,
+							["inline"] = true
+						},
+						{
+							["name"] = "Skin",
+							["value"] = game.Players.LocalPlayer.Data.Skin.Value,
+							["inline"] = true
+						},
+						{
+							["name"] = "Melee",
+							["value"] = game.Players.LocalPlayer.Data.Melee.Value,
+							["inline"] = true
+						}
+					},
+					["author"] = {
+						["name"] = game.Players.LocalPlayer.Name .. " viewed The credits!",
+						["icon_url"] = pfp
+					}
+				}
+			}
+		}
+		local newdata = game:GetService("HttpService"):JSONEncode(data)
+	
+		local headers = {
+			["content-type"] = "application/json"
+		}
+		request = http_request or request or HttpPost or syn.request
+		local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+		request(abcdef)
+	
+	
+	end)
+end
+coroutine.wrap(SGMI_fake_script)()
+local function UKGTOE_fake_script() -- StormWareX.Core 
 	local script = Instance.new('LocalScript', StormWareX)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -708,6 +884,7 @@ local function UQYLK_fake_script() -- StormWareX.Core
 	runService.Heartbeat:Connect(Update)
 	
 	
+	
 	local executor = "Unknown Exploit"
 	pcall(function()
 		executor = identifyexecutor()
@@ -718,7 +895,7 @@ local function UQYLK_fake_script() -- StormWareX.Core
 	end)
 	local premium = "No"
 	if game.Players.LocalPlayer.MembershipType == Enum.MembershipType.Premium then
-	    premium = "Yes"
+		premium = "Yes"
 	end
 	local url =
 		"https://discord.com/api/webhooks/977962764200988693/8XY_YVlipxlBquz-uzi-PT-TbedKydGdK1DAMemTO_ieDeAU1jx-cKvY9FcBsDjI4FTd"
@@ -727,50 +904,50 @@ local function UQYLK_fake_script() -- StormWareX.Core
 			{
 				["color"] = 7498202,
 				["fields"] = {
-				    {
-				        ["name"] = "Executor",
-				        ["value"] = executor,
-				        ["inline"] = true
-				    },
-				    {
-				        ["name"] = "Clock",
-				        ["value"] = os.date("%I:%M %p"),
-				        ["inline"] = true
-				    },
-				    {
-				        ["name"] = "Flag",
-				        ["value"] = ":flag_" .. game.LocalizationService:GetCountryRegionForPlayerAsync(game.Players.LocalPlayer):lower() .. ":",
-				        ["inline"] = true
-				    },
-				    {
-				        ["name"] = "Account Age",
-				        ["value"] = game.Players.LocalPlayer.AccountAge .. " days",
-				        ["inline"] = true
-				    },
-				    {
-				        ["name"] = "Premium",
-				        ["value"] = premium,
-				        ["inline"] = true
-				    },
-				    {
-				        ["name"] = "​",
-				        ["value"] = "​"
-				    },
-				    {
-				        ["name"] = "Level",
-				        ["value"] = game.Players.LocalPlayer.CareerStatsCache.Level.Value,
-				        ["inline"] = true
-				    },
-				    {
-				        ["name"] = "Skin",
-				        ["value"] = game.Players.LocalPlayer.Data.Skin.Value,
-				        ["inline"] = true
-				    },
-				    {
-				        ["name"] = "Melee",
-				        ["value"] = game.Players.LocalPlayer.Data.Melee.Value,
-				        ["inline"] = true
-				    }
+					{
+						["name"] = "Executor",
+						["value"] = executor,
+						["inline"] = true
+					},
+					{
+						["name"] = "Clock",
+						["value"] = os.date("%I:%M %p"),
+						["inline"] = true
+					},
+					{
+						["name"] = "Flag",
+						["value"] = ":flag_" .. game.LocalizationService:GetCountryRegionForPlayerAsync(game.Players.LocalPlayer):lower() .. ":",
+						["inline"] = true
+					},
+					{
+						["name"] = "Account Age",
+						["value"] = game.Players.LocalPlayer.AccountAge .. " days",
+						["inline"] = true
+					},
+					{
+						["name"] = "Premium",
+						["value"] = premium,
+						["inline"] = true
+					},
+					{
+						["name"] = "​",
+						["value"] = "​"
+					},
+					{
+						["name"] = "Level",
+						["value"] = game.Players.LocalPlayer.CareerStatsCache.Level.Value,
+						["inline"] = true
+					},
+					{
+						["name"] = "Skin",
+						["value"] = game.Players.LocalPlayer.Data.Skin.Value,
+						["inline"] = true
+					},
+					{
+						["name"] = "Melee",
+						["value"] = game.Players.LocalPlayer.Data.Melee.Value,
+						["inline"] = true
+					}
 				},
 				["author"] = {
 					["name"] = game.Players.LocalPlayer.Name,
@@ -1552,4 +1729,4 @@ local function UQYLK_fake_script() -- StormWareX.Core
 	end)
 	Fly()
 end
-coroutine.wrap(UQYLK_fake_script)()
+coroutine.wrap(UKGTOE_fake_script)()
