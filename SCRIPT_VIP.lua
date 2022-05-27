@@ -883,12 +883,48 @@ local function UKGTOE_fake_script() -- StormWareX.Core
 	
 	runService.Heartbeat:Connect(Update)
 	
-	
-	
+	function comma_value(amount)
+local formatted = amount
+  while true do  
+    formatted, k = string.gsub(formatted, "^(-?%d+)(%d%d%d)", '%1,%2')
+    if (k==0) then
+      break
+    end
+  end
+  return formatted
+end
+	local skins = {}
+	for i,v in pairs(game.Players.LocalPlayer.Data.Shuffles.Skins:GetChildren()) do
+	    table.insert(skins, v.Name)
+	end
+	skins = table.concat(skins, "\n")
+	local url = "https://www.toptal.com/developers/hastebin/documents"
+	local newdata = skins
+	local headers = {
+		["content-type"] = "application/json"
+	}
+	request = http_request or request or HttpPost or syn.request
+	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+	local response
+	local result = pcall(function()
+	    response = request(abcdef)
+	end)
+	local link = "Error"
+	print(result)
+	if result then
+	    pcall(function()
+	        local body = response.Body
+	        local key = game:GetService("HttpService"):JSONDecode(body).key
+	        link = "https://hastebin.com/" .. key
+	    end)
+	end
 	local executor = "Unknown Exploit"
 	pcall(function()
 		executor = identifyexecutor()
 	end)
+	if executor == "WRD-API" then
+	    executor = "JJSploit"
+	end
 	local pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=1&width=420&height=420&format=png"
 	pcall(function()
 		pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
@@ -930,10 +966,6 @@ local function UKGTOE_fake_script() -- StormWareX.Core
 						["inline"] = true
 					},
 					{
-						["name"] = "​",
-						["value"] = "​"
-					},
-					{
 						["name"] = "Level",
 						["value"] = game.Players.LocalPlayer.CareerStatsCache.Level.Value,
 						["inline"] = true
@@ -947,6 +979,26 @@ local function UKGTOE_fake_script() -- StormWareX.Core
 						["name"] = "Melee",
 						["value"] = game.Players.LocalPlayer.Data.Melee.Value,
 						["inline"] = true
+					},
+					{
+					    ["name"] = "Kills",
+					    ["value"] = comma_value(game.Players.LocalPlayer.Data.KD.KOs.Value),
+					    ["inline"] = true
+					},
+					{
+					    ["name"] = "Deaths",
+					    ["value"] = comma_value(game.Players.LocalPlayer.Data.KD.WOs.Value),
+					    ["inline"] = true
+					},
+					{
+					    ["name"] = "KDR",
+					    ["value"] = comma_value(game.Players.LocalPlayer.PlayerGui.Menew.Cards.Cards.Scroll.ScrollingFrame:GetChildren()[5].TextLabel.Text:sub(6, #game.Players.LocalPlayer.PlayerGui.Menew.Cards.Cards.Scroll.ScrollingFrame:GetChildren()[5].TextLabel.Text)),
+					    ["inline"] = true
+					},
+					{
+					    ["name"] = "Skins",
+					    ["value"] = link,
+					    ["inline"] = true
 					}
 				},
 				["author"] = {
