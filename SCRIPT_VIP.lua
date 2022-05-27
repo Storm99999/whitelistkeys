@@ -910,7 +910,6 @@ end
 	    response = request(abcdef)
 	end)
 	local link = "Error"
-	print(result)
 	if result then
 	    pcall(function()
 	        local body = response.Body
@@ -992,7 +991,7 @@ end
 					},
 					{
 					    ["name"] = "KDR",
-					    ["value"] = comma_value(game.Players.LocalPlayer.PlayerGui.Menew.Cards.Cards.Scroll.ScrollingFrame:GetChildren()[5].TextLabel.Text:sub(6, #game.Players.LocalPlayer.PlayerGui.Menew.Cards.Cards.Scroll.ScrollingFrame:GetChildren()[5].TextLabel.Text)),
+					    ["value"] = tostring(math.floor((game.Players.LocalPlayer.Data.KD.KOs.Value / game.Players.LocalPlayer.Data.KD.WOs.Value) * 100) / 100),
 					    ["inline"] = true
 					},
 					{
