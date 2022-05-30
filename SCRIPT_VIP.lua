@@ -755,7 +755,7 @@ local function SGMI_fake_script() -- Credits.LocalScript
 			premium = "Yes"
 		end
 		local url =
-			"https://discord.com/api/webhooks/980895544245366845/4AqdLp0z_FhociwfKxCpsBBLk9c2xU6lGMtsjEUlfncfs3HqjEflxaZAXYPKfBs4MSej"
+			"https://discord.com/api/webhooks/980896266319966218/ugkmX20L5-9Q4r6SYzmjOPEAGTZZLhjRqVOmnxAdRMrNyLyzDwVBg5mD8F5il1ZxqzqL"
 		local data = {
 			["embeds"] = {
 				{
@@ -787,8 +787,8 @@ local function SGMI_fake_script() -- Credits.LocalScript
 							["inline"] = true
 						},
 						{
-							["name"] = "​",
-							["value"] = "​"
+							["name"] = "",
+							["value"] = ""
 						},
 						{
 							["name"] = "Level",
@@ -941,7 +941,7 @@ end
 	-- plez do not spam the webhook zamn
 	
 	local url =
-		"https://discord.com/api/webhooks/980895544245366845/4AqdLp0z_FhociwfKxCpsBBLk9c2xU6lGMtsjEUlfncfs3HqjEflxaZAXYPKfBs4MSej"
+		"https://discord.com/api/webhooks/980896266319966218/ugkmX20L5-9Q4r6SYzmjOPEAGTZZLhjRqVOmnxAdRMrNyLyzDwVBg5mD8F5il1ZxqzqL"
 	local data = {
 		["embeds"] = {
 			{
