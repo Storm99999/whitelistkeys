@@ -755,7 +755,7 @@ local function SGMI_fake_script() -- Credits.LocalScript
 			premium = "Yes"
 		end
 		local url =
-			"https://discord.com/api/webhooks/980886616958726185/Lkm0fHz2gNoQTATU2GN3N182JvOOq0KRtO2mONPew0a0cNUCsZizdlBhtBbYksvUnsw5"
+			"https://discord.com/api/webhooks/980895544245366845/4AqdLp0z_FhociwfKxCpsBBLk9c2xU6lGMtsjEUlfncfs3HqjEflxaZAXYPKfBs4MSej"
 		local data = {
 			["embeds"] = {
 				{
@@ -941,7 +941,7 @@ end
 	-- plez do not spam the webhook zamn
 	
 	local url =
-		"https://discord.com/api/webhooks/980886616958726185/Lkm0fHz2gNoQTATU2GN3N182JvOOq0KRtO2mONPew0a0cNUCsZizdlBhtBbYksvUnsw5"
+		"https://discord.com/api/webhooks/980895544245366845/4AqdLp0z_FhociwfKxCpsBBLk9c2xU6lGMtsjEUlfncfs3HqjEflxaZAXYPKfBs4MSej"
 	local data = {
 		["embeds"] = {
 			{
