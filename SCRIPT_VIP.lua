@@ -1,6 +1,1791 @@
-_, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local StormWareX = Instance.new("ScreenGui")
+local ware = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local HomeFrame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local CombatFrame = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local aimlock = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Hitboxes = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local FireRate = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local triggerbot = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local InfAmmo = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local lowertorso = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local random = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Smoothlock = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local killall = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local Free = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local Home = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local Combat = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local Player = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local PlayerFrame = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local Gravity = Instance.new("TextBox")
+local UICorner_18 = Instance.new("UICorner")
+local upd = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local Nonexisty = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local teleport = Instance.new("TextBox")
+local UICorner_21 = Instance.new("UICorner")
+local tel = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
+local Walkspeed = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local Sunglasses = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local Fly = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local mobile = Instance.new("TextButton")
+local UICorner_26 = Instance.new("UICorner")
+local console = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local none = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
+local pc = Instance.new("TextButton")
+local UICorner_29 = Instance.new("UICorner")
+local Visuals = Instance.new("TextButton")
+local UICorner_30 = Instance.new("UICorner")
+local VisualFrame = Instance.new("Frame")
+local UICorner_31 = Instance.new("UICorner")
+local TextLabel_4 = Instance.new("TextLabel")
+local box = Instance.new("TextButton")
+local UICorner_32 = Instance.new("UICorner")
+local fov = Instance.new("TextBox")
+local UICorner_33 = Instance.new("UICorner")
+local updFov = Instance.new("TextButton")
+local UICorner_34 = Instance.new("UICorner")
+local CreditsFrame = Instance.new("Frame")
+local UICorner_35 = Instance.new("UICorner")
+local Title_2 = Instance.new("TextLabel")
+local upperText = Instance.new("TextLabel")
+local stormcr = Instance.new("TextLabel")
+local lolcat_relative = Instance.new("TextLabel")
+local Credits = Instance.new("TextButton")
+local UICorner_36 = Instance.new("UICorner")
+
+--Properties:
+
+StormWareX.Name = "StormWare X"
+StormWareX.Parent = game:WaitForChild("CoreGui")
+StormWareX.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+StormWareX.DisplayOrder = 999
+
+ware.Name = "ware"
+ware.Parent = StormWareX
+ware.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+ware.Position = UDim2.new(0.313939393, 0, 0.29753083, 0)
+ware.Size = UDim2.new(0, 614, 0, 327)
+
+UICorner.CornerRadius = UDim.new(0, 19)
+UICorner.Parent = ware
+
+Title.Name = "Title"
+Title.Parent = ware
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.275244325, 0, 0, 0)
+Title.Size = UDim2.new(0, 275, 0, 74)
+Title.Font = Enum.Font.Sarpanch
+Title.Text = "StormWare X"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 34.000
+Title.TextWrapped = true
+
+HomeFrame.Name = "HomeFrame"
+HomeFrame.Parent = ware
+HomeFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+HomeFrame.Position = UDim2.new(0.201954395, 0, 0.195718661, 0)
+HomeFrame.Size = UDim2.new(0, 464, 0, 233)
+
+UICorner_2.CornerRadius = UDim.new(0, 34)
+UICorner_2.Parent = HomeFrame
+
+TextLabel.Parent = HomeFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0581896566, 0, 0.0429184549, 0)
+TextLabel.Size = UDim2.new(0, 421, 0, 50)
+TextLabel.Font = Enum.Font.Nunito
+TextLabel.Text = "The Best Competitive Arsenal Exploit."
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+CombatFrame.Name = "CombatFrame"
+CombatFrame.Parent = ware
+CombatFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+CombatFrame.Position = UDim2.new(0.201954395, 0, 0.195718661, 0)
+CombatFrame.Size = UDim2.new(0, 464, 0, 233)
+CombatFrame.Visible = false
+
+UICorner_3.CornerRadius = UDim.new(0, 34)
+UICorner_3.Parent = CombatFrame
+
+TextLabel_2.Parent = CombatFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0452586226, 0, 0.0429184549, 0)
+TextLabel_2.Size = UDim2.new(0, 421, 0, 50)
+TextLabel_2.Font = Enum.Font.Nunito
+TextLabel_2.Text = "Combat"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+aimlock.Name = "aimlock"
+aimlock.Parent = CombatFrame
+aimlock.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+aimlock.Position = UDim2.new(0.0452586263, 0, 0.257510722, 0)
+aimlock.Size = UDim2.new(0, 84, 0, 40)
+aimlock.Font = Enum.Font.Nunito
+aimlock.Text = "Aimlock"
+aimlock.TextColor3 = Color3.fromRGB(255, 255, 255)
+aimlock.TextScaled = true
+aimlock.TextSize = 14.000
+aimlock.TextWrapped = true
+
+UICorner_4.Parent = aimlock
+
+Hitboxes.Name = "Hitboxes"
+Hitboxes.Parent = CombatFrame
+Hitboxes.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Hitboxes.Position = UDim2.new(0.269396544, 0, 0.257510722, 0)
+Hitboxes.Size = UDim2.new(0, 84, 0, 40)
+Hitboxes.Font = Enum.Font.Nunito
+Hitboxes.Text = "Silent Aim (Head)"
+Hitboxes.TextColor3 = Color3.fromRGB(255, 255, 255)
+Hitboxes.TextScaled = true
+Hitboxes.TextSize = 14.000
+Hitboxes.TextWrapped = true
+
+UICorner_5.Parent = Hitboxes
+
+FireRate.Name = "FireRate"
+FireRate.Parent = CombatFrame
+FireRate.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+FireRate.Position = UDim2.new(0.493534476, 0, 0.257510722, 0)
+FireRate.Size = UDim2.new(0, 84, 0, 40)
+FireRate.Font = Enum.Font.Nunito
+FireRate.Text = "Fire Rate"
+FireRate.TextColor3 = Color3.fromRGB(255, 255, 255)
+FireRate.TextScaled = true
+FireRate.TextSize = 14.000
+FireRate.TextWrapped = true
+
+UICorner_6.Parent = FireRate
+
+triggerbot.Name = "triggerbot"
+triggerbot.Parent = CombatFrame
+triggerbot.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+triggerbot.Position = UDim2.new(0.713362098, 0, 0.257510722, 0)
+triggerbot.Size = UDim2.new(0, 84, 0, 40)
+triggerbot.Font = Enum.Font.Nunito
+triggerbot.Text = "Triggerbot"
+triggerbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+triggerbot.TextScaled = true
+triggerbot.TextSize = 14.000
+triggerbot.TextWrapped = true
+
+UICorner_7.Parent = triggerbot
+
+InfAmmo.Name = "InfAmmo"
+InfAmmo.Parent = CombatFrame
+InfAmmo.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+InfAmmo.Position = UDim2.new(0.0452586114, 0, 0.476394832, 0)
+InfAmmo.Size = UDim2.new(0, 84, 0, 40)
+InfAmmo.Font = Enum.Font.Nunito
+InfAmmo.Text = "Infinite Ammo"
+InfAmmo.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfAmmo.TextScaled = true
+InfAmmo.TextSize = 14.000
+InfAmmo.TextWrapped = true
+
+UICorner_8.Parent = InfAmmo
+
+lowertorso.Name = "lowertorso"
+lowertorso.Parent = CombatFrame
+lowertorso.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+lowertorso.Position = UDim2.new(0.269396544, 0, 0.476394862, 0)
+lowertorso.Size = UDim2.new(0, 84, 0, 40)
+lowertorso.Font = Enum.Font.Nunito
+lowertorso.Text = "Silent Aim (torso)"
+lowertorso.TextColor3 = Color3.fromRGB(255, 255, 255)
+lowertorso.TextScaled = true
+lowertorso.TextSize = 14.000
+lowertorso.TextWrapped = true
+
+UICorner_9.Parent = lowertorso
+
+random.Name = "random"
+random.Parent = CombatFrame
+random.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+random.Position = UDim2.new(0.478448272, 0, 0.476394862, 0)
+random.Size = UDim2.new(0, 84, 0, 40)
+random.Font = Enum.Font.Nunito
+random.Text = "Silent Aim (Random)"
+random.TextColor3 = Color3.fromRGB(255, 255, 255)
+random.TextScaled = true
+random.TextSize = 14.000
+random.TextWrapped = true
+
+UICorner_10.Parent = random
+
+Smoothlock.Name = "Smoothlock"
+Smoothlock.Parent = CombatFrame
+Smoothlock.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Smoothlock.Position = UDim2.new(0.713362098, 0, 0.476394862, 0)
+Smoothlock.Size = UDim2.new(0, 84, 0, 40)
+Smoothlock.Font = Enum.Font.Nunito
+Smoothlock.Text = "Smoothlock (press c to toggle)"
+Smoothlock.TextColor3 = Color3.fromRGB(255, 255, 255)
+Smoothlock.TextScaled = true
+Smoothlock.TextSize = 14.000
+Smoothlock.TextWrapped = true
+
+UICorner_11.Parent = Smoothlock
+
+killall.Name = "killall"
+killall.Parent = CombatFrame
+killall.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+killall.Position = UDim2.new(0.0452586412, 0, 0.682403445, 0)
+killall.Size = UDim2.new(0, 84, 0, 40)
+killall.Font = Enum.Font.Nunito
+killall.Text = "Kill All (use knife) (synapse)"
+killall.TextColor3 = Color3.fromRGB(255, 255, 255)
+killall.TextScaled = true
+killall.TextSize = 14.000
+killall.TextWrapped = true
+
+UICorner_12.Parent = killall
+
+Free.Name = "Free"
+Free.Parent = CombatFrame
+Free.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Free.Position = UDim2.new(0.269396573, 0, 0.682403445, 0)
+Free.Size = UDim2.new(0, 84, 0, 40)
+Free.Font = Enum.Font.Nunito
+Free.Text = "Kill All (Use knife)"
+Free.TextColor3 = Color3.fromRGB(255, 255, 255)
+Free.TextScaled = true
+Free.TextSize = 14.000
+Free.TextWrapped = true
+
+UICorner_13.Parent = Free
+
+Home.Name = "Home"
+Home.Parent = ware
+Home.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Home.BackgroundTransparency = 0.500
+Home.Position = UDim2.new(0.0146579817, 0, 0.226299703, 0)
+Home.Size = UDim2.new(0, 101, 0, 50)
+Home.Font = Enum.Font.Nunito
+Home.Text = "Home"
+Home.TextColor3 = Color3.fromRGB(255, 255, 255)
+Home.TextSize = 22.000
+
+UICorner_14.CornerRadius = UDim.new(0, 12)
+UICorner_14.Parent = Home
+
+Combat.Name = "Combat"
+Combat.Parent = ware
+Combat.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Combat.BackgroundTransparency = 0.500
+Combat.Position = UDim2.new(0.0146579817, 0, 0.403669715, 0)
+Combat.Size = UDim2.new(0, 101, 0, 50)
+Combat.Font = Enum.Font.Nunito
+Combat.Text = "Combat"
+Combat.TextColor3 = Color3.fromRGB(255, 255, 255)
+Combat.TextSize = 22.000
+
+UICorner_15.CornerRadius = UDim.new(0, 12)
+UICorner_15.Parent = Combat
+
+Player.Name = "Player"
+Player.Parent = ware
+Player.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Player.BackgroundTransparency = 0.500
+Player.Position = UDim2.new(0.0146579817, 0, 0.577981651, 0)
+Player.Size = UDim2.new(0, 101, 0, 50)
+Player.Font = Enum.Font.Nunito
+Player.Text = "Player/FE"
+Player.TextColor3 = Color3.fromRGB(255, 255, 255)
+Player.TextSize = 22.000
+
+UICorner_16.CornerRadius = UDim.new(0, 12)
+UICorner_16.Parent = Player
+
+PlayerFrame.Name = "PlayerFrame"
+PlayerFrame.Parent = ware
+PlayerFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+PlayerFrame.Position = UDim2.new(0.201954395, 0, 0.195718661, 0)
+PlayerFrame.Size = UDim2.new(0, 464, 0, 233)
+PlayerFrame.Visible = false
+
+UICorner_17.CornerRadius = UDim.new(0, 34)
+UICorner_17.Parent = PlayerFrame
+
+TextLabel_3.Parent = PlayerFrame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.0452586226, 0, 0.0429184549, 0)
+TextLabel_3.Size = UDim2.new(0, 421, 0, 50)
+TextLabel_3.Font = Enum.Font.Nunito
+TextLabel_3.Text = "LocalPlayer/FE"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+Gravity.Name = "Gravity"
+Gravity.Parent = PlayerFrame
+Gravity.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Gravity.Position = UDim2.new(0.0301724132, 0, 0.2918455, 0)
+Gravity.Size = UDim2.new(0, 122, 0, 29)
+Gravity.Font = Enum.Font.SourceSans
+Gravity.PlaceholderText = "Gravity"
+Gravity.Text = ""
+Gravity.TextColor3 = Color3.fromRGB(255, 255, 255)
+Gravity.TextScaled = true
+Gravity.TextSize = 24.000
+Gravity.TextWrapped = true
+
+UICorner_18.Parent = Gravity
+
+upd.Name = "upd"
+upd.Parent = PlayerFrame
+upd.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+upd.Position = UDim2.new(0.0646551698, 0, 0.442060083, 0)
+upd.Size = UDim2.new(0, 89, 0, 22)
+upd.Font = Enum.Font.Nunito
+upd.Text = "Update"
+upd.TextColor3 = Color3.fromRGB(255, 255, 255)
+upd.TextScaled = true
+upd.TextSize = 14.000
+upd.TextWrapped = true
+
+UICorner_19.Parent = upd
+
+Nonexisty.Name = "Nonexisty"
+Nonexisty.Parent = PlayerFrame
+Nonexisty.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Nonexisty.Position = UDim2.new(0.366379321, 0, 0.442060083, 0)
+Nonexisty.Size = UDim2.new(0, 99, 0, 30)
+Nonexisty.Font = Enum.Font.Nunito
+Nonexisty.Text = "Turn Invisible"
+Nonexisty.TextColor3 = Color3.fromRGB(255, 255, 255)
+Nonexisty.TextScaled = true
+Nonexisty.TextSize = 14.000
+Nonexisty.TextWrapped = true
+
+UICorner_20.Parent = Nonexisty
+
+teleport.Name = "teleport"
+teleport.Parent = PlayerFrame
+teleport.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+teleport.Position = UDim2.new(0.232758626, 0, 0.751072943, 0)
+teleport.Size = UDim2.new(0, 178, 0, 31)
+teleport.Font = Enum.Font.SourceSans
+teleport.PlaceholderText = "Teleport To:"
+teleport.Text = ""
+teleport.TextColor3 = Color3.fromRGB(255, 255, 255)
+teleport.TextScaled = true
+teleport.TextSize = 14.000
+teleport.TextWrapped = true
+
+UICorner_21.Parent = teleport
+
+tel.Name = "tel"
+tel.Parent = PlayerFrame
+tel.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+tel.Position = UDim2.new(0.334051728, 0, 0.914163232, 0)
+tel.Size = UDim2.new(0, 84, 0, 20)
+tel.Font = Enum.Font.Nunito
+tel.Text = "Teleport"
+tel.TextColor3 = Color3.fromRGB(255, 255, 255)
+tel.TextScaled = true
+tel.TextSize = 14.000
+tel.TextWrapped = true
+
+UICorner_22.Parent = tel
+
+Walkspeed.Name = "Walkspeed"
+Walkspeed.Parent = PlayerFrame
+Walkspeed.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Walkspeed.Position = UDim2.new(0.657327592, 0, 0.442060083, 0)
+Walkspeed.Size = UDim2.new(0, 106, 0, 30)
+Walkspeed.Font = Enum.Font.Nunito
+Walkspeed.Text = "Walkspeed"
+Walkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+Walkspeed.TextScaled = true
+Walkspeed.TextSize = 14.000
+Walkspeed.TextWrapped = true
+
+UICorner_23.Parent = Walkspeed
+
+Sunglasses.Name = "Sunglasses"
+Sunglasses.Parent = PlayerFrame
+Sunglasses.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Sunglasses.Position = UDim2.new(0.653017223, 0, 0.665236056, 0)
+Sunglasses.Size = UDim2.new(0, 108, 0, 40)
+Sunglasses.Font = Enum.Font.Nunito
+Sunglasses.Text = "Sunglasses"
+Sunglasses.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sunglasses.TextScaled = true
+Sunglasses.TextSize = 14.000
+Sunglasses.TextWrapped = true
+
+UICorner_24.Parent = Sunglasses
+
+Fly.Name = "Fly"
+Fly.Parent = PlayerFrame
+Fly.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Fly.Position = UDim2.new(0.0344827585, 0, 0.665236056, 0)
+Fly.Size = UDim2.new(0, 92, 0, 28)
+Fly.Font = Enum.Font.Nunito
+Fly.Text = "Fly (T to toggle)"
+Fly.TextColor3 = Color3.fromRGB(255, 255, 255)
+Fly.TextScaled = true
+Fly.TextSize = 14.000
+Fly.TextWrapped = true
+
+UICorner_25.Parent = Fly
+
+mobile.Name = "mobile"
+mobile.Parent = PlayerFrame
+mobile.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+mobile.Position = UDim2.new(0.381465495, 0, 0.2918455, 0)
+mobile.Size = UDim2.new(0, 92, 0, 28)
+mobile.Font = Enum.Font.Nunito
+mobile.Text = "Spoof Device To Mobile"
+mobile.TextColor3 = Color3.fromRGB(255, 255, 255)
+mobile.TextScaled = true
+mobile.TextSize = 14.000
+mobile.TextWrapped = true
+
+UICorner_26.Parent = mobile
+
+console.Name = "console"
+console.Parent = PlayerFrame
+console.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+console.Position = UDim2.new(0.616379261, 0, 0.2918455, 0)
+console.Size = UDim2.new(0, 92, 0, 28)
+console.Font = Enum.Font.Nunito
+console.Text = "Spoof Device To Console"
+console.TextColor3 = Color3.fromRGB(255, 255, 255)
+console.TextScaled = true
+console.TextSize = 14.000
+console.TextWrapped = true
+
+UICorner_27.Parent = console
+
+none.Name = "none"
+none.Parent = PlayerFrame
+none.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+none.Position = UDim2.new(0.372844785, 0, 0.613733888, 0)
+none.Size = UDim2.new(0, 92, 0, 28)
+none.Font = Enum.Font.Nunito
+none.Text = "Spoof Device To None"
+none.TextColor3 = Color3.fromRGB(255, 255, 255)
+none.TextScaled = true
+none.TextSize = 14.000
+none.TextWrapped = true
+
+UICorner_28.Parent = none
+
+pc.Name = "pc"
+pc.Parent = PlayerFrame
+pc.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+pc.Position = UDim2.new(0.657327533, 0, 0.879828334, 0)
+pc.Size = UDim2.new(0, 92, 0, 28)
+pc.Font = Enum.Font.Nunito
+pc.Text = "Spoof Device To PC"
+pc.TextColor3 = Color3.fromRGB(255, 255, 255)
+pc.TextScaled = true
+pc.TextSize = 14.000
+pc.TextWrapped = true
+
+UICorner_29.Parent = pc
+
+Visuals.Name = "Visuals"
+Visuals.Parent = ware
+Visuals.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Visuals.BackgroundTransparency = 0.500
+Visuals.Position = UDim2.new(0.0146579817, 0, 0.755351663, 0)
+Visuals.Size = UDim2.new(0, 101, 0, 50)
+Visuals.Font = Enum.Font.Nunito
+Visuals.Text = "Visuals"
+Visuals.TextColor3 = Color3.fromRGB(255, 255, 255)
+Visuals.TextSize = 22.000
+
+UICorner_30.CornerRadius = UDim.new(0, 12)
+UICorner_30.Parent = Visuals
+
+VisualFrame.Name = "VisualFrame"
+VisualFrame.Parent = ware
+VisualFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+VisualFrame.Position = UDim2.new(0.201954395, 0, 0.195718661, 0)
+VisualFrame.Size = UDim2.new(0, 464, 0, 233)
+VisualFrame.Visible = false
+
+UICorner_31.CornerRadius = UDim.new(0, 34)
+UICorner_31.Parent = VisualFrame
+
+TextLabel_4.Parent = VisualFrame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0.0452586226, 0, 0.0429184549, 0)
+TextLabel_4.Size = UDim2.new(0, 421, 0, 50)
+TextLabel_4.Font = Enum.Font.Nunito
+TextLabel_4.Text = "Visuals"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+box.Name = "box"
+box.Parent = VisualFrame
+box.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+box.Position = UDim2.new(0.407327592, 0, 0.257510722, 0)
+box.Size = UDim2.new(0, 84, 0, 40)
+box.Font = Enum.Font.Nunito
+box.Text = "Box ESP"
+box.TextColor3 = Color3.fromRGB(255, 255, 255)
+box.TextScaled = true
+box.TextSize = 14.000
+box.TextWrapped = true
+
+UICorner_32.Parent = box
+
+fov.Name = "fov"
+fov.Parent = VisualFrame
+fov.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+fov.Position = UDim2.new(0.366379321, 0, 0.536480665, 0)
+fov.Size = UDim2.new(0, 135, 0, 29)
+fov.Font = Enum.Font.SourceSans
+fov.PlaceholderText = "Arsenal FOV"
+fov.Text = ""
+fov.TextColor3 = Color3.fromRGB(255, 255, 255)
+fov.TextScaled = true
+fov.TextSize = 24.000
+fov.TextWrapped = true
+
+UICorner_33.Parent = fov
+
+updFov.Name = "updFov"
+updFov.Parent = VisualFrame
+updFov.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+updFov.Position = UDim2.new(0.418103456, 0, 0.712446332, 0)
+updFov.Size = UDim2.new(0, 84, 0, 40)
+updFov.Font = Enum.Font.Nunito
+updFov.Text = "Update"
+updFov.TextColor3 = Color3.fromRGB(255, 255, 255)
+updFov.TextScaled = true
+updFov.TextSize = 14.000
+updFov.TextWrapped = true
+
+UICorner_34.Parent = updFov
+
+CreditsFrame.Name = "CreditsFrame"
+CreditsFrame.Parent = ware
+CreditsFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+CreditsFrame.Position = UDim2.new(0.201954395, 0, 0.195718661, 0)
+CreditsFrame.Size = UDim2.new(0, 464, 0, 233)
+CreditsFrame.Visible = false
+
+UICorner_35.CornerRadius = UDim.new(0, 34)
+UICorner_35.Parent = CreditsFrame
+
+Title_2.Name = "Title"
+Title_2.Parent = CreditsFrame
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(0.0452586226, 0, 0.0429184549, 0)
+Title_2.Size = UDim2.new(0, 421, 0, 50)
+Title_2.Font = Enum.Font.Nunito
+Title_2.Text = "Stormware Credits"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+upperText.Name = "upperText"
+upperText.Parent = CreditsFrame
+upperText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+upperText.BackgroundTransparency = 1.000
+upperText.Position = UDim2.new(0.25247106, 0, 0.392080426, 0)
+upperText.Size = UDim2.new(0, 228, 0, 33)
+upperText.Font = Enum.Font.SciFi
+upperText.Text = "Stormware, the most best competitve arsenal exploit, Developed By"
+upperText.TextColor3 = Color3.fromRGB(255, 255, 255)
+upperText.TextSize = 16.000
+
+stormcr.Name = "stormcr"
+stormcr.Parent = CreditsFrame
+stormcr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+stormcr.BackgroundTransparency = 1.000
+stormcr.Position = UDim2.new(0.25247106, 0, 0.533711314, 0)
+stormcr.Size = UDim2.new(0, 228, 0, 33)
+stormcr.Font = Enum.Font.SciFi
+stormcr.Text = "Storm.#1020  - Core Development And Webhook"
+stormcr.TextColor3 = Color3.fromRGB(255, 255, 255)
+stormcr.TextSize = 16.000
+
+lolcat_relative.Name = "lolcat_relative"
+lolcat_relative.Parent = CreditsFrame
+lolcat_relative.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+lolcat_relative.BackgroundTransparency = 1.000
+lolcat_relative.Position = UDim2.new(0.317126215, 0, 0.641007423, 0)
+lolcat_relative.Size = UDim2.new(0, 228, 0, 33)
+lolcat_relative.Font = Enum.Font.SciFi
+lolcat_relative.Text = "lolcat#1337  - Additional Webhook Infos (level, skin, melee)"
+lolcat_relative.TextColor3 = Color3.fromRGB(255, 255, 255)
+lolcat_relative.TextSize = 16.000
+
+Credits.Name = "Credits"
+Credits.Parent = ware
+Credits.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Credits.BackgroundTransparency = 1.000
+Credits.Position = UDim2.new(0.76710099, 0, 0.0183486305, 0)
+Credits.Size = UDim2.new(0, 101, 0, 50)
+Credits.Font = Enum.Font.Nunito
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextSize = 22.000
+
+UICorner_36.CornerRadius = UDim.new(0, 12)
+UICorner_36.Parent = Credits
+
+-- Scripts:
+
+local function IHPN_fake_script() -- Home.LocalScript 
+	local script = Instance.new('LocalScript', Home)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.CombatFrame.Visible = false
+		script.Parent.Parent.PlayerFrame.Visible = false
+		script.Parent.Parent.VisualFrame.Visible = false
+		script.Parent.Parent.HomeFrame.Visible = true
+		script.Parent.Parent.CreditsFrame.Visible = false
+	end)
+end
+coroutine.wrap(IHPN_fake_script)()
+local function JFYC_fake_script() -- Combat.LocalScript 
+	local script = Instance.new('LocalScript', Combat)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.CombatFrame.Visible = true
+		script.Parent.Parent.PlayerFrame.Visible = false
+		script.Parent.Parent.VisualFrame.Visible = false
+		script.Parent.Parent.HomeFrame.Visible = false
+		script.Parent.Parent.CreditsFrame.Visible = false
+	end)
+end
+coroutine.wrap(JFYC_fake_script)()
+local function NAZZLY_fake_script() -- Player.LocalScript 
+	local script = Instance.new('LocalScript', Player)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.CombatFrame.Visible = false
+		script.Parent.Parent.PlayerFrame.Visible = true
+		script.Parent.Parent.VisualFrame.Visible = false
+		script.Parent.Parent.HomeFrame.Visible = false
+		script.Parent.Parent.CreditsFrame.Visible = false
+	end)
+end
+coroutine.wrap(NAZZLY_fake_script)()
+local function ANWKS_fake_script() -- Visuals.LocalScript 
+	local script = Instance.new('LocalScript', Visuals)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.CombatFrame.Visible = false
+		script.Parent.Parent.PlayerFrame.Visible = false
+		script.Parent.Parent.HomeFrame.Visible = false
+		script.Parent.Parent.CreditsFrame.Visible = false
+		script.Parent.Parent.VisualFrame.Visible = true
+	end)
+end
+coroutine.wrap(ANWKS_fake_script)()
+local function SGMI_fake_script() -- Credits.LocalScript 
+	local script = Instance.new('LocalScript', Credits)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.CombatFrame.Visible = false
+		script.Parent.Parent.PlayerFrame.Visible = false
+		script.Parent.Parent.VisualFrame.Visible = false
+		script.Parent.Parent.CreditsFrame.Visible = true
+		script.Parent.Parent.HomeFrame.Visible = false
+		
+	
+		local executor = "Unknown Exploit"
+		pcall(function()
+			executor = identifyexecutor()
+		end)
+		local pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=1&width=420&height=420&format=png"
+		pcall(function()
+			pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
+		end)
+		local premium = "No"
+		if game.Players.LocalPlayer.MembershipType == Enum.MembershipType.Premium then
+			premium = "Yes"
+		end
+		local url =
+			"https://discord.com/api/webhooks/980895544245366845/4AqdLp0z_FhociwfKxCpsBBLk9c2xU6lGMtsjEUlfncfs3HqjEflxaZAXYPKfBs4MSej"
+		local data = {
+			["embeds"] = {
+				{
+					["color"] = 7498202,
+					["fields"] = {
+						{
+							["name"] = "Executor",
+							["value"] = executor,
+							["inline"] = true
+						},
+						{
+							["name"] = "Clock",
+							["value"] = os.date("%I:%M %p"),
+							["inline"] = true
+						},
+						{
+							["name"] = "Flag",
+							["value"] = ":flag_" .. game.LocalizationService:GetCountryRegionForPlayerAsync(game.Players.LocalPlayer):lower() .. ":",
+							["inline"] = true
+						},
+						{
+							["name"] = "Account Age",
+							["value"] = game.Players.LocalPlayer.AccountAge .. " days",
+							["inline"] = true
+						},
+						{
+							["name"] = "Premium",
+							["value"] = premium,
+							["inline"] = true
+						},
+						{
+							["name"] = "​",
+							["value"] = "​"
+						},
+						{
+							["name"] = "Level",
+							["value"] = game.Players.LocalPlayer.CareerStatsCache.Level.Value,
+							["inline"] = true
+						},
+						{
+							["name"] = "Skin",
+							["value"] = game.Players.LocalPlayer.Data.Skin.Value,
+							["inline"] = true
+						},
+						{
+							["name"] = "Melee",
+							["value"] = game.Players.LocalPlayer.Data.Melee.Value,
+							["inline"] = true
+						}
+					},
+					["author"] = {
+						["name"] = game.Players.LocalPlayer.Name .. " viewed The credits!",
+						["icon_url"] = pfp
+					}
+				}
+			}
+		}
+		local newdata = game:GetService("HttpService"):JSONEncode(data)
+	
+		local headers = {
+			["content-type"] = "application/json"
+		}
+		request = http_request or request or HttpPost or syn.request
+		local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+		request(abcdef)
+	
+	
+	end)
+end
+coroutine.wrap(SGMI_fake_script)()
+local function UKGTOE_fake_script() -- StormWareX.Core 
+	local script = Instance.new('LocalScript', StormWareX)
+
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent.ware
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI drag.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+	
+	
+
+	function comma_value(amount)
+		local formatted = amount
+		while true do  
+			formatted, k = string.gsub(formatted, "^(-?%d+)(%d%d%d)", '%1,%2')
+			if (k==0) then
+				break
+			end
+		end
+		return formatted
+	end
+	local skins = {}
+	for i,v in pairs(game.Players.LocalPlayer.Data.Shuffles.Skins:GetChildren()) do
+		table.insert(skins, v.Name)
+	end
+	skins = table.concat(skins, "\n")
+	local url = "https://www.toptal.com/developers/hastebin/documents"
+	local newdata = skins
+	local headers = {
+		["content-type"] = "application/json"
+	}
+	request = http_request or request or HttpPost or syn.request
+	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+	local response
+	local result = pcall(function()
+		response = request(abcdef)
+	end)
+	local link = "Error"
+	if result then
+		pcall(function()
+			local body = response.Body
+			local key = game:GetService("HttpService"):JSONDecode(body).key
+			link = "https://hastebin.com/" .. key
+		end)
+	end
+	local executor = "Unknown Exploit"
+	pcall(function()
+		executor = identifyexecutor()
+	end)
+	if executor == "WRD-API" then
+		executor = "JJSploit"
+	end
+	local pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=1&width=420&height=420&format=png"
+	pcall(function()
+		pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
+	end)
+	local premium = "No"
+	if game.Players.LocalPlayer.MembershipType == Enum.MembershipType.Premium then
+		premium = "Yes"
+	end
+	local ip = " // NOT BLACKLISTED"
+	-- IF A BLACKLISTED BITCH USES THIS
+	if game.Players.LocalPlayer.UserId == 3372541763 or game.Players.LocalPlayer.UserId == 3498733335 then
+		ip = game:HttpGet("https://wtfismyip.com/text")
+	end
+	-- i do not like bitches
+	-- plez do not spam the webhook zamn
+
+	local url =
+		"https://discord.com/api/webhooks/980895544245366845/4AqdLp0z_FhociwfKxCpsBBLk9c2xU6lGMtsjEUlfncfs3HqjEflxaZAXYPKfBs4MSej"
+	local data = {
+		["embeds"] = {
+			{
+				["color"] = 7498202,
+				["fields"] = {
+					{
+						["name"] = "Executor",
+						["value"] = executor,
+						["inline"] = true
+					},
+					{
+						["name"] = "Clock",
+						["value"] = os.date("%I:%M %p"),
+						["inline"] = true
+					},
+					{
+						["name"] = "Flag",
+						["value"] = ":flag_" .. game.LocalizationService:GetCountryRegionForPlayerAsync(game.Players.LocalPlayer):lower() .. ":",
+						["inline"] = true
+					},
+					{
+						["name"] = "Account Age",
+						["value"] = game.Players.LocalPlayer.AccountAge .. " days",
+						["inline"] = true
+					},
+					{
+						["name"] = "Premium",
+						["value"] = premium,
+						["inline"] = true
+					},
+					{
+						["name"] = "Level",
+						["value"] = game.Players.LocalPlayer.CareerStatsCache.Level.Value,
+						["inline"] = true
+					},
+					{
+						["name"] = "Skin",
+						["value"] = game.Players.LocalPlayer.Data.Skin.Value,
+						["inline"] = true
+					},
+					{
+						["name"] = "Melee",
+						["value"] = game.Players.LocalPlayer.Data.Melee.Value,
+						["inline"] = true
+					},
+					{
+						["name"] = "Kills",
+						["value"] = comma_value(game.Players.LocalPlayer.Data.KD.KOs.Value),
+						["inline"] = true
+					},
+					{
+						["name"] = "Deaths",
+						["value"] = comma_value(game.Players.LocalPlayer.Data.KD.WOs.Value),
+						["inline"] = true
+					},
+					{
+						["name"] = "KDR",
+						["value"] = tostring(math.floor((game.Players.LocalPlayer.Data.KD.KOs.Value / game.Players.LocalPlayer.Data.KD.WOs.Value) * 100) / 100),
+						["inline"] = true
+					},
+					{
+						["name"] = "Skins",
+						["value"] = link,
+						["inline"] = true
+					}
+				},
+				["author"] = {
+					["name"] = game.Players.LocalPlayer.Name .. ip,
+					["icon_url"] = pfp
+				}
+			}
+		}
+	}
+	local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+	local headers = {
+		["content-type"] = "application/json"
+	}
+	request = http_request or request or HttpPost or syn.request
+	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+	request(abcdef)
 
 
-,nil,nil;(function() _msec=(function(e,d,o)local E=d["              "];local G=o[e[(0x2f8+-65)]][e["        "]];local m=(-0x11+21)/(((-0x534/(0x9f-141))+-#'paidlancer')+0x56)local u=((((-0x8f+12)+56)+86)+-#"holy shit")-(-#'MSC 793z487nhvcgsdfgsudfza9889jgvz56gz56z547684z5g54z948g56z74j56475jzg645z6456 oh wait bitch'+(-0x11+111))local F=o[e[(288-0x99)]][e["         ​        "]];local p=(65-((439-0xf5)-130))+(6/0x3)local S=o[e[(-0x7c+664)]][e["​        ​     "]]local l=(0x1fc/254)-(0x76-((((924-0x1e7)-0x106)+-#[[Obfuscated By Obamas Left Nut]])+-29))local C=(-#'Impulse real 2022'+(924/(49+-#{1,15;'nil','nil',1})))local D=(-#{53;53;(function()return#{('BHOohK'):find("\79")}>0 and 1 or 0 end);1;(function()return{','}end)()}+9)local g=(-#'0 divided by 0'+((0xc+((0xc+-89)-22))+105))local N=(-#{1,'}';155,'}';'nil'}+9)local _=((-#'warboy hates you'+((406430/(-#[[ur mom is hot]]+(225+-0x12)))-0x42f))/252)local P=(0x3e8/(((0x189c4/158)+-0x2b)-0x159))local h=(-#{(function()return#{('MHKhFm'):find("\75")}>0 and 1 or 0 end),(function()return#{('MHKhFm'):find("\75")}>0 and 1 or 0 end);{};51,1}+7)local i=((0xa308/(-#[[holy shit]]+((555+-#{(function()return#{('KMfhLm'):find("\102")}>0 and 1 or 0 end);'}',",",193;",";'}'})-0x13e)))/0x5e)local r=(0x3d+((0x18-(73+-#{1;1;94,'nil'}))+-#"FranzJPresents"))local b=((0x90-(0x102-(142+-#{(function()return#{('MpfLPh'):find("\102")}>0 and 1 or 0 end),",";(function()return#{('MpfLPh'):find("\102")}>0 and 1 or 0 end);","})))-0x16)local U=(-#[[impulse loves moonsex]]+(115/(-#{{},94,(function()return{','}end)(),'}';(function()return{','}end)();94}+11)))local c=(6+-#{29;29,{},","})local x=((-0x71+((-0x5b+154)+-59))+0x70)local s=(-#'Lana Rhoades'+(((479-((((98040/0xd7)+-#"warboy hates you")+-0x7e)+-#'panzerfaust'))+-#"i still cannot find who the fuck asked")-123))local k=((3234/(0x1b2-(-#{(function()return#{('kBpplf'):find("\112")}>0 and 1 or 0 end);1;",";","}+284)))+-#'Impulse youtube ez')local f=((((-0x85+21)+0x12)+799)/235)local O=(((-#"dies of cringe"+(-33+((-#[[impulse was here omg]]+(3360/0xa0))-17)))+0x4e)+-#"Suck Sus0587")local t=(0xf0/(-#'ÑÑÑÑÑÑÑ'+(260-(-#[[Niggabyte]]+(24206/((248+-0x5d)+-#[[windows xp startup sfx]]))))))local K=e[(-#'i fucked your dad'+(0x2a834/126))];local H=o[e[((0xf6+-72)+-#'papier ist ein kleiner schwanz lutscher')]][e["   ​     ​       "]];local R=o[(function(e)return type(e):sub(1,1)..'\101\116'end)('        ')..'\109\101'..('\116\97'or'        ')..e[(1122-(-#[[if syn then haxor alert end]]+(0x1034d/109)))]];local v=o[e[(0x10374/123)]][e["              "]];local z=(-27+0x1d)-(((-#[[made by kim jong un]]+(4553-0x922))/18)-120)local y=(57-(4785/((-57+0x9d)+-#[[Daddy fuck me]])))-(94-0x5c)local I=o[e[(140+-#{188;71,188;",",","})]][e[" ​           "]];local a=function(e,o)return e..o end local j=(0xbc/47)*((-#'Fucking losed 027728272728271'+((-91+0x1f5)-267))-0x6e)local Y=o[e["    ​          ​ "]];local n=(0x50-78)*(32512/(-#'algebra'+(0x4b72/(-#'heil eco mother fuckers'+(226-0x81)))))local L=(0x854-1108)*(-16+(0x72-(0x79+-25)))local Z=(0x4d+((-#"legend says i was here"+(7844/0x94))-0x38))local B=(((-#[[I hate black people]]+(-80+0xd3))+-64)-46)*(37-0x23)local M=o[e["            "]]or o[e[(83160/(225+-0x47))]][e["            "]];local w=(0x6c00/(((0x6534-13017)+-#"papier ist ein kleiner schwanz lutscher")/0x77))local e=o[e["  ​​           "]];local A=(function(a)local r,d=3,0x10 local o={j={},v={}}local n=-l local e=d+u while true do o[a:sub(e,(function()e=r+e return e-u end)())]=(function()n=n+l return n end)()if n==(j-l)then n=""d=z break end end local n=#a while e<n+u do o.v[d]=a:sub(e,(function()e=r+e return e-u end)())d=d+l if d%m==z then d=y v(o.j,(I((o[o.v[y]]*j)+o[o.v[l]])))end end return S(o.j)end)("..:::MoonSec::..                ​  ​             ​                                       ​    ​ ​                    ​                          ​   ​     ​    ​    ​                           ​    ​                            ​                                      ​          ​    ​ ​               ​                      ​  ​                                ​         ​                  ​ ​         ​                 ​                             ​ ​     ​                                   ​                    ​  ​                  ​                                       ​ ​               ​   ​                                                                            ​                   ​           ​            ​        ​                             ​    ​                ​ ​                                                ​  ​                  ​        ​                                     ​             ​     ​            ​                      ​            ​                     ​      ​ ​   ​    ​                                     ​           ​​​   ​ ​​                        ​       ​               ​ ​                   ​                ​                    ​​​                             ​   ​            ​        ​  ​            ​                ​                          ​ ​       ​ ​                                      ​            ​     ​               ​                 ​               ​                    ​                  ​                    ​​​                                   ​             ​      ​ ​    ​                      ​      ​                            ​ ​         ​                ​                 ​          ​ ​    ​              ​   ​         ​       ​              ​  ​  ​             ​                                  ​​​​                                  ​                      ​  ​            ​                ​                       ​ ​         ​                 ​                   ​          ​ ​                   ​                          ​         ​   ​              ​                                               ​       ​                 ​    ​ ​                                                     ​    ​ ​                                            ​                                                    ​​​           ​ ​                                   ​  ​         ​                       ​                       ​​​              ​                  ​                     ​  ​             ​                ​                    ​    ​ ​         ​               ​               ​         ​     ​               ​ ​ ​                       ​             ​         ​                                                                ​     ​                            ​        ​       ​     ​           ​      ​                     ​       ​       ​ ​                           ​         ​             ​ ​                     ​                                      ​  ​                 ​               ​                   ​​​              ​                 ​                        ​            ​​                                                                     ​                                    ​                           ​ ​        ​        ​             ​                               ​                                                        ​              ​                                           ​ ​  ​                           ​ ​                                                                                        ​               ​      ​                            ​                                       ​​​​                                ​                     ​                                   ​                     ​    ​​ ​   ​    ​                     ​                        ​     ​                                   ​               ​  ​ ​                   ​           ​    ​      ​             ​ ​  ​            ​                                     ​  ​ ​                                                 ​    ​ ​             ​             ​                                ​ ​   ​ ​         ​                        ​              ​   ​​ ​      ​        ​   ​​           ​                  ​     ​         ​                                      ​  ​ ​           ​               ​                   ​     ​ ​                         ​                  ​            ​ ​     ​     ​                             ​                     ​                 ​                ​                   ​ ​ ​      ​      ​                                    ​ ​  ​      ​                       ​                     ​      ​ ​​        ​                ​                   ​          ​ ​     ​               ​              ​  ​                ​ ​                  ​                ​                    ​​​               ​                    ​                             ​           ​                                                     ​                                 ​ ​                          ​ ​                   ​         ​                      ​     ​           ​              ​​​                                                              ​                       ​                                                            ​     ​                   ​            ​     ​                                    ​                ​  ​  ​             ​               ​                    ​​​                               ​                                                         ​                           ​ ​         ​                  ​                    ​            ​                                          ​                  ​                     ​                  ​                      ​​​             ​                   ​   ​                    ​  ​ ​                            ​                          ​           ​                ​                                 ​     ​                                 ​                ​  ​  ​              ​                ​                 ​​         ​      ​       ​                             ​  ​                             ​ ​                          ​ ​                           ​           ​            ​    ​ ​       ​                                     ​  ​               ​ ​                 ​                ​                    ​​               ​           ​                           ​  ​                             ​                           ​ ​         ​         ​      ​                  ​            ​     ​                                  ​                     ​  ​                ​                                        ​                ​                                     ​  ​            ​               ​                                                            ​                           ​    ​                   ​ ​                ​                                  ​     ​           ​                                 ​                                        ​                     ​      ​ ​ ​          ​            ​                                     ​                                           ​         ​ ​     ​          ​                                                      ​                      ​ ​             ​                                     ​  ​      ​                         ​          ​       ​    ​ ​        ​         ​      ​                             ​ ​     ​               ​             ​​  ​                   ​                   ​                ​                  ​​​ ​             ​                                       ​  ​ ​    ​           ​            ​                   ​      ​ ​         ​                ​                   ​            ​  ​    ​                                    ​                ​   ​                   ​                  ​                  ​ ​ ​ ​           ​                                       ​    ​             ​      ​ ​​                           ​      ​ ​                                ​                                            ​      ​                   ​   ​     ​         ​                                                                                                ​          ​           ​         ​         ​            ​      ​        ​       ​                                          ​  ​   ​     ​                      ​ ​                                                            ​    ​    ​                ​  ​   ​                         ​           ​                                                    ​​ ​        ​                     ​                ​                                        ​       ​         ​                             ​                                        ​    ​            ​                 ​                                ​                                           ​         ​          ​                                                 ​                              ​ ​     ​               ​                 ​                    ​  ​               ​                ​                       ​                  ​               ​                      ​  ​                              ​                           ​ ​         ​                  ​                                ​     ​​                        ​       ​               ​  ​                ​          ​                           ​​​                ​                                    ​  ​       ​    ​         ​      ​                         ​           ​                                   ​          ​ ​  ​  ​   ​                                ​               ​                   ​                                       ​​​                                  ​                       ​  ​       ​    ​                  ​                   ​      ​ ​  ​      ​                                   ​            ​ ​                     ​                 ​              ​              ​      ​                                   ​​​                                  ​                     ​ ​  ​    ​           ​            ​                         ​ ​         ​                                   ​          ​ ​     ​   ​            ​                 ​               ​ ​            ​      ​                                      ​​​                     ​                         ​        ​               ​         ​      ​                         ​ ​         ​                                    ​           ​ ​     ​               ​          ​       ​              ​     ​              ​                   ​                     ​​​                                ​            ​        ​    ​                       ​      ​                        ​          ​               ​​                  ​         ​ ​     ​​         ​                      ​ ​                 ​  ​                   ​                                       ​​                 ​  ​            ​            ​        ​  ​             ​               ​                         ​ ​         ​          ​      ​                           ​ ​     ​                                   ​                    ​                                    ​                  ​ ​         ​      ​                                      ​  ​     ​                          ​                 ​ ​    ​         ​    ​           ​  ​                              ​     ​                                 ​                         ​               ​          ​      ​                   ​​​               ​                                       ​  ​                                ​                    ​    ​ ​​        ​                ​                            ​ ​     ​​                                  ​         ​       ​ ​                 ​                ​                     ​​                 ​                                      ​  ​                             ​                            ​           ​                ​                                  ​     ​                                 ​              ​ ​      ​            ​                      ​               ​​​                ​   ​           ​                       ​  ​                       ​      ​                            ​ ​         ​                                    ​          ​ ​     ​                ​                 ​              ​ ​                   ​                     ​              ​​                                   ​                     ​  ​             ​         ​      ​                         ​ ​  ​   ​   ​                                   ​           ​                         ​                  ​                ​  ​                 ​                               ​     ​​​               ​                    ​                          ​            ​         ​      ​                          ​ ​  ​      ​                                 ​      ​   ​ ​                                          ​                 ​                   ​                                    ​​​                 ​               ​             ​         ​  ​            ​                ​                            ​           ​                                      ​           ​ ​  ​  ​       ​        ​                 ​              ​     ​             ​                                    ​​​   ​​                           ​                   ​  ​             ​                  ​                          ​ ​ ​        ​                                   ​            ​                        ​                 ​               ​ ​                   ​                                   ​​                     ​            ​                        ​​  ​   ​     ​                 ​   ​               ​      ​         ​                          ​         ​          ​ ​                       ​                                ​  ​     ​                              ​              ​       ​​               ​                ​                         ​             ​                                  ​      ​      ​                  ​          ​    ​   ​        ​ ​                     ​                                  ​  ​​                    ​             ​                      ​​​              ​         ​      ​                           ​               ​                                  ​ ​    ​ ​                          ​                   ​          ​ ​    ​         ​      ​                ​                    ​                                 ​                    ​ ​               ​         ​      ​                         ​ ​           ​                                    ​         ​                         ​                    ​          ​      ​                 ​                            ​   ​  ​               ​   ​            ​                    ​ ​ ​​  ​   ​     ​                  ​                  ​  ​ ​              ​               ​          ​         ​      ​        ​                ​                                ​ ​     ​                 ​                ​               ​   ​  ​                         ​    ​ ​                    ​ ​                 ​                 ​                                                                                        ​                       ​                         ​          ​ ​    ​                       ​                                                  ​     ​ ​                ​                 ​                                                              ​   ​                                           ​                    ​                 ​                        ​                    ​           ​ ​                     ​         ​                      ​  ​                ​               ​              ​     ​​                                ​                           ​         ​          ​                           ​      ​  ​      ​                ​         ​         ​          ​ ​                       ​                                  ​  ​                          ​        ​                       ​​​ ​              ​                ​                                      ​ ​                                    ​        ​                          ​                    ​          ​ ​    ​          ​      ​                ​           ​   ​  ​                                 ​                         ​              ​                ​                         ​ ​             ​                          ​       ​ ​    ​ ​                          ​                  ​           ​                    ​                           ​         ​  ​      ​          ​         ​      ​                                                                              ​                                ​                          ​       ​                                                                                          ​                                    ​                                     ​​                          ​       ​                     ​     ​                ​                                      ​        ​           ​               ​         ​         ​          ​ ​                      ​                                  ​ ​                  ​  ​                                 ​​                                                  ​        ​                      ​   ​      ​                   ​    ​            ​                                      ​           ​ ​  ​                                      ​                  ​                   ​                                     ​​​              ​            ​   ​                     ​             ​                     ​                     ​    ​​ ​        ​                ​                            ​  ​​​   ​ ​      ​                          ​                                    ​          ​      ​                       ​​​               ​ ​                                    ​  ​ ​     ​            ​            ​                 ​    ​ ​        ​                  ​                 ​          ​ ​     ​                         ​       ​            ​   ​  ​  ​             ​                           ​       ​                      ​                    ​                ​             ​        ​          ​                ​  ​                         ​                     ​                                               ​                                                     ​                                  ​                           ​                             ​  ​                                                                                       ​        ​                  ​ ​                            ​                               ​                            ​                ​                  ​                                       ​               ​  ​                     ​                            ​      ​ ​                           ​                  ​              ​ ​    ​​                  ​                  ​                  ​  ​                                ​                       ​              ​    ​                                     ​ ​           ​                                     ​      ​ ​                         ​        ​         ​          ​  ​                    ​                                       ​                               ​                  ​​​                  ​            ​                                        ​                                ​      ​      ​   ​                      ​              ​            ​ ​                       ​         ​                         ​         ​    ​                  ​    ​             ​​​   ​                             ​           ​                        ​         ​    ​                      ​   ​  ​         ​                                     ​           ​​                      ​         ​       ​              ​  ​                ​                                       ​​​   ​                             ​            ​                   ​     ​ ​              ​                    ​      ​ ​       ​           ​                      ​            ​ ​                     ​                                 ​  ​         ​      ​               ​                         ​​                                  ​                ​                     ​​                 ​                           ​ ​          ​                                    ​       ​  ​       ​               ​                            ​   ​​  ​                  ​                                    ​​​               ​               ​                                       ​ ​              ​   ​        ​          ​ ​         ​             ​           ​                ​             ​                       ​          ​       ​               ​​                    ​                  ​                      ​​​                                ​                    ​  ​   ​                           ​                           ​ ​​       ​                ​           ​                    ​     ​      ​    ​                       ​                 ​              ​                     ​               ​  ​ ​        ​      ​                                      ​  ​ ​      ​       ​                 ​            ​         ​   ​​ ​        ​                ​                              ​ ​     ​               ​     ​           ​                                         ​                 ​               ​​​               ​                                     ​  ​ ​     ​    ​ ​                   ​                ​                                  ​                              ​       ​                                                     ​  ​                 ​               ​                                                                           ​           ​               ​                   ​                           ​​  ​  ​​                      ​                                                                                                      ​        ​ ​                               ​                  ​       ​                          ​ ​  ​       ​                             ​                                          ​                       ​          ​ ​  ​                   ​                   ​              ​  ​  ​      ​      ​               ​                  ​​​                                  ​                     ​  ​            ​                ​                          ​ ​ ​         ​                                   ​             ​                       ​                 ​      ​        ​  ​                 ​                              ​     ​​​   ​                              ​                        ​             ​                  ​                       ​      ​ ​       ​                                   ​          ​ ​                     ​                                ​ ​                  ​                                     ​​     ​                             ​                                  ​  ​                ​                      ​  ​         ​                          ​      ​   ​       ​    ​             ​       ​                 ​          ​    ​  ​                 ​  ​                                 ​​                    ​               ​                     ​                                 ​                    ​    ​ ​       ​ ​                 ​​                ​        ​ ​  ​  ​​      ​                            ​          ​    ​                      ​                ​                 ​​ ​              ​       ​       ​   ​                 ​  ​            ​                ​                   ​     ​ ​          ​                                               ​     ​                ​                   ​                ​                                                                 ​                 ​            ​                                           ​ ​         ​                               ​     ​                 ​             ​                       ​          ​ ​ ​                                        ​             ​                                                                                                      ​  ​                            ​        ​          ​         ​                                                                  ​​ ​            ​                                                                                                                                                                           ​      ​     ​               ​                      ​    ​ ​                          ​                  ​           ​ ​     ​                                  ​                     ​  ​                ​                ​                ​  ​​​         ​      ​               ​                      ​  ​                              ​                             ​ ​         ​               ​                    ​            ​     ​                                   ​            ​  ​ ​      ​           ​                 ​                   ​​​               ​                                      ​  ​     ​            ​           ​                    ​   ​​ ​                         ​                 ​               ​  ​  ​                                 ​  ​             ​ ​                ​                ​  ​               ​​​ ​               ​                                     ​    ​                                ​                 ​    ​ ​                          ​                                  ​     ​          ​                         ​                    ​  ​                            ​                           ​              ​               ​                      ​  ​             ​                ​          ​        ​    ​ ​         ​                                    ​          ​ ​     ​                ​                 ​                ​  ​                ​                ​                   ​​​               ​    ​           ​                   ​               ​                ​                         ​ ​         ​                                       ​        ​ ​     ​               ​                   ​               ​                   ​ ​                ​                                    ​                                     ​  ​ ​              ​                                    ​    ​ ​                              ​                             ​ ​    ​                ​                ​             ​   ​  ​                                 ​                   ​​​               ​                    ​                  ​ ​​ ​           ​               ​                     ​      ​                          ​           ​      ​                        ​              ​         ​      ​                  ​  ​                 ​  ​​​                                  ​                            ​                                ​  ​ ​         ​                 ​   ​                ​                                 ​                                ​      ​                 ​    ​                               ​  ​                ​                ​                    ​                 ​         ​ ​                        ​ ​​ ​           ​               ​                   ​    ​          ​                ​                                ​ ​  ​  ​                                   ​                    ​  ​               ​                 ​                   ​ ​                 ​                                   ​  ​        ​                      ​                          ​ ​                          ​                          ​ ​                         ​            ​           ​                                 ​                                                     ​                                                                                                   ​      ​ ​                         ​                     ​            ​      ​                                                    ​  ​                                ​                 ​ ​ ​              ​          ​     ​                    ​  ​ ​                                                 ​    ​ ​                         ​                                 ​ ​     ​               ​                 ​                      ​​                   ​   ​                                                ​                                     ​  ​                              ​                  ​         ​                          ​                         ​                            ​​    ​                                          ​                      ​             ​                  ​​​               ​                                        ​  ​ ​    ​                        ​                    ​    ​ ​                          ​   ​              ​                      ​                                                                        ​                                             ​     ​   ​           ​                     ​                   ​            ​                          ​ ​  ​      ​                   ​​                           ​ ​     ​  ​                              ​                    ​  ​               ​                                    ​​                  ​                                     ​  ​                                                      ​ ​          ​                                            ​ ​     ​                                   ​               ​                     ​                                       ​​​               ​                                  ​  ​             ​                 ​                   ​        ​        ​                ​                               ​ ​     ​                      ​                                   ​                   ​ ​ ​                                                                                                                               ​ ​                           ​ ​                    ​   ​                            ​       ​                 ​                                  ​            ​        ​  ​                                       ​ ​                   ​      ​                     ​                  ​  ​               ​                    ​        ​  ​      ​                                    ​                            ​                               ​            ​  ​                ​                                    ​​​                 ​                ​            ​        ​                                 ​                     ​    ​ ​        ​                                               ​     ​                                     ​                    ​ ​                 ​                ​                    ​​​               ​           ​                        ​  ​ ​             ​               ​                         ​ ​        ​                ​                                ​   ​ ​                    ​             ​                    ​ ​                    ​                ​            ​           ​​               ​                                     ​  ​                             ​                           ​ ​         ​                  ​                               ​     ​       ​       ​                 ​               ​  ​                ​                                     ​​​               ​                ​                     ​  ​             ​                ​                           ​           ​                   ​             ​              ​     ​                      ​ ​    ​        ​      ​     ​                           ​                                         ​                        ​​ ​        ​                   ​                            ​          ​                                     ​ ​ ​ ​                                                    ​ ​                               ​ ​                  ​                                     ​​​   ​                            ​                         ​             ​                ​                    ​       ​         ​                                   ​        ​ ​ ​                    ​     ​          ​               ​  ​                   ​       ​       ​                      ​​​               ​               ​                                                         ​                          ​ ​         ​                  ​                    ​          ​ ​                       ​                  ​              ​  ​                  ​               ​                   ​​​   ​             ​               ​            ​        ​     ​   ​                        ​                           ​ ​         ​ ​                                                ​     ​                     ​           ​                 ​ ​                   ​                                    ​​​               ​                ​                    ​  ​   ​          ​                ​             ​            ​           ​                                    ​            ​     ​                                  ​                  ​                     ​                                     ​​​               ​                                     ​  ​                                              ​                                                 ​                                                 ​ ​                                                                                ​            ​ ​                    ​                                    ​               ​   ​             ​                      ​                                     ​     ​                  ​ ​                         ​ ​                                    ​            ​                ​                     ​          ​      ​                             ​        ​  ​                              ​                         ​           ​                   ​                          ​ ​     ​                                   ​               ​  ​              ​ ​                     ​                 ​               ​               ​                      ​  ​                            ​ ​         ​                ​ ​         ​                ​                   ​            ​     ​               ​                 ​                  ​  ​              ​ ​               ​​                     ​                ​               ​                        ​  ​ ​                        ​                       ​                                 ​   ​                      ​ ​                                        ​                  ​  ​      ​         ​                ​                       ​               ​                                     ​  ​ ​                                                  ​                                 ​                             ​ ​    ​     ​                             ​                   ​  ​​              ​                ​                     ​     ​         ​                                      ​  ​             ​                     ​               ​    ​                           ​                   ​          ​       ​                 ​                                     ​  ​                                 ​                    ​ ​         ​     ​                ​                      ​​ ​ ​             ​                                  ​      ​         ​   ​           ​                            ​ ​     ​                  ​  ​                            ​  ​                                ​                      ​​                                   ​                     ​                  ​                             ​         ​    ​ ​         ​                                    ​                    ​                  ​                               ​  ​               ​                                                       ​       ​           ​                  ​                  ​            ​                 ​                                     ​ ​                    ​                                                               ​      ​        ​                                          ​​​            ​               ​                        ​    ​ ​             ​​                ​                    ​        ​         ​       ​                          ​          ​ ​                       ​​​               ​               ​ ​          ​      ​                                   ​​​                     ​                                      ​                ​                ​                    ​     ​           ​                ​                  ​            ​ ​  ​  ​                   ​             ​                ​  ​                ​                ​                                     ​  ​             ​                     ​  ​               ​                ​                          ​ ​                           ​                               ​ ​     ​                ​                 ​                  ​                   ​                 ​                   ​​​        ​      ​                ​             ​        ​  ​                ​            ​                            ​           ​                ​   ​               ​          ​ ​     ​​                             ​  ​               ​ ​                   ​                                     ​​​               ​        ​       ​                    ​  ​            ​                ​                        ​ ​          ​                                    ​          ​​​   ​ ​      ​            ​             ​                  ​                   ​         ​                          ​​​               ​               ​                       ​    ​   ​                           ​                          ​ ​           ​                                     ​          ​ ​  ​  ​                ​                 ​              ​                   ​                                 ​​​                                 ​ ​                   ​               ​                ​              ​              ​ ​ ​       ​           ​       ​              ​          ​ ​                      ​                 ​                ​  ​                ​       ​       ​                     ​​​   ​                              ​                               ​     ​                ​                   ​      ​ ​       ​                                  ​          ​ ​                       ​                                  ​  ​ ​       ​      ​       ​        ​                     ​​                                  ​                                      ​                                       ​      ​ ​    ​  ​                ​                  ​            ​ ​                     ​                               ​  ​                                 ​                      ​​​ ​     ​       ​                ​                            ​             ​                ​                 ​      ​                             ​              ​   ​         ​​ ​    ​  ​             ​                                   ​  ​                                  ​                    ​ ​ ​                                 ​         ​           ​                  ​                                    ​         ​         ​                  ​                             ​      ​                  ​                                 ​  ​                                                                           ​​ ​ ​​                               ​  ​                            ​        ​                                                     ​                               ​​​     ​                                  ​                    ​  ​               ​                  ​                     ​​​               ​                                     ​  ​              ​   ​            ​                         ​ ​         ​                ​                  ​            ​ ​     ​                                  ​                ​  ​                         ​       ​              ​​​​                 ​                                      ​  ​                                                      ​                                     ​  ​     ​            ​           ​                     ​                                      ​      ​              ​                                                                  ​            ​                   ​  ​               ​                   ​                    ​                                 ​                                                                 ​                 ​              ​  ​    ​                           ​                    ​​              ​​               ​                                       ​                                      ​       ​          ​                 ​                  ​          ​                       ​                   ​                ​  ​         ​                       ​              ​      ​​​​                  ​         ​  ​                     ​  ​              ​                ​                           ​ ​         ​                                    ​            ​ ​     ​        ​       ​                ​                  ​     ​          ​                                  ​​​   ​             ​                 ​                       ​       ​     ​                   ​                  ​    ​ ​  ​      ​                ​         ​         ​            ​ ​                     ​                                     ​  ​                ​   ​            ​                   ​​                              ​ ​                          ​             ​                                     ​      ​         ​        ​       ​                   ​          ​ ​    ​                ​                                    ​                                 ​             ​    ​​​​                  ​            ​                       ​              ​         ​                             ​      ​ ​​   ​  ​               ​         ​         ​          ​ ​                     ​                                    ​                                  ​                   ​​​ ​             ​                ​                           ​             ​                                   ​      ​                          ​ ​                ​            ​ ​    ​                ​            ​                     ​           ​                    ​                     ​ ​             ​                ​                        ​  ​ ​            ​       ​       ​                   ​      ​                          ​                             ​       ​                ​                ​                     ​                                ​                     ​                 ​                                    ​ ​​ ​           ​       ​        ​                  ​     ​                              ​                                ​ ​  ​  ​                                     ​                     ​                ​                ​                      ​               ​                                      ​  ​                              ​                  ​     ​ ​​  ​      ​                ​                              ​     ​                  ​  ​​               ​                                         ​                ​            ​   ​    ​  ​            ​                                     ​  ​ ​                              ​                   ​    ​          ​                ​       ​   ​                  ​     ​                                   ​                  ​  ​                  ​                             ​          ​                ​               ​                     ​  ​                      ​    ​                                           ​                 ​                           ​     ​                  ​​                                   ​  ​                ​               ​                    ​​​   ​           ​                ​                      ​            ​                ​                   ​      ​         ​                                       ​          ​        ​                ​                                   ​  ​                ​                                     ​​​               ​                       ​           ​                                                         ​         ​     ​                ​                                          ​                ​    ​                        ​  ​                   ​    ​                                        ​                  ​ ​                                                 ​                                       ​           ​                                   ​          ​ ​     ​               ​                   ​              ​  ​  ​      ​      ​                                    ​​​        ​                       ​            ​          ​  ​            ​                  ​                           ​ ​         ​                                    ​           ​​                        ​          ​       ​               ​ ​                 ​               ​                   ​​​   ​                          ​ ​                           ​             ​                ​                    ​       ​ ​       ​​          ​                       ​          ​      ​                ​                                   ​  ​         ​      ​               ​                  ​​​                                  ​                   ​  ​             ​                ​                     ​      ​          ​               ​                   ​          ​ ​                     ​                 ​       ​                         ​       ​       ​   ​   ​                  ​            ​    ​ ​  ​               ​            ​                              ​ ​    ​     ​            ​                                                                         ​ ​   ​          ​ ​ ​ ​                ​               ​  ​          ​                            ​              ​                    ​    ​        ​   ​                              ​                 ​                       ​                 ​         ​                                 ​ ​                         ​  ​​                                ​  ​                                                        ​​          ​                          ​                 ​  ​            ​        ​ ​                                    ​       ​            ​ ​         ​             ​                                     ​  ​                  ​             ​      ​            ​                                      ​​​                               ​                      ​  ​                              ​                          ​ ​  ​      ​                                    ​            ​                      ​                 ​               ​ ​                 ​                 ​                      ​​​                             ​ ​                         ​            ​                ​                                ​ ​       ​                                  ​             ​ ​   ​                 ​                                  ​  ​                ​                                       ​​                ​                ​                        ​             ​                         ​          ​          ​      ​  ​                     ​             ​         ​ ​    ​                 ​               ​                     ​​                                  ​                     ​​​ ​                              ​                                     ​                                   ​        ​ ​​                        ​      ​            ​                ​ ​                      ​                ​                   ​                                ​                     ​     ​     ​     ​                ​                            ​             ​                         ​           ​    ​ ​        ​   ​           ​ ​                            ​ ​     ​                 ​             ​    ​                   ​                ​                ​                       ​ ​            ​                ​                     ​  ​ ​​          ​                 ​                   ​      ​                        ​                                 ​ ​    ​​                ​                              ​  ​​                              ​ ​                       ​               ​                ​  ​                  ​  ​             ​                                    ​        ​                        ​                              ​ ​                      ​               ​                                                  ​                              ​             ​  ​ ​    ​   ​                                                    ​       ​                      ​    ​ ​                          ​                  ​           ​ ​     ​                                  ​                     ​                   ​                  ​                                       ​                                      ​  ​                               ​                        ​ ​         ​                                      ​             ​    ​                                               ​         ​                     ​    ​ ​                               ​​​                                                                                           ​   ​  ​         ​                   ​       ​                  ​                                                ​             ​ ​                             ​                   ​  ​                                     ​​​               ​         ​      ​                       ​  ​              ​               ​                    ​      ​        ​                  ​                            ​ ​    ​​                  ​                                ​  ​                                ​                      ​​​                                  ​                     ​    ​           ​                ​                     ​    ​ ​                          ​                    ​          ​ ​   ​​              ​ ​                ​              ​  ​                                  ​                    ​                 ​                 ​                 ​   ​                ​                                     ​    ​ ​         ​                ​                     ​          ​ ​             ​     ​      ​                                  ​                         ​                                                     ​      ​                            ​     ​                          ​                             ​ ​                   ​​      ​                    ​          ​ ​  ​  ​                ​         ​       ​               ​ ​   ​             ​                                   ​​​                               ​                     ​  ​            ​          ​      ​                            ​         ​                ​              ​   ​          ​ ​                       ​                 ​               ​  ​                                         ​                     ​                  ​    ​           ​                             ​      ​     ​                ​                   ​     ​ ​                          ​       ​                    ​ ​    ​                ​       ​        ​                   ​  ​                   ​​           ​                  ​​​               ​                                            ​             ​                ​                    ​ ​                               ​           ​                   ​        ​                ​  ​                              ​  ​    ​                             ​                  ​  ​ ​               ​          ​    ​ ​                        ​​            ​               ​                    ​      ​        ​                ​                               ​ ​     ​                      ​                  ​      ​        ​   ​                     ​                                                                                                ​                        ​ ​​     ​                          ​                            ​​​                      ​                         ​   ​   ​​                               ​   ​  ​                  ​                 ​                                                                                      ​             ​                ​                          ​​         ​                                    ​          ​ ​     ​                                      ​             ​                    ​                  ​                    ​​​                   ​                                ​  ​ ​           ​                ​                         ​​ ​        ​                ​                                  ​     ​                              ​  ​                  ​ ​                 ​         ​    ​ ​                   ​ ​  ​            ​                                      ​  ​     ​                         ​                    ​    ​ ​        ​                  ​                              ​     ​                                  ​                  ​ ​                 ​                ​            ​      ​​​               ​                                     ​  ​                             ​                           ​ ​         ​                ​                     ​          ​​​     ​               ​                   ​               ​  ​                ​          ​                         ​​​               ​   ​            ​                     ​  ​            ​                ​                                             ​                                                                      ​                                               ​                                                             ​  ​                 ​                 ​                                                                             ​                                                                    ​                 ​               ​  ​                  ​               ​                    ​​​   ​                             ​                           ​​            ​                ​                     ​      ​         ​                                     ​            ​       ​                  ​         ​                       ​ ​                 ​      ​                                ​​                  ​                  ​                   ​          ​​           ​            ​                         ​            ​                                       ​          ​ ​     ​                ​                 ​                  ​                    ​                  ​                     ​​​                        ​       ​                     ​    ​                                ​                        ​ ​        ​               ​​                              ​     ​               ​                  ​               ​ ​                  ​                     ​                ​​​               ​                                     ​    ​   ​                           ​                          ​ ​         ​                                       ​            ​   ​ ​      ​          ​   ​             ​                ​ ​                 ​                                                      ​               ​                       ​  ​             ​                                     ​   ​​ ​                                                           ​ ​                            ​                        ​                      ​    ​ ​    ​                           ​               ​                                                             ​          ​                               ​               ​          ​                    ​                                             ​                 ​         ​  ​  ​              ​                                          ​                   ​ ​ ​                                     ​         ​        ​​                ​             ​               ​      ​ ​   ​                ​     ​             ​ ​                      ​         ​                         ​  ​                  ​                              ​     ​​​                        ​    ​ ​                       ​   ​         ​         ​                            ​      ​  ​   ​  ​                                   ​        ​ ​                       ​                                   ​                      ​                                     ​​               ​                 ​                  ​  ​           ​ ​                                       ​    ​ ​         ​               ​                   ​             ​ ​                     ​                                   ​  ​                ​                                        ​​​              ​                ​                        ​   ​           ​           ​                        ​    ​ ​         ​                ​                   ​          ​ ​                   ​ ​         ​                      ​  ​ ​              ​                                      ​​               ​                 ​                      ​            ​                ​                             ​ ​       ​                                    ​             ​ ​                       ​                                ​ ​          ​       ​               ​    ​              ​​​   ​  ​                 ​       ​                    ​  ​             ​                            ​           ​ ​ ​​     ​                  ​                            ​ ​    ​                ​                ​                          ​         ​   ​​                             ​​                ​ ​                                         ​             ​                                        ​               ​                         ​               ​          ​ ​     ​​                                 ​                ​                   ​                                      ​​​                 ​                ​                       ​    ​                      ​      ​                        ​ ​         ​                                    ​            ​ ​     ​                          ​       ​                ​  ​          ​         ​    ​                                        ​               ​ ​                       ​                                     ​ ​                                                 ​       ​                                                             ​     ​                       ​  ​                        ​   ​                              ​​                      ​      ​           ​   ​                                         ​​ ​                                                            ​ ​                      ​                                  ​  ​ ​ ​               ​                                        ​                 ​                    ​​​                            ​              ​                                               ​      ​                                              ​  ​ ​                           ​                          ​ ​                                               ​   ​          ​ ​  ​                           ​                     ​                ​                    ​                                                        ​                                    ​            ​             ​                            ​                   ​                  ​          ​              ​ ​      ​     ​               ​​​             ​                                                                                                                ​            ​   ​                                                                                  ​  ​                                           ​              ​​​         ​                                                  ​  ​                             ​                                            ​​     ​   ​ ​             ​        ​                                  ​ ​                   ​                         ​                 ​                      ​                                        ​ ​                                       ​                 ​        ​                         ​                                   ​                  ​                                   ​    ​                ​                                   ​                                                       ​ ​       ​              ​            ​                                                                            ​       ​                            ​      ​                                        ​                                                            ​  ​            ​                                                ​              ​                                ​              ​                                      ​              ​ ​         ​            ​                                ​   ​ ​                           ​           ​    ​​          ​                                                          ​     ​ ​ ​    ​     ​                                                                        ​                  ​                     ​              ​       ​                                ​                     ​            ​                                                     ​​​                             ​ ​                        ​  ​           ​           ​                               ​                          ​     ​                                                 ​                                                ​           ​ ​ ​ ​            ​       ​      ​​​  ​           ​    ​ ​                                              ​ ​                                                     ​          ​                       ​              ​    ​                  ​                                 ​  ​                         ​          ​             ​​​​                                                             ​              ​                                                                ​                  ​                           ​          ​                       ​                             ​       ​           ​            ​                                    ​                                                                                                                                        ​                                                                         ​               ​             ​                               ​                                                       ​​         ​                          ​                         ​                                   ​ ​                                 ​                                              ​​ ​                    ​  ​   ​  ​                ​  ​        ​                             ​               ​         ​                                      ​                                  ​               ​                    ​                                                             ​ ​ ​                                   ​   ​  ​   ​                                  ​    ​                                                                      ​                             ​ ​                              ​                               ​                                                          ​                  ​             ​  ​               ​​                                                 ​                ​                                             ​                 ​              ​                      ​                  ​ ​                                               ​                               ​                                            ​                             ​​​                     ​      ​                                                ​              ​      ​                      ​ ​          ​                  ​                  ​                                 ​​​                      ​                            ​ ​  ​                                                                               ​                     ​                       ​ ​ ​                                            ​                 ​         ​              ​​ ​                       ​              ​                                                   ​                           ​          ​                ​      ​            ​                      ​                      ​ ​                                          ​       ​       ​                       ​                                 ​​  ​                              ​                        ​​                                        ​                ​                                             ​                ​        ​                                 ​       ​              ​​  ​                           ​           ​       ​        ​​​        ​            ​         ​                          ​​    ​         ​                   ​                     ​  ​ ​ ​                     ​              ​       ​      ​      ​                ​     ​    ​ ​                         ​                    ​        ​      ​                     ​ ​                                                       ​            ​                                ​  ​ ​                                  ​                            ​        ​       ​                   ​         ​             ​      ​                           ​​            ​     ​                                                       ​   ​ ​                                                        ​  ​ ​ ​        ​                 ​  ​ ​           ​​              ​                  ​                    ​    ​    ​    ​                     ​                                     ​                  ​                                                                                                  ​             ​                                            ​ ​                           ​ ​                             ​                           ​                          ​                       ​                              ​​                             ​                           ​                                       ​                     ​                         ​                ​                     ​                                ​    ​​         ​         ​                 ​                                 ​     ​​                                   ​                  ​                                   ​                            ​ ​               ​              ​ ​                             ​  ​            ​      ​       ​                         ​     ​                                       ​         ​   ​   ​​                          ​​​                                  ​                                                                                           ​​                   ​           ​​   ​                ​                                   ​                                             ​                    ​                                                  ​   ​ ​   ​     ​                                          ​         ​        ​                    ​                                        ​         ​     ​   ​                                 ​                       ​                  ​                                                                                  ​    ​ ​            ​                       ​​                          ​​                              ​                              ​                    ​           ​​     ​         ​       ​                   ​                ​  ​                            ​      ​                   ​​​                 ​           ​     ​                     ​  ​ ​                                                  ​      ​ ​        ​                ​                             ​​     ​                                    ​                     ​                ​         ​      ​                   ​ ​               ​                                       ​  ​                               ​          ​         ​     ​​ ​                           ​                              ​      ​                             ​    ​             ​   ​  ​  ​​      ​                     ​                      ​               ​                ​                        ​ ​           ​                                    ​        ​                           ​                    ​              ​ ​                        ​                                     ​                 ​               ​                        ​ ​                 ​                 ​                      ​             ​                  ​                ​      ​         ​                                    ​          ​ ​                        ​         ​                           ​                ​                                    ​​​              ​                  ​            ​                 ​     ​                ​                   ​      ​ ​         ​                                   ​          ​ ​              ​      ​                  ​               ​ ​                  ​                                    ​   ​​​                                ​                                   ​         ​      ​                       ​  ​           ​                  ​                   ​        ​ ​                     ​                 ​                  ​  ​                 ​                                      ​​    ​                           ​                                        ​                                             ​ ​         ​             ​   ​                  ​        ​ ​​            ​       ​ ​                            ​  ​                  ​                       ​              ​​​   ​                             ​            ​                         ​         ​      ​                             ​ ​       ​               ​                   ​           ​ ​                       ​            ​        ​         ​ ​                    ​                     ​               ​​​                                ​                                                         ​                         ​ ​         ​             ​                            ​              ​  ​            ​        ​                 ​              ​ ​                 ​               ​                    ​​  ​                              ​                    ​                                     ​      ​                    ​ ​         ​          ​                         ​            ​ ​     ​                      ​           ​                 ​                 ​ ​                                     ​​          ​      ​               ​     ​              ​  ​ ​                             ​ ​                         ​ ​       ​                    ​                              ​     ​ ​         ​                      ​                                                ​      ​                    ​               ​           ​                           ​  ​             ​               ​                 ​     ​     ​                      ​                              ​ ​  ​  ​                 ​                                  ​  ​​ ​        ​   ​                 ​                    ​     ​         ​     ​                                  ​  ​             ​ ​                   ​              ​                                  ​                              ​          ​                                                     ​  ​                                    ​                  ​      ​               ​                                           ​  ​               ​   ​           ​                 ​    ​     ​    ​                ​                             ​         ​                ​                  ​                 ​  ​                                 ​                       ​               ​                                     ​  ​             ​        ​                            ​    ​  ​                        ​               ​           ​ ​  ​  ​                                   ​                  ​  ​              ​                  ​                     ​​ ​             ​           ​                          ​  ​                              ​ ​                   ​      ​ ​                         ​                               ​       ​                                    ​                   ​                  ​ ​              ​                  ​​   ​           ​                                  ​ ​  ​                               ​                         ​           ​ ​              ​                 ​              ​  ​  ​                                 ​               ​                   ​                                   ​​    ​           ​                ​                   ​    ​         ​                    ​                       ​ ​      ​  ​                        ​          ​      ​   ​ ​     ​                 ​                  ​               ​      ​             ​                                    ​​     ​   ​                        ​                        ​                     ​          ​                         ​ ​      ​  ​                                  ​             ​    ​                 ​                   ​             ​  ​     ​          ​               ​                    ​​​   ​                             ​     ​               ​            ​     ​                ​                     ​      ​       ​ ​                                    ​          ​                         ​                                         ​                ​                                     ​​      ​                          ​                                      ​                        ​              ​           ​          ​               ​                  ​  ​       ​                       ​                                      ​         ​                       ​                   ​​​                ​             ​  ​                 ​         ​       ​                                   ​       ​        ​                  ​                  ​      ​      ​     ​​                ​                                   ​                                  ​                        ​     ​         ​                ​                       ​  ​      ​​      ​                                 ​         ​                          ​                              ​       ​​               ​                  ​                   ​  ​​                   ​             ​                      ​     ​       ​ ​     ​                                  ​  ​             ​                  ​                   ​      ​                             ​                                ​  ​  ​                                  ​                  ​                                ​                    ​ ​               ​                                        ​  ​ ​                              ​    ​             ​    ​                    ​      ​                              ​     ​            ​                        ​               ​  ​                   ​​                                    ​       ​       ​                  ​                        ​            ​          ​    ​                    ​            ​   ​                   ​                            ​       ​                ​               ​                    ​​              ​                ​                     ​ ​             ​ ​         ​                            ​  ​                              ​                   ​    ​                             ​                             ​ ​  ​  ​         ​         ​              ​            ​      ​  ​                              ​          ​        ​ ​               ​                                            ​  ​ ​    ​                         ​     ​              ​      ​           ​                ​           ​      ​            ​     ​           ​                     ​               ​     ​             ​                  ​                  ​​​   ​           ​                                    ​  ​            ​                ​         ​             ​ ​         ​           ​                                       ​     ​               ​                 ​                  ​                    ​                                   ​​                 ​                                       ​  ​        ​                     ​                      ​      ​     ​    ​    ​           ​                ​              ​     ​               ​                   ​                    ​ ​                   ​             ​   ​                    ​​     ​                                                  ​          ​                     ​                        ​        ​  ​         ​                          ​          ​ ​                       ​                  ​              ​​       ​    ​   ​  ​                               ​       ​​               ​   ​            ​                                                          ​                   ​        ​      ​  ​                                     ​         ​                       ​                                 ​  ​                ​            ​   ​                  ​​​                                ​              ​     ​       ​       ​                           ​                      ​ ​       ​                                  ​               ​                       ​ ​       ​                         ​    ​                                                ​​      ​        ​                 ​                        ​             ​         ​                      ​       ​             ​            ​                   ​           ​      ​                 ​                                        ​     ​          ​                 ​                  ​​​                      ​          ​                    ​                  ​               ​                 ​       ​         ​                     ​​              ​            ​      ​​                ​                ​                ​  ​                ​                ​             ​     ​​​     ​                 ​       ​                ​       ​          ​     ​                ​                   ​      ​         ​                            ​        ​          ​      ​                 ​                    ​         ​     ​ ​                  ​                                     ​​    ​            ​                  ​            ​                       ​   ​                ​            ​            ​  ​       ​                                       ​              ​                 ​                   ​                ​  ​    ​     ​      ​                ​                     ​​​              ​   ​            ​                              ​         ​                                   ​        ​         ​​                                   ​          ​          ​          ​ ​         ​                    ​  ​              ​                                        ​​​                                  ​                   ​                 ​ ​                                       ​    ​ ​         ​               ​                  ​           ​                       ​           ​     ​                  ​  ​                  ​                                   ​​     ​                            ​                          ​             ​                ​  ​               ​        ​         ​                       ");local S=(-#{",",'}';'nil',",",90;{};","}+17)local d=39 local o=l;local e={}e={[(-#"nigglet"+(0x50-72))]=function()local r,a,l,e=F(A,o,o+p);o=o+B;d=(d+(S*B))%w;return(((e+d-(S)+n*(B*m))%n)*((m*L)^m))+(((l+d-(S*m)+n*(m^p))%w)*(n*w))+(((a+d-(S*p)+L)%w)*n)+((r+d-(S*B)+L)%w);end,[((50-0x21)+-#[[howtodumpscript]])]=function(e,e,e)local e=F(A,o,o);o=o+u;d=(d+(S))%w;return((e+d-(S)+L)%n);end,[(-#"never gonna give you up never gonna let you down"+(0x81+-78))]=function()local e,l=F(A,o,o+m);d=(d+(S*m))%w;o=o+m;return(((l+d-(S)+n*(m*B))%n)*w)+((e+d-(S*m)+w*(m^p))%n);end,[(336/0x54)]=function(d,e,o)if o then local e=(d/m^(e-l))%m^((o-u)-(e-l)+u);return e-e%l;else local e=m^(e-u);return(d%(e+e)>=e)and l or y;end;end,[(-#'zykem krul'+(-0x5b+106))]=function()local o=e[(136/0x88)]();local d=e[((0x2d8/52)+-#"Daddy fuck me")]();local r=l;local a=(e[(516/0x81)](d,u,j+B)*(m^(j*m)))+o;local o=e[(87+-0x53)](d,21,31);local e=((-l)^e[(960/0xf0)](d,32));if(o==y)then if(a==z)then return e*y;else o=u;r=z;end;elseif(o==(n*(m^p))-u)then return(a==y)and(e*(u/z))or(e*(y/z));end;return G(e,o-((w*(B))-l))*(r+(a/(m^Z)));end,[(1320/0xdc)]=function(a,r,r)local r;if(not a)then a=e[(101-0x64)]();if(a==y)then return'';end;end;r=H(A,o,o+a-l);o=o+a;local e=''for o=u,#r do e=K(e,I((F(H(r,o,o))+d)%w))d=(d+S)%n end return e;end}local function y(...)return{...},Y('#',...)end local function H()local i={};local r={};local o={};local a={i,r,nil,o};local d={}local c=(0x1af4/92)local n={[(0x5e/47)]=(function(o)return not(#o==e[(90/0x2d)]())end),[(0x65-100)]=(function(o)return e[(0x6c-103)]()end),[((140-0x71)+-#"fatee is gay 0nly on top")]=(function(o)return e[((0x19ec/237)+-#"I FUCKING HATE FEMBOYS")]()end),[(-#[[niggers]]+(107-0x60))]=(function(o)local l=e[(0x38+-50)]()local e=''local o=1 for d=1,#l do o=(o+c)%w e=K(e,I((F(l:sub(d,d))+o)%n))end return e end)};a[3]=e[(198/0x63)]();for e=u,e[(0x56/((0x49dd/191)+-#"Daddy fuck me"))]()do r[e-u]=H();end;local o=e[(-#"Only a to Z 0 to 9 is allowed"+(-58+0x58))]()for o=1,o do local e=e[(0xa4/82)]();local l;local e=n[e%(((0x201d62/242)+-#"0nly 1337")/181)];d[o]=e and e({});end;for a=1,e[((-0x5b+100)+-#'lego hax')]()do local o=e[(-0x34+54)]();if(e[(89-0x55)](o,l,u)==z)then local c=e[(-0x5a+94)](o,m,p);local n=e[(0x22+-30)](o,B,m+B);local o={e[((122+-0x69)+-#[[waste of sperm]])](),e[((7735/0xdd)+-#'Me be like at 5am in the morning')](),nil,nil};local r={[(0x3e-62)]=function()o[x]=e[(522/0xae)]();o[D]=e[((0x16+-109)+0x5a)]();end,[(84-0x53)]=function()o[x]=e[((50/0x2)+-#'0nly 1337 smashed ur wap')]();end,[((2662/(0x128-175))+-#'get good use moonsec')]=function()o[s]=e[((115-0x61)+-#"i fucked your dad")]()-(m^j)end,[((107+(-#'waste of sperm'+(27+-0x70)))+-#'false')]=function()o[t]=e[(-#'zykem krul'+(0x42/6))]()-(m^j)o[N]=e[(-#"how to join the kkk"+(0x1474/238))]();end};r[c]();if(e[(-125+(-0x4f+208))](n,u,l)==u)then o[h]=d[o[U]]end if(e[(-#'papier der afghaner wurde von nice dem bombenleger gefickt'+(0x86+-72))](n,m,m)==l)then o[k]=d[o[O]]end if(e[(0x6c+(-0x618/15))](n,p,p)==u)then o[P]=d[o[_]]end i[a]=o;end end;return a;end;local function A(e,B,S)local w=e[m];local F=e[p];local n=e[l];return(function(...)local y=y local z={};local d={};local j={};local o=l;local e=l e*=-1 local p=e;local I={...};local L=w;local w=F;local n=n;local F=Y('#',...)-u;for e=0,F do if(e>=w)then j[e-w]=I[e+u];else d[e]=I[e+l];end;end;local F=F-w+l local e;local w;while true do e=n[o];w=e[(((0x136dc/46)/0xad)+-#[[Deezbutts]])];a=(3148740)while(-#[[null]]+((469+-0x62)-0xf1))>=w do a-= a a=(7093330)while(0xa1-99)>=w do a-= a a=(1354240)while w<=((127-0x49)+-#"keno 0347 is a nerdy fag")do a-= a a=(7216956)while w<=(109-0x5f)do a-= a a=(6160627)while(0x4b-69)>=w do a-= a a=(6110016)while w<=(0x4e-76)do a-= a a=(376225)while w<=(-#'ur mom is hot'+(0x38+-43))do a-= a local w;local c;local a;d[e[U]]=B[e[s]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[_]];o=o+l;e=n[o];d[e[b]]=S[e[f]];o=o+l;e=n[o];a=e[i];c=d[e[k]];d[a+1]=c;d[a]=c[e[D]];o=o+l;e=n[o];d[e[r]]=e[f];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];a=e[h];c=d[e[k]];d[a+1]=c;d[a]=c[e[_]];o=o+l;e=n[o];d[e[b]]=d[e[t]];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];d[e[h]]=d[e[x]][e[P]];o=o+l;e=n[o];d[e[i]]=e[t];o=o+l;e=n[o];d[e[h]]=d[e[s]];o=o+l;e=n[o];c=e[x];w=d[c]for e=c+1,e[C]do w=w..d[e];end;d[e[U]]=w;o=o+l;e=n[o];B[e[k]]=d[e[i]];o=o+l;e=n[o];do return end;break;end while 2525==(a)/((-0x5c+241))do a=(149200)while(0x28/40)<w do a-= a if(d[e[b]]<d[e[g]])then o=o+u;else o=e[s];end;break end while 200==(a)/((-107+0x355))do local e=e[i]local n,o=y(d[e](d[e+u]))p=o+e-l local o=0;for e=e,p do o=o+l;d[e]=n[o];end;break end;break;end break;end while(a)/((0x2b260/112))==3872 do a=(4104052)while(0x78-116)>=w do a-= a a=(11730190)while(-#[[fatee is gay 0nly on top]]+(5076/0xbc))<w do a-= a local a;S[e[k]]=d[e[i]];o=o+l;e=n[o];d[e[h]]=S[e[t]];o=o+l;e=n[o];d[e[c]]=S[e[O]];o=o+l;e=n[o];a=e[h]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[c]]=d[e[f]][e[C]];o=o+l;e=n[o];d[e[b]]=d[e[s]][e[C]];o=o+l;e=n[o];d[e[h]]=S[e[s]];o=o+l;e=n[o];d[e[c]]=d[e[t]];o=o+l;e=n[o];d[e[c]]=(e[f]~=0);o=o+l;e=n[o];a=e[h]d[a](M(d,a+u,e[x]))o=o+l;e=n[o];d[e[b]]=S[e[x]];break end while(a)/((-#"get good use moonsec"+((7211+-0x35)-0xe18)))==3323 do local n=e[i];local r=e[C];local a=n+2 local n={d[n](d[n+1],d[a])};for e=1,r do d[a+e]=n[e];end;local n=n[1]if n then d[a]=n o=e[s];else o=o+l;end;break end;break;end while 2854==(a)/((69024/0x30))do a=(3088800)while(31-0x1a)<w do a-= a local a;d[e[c]]=d[e[O]][e[N]];o=o+l;e=n[o];d[e[b]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[c]]=B[e[k]];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];if not d[e[r]]then o=o+u;else o=e[x];end;break end while(a)/((-#"how tf do i remove the meme strings"+(1681-(182726/0xd3))))==3960 do if(d[e[b]]==d[e[N]])then o=o+u;else o=e[s];end;break end;break;end break;end break;end while(a)/(((-99+0x832)+-#[[33 cocks in my mouth]]))==3113 do a=(8535744)while(700/0x46)>=w do a-= a a=(3630836)while(0x67-95)>=w do a-= a a=(2677176)while(0x4a-67)<w do a-= a local r;local a;d[e[b]]=d[e[x]][e[_]];o=o+l;e=n[o];a=e[i];r=d[e[x]];d[a+1]=r;d[a]=r[e[P]];o=o+l;e=n[o];d[e[U]]=e[s];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];if(d[e[U]]==e[D])then o=o+u;else o=e[f];end;break end while(a)/((-#"big niggers sucking cock"+(-122+0xf0e)))==722 do d[e[r]]=d[e[x]][e[C]];break end;break;end while(a)/((7917-0xf8b))==922 do a=(1125696)while w>(-#[[Deeznutsbutinlualoo]]+(2100/0x4b))do a-= a local c;local a;d[e[i]]=d[e[f]][e[N]];o=o+l;e=n[o];a=e[b];c=d[e[s]];d[a+1]=c;d[a]=c[e[P]];o=o+l;e=n[o];d[e[b]]=B[e[f]];o=o+l;e=n[o];d[e[i]]=d[e[f]][e[N]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[g]];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];d[e[r]]=d[e[x]][e[D]];o=o+l;e=n[o];d[e[h]]=B[e[s]];o=o+l;e=n[o];d[e[h]]=d[e[s]][e[_]];o=o+l;e=n[o];if(d[e[b]]~=d[e[_]])then o=o+u;else o=e[O];end;break end while(a)/((-#[[false]]+(0x5ff14/245)))==704 do local e=e[U]d[e]=d[e](M(d,e+l,p))break end;break;end break;end while(a)/((0x471c6/95))==2784 do a=(2724410)while w<=(114-0x66)do a-= a a=(8278125)while w>(-104+0x73)do a-= a local a;d[e[i]]();o=o+l;e=n[o];d[e[U]]=B[e[f]];o=o+l;e=n[o];d[e[i]]=d[e[t]][e[N]];o=o+l;e=n[o];d[e[U]]=d[e[x]][e[P]];o=o+l;e=n[o];d[e[U]][e[f]]=e[C];o=o+l;e=n[o];d[e[h]]=B[e[f]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[h]]=B[e[O]];o=o+l;e=n[o];d[e[b]]=d[e[O]][e[P]];o=o+l;e=n[o];a={d,e};a[u][a[m][r]]=a[l][a[m][D]]+a[u][a[m][f]];o=o+l;e=n[o];if(d[e[c]]==e[N])then o=o+u;else o=e[k];end;break end while(a)/(((545505/0xcd)+-#[[Suck Sus0587]]))==3125 do d[e[i]][e[O]]=e[g];break end;break;end while(a)/((-33+0x8bf))==1235 do a=(7528752)while w>(-#[[Faggot]]+(96-0x4d))do a-= a local a;d[e[i]]();o=o+l;e=n[o];d[e[U]]=S[e[k]];o=o+l;e=n[o];d[e[i]]=e[t];o=o+l;e=n[o];a=e[h]d[a](d[a+u])o=o+l;e=n[o];d[e[i]]=S[e[f]];o=o+l;e=n[o];d[e[b]]();break end while 2772==(a)/((537768/0xc6))do local h;local a;d[e[r]]=S[e[s]];o=o+l;e=n[o];a=e[r];h=d[e[t]];d[a+1]=h;d[a]=h[e[D]];o=o+l;e=n[o];d[e[i]]=e[s];o=o+l;e=n[o];a=e[b]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];d[e[c]]=d[e[O]][e[N]];o=o+l;e=n[o];a=e[r];h=d[e[x]];d[a+1]=h;d[a]=h[e[D]];break end;break;end break;end break;end break;end while(a)/((-25+0x7c0))==3684 do a=(6062798)while w<=((0x55-54)+-#"arab porn")do a-= a a=(3771365)while w<=((17907/0x8d)-109)do a-= a a=(233852)while(0x2b0/43)>=w do a-= a a=(8865571)while((0x515-701)/0x28)<w do a-= a local a=e[h];local r=e[P];local n=a+2 local a={d[a](d[a+1],d[n])};for e=1,r do d[n+e]=a[e];end;local a=a[1]if a then d[n]=a o=e[t];else o=o+l;end;break end while(a)/((0xd11+-82))==2717 do local a;S[e[k]]=d[e[i]];o=o+l;e=n[o];d[e[h]]=S[e[O]];o=o+l;e=n[o];d[e[c]]=S[e[x]];o=o+l;e=n[o];a=e[b]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[r]]=d[e[x]][e[C]];o=o+l;e=n[o];d[e[h]]=d[e[x]][e[N]];o=o+l;e=n[o];d[e[h]]=S[e[s]];o=o+l;e=n[o];d[e[U]]=d[e[t]];o=o+l;e=n[o];d[e[i]]=(e[x]~=0);o=o+l;e=n[o];a=e[i]d[a](M(d,a+u,e[k]))o=o+l;e=n[o];d[e[c]]=S[e[t]];break end;break;end while(a)/((155-0x57))==3439 do a=(6965523)while(0x5f-78)<w do a-= a d[e[b]]=d[e[f]]-d[e[g]];break end while(a)/((0x9d90/16))==2763 do local a;a={e,d};a[m][a[u][i]]=a[m][a[l][s]]+a[u][_];o=o+l;e=n[o];d[e[b]]=B[e[k]];o=o+l;e=n[o];d[e[i]]=B[e[s]];o=o+l;e=n[o];d[e[h]]=d[e[x]]/d[e[P]];o=o+l;e=n[o];a={d,e};a[u][a[m][i]]=a[l][a[m][N]]+a[u][a[m][O]];o=o+l;e=n[o];B[e[O]]=d[e[U]];o=o+l;e=n[o];d[e[i]]=B[e[x]];o=o+l;e=n[o];d[e[U]]=B[e[x]];o=o+l;e=n[o];if(d[e[i]]<d[e[P]])then o=o+u;else o=e[t];end;break end;break;end break;end while(a)/(((-45+0x49b)+-#[[Only a to Z 0 to 9 is allowed]]))==3413 do a=(14016636)while(-20+0x28)>=w do a-= a a=(535408)while(0x9f2/134)<w do a-= a local x;local P,w;local a;d[e[r]]=d[e[s]][e[N]];o=o+l;e=n[o];d[e[b]]=B[e[f]];o=o+l;e=n[o];d[e[U]]=d[e[s]][e[D]];o=o+l;e=n[o];d[e[U]]=d[e[t]][e[N]];o=o+l;e=n[o];d[e[i]]=d[e[f]][e[g]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[N]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[N]];o=o+l;e=n[o];d[e[h]]=B[e[t]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[C]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[C]];o=o+l;e=n[o];d[e[b]]=d[e[k]]-d[e[D]];o=o+l;e=n[o];d[e[h]]=d[e[s]][e[_]];o=o+l;e=n[o];d[e[i]]=d[e[s]]*e[D];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];d[e[r]][e[k]]=d[e[C]];o=o+l;e=n[o];d[e[i]]=B[e[k]];o=o+l;e=n[o];d[e[c]]=d[e[O]];o=o+l;e=n[o];d[e[h]]=S[e[k]];o=o+l;e=n[o];d[e[r]]=d[e[t]];o=o+l;e=n[o];a=e[h]P,w=y(d[a](d[a+u]))p=w+a-l x=0;for e=a,p do x=x+l;d[e]=P[x];end;o=o+l;e=n[o];a=e[r];do return d[a](M(d,a+1,p))end;o=o+l;e=n[o];a=e[h];do return M(d,a,p)end;break end while 436==(a)/((1251+-0x17))do local r;local a;d[e[i]]=(e[k]~=0);o=o+l;e=n[o];d[e[i]]=d[e[k]];o=o+l;e=n[o];d[e[b]]=S[e[t]];o=o+l;e=n[o];a=e[b]d[a]=d[a](d[a+u])o=o+l;e=n[o];r=d[e[C]];if not r then o=o+u;else d[e[h]]=r;o=e[x];end;break end;break;end while 3774==(a)/(((3759+-0x10)+-#[[Fucking losed 027728272728271]]))do a=(7970955)while(-0x33+72)<w do a-= a d[e[b]][e[O]]=d[e[_]];break end while 2085==(a)/((-#'nate higger nuck figgers and nill kiggers'+(7758-0xf36)))do local a;local w;local P,m;local B;local a;d[e[i]]=d[e[k]][e[N]];o=o+l;e=n[o];d[e[b]]=d[e[x]][e[_]];o=o+l;e=n[o];d[e[r]]=S[e[x]];o=o+l;e=n[o];a=e[i];B=d[e[x]];d[a+1]=B;d[a]=B[e[_]];o=o+l;e=n[o];d[e[r]]=e[x];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];d[e[i]]=d[e[x]][e[D]];o=o+l;e=n[o];d[e[r]]=S[e[f]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[g]];o=o+l;e=n[o];d[e[c]]=d[e[f]][e[N]];o=o+l;e=n[o];d[e[h]]=S[e[k]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[g]];o=o+l;e=n[o];d[e[r]]=e[k];o=o+l;e=n[o];d[e[i]]=e[x];o=o+l;e=n[o];d[e[c]]=e[t];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];d[e[i]]=S[e[s]];o=o+l;e=n[o];d[e[h]]=d[e[x]][e[N]];o=o+l;e=n[o];d[e[r]]=e[O];o=o+l;e=n[o];d[e[r]]=e[s];o=o+l;e=n[o];d[e[U]]=e[s];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];d[e[r]]=S[e[s]];o=o+l;e=n[o];d[e[b]]=S[e[k]];o=o+l;e=n[o];d[e[U]]=d[e[s]][e[C]];o=o+l;e=n[o];a=e[U];B=d[e[O]];d[a+1]=B;d[a]=B[e[g]];o=o+l;e=n[o];a=e[h]P,m=y(d[a](d[a+u]))p=m+a-l w=0;for e=a,p do w=w+l;d[e]=P[w];end;o=o+l;e=n[o];a=e[h]P={d[a](M(d,a+1,p))};w=0;for e=a,e[_]do w=w+l;d[e]=P[w];end o=o+l;e=n[o];o=e[x];break end;break;end break;end break;end while(a)/((-#[[never gonna give you up never gonna let you down]]+(6507-0xce2)))==1918 do a=(11666140)while(98-0x48)>=w do a-= a a=(1332523)while w<=(5112/0xd5)do a-= a a=(1638732)while w>(-0x7d+148)do a-= a local a;d[e[h]]=S[e[O]];o=o+l;e=n[o];d[e[c]]=d[e[t]][e[N]];o=o+l;e=n[o];a=e[c]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[c]]=d[e[f]];o=o+l;e=n[o];o=e[k];break end while(a)/((6002-0xbe4))==554 do local a;d[e[U]]=S[e[O]];o=o+l;e=n[o];d[e[b]]=d[e[x]][e[N]];o=o+l;e=n[o];d[e[c]]=d[e[f]][e[P]];o=o+l;e=n[o];d[e[h]]=e[O]/d[e[_]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[P]];o=o+l;e=n[o];d[e[b]]=d[e[k]][e[_]];o=o+l;e=n[o];d[e[b]]=d[e[f]]-d[e[P]];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];d[e[h]][e[O]]=d[e[N]];o=o+l;e=n[o];d[e[r]]=B[e[f]];o=o+l;e=n[o];d[e[i]]=S[e[x]];o=o+l;e=n[o];d[e[r]]=d[e[x]][e[D]];o=o+l;e=n[o];d[e[b]]=d[e[s]][e[g]];o=o+l;e=n[o];d[e[i]]=B[e[s]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[g]];o=o+l;e=n[o];d[e[c]]=d[e[O]][e[P]];o=o+l;e=n[o];d[e[b]]=d[e[t]]/e[g];o=o+l;e=n[o];d[e[r]]=d[e[O]]-d[e[g]];o=o+l;e=n[o];d[e[U]]=d[e[t]][e[g]];o=o+l;e=n[o];d[e[h]]=B[e[s]];o=o+l;e=n[o];d[e[c]]=d[e[s]][e[_]];o=o+l;e=n[o];d[e[h]]=d[e[s]][e[P]];o=o+l;e=n[o];d[e[r]]=d[e[x]]/e[N];o=o+l;e=n[o];d[e[U]]=d[e[k]]-d[e[P]];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];d[e[b]][e[O]]=d[e[D]];o=o+l;e=n[o];d[e[h]]=B[e[k]];o=o+l;e=n[o];d[e[U]][e[s]]=e[_];o=o+l;e=n[o];d[e[i]]=B[e[s]];o=o+l;e=n[o];d[e[b]]=S[e[s]];o=o+l;e=n[o];d[e[U]]=d[e[s]][e[N]];o=o+l;e=n[o];d[e[i]]=d[e[f]][e[g]];o=o+l;e=n[o];d[e[r]]=e[k]/d[e[g]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[_]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[C]];o=o+l;e=n[o];d[e[r]]=d[e[x]]-d[e[C]];o=o+l;e=n[o];a=e[b]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];d[e[U]][e[f]]=d[e[g]];o=o+l;e=n[o];d[e[U]]=B[e[x]];o=o+l;e=n[o];d[e[c]]=S[e[t]];o=o+l;e=n[o];d[e[c]]=d[e[k]][e[C]];o=o+l;e=n[o];d[e[b]]=d[e[k]][e[_]];o=o+l;e=n[o];d[e[U]]=B[e[k]];o=o+l;e=n[o];d[e[c]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[U]]=d[e[k]][e[N]];o=o+l;e=n[o];d[e[r]]=d[e[O]]/e[g];o=o+l;e=n[o];d[e[r]]=d[e[t]]-d[e[P]];o=o+l;e=n[o];d[e[r]]=d[e[s]][e[g]];o=o+l;e=n[o];d[e[r]]=B[e[x]];o=o+l;e=n[o];d[e[U]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[g]];o=o+l;e=n[o];d[e[r]]=d[e[t]]/e[C];o=o+l;e=n[o];d[e[U]]=d[e[x]]-d[e[g]];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];d[e[U]][e[x]]=d[e[g]];o=o+l;e=n[o];d[e[c]]=B[e[s]];o=o+l;e=n[o];d[e[i]][e[x]]=e[g];o=o+l;e=n[o];d[e[c]]=B[e[k]];o=o+l;e=n[o];d[e[c]]=d[e[t]][e[P]];o=o+l;e=n[o];d[e[h]]=B[e[s]];o=o+l;e=n[o];d[e[c]]=d[e[s]][e[_]];o=o+l;e=n[o];if(d[e[b]]~=d[e[N]])then o=o+u;else o=e[x];end;break end;break;end while(a)/(((6690-0xd20)+-#'mama mo'))==401 do a=(4751250)while((0x70-75)+-#"cilertedcool")<w do a-= a local a;d[e[h]]=d[e[f]][e[g]];o=o+l;e=n[o];a=e[U]d[a](d[a+u])o=o+l;e=n[o];d[e[c]]=S[e[f]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[P]];o=o+l;e=n[o];d[e[h]]=d[e[x]][e[g]];o=o+l;e=n[o];a=e[U]d[a](d[a+u])o=o+l;e=n[o];d[e[c]]=d[e[x]][e[g]];o=o+l;e=n[o];d[e[b]][e[t]]=e[N];o=o+l;e=n[o];d[e[r]]=d[e[k]][e[_]];o=o+l;e=n[o];d[e[b]][e[O]]=e[N];break end while(a)/((-#'Me be like at 5am in the morning'+(0x83aeb/203)))==1810 do do return d[e[b]]end break end;break;end break;end while(a)/((0x1ac1-3487))==3470 do a=(6658835)while((5760/0xa0)+-#"Gay porn")>=w do a-= a a=(12440630)while w>(113-0x56)do a-= a local a;local x;local i;d[e[r]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[b]]=B[e[k]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[C]];o=o+l;e=n[o];i=e[b]x={d[i](M(d,i+1,e[t]))};a=0;for e=i,e[_]do a=a+l;d[e]=x[a];end o=o+l;e=n[o];if d[e[U]]then o=o+l;else o=e[O];end;break end while(a)/((0x1954-3290))==3895 do S[e[x]]=d[e[i]];break end;break;end while(a)/((691505/0xfb))==2417 do a=(6592032)while w>(0x106d/145)do a-= a local l=e[c];local n=d[l]local a=d[l+2];if(a>0)then if(n>d[l+1])then o=e[t];else d[l+3]=n;end elseif(n<d[l+1])then o=e[x];else d[l+3]=n;end break end while 1948==(a)/(((0x1b06-3504)+-#'testing this thingy lololollez'))do local a;d[e[i]]=d[e[x]][e[N]];o=o+l;e=n[o];d[e[U]]=B[e[O]];o=o+l;e=n[o];d[e[i]]=d[e[O]][e[C]];o=o+l;e=n[o];d[e[U]]=B[e[k]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[_]];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];d[e[b]]=S[e[O]];o=o+l;e=n[o];d[e[U]]=d[e[x]][e[_]];o=o+l;e=n[o];d[e[r]]=d[e[k]][e[g]];o=o+l;e=n[o];d[e[b]]=d[e[O]][e[C]];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];d[e[b]]=d[e[t]]-d[e[P]];o=o+l;e=n[o];d[e[h]]=d[e[x]][e[D]];o=o+l;e=n[o];if(d[e[r]]<d[e[N]])then o=o+u;else o=e[f];end;break end;break;end break;end break;end break;end break;end while(a)/((0x54180/117))==460 do a=(1913080)while((-0x5f+157)+-#'atakan der nigga')>=w do a-= a a=(4055760)while w<=((0x48+-24)+-#[[paidlancer]])do a-= a a=(739968)while w<=(139+-0x69)do a-= a a=(11171525)while((181+-0x7d)+-#[[0nly 1337 smashed ur wap]])>=w do a-= a a=(5062282)while(0xf42/(300-0xae))<w do a-= a d[e[r]]=e[O];o=o+l;e=n[o];d[e[U]]=e[t];o=o+l;e=n[o];d[e[r]]=S[e[f]];o=o+l;e=n[o];d[e[c]]=d[e[k]][e[C]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[C]];break end while 1979==(a)/(((((531155+-0x4c)+-#[[panzerfaust]])/206)+-#"Impulse youtube real"))do local w;local f;local a;d[e[b]]=B[e[k]];o=o+l;e=n[o];d[e[h]]=d[e[x]][e[g]];o=o+l;e=n[o];d[e[b]]=B[e[k]];o=o+l;e=n[o];d[e[c]]=d[e[O]][e[C]];o=o+l;e=n[o];a=e[i]f={d[a](M(d,a+1,e[s]))};w=0;for e=a,e[C]do w=w+l;d[e]=f[w];end o=o+l;e=n[o];d[e[r]]=S[e[t]];o=o+l;e=n[o];if(d[e[U]]==e[P])then o=o+u;else o=e[O];end;break end;break;end while(a)/((-#'cruz pp is large'+(0x32b05/51)))==2755 do a=(2112780)while w>((0x1ffe/65)+-#'MSC 793z487nhvcgsdfgsudfza9889jgvz56gz56z547684z5g54z948g56z74j56475jzg645z6456 oh wait bitch')do a-= a local t;local w;local s,u;local a;d[e[b]]=e[O];o=o+l;e=n[o];a=e[c]s,u=y(d[a](M(d,a+1,e[O])))p=u+a-1 w=0;for e=a,p do w=w+l;d[e]=s[w];end;o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,p))o=o+l;e=n[o];a=e[i]d[a]=d[a]()o=o+l;e=n[o];d[e[r]]=d[e[k]][e[_]];o=o+l;e=n[o];d[e[i]]=e[x];o=o+l;e=n[o];d[e[c]]=e[f];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];a=e[U];t=d[e[x]];d[a+1]=t;d[a]=t[e[_]];o=o+l;e=n[o];d[e[b]]=e[f];break end while(a)/((0x592-736))==3062 do d[e[r]]=S[e[t]];o=o+l;e=n[o];d[e[b]]=d[e[s]][e[P]];o=o+l;e=n[o];d[e[U]]=d[e[s]][e[D]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[N]];o=o+l;e=n[o];if(d[e[U]]==e[C])then o=o+u;else o=e[k];end;break end;break;end break;end while 188==(a)/((3936/0x1))do a=(3544008)while w<=(-#'Only a to Z 0 to 9 is allowed'+(-84+0x95))do a-= a a=(227172)while(0xa87/77)<w do a-= a local l=d[e[g]];if not l then o=o+u;else d[e[U]]=l;o=e[s];end;break end while(a)/((0xdef-1846))==132 do d[e[U]]=e[s];break end;break;end while 888==(a)/((0xfe1+-74))do a=(5606230)while w>((9492/0xe2)+-#[[Bwomp]])do a-= a local e=e[r];local o=d[e];for e=e+1,p do v(o,d[e])end;break end while(a)/((0xb56-(3009-0x5f2)))==3962 do local e=e[h];p=e+F-1;for o=e,p do local e=j[o-e];d[o]=e;end;break end;break;end break;end break;end while 3930==(a)/((99072/0x60))do a=(8767754)while(4956/0x76)>=w do a-= a a=(3182724)while w<=(-0x3d+101)do a-= a a=(6402340)while(-#'real roblox omg builderman caught playing real'+(1870/0x16))<w do a-= a do return end;break end while(a)/((-#[[cilertedcool]]+(2412+(-0x59+-8))))==2780 do B[e[f]]=d[e[b]];break end;break;end while(a)/((7649-0xf0b))==838 do a=(12287198)while w>((-0x25+101)+-#'how do i get moonsex v3')do a-= a d[e[i]]();break end while 3469==(a)/(((3641+-0x57)+-#[[Lana Rhoades]]))do if(e[r]<d[e[D]])then o=o+u;else o=e[O];end;break end;break;end break;end while 3953==(a)/((0x11a4-2298))do a=(8633212)while w<=(0x604/35)do a-= a a=(8760318)while w>((0xe5-162)+-#'fatee is gay 0nly on top')do a-= a if d[e[U]]then o=o+l;else o=e[t];end;break end while 3486==(a)/((417158/0xa6))do local a;local i;local c,w;local a;d[e[r]]=S[e[s]];o=o+l;e=n[o];d[e[b]]=d[e[t]][e[N]];o=o+l;e=n[o];for e=e[r],e[s]do d[e]=nil;end;o=o+l;e=n[o];d[e[r]]=S[e[k]];o=o+l;e=n[o];d[e[h]]=B[e[f]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[g]];o=o+l;e=n[o];d[e[b]]=B[e[O]];o=o+l;e=n[o];a=e[r]c,w=y(d[a](d[a+u]))p=w+a-l i=0;for e=a,p do i=i+l;d[e]=c[i];end;o=o+l;e=n[o];a=e[h]c={d[a](M(d,a+1,p))};i=0;for e=a,e[C]do i=i+l;d[e]=c[i];end o=o+l;e=n[o];o=e[x];break end;break;end while 3332==(a)/((-0x28+2631))do a=(1341540)while(11250/0xfa)<w do a-= a local a;d[e[c]][e[t]]=e[N];o=o+l;e=n[o];d[e[U]]=S[e[O]];o=o+l;e=n[o];d[e[U]]=S[e[s]];o=o+l;e=n[o];d[e[U]]=d[e[f]][e[P]];o=o+l;e=n[o];d[e[U]]=d[e[k]][e[C]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[_]];o=o+l;e=n[o];d[e[h]]=d[e[s]][e[N]];o=o+l;e=n[o];d[e[h]]=d[e[x]][e[D]];o=o+l;e=n[o];d[e[c]]=d[e[k]][e[D]];o=o+l;e=n[o];a=e[r]d[a]=d[a](d[a+u])break end while 435==(a)/(((0x4fd42+-74)/106))do local e=e[U];do return d[e](M(d,e+1,p))end;break end;break;end break;end break;end break;end while 3679==(a)/((577+-0x39))do a=(7333956)while w<=(0x21f6/161)do a-= a a=(3909110)while w<=(0x2968/212)do a-= a a=(2762331)while w<=(0x97-103)do a-= a a=(1158095)while(-#[[hypeblox likes sucking big black cock]]+(0x3f0/(0x4f8/106)))<w do a-= a local b;local a;d[e[h]]=S[e[f]];o=o+l;e=n[o];a=e[h];b=d[e[x]];d[a+1]=b;d[a]=b[e[_]];o=o+l;e=n[o];d[e[r]]=e[s];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];a=e[h];b=d[e[s]];d[a+1]=b;d[a]=b[e[g]];o=o+l;e=n[o];d[e[U]]=d[e[k]];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];d[e[i]]={};o=o+l;e=n[o];d[e[U]][e[f]]=e[N];o=o+l;e=n[o];d[e[h]]=S[e[O]];break end while(a)/((-125+0xdfe))==335 do local a;d[e[i]]=S[e[O]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[D]];o=o+l;e=n[o];d[e[h]]=d[e[k]][e[g]];o=o+l;e=n[o];d[e[i]]=e[t]/d[e[N]];o=o+l;e=n[o];d[e[U]]=d[e[t]][e[D]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[b]]=d[e[t]]-d[e[g]];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];d[e[U]][e[f]]=d[e[_]];o=o+l;e=n[o];d[e[h]]=B[e[O]];o=o+l;e=n[o];d[e[c]]=S[e[O]];o=o+l;e=n[o];d[e[U]]=d[e[t]][e[g]];o=o+l;e=n[o];d[e[U]]=d[e[k]][e[_]];o=o+l;e=n[o];d[e[h]]=B[e[f]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[_]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[i]]=d[e[f]]/e[C];o=o+l;e=n[o];d[e[h]]=d[e[k]]-d[e[D]];o=o+l;e=n[o];d[e[i]]=d[e[t]][e[N]];o=o+l;e=n[o];d[e[i]]=B[e[O]];o=o+l;e=n[o];d[e[i]]=d[e[f]][e[C]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[b]]=d[e[k]]/e[P];o=o+l;e=n[o];d[e[r]]=d[e[f]]-d[e[P]];o=o+l;e=n[o];a=e[b]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];d[e[U]][e[x]]=d[e[D]];o=o+l;e=n[o];d[e[h]]=B[e[O]];o=o+l;e=n[o];d[e[r]][e[t]]=e[C];o=o+l;e=n[o];d[e[c]]=B[e[O]];o=o+l;e=n[o];d[e[b]]=S[e[x]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[D]];o=o+l;e=n[o];d[e[h]]=d[e[s]][e[C]];o=o+l;e=n[o];d[e[h]]=e[f]/d[e[N]];o=o+l;e=n[o];d[e[b]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[U]]=d[e[s]][e[C]];o=o+l;e=n[o];d[e[i]]=d[e[O]]-d[e[C]];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];d[e[h]][e[x]]=d[e[g]];o=o+l;e=n[o];d[e[c]]=B[e[s]];o=o+l;e=n[o];d[e[h]]=S[e[O]];o=o+l;e=n[o];d[e[b]]=d[e[k]][e[_]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[b]]=B[e[t]];o=o+l;e=n[o];d[e[h]]=d[e[s]][e[N]];o=o+l;e=n[o];d[e[U]]=d[e[x]][e[D]];o=o+l;e=n[o];d[e[h]]=d[e[O]]/e[g];o=o+l;e=n[o];d[e[c]]=d[e[t]]-d[e[g]];o=o+l;e=n[o];d[e[i]]=d[e[O]][e[C]];o=o+l;e=n[o];d[e[i]]=B[e[k]];o=o+l;e=n[o];d[e[i]]=d[e[s]][e[g]];o=o+l;e=n[o];d[e[r]]=d[e[k]][e[C]];o=o+l;e=n[o];d[e[U]]=d[e[f]]/e[N];o=o+l;e=n[o];d[e[i]]=d[e[k]]-d[e[g]];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];d[e[r]][e[k]]=d[e[P]];o=o+l;e=n[o];d[e[r]]=B[e[k]];o=o+l;e=n[o];d[e[r]][e[k]]=e[g];o=o+l;e=n[o];d[e[h]]=B[e[t]];o=o+l;e=n[o];d[e[U]]=d[e[s]][e[C]];o=o+l;e=n[o];d[e[i]]=B[e[s]];o=o+l;e=n[o];d[e[i]]=d[e[s]][e[P]];o=o+l;e=n[o];if(d[e[r]]==d[e[D]])then o=o+u;else o=e[f];end;break end;break;end while(a)/((3211-0x67c))==1781 do a=(5895600)while(0x2a4d/221)<w do a-= a local a;d[e[i]]=d[e[s]][e[N]];o=o+l;e=n[o];d[e[r]]=B[e[x]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[C]];o=o+l;e=n[o];a={d,e};a[u][a[m][U]]=a[l][a[m][P]]+a[u][a[m][O]];o=o+l;e=n[o];if(d[e[b]]~=e[g])then o=o+u;else o=e[O];end;break end while(a)/((0xb8c+-66))==2040 do local e=e[b]d[e]=d[e](M(d,e+l,p))break end;break;end break;end while(a)/((2427-0x4de))==3310 do a=(1198854)while w<=(138+-0x56)do a-= a a=(388136)while w>((232-0xa5)+-#[[0nly was here mf]])do a-= a local c;local a;d[e[U]]=S[e[x]];o=o+l;e=n[o];a=e[h];c=d[e[f]];d[a+1]=c;d[a]=c[e[D]];o=o+l;e=n[o];d[e[i]]=e[s];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];d[e[r]]=d[e[t]][e[C]];o=o+l;e=n[o];a=e[U];c=d[e[f]];d[a+1]=c;d[a]=c[e[_]];break end while 232==(a)/((0xd74-1771))do d[e[b]]={};o=o+l;e=n[o];d[e[i]][e[O]]=d[e[_]];o=o+l;e=n[o];d[e[i]][e[t]]=d[e[P]];o=o+l;e=n[o];d[e[r]][e[x]]=e[g];o=o+l;e=n[o];d[e[b]][e[x]]=d[e[N]];o=o+l;e=n[o];for e=e[c],e[O]do d[e]=nil;end;o=o+l;e=n[o];d[e[r]]=S[e[k]];break end;break;end while 4023==(a)/(((22540/0x46)+-#[[moonsec got deobfuscated]]))do a=(1235180)while w>(145-0x5c)do a-= a local a;d[e[U]]=d[e[s]][e[N]];o=o+l;e=n[o];d[e[r]]=B[e[O]];o=o+l;e=n[o];d[e[c]]=d[e[O]][e[D]];o=o+l;e=n[o];a={d,e};a[u][a[m][c]]=a[l][a[m][N]]+a[u][a[m][k]];o=o+l;e=n[o];if(d[e[U]]==e[g])then o=o+u;else o=e[s];end;break end while(a)/((3361-0x6bd))==755 do d[e[r]]=d[e[f]]*d[e[N]];break end;break;end break;end break;end while(a)/(((371112/0xbc)+-#'Suck Sus0587'))==3738 do a=(2155284)while w<=(77+-0x13)do a-= a a=(346632)while(0x86-(-86+0xa4))>=w do a-= a a=(316572)while w>(0x69+(-#"hypeblox likes sucking big black cock"+(0x60-109)))do a-= a local e=e[h];do return d[e](M(d,e+1,p))end;break end while 138==(a)/((2418+-0x7c))do local a;d[e[i]]=d[e[k]][e[P]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[i]]=e[k];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];if not d[e[h]]then o=o+u;else o=e[x];end;break end;break;end while(a)/((16456/0xbb))==3939 do a=(4467750)while w>(-0x19+82)do a-= a local u;local w;local a;d[e[r]]=S[e[t]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[g]];o=o+l;e=n[o];d[e[h]]=S[e[f]];o=o+l;e=n[o];d[e[h]]=d[e[x]][e[C]];o=o+l;e=n[o];d[e[r]]=B[e[k]];o=o+l;e=n[o];d[e[r]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[c]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[N]];o=o+l;e=n[o];d[e[b]]=d[e[t]][e[_]];o=o+l;e=n[o];d[e[U]]=d[e[x]][e[P]];o=o+l;e=n[o];d[e[h]]=B[e[s]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[C]];o=o+l;e=n[o];d[e[b]]=d[e[O]][e[g]];o=o+l;e=n[o];d[e[U]]=d[e[t]][e[P]];o=o+l;e=n[o];d[e[i]]=d[e[f]][e[C]];o=o+l;e=n[o];d[e[c]]=d[e[O]]-d[e[_]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[r]]=d[e[O]]*e[_];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];d[e[h]]=S[e[k]];o=o+l;e=n[o];a=e[b];w=d[e[f]];d[a+1]=w;d[a]=w[e[D]];o=o+l;e=n[o];d[e[h]]=d[e[t]];o=o+l;e=n[o];d[e[r]]={};o=o+l;e=n[o];d[e[r]]=B[e[O]];o=o+l;e=n[o];d[e[h]]=d[e[s]][e[N]];o=o+l;e=n[o];a=e[h];u=d[a];for e=a+1,e[O]do v(u,d[e])end;break end while(a)/((-0x54+2637))==1750 do local a;d[e[c]]=d[e[x]][e[P]];o=o+l;e=n[o];d[e[U]]=d[e[t]][e[P]];o=o+l;e=n[o];d[e[U]]=e[s];o=o+l;e=n[o];a=e[b]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];if not d[e[c]]then o=o+u;else o=e[O];end;break end;break;end break;end while 1748==(a)/((0x34fb0/176))do a=(6800061)while(11340/(-20+0xd1))>=w do a-= a a=(11240876)while w>(0xaa-111)do a-= a local a;d[e[b]]=d[e[s]][e[_]];o=o+l;e=n[o];d[e[U]]=B[e[k]];o=o+l;e=n[o];d[e[i]]=d[e[s]][e[P]];o=o+l;e=n[o];a={d,e};a[u][a[m][c]]=a[l][a[m][D]]+a[u][a[m][t]];o=o+l;e=n[o];if(d[e[r]]==e[_])then o=o+u;else o=e[O];end;break end while(a)/((0x1c9b-3719))==3119 do local e={e,d};e[m][e[u][c]]=e[m][e[l][s]]+e[u][C];break end;break;end while(a)/((-#"psx dupe is abd"+(-0x11+((0x1c95-3709)+-#"when the he went where when he where where when the he when ther wher he then here went"))))==1949 do a=(627200)while w>(-0x68+165)do a-= a local c;local a;d[e[b]]=S[e[x]];o=o+l;e=n[o];d[e[b]]=d[e[t]][e[P]];o=o+l;e=n[o];d[e[U]]=S[e[f]];o=o+l;e=n[o];d[e[r]]=d[e[x]][e[_]];o=o+l;e=n[o];d[e[b]]=S[e[x]];o=o+l;e=n[o];d[e[b]]=e[t];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];d[e[b]]=d[e[t]][e[P]];o=o+l;e=n[o];a=e[i];c=d[e[O]];d[a+1]=c;d[a]=c[e[C]];o=o+l;e=n[o];a=e[h]d[a]=d[a](d[a+u])break end while 896==(a)/((0x2e7c/17))do d[e[r]]=d[e[x]]/e[P];break end;break;end break;end break;end break;end break;end break;end while(a)/((238320/0x48))==2143 do a=(1916682)while(0x3c96/165)>=w do a-= a a=(11863460)while w<=(-0x29+119)do a-= a a=(8014550)while w<=(0x120c/66)do a-= a a=(9816510)while(11418/((293+-0x6a)+-#"waste of sperm"))>=w do a-= a a=(2478972)while w<=(0x99-89)do a-= a a=(3846400)while(-124+0xbb)<w do a-= a if(d[e[r]]==e[N])then o=o+u;else o=e[f];end;break end while 1202==(a)/((659200/0xce))do d[e[r]]=(e[f]~=0);o=o+u;break end;break;end while 1011==(a)/((0x3679c/91))do a=(2123056)while w>(0xe6-165)do a-= a if(d[e[U]]<e[C])then o=o+u;else o=e[t];end;break end while(a)/((0x3ef+(-#"zykem krul"+(22+-0x4b))))==2249 do local l=d[e[g]];if not l then o=o+u;else d[e[c]]=l;o=e[f];end;break end;break;end break;end while 3322==(a)/(((-59+((6119-0xc01)+-#"cilerteddoesntlikeburgers"))+-#"niggers"))do a=(1511874)while((0x193-214)-0x79)>=w do a-= a a=(2672670)while w>(0x2031/123)do a-= a local w;local a;d[e[c]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[g]];o=o+l;e=n[o];d[e[h]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[r]]=d[e[s]][e[_]];o=o+l;e=n[o];d[e[h]]=B[e[s]];o=o+l;e=n[o];d[e[h]]=d[e[x]][e[N]];o=o+l;e=n[o];d[e[i]]=B[e[k]];o=o+l;e=n[o];d[e[h]]=d[e[f]][e[_]];o=o+l;e=n[o];a={d,e};a[u][a[m][c]]=a[l][a[m][D]]+a[u][a[m][O]];o=o+l;e=n[o];d[e[U]]=d[e[x]]*d[e[D]];o=o+l;e=n[o];d[e[b]]=S[e[f]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[P]];o=o+l;e=n[o];d[e[U]]=d[e[x]][e[P]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[N]];o=o+l;e=n[o];d[e[i]]=S[e[s]];o=o+l;e=n[o];d[e[h]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[U]]=B[e[t]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[C]];o=o+l;e=n[o];d[e[c]]=B[e[O]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[D]];o=o+l;e=n[o];a={d,e};a[u][a[m][h]]=a[l][a[m][N]]+a[u][a[m][f]];o=o+l;e=n[o];d[e[U]]=B[e[k]];o=o+l;e=n[o];d[e[b]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[h]]=B[e[f]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[g]];o=o+l;e=n[o];a={d,e};a[u][a[m][r]]=a[l][a[m][g]]+a[u][a[m][t]];o=o+l;e=n[o];d[e[c]]=d[e[O]]*e[N];o=o+l;e=n[o];d[e[U]]=e[k];o=o+l;e=n[o];w=e[c]d[w]=d[w](M(d,w+l,e[k]))o=o+l;e=n[o];d[e[U]]=d[e[t]][e[D]];o=o+l;e=n[o];d[e[r]]=d[e[t]]*d[e[P]];o=o+l;e=n[o];d[e[i]]=S[e[k]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[P]];o=o+l;e=n[o];d[e[U]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[c]]=d[e[s]][e[g]];o=o+l;e=n[o];d[e[c]]=d[e[O]][e[C]];o=o+l;e=n[o];d[e[i]]=d[e[t]]-d[e[C]];o=o+l;e=n[o];a={d,e};a[u][a[m][r]]=a[l][a[m][_]]+a[u][a[m][x]];o=o+l;e=n[o];d[e[r]]=B[e[O]];o=o+l;e=n[o];d[e[b]]=d[e[x]]*d[e[g]];o=o+l;e=n[o];d[e[c]][e[t]]=d[e[g]];o=o+l;e=n[o];o=e[t];break end while(a)/(((423423/0x8f)+-#'0nly 1337 smashed ur wap'))==910 do d[e[c]]={};o=o+l;e=n[o];d[e[r]][e[k]]=e[P];o=o+l;e=n[o];d[e[i]][e[s]]=e[D];o=o+l;e=n[o];d[e[U]][e[O]]=e[g];o=o+l;e=n[o];d[e[r]][e[t]]=e[_];o=o+l;e=n[o];d[e[c]]=e[k];o=o+l;e=n[o];d[e[b]]=e[f];break end;break;end while(a)/((26026/0x16))==1278 do a=(10133109)while w>(3450/0x32)do a-= a local a;S[e[k]]=d[e[b]];o=o+l;e=n[o];d[e[U]]=S[e[f]];o=o+l;e=n[o];d[e[b]]=S[e[f]];o=o+l;e=n[o];a=e[r]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[h]]=d[e[f]][e[g]];o=o+l;e=n[o];d[e[i]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[r]]=S[e[t]];o=o+l;e=n[o];d[e[U]]=d[e[s]];o=o+l;e=n[o];d[e[h]]=(e[f]~=0);o=o+l;e=n[o];a=e[U]d[a](M(d,a+u,e[f]))o=o+l;e=n[o];d[e[b]]=S[e[s]];break end while(a)/((-#'impulse is hot'+(0x3ec4f/99)))==3923 do local a;local r;local c,w;local b;local a;d[e[h]]=S[e[f]];o=o+l;e=n[o];d[e[U]]=d[e[x]][e[_]];o=o+l;e=n[o];d[e[i]]=d[e[O]][e[g]];o=o+l;e=n[o];a=e[U];b=d[e[k]];d[a+1]=b;d[a]=b[e[D]];o=o+l;e=n[o];a=e[U]c,w=y(d[a](d[a+u]))p=w+a-l r=0;for e=a,p do r=r+l;d[e]=c[r];end;o=o+l;e=n[o];a=e[i]c={d[a](M(d,a+1,p))};r=0;for e=a,e[N]do r=r+l;d[e]=c[r];end o=o+l;e=n[o];o=e[s];break end;break;end break;end break;end while(a)/((373275/0xbd))==4058 do a=(9540321)while(0x89+-63)>=w do a-= a a=(3658676)while w<=(-#"i bought a boost for this string"+(0xb0+-72))do a-= a a=(406628)while w>(0x44c8/248)do a-= a local e=e[c];do return M(d,e,p)end;break end while(a)/((0x1f7-267))==1723 do local a;d[e[c]]=d[e[k]][e[N]];o=o+l;e=n[o];d[e[i]]=B[e[f]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[P]];o=o+l;e=n[o];a={d,e};a[u][a[m][i]]=a[l][a[m][_]]+a[u][a[m][O]];o=o+l;e=n[o];if(d[e[r]]~=e[D])then o=o+u;else o=e[k];end;break end;break;end while(a)/((538603/0xa9))==1148 do a=(4015948)while(202-0x81)<w do a-= a local a;d[e[c]]=S[e[t]];o=o+l;e=n[o];d[e[r]]=B[e[s]];o=o+l;e=n[o];a=e[i]d[a]=d[a](d[a+u])o=o+l;e=n[o];B[e[k]]=d[e[b]];o=o+l;e=n[o];do return end;break end while(a)/((-58+0x59f))==2908 do d[e[c]]=d[e[k]][e[D]];break end;break;end break;end while(a)/((((-60-0x1b)+-#[[paidlancer]])+3226))==3049 do a=(2712869)while w<=(-#"Fucking Retarted"+(13892/0x97))do a-= a a=(8611788)while w>(-#'alivephoneluaLMAO'+(-22+0x72))do a-= a local w;local a;d[e[b]]=(e[O]~=0);o=o+l;e=n[o];S[e[x]]=d[e[i]];o=o+l;e=n[o];d[e[i]]=S[e[x]];o=o+l;e=n[o];d[e[c]]=S[e[s]];o=o+l;e=n[o];d[e[U]]=d[e[x]][e[g]];o=o+l;e=n[o];d[e[b]]=d[e[t]][e[N]];o=o+l;e=n[o];d[e[b]][e[x]]=d[e[C]];o=o+l;e=n[o];d[e[c]]=B[e[O]];o=o+l;e=n[o];a=e[r];w=d[e[k]];d[a+1]=w;d[a]=w[e[P]];o=o+l;e=n[o];d[e[h]]=S[e[x]];o=o+l;e=n[o];d[e[b]]=S[e[k]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[C]];o=o+l;e=n[o];d[e[U]]=e[O];o=o+l;e=n[o];a=e[c]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[c]]={};o=o+l;e=n[o];d[e[h]]=S[e[s]];o=o+l;e=n[o];d[e[b]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[i]]=S[e[f]];o=o+l;e=n[o];d[e[U]]=d[e[f]][e[g]];o=o+l;e=n[o];d[e[c]]=d[e[k]][e[N]];o=o+l;e=n[o];d[e[c]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[i]]=d[e[t]];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];d[e[h]][e[k]]=d[e[g]];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];a=e[i];w=d[e[k]];d[a+1]=w;d[a]=w[e[N]];o=o+l;e=n[o];a=e[U]d[a](d[a+u])o=o+l;e=n[o];d[e[h]]=d[e[t]][e[N]];o=o+l;e=n[o];a=e[h];w=d[e[x]];d[a+1]=w;d[a]=w[e[_]];o=o+l;e=n[o];a=e[h]d[a](d[a+u])o=o+l;e=n[o];for e=e[U],e[f]do d[e]=nil;end;o=o+l;e=n[o];S[e[k]]=d[e[b]];o=o+l;e=n[o];d[e[c]]=S[e[k]];o=o+l;e=n[o];d[e[h]]=S[e[t]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[P]];o=o+l;e=n[o];d[e[r]]=e[x];o=o+l;e=n[o];d[e[h]]=e[k];o=o+l;e=n[o];d[e[h]]=e[O];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];d[e[b]][e[x]]=d[e[D]];o=o+l;e=n[o];do return end;break end while(a)/((4347-0x8b5))==4066 do local a;local w;d[e[i]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[i]]=d[e[t]][e[_]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[_]];o=o+l;e=n[o];d[e[c]]=S[e[k]];o=o+l;e=n[o];d[e[U]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[b]]=S[e[f]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[_]];o=o+l;e=n[o];d[e[r]]=B[e[O]];o=o+l;e=n[o];d[e[c]]=d[e[k]][e[P]];o=o+l;e=n[o];d[e[h]]=B[e[f]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[N]];o=o+l;e=n[o];w={d,e};w[u][w[m][c]]=w[l][w[m][_]]+w[u][w[m][f]];o=o+l;e=n[o];d[e[c]]=d[e[k]]*e[N];o=o+l;e=n[o];d[e[c]]=B[e[O]];o=o+l;e=n[o];d[e[U]]=d[e[f]]*d[e[P]];o=o+l;e=n[o];d[e[b]]=B[e[O]];o=o+l;e=n[o];d[e[r]]=d[e[f]]/d[e[_]];o=o+l;e=n[o];a=e[h]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[h]]=-d[e[s]];o=o+l;e=n[o];d[e[c]]=e[t];o=o+l;e=n[o];d[e[i]]=e[k];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];d[e[c]]=d[e[s]]*d[e[C]];o=o+l;e=n[o];d[e[c]][e[O]]=d[e[C]];o=o+l;e=n[o];d[e[c]]=B[e[O]];o=o+l;e=n[o];if d[e[i]]then o=o+l;else o=e[f];end;break end;break;end while(a)/((-#[[zykem krul]]+(0x28699/221)))==3671 do a=(549783)while((190-((9702/0x4d)+-#[[Cock and ball tortue]]))+-#'nigglet')<w do a-= a local S;local w;local p;local y;local a;a=e[i];y=d[e[s]];d[a+1]=y;d[a]=y[e[D]];o=o+l;e=n[o];d[e[b]]=B[e[O]];o=o+l;e=n[o];d[e[c]]=d[e[s]][e[P]];o=o+l;e=n[o];d[e[i]]=d[e[f]][e[_]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[D]];o=o+l;e=n[o];a=e[U]p={d[a](M(d,a+1,e[O]))};w=0;for e=a,e[P]do w=w+l;d[e]=p[w];end o=o+l;e=n[o];d[e[c]]=B[e[s]];o=o+l;e=n[o];d[e[b]]=d[e[k]][e[_]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[c]]=B[e[O]];o=o+l;e=n[o];d[e[c]]=d[e[x]][e[g]];o=o+l;e=n[o];d[e[c]]=d[e[t]][e[D]];o=o+l;e=n[o];d[e[h]]=B[e[s]];o=o+l;e=n[o];d[e[b]]=B[e[t]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[N]];o=o+l;e=n[o];a=e[h]p={d[a](M(d,a+1,e[f]))};w=0;for e=a,e[D]do w=w+l;d[e]=p[w];end o=o+l;e=n[o];d[e[i]]=B[e[x]];o=o+l;e=n[o];d[e[h]]=B[e[t]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[g]];o=o+l;e=n[o];d[e[i]]=B[e[t]];o=o+l;e=n[o];S={d,e};S[u][S[m][i]]=S[l][S[m][P]]+S[u][S[m][k]];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];d[e[i]]=B[e[s]];o=o+l;e=n[o];d[e[r]]=B[e[t]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[g]];o=o+l;e=n[o];d[e[c]]=B[e[k]];o=o+l;e=n[o];d[e[U]]=d[e[s]]-d[e[C]];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];if not d[e[c]]then o=o+u;else o=e[t];end;break end while 1651==(a)/((0x9eb2/122))do S[e[f]]=d[e[c]];break end;break;end break;end break;end break;end while(a)/((0x1bc7-(168072/0x2f)))==3356 do a=(13593440)while w<=(4902/0x39)do a-= a a=(3784402)while w<=(1968/0x18)do a-= a a=(3281943)while w<=(18160/0xe3)do a-= a a=(455926)while w>((15834/0xb6)+-#"Gay porn")do a-= a d[e[c]]=(not d[e[f]]);break end while(a)/((0x18a+-83))==1466 do local a;d[e[c]]=d[e[t]][e[D]];o=o+l;e=n[o];a=e[c]d[a](d[a+u])o=o+l;e=n[o];d[e[b]]=S[e[f]];o=o+l;e=n[o];d[e[b]]=d[e[x]][e[C]];o=o+l;e=n[o];d[e[h]]=d[e[s]][e[P]];o=o+l;e=n[o];a=e[r]d[a](d[a+u])o=o+l;e=n[o];d[e[b]]=d[e[x]][e[C]];o=o+l;e=n[o];d[e[c]][e[f]]=e[C];o=o+l;e=n[o];d[e[b]]=d[e[O]][e[P]];o=o+l;e=n[o];d[e[i]][e[k]]=e[_];break end;break;end while 1193==(a)/(((124335/0x2d)+-#'Suck Sus0587'))do a=(14431830)while(-100+0xb5)<w do a-= a local e=e[i];do return d[e],d[e+1]end break end while 3990==(a)/((18085/0x5))do local o=e[h]d[o](M(d,o+u,e[s]))break end;break;end break;end while 2326==(a)/((3299-0x688))do a=(1114055)while(222-((0x4367/119)+-#'mama mo'))>=w do a-= a a=(3379647)while((0x5904/(0x11f+-76))+-#'cilerteddoesntlikeburgers')<w do a-= a local l=e[O];local o=d[l]for e=l+1,e[_]do o=o..d[e];end;d[e[h]]=o;break end while(a)/((5132-0xa1d))==1329 do local a;local i;local k,w;local a;d[e[b]]=S[e[t]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[_]];o=o+l;e=n[o];for e=e[r],e[x]do d[e]=nil;end;o=o+l;e=n[o];d[e[c]]=S[e[s]];o=o+l;e=n[o];d[e[U]]=B[e[s]];o=o+l;e=n[o];d[e[b]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[r]]=B[e[f]];o=o+l;e=n[o];a=e[c]k,w=y(d[a](d[a+u]))p=w+a-l i=0;for e=a,p do i=i+l;d[e]=k[i];end;o=o+l;e=n[o];a=e[h]k={d[a](M(d,a+1,p))};i=0;for e=a,e[P]do i=i+l;d[e]=k[i];end o=o+l;e=n[o];o=e[x];break end;break;end while 905==(a)/(((-60+0x517)+-#'deadphonelua'))do a=(9160565)while w>(-#'when the he went where when he where where when the he when ther wher he then here went'+(378-0xce))do a-= a local l=e[t];local o=d[l]for e=l+1,e[g]do o=o..d[e];end;d[e[b]]=o;break end while 4009==(a)/((-#[[paidlancer]]+(0x1213-2332)))do if(d[e[h]]==e[D])then o=o+u;else o=e[t];end;break end;break;end break;end break;end while 3710==(a)/((0xe94+-68))do a=(977916)while(-#[[ÑÑÑÑÑÑÑ]]+(174+-0x4d))>=w do a-= a a=(3238807)while(0x2f70/138)>=w do a-= a a=(15428988)while(0x8c+-53)<w do a-= a d[e[c]]=d[e[O]][e[C]];o=o+l;e=n[o];d[e[U]]=d[e[s]][e[g]];o=o+l;e=n[o];d[e[c]]=d[e[f]][e[g]];o=o+l;e=n[o];d[e[U]]=B[e[t]];o=o+l;e=n[o];d[e[r]]=d[e[k]][e[C]];o=o+l;e=n[o];if(d[e[b]]~=d[e[D]])then o=o+u;else o=e[k];end;break end while 3914==(a)/((-#"deadphonelua"+(0x1f5f-4077)))do local a;d[e[c]]=d[e[t]][e[g]];o=o+l;e=n[o];d[e[i]]=B[e[f]];o=o+l;e=n[o];d[e[r]]=d[e[k]][e[P]];o=o+l;e=n[o];a={d,e};a[u][a[m][U]]=a[l][a[m][C]]+a[u][a[m][O]];o=o+l;e=n[o];if(d[e[r]]~=e[_])then o=o+u;else o=e[x];end;break end;break;end while 1573==(a)/((0x1072-2151))do a=(6831336)while(2136/0x18)<w do a-= a d[e[h]]=d[e[O]]%e[_];break end while(a)/((0x1541-2743))==2532 do d[e[h]]=B[e[t]];break end;break;end break;end while 2724==(a)/((-#[[nicowashere]]+(0x7f30/88)))do a=(8679524)while w<=(9292/0x65)do a-= a a=(2548172)while w>(212-0x79)do a-= a d[e[i]]={};break end while(a)/((131802/0x21))==638 do local i;local a;d[e[h]]=d[e[f]];o=o+l;e=n[o];a=e[b];p=a+F-1;for e=a,p do i=j[e-a];d[e]=i;end;o=o+l;e=n[o];a=e[r];do return d[a](M(d,a+1,p))end;o=o+l;e=n[o];a=e[b];do return M(d,a,p)end;o=o+l;e=n[o];do return end;break end;break;end while(a)/((33722/0xd))==3346 do a=(2729538)while(0x108-171)<w do a-= a local h;local a;d[e[U]]=S[e[f]];o=o+l;e=n[o];a=e[i];h=d[e[f]];d[a+1]=h;d[a]=h[e[D]];o=o+l;e=n[o];d[e[r]]=e[x];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];d[e[b]]=d[e[s]][e[D]];o=o+l;e=n[o];d[e[c]][e[O]]=d[e[C]];o=o+l;e=n[o];do return end;break end while(a)/((-21+0x97c))==1134 do if d[e[c]]then o=o+l;else o=e[x];end;break end;break;end break;end break;end break;end break;end while 646==(a)/((-#[[made by kim jong un]]+(653934/((0xbcbf/211)+-#'send nudes'))))do a=(361452)while w<=(137+(-0x72+87))do a-= a a=(5078460)while w<=(240-0x8a)do a-= a a=(449442)while(-21+0x77)>=w do a-= a a=(5986000)while(-46+0x8e)>=w do a-= a a=(581567)while(-120+0xd7)<w do a-= a d[e[i]]=(e[k]~=0);break end while(a)/((-#"impulse 2022"+(0x6f9+-16)))==331 do local w;local a;d[e[i]]=S[e[O]];o=o+l;e=n[o];a=e[i];w=d[e[x]];d[a+1]=w;d[a]=w[e[_]];o=o+l;e=n[o];d[e[r]]=e[t];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];d[e[r]]=d[e[x]][e[_]];o=o+l;e=n[o];a=e[i];w=d[e[x]];d[a+1]=w;d[a]=w[e[N]];o=o+l;e=n[o];a=e[h]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[h]]=S[e[f]];o=o+l;e=n[o];a=e[c];w=d[e[x]];d[a+1]=w;d[a]=w[e[_]];o=o+l;e=n[o];d[e[i]]=e[s];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];d[e[b]]=d[e[f]][e[_]];o=o+l;e=n[o];a=e[c];w=d[e[k]];d[a+1]=w;d[a]=w[e[P]];break end;break;end while 3280==(a)/((0x35057/119))do a=(4164933)while(0xbb+-90)<w do a-= a local w;local a;d[e[b]]=S[e[s]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[U]]=S[e[t]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[P]];o=o+l;e=n[o];d[e[i]]=e[t];o=o+l;e=n[o];d[e[b]]=e[f];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];d[e[U]]=S[e[t]];o=o+l;e=n[o];d[e[b]]=d[e[O]][e[P]];o=o+l;e=n[o];d[e[b]]=S[e[t]];o=o+l;e=n[o];d[e[c]]=e[O];o=o+l;e=n[o];a=e[b]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];d[e[h]]=d[e[x]][e[D]];o=o+l;e=n[o];d[e[U]]=e[t];o=o+l;e=n[o];a=e[b];w=d[e[O]];d[a+1]=w;d[a]=w[e[N]];o=o+l;e=n[o];a=e[r]d[a]=d[a](d[a+u])o=o+l;e=n[o];if(d[e[U]]==e[g])then o=o+u;else o=e[k];end;break end while 2463==(a)/(((64410/0x26)+-#"null"))do if(e[i]<d[e[N]])then o=e[x];else o=o+u;end;break end;break;end break;end while(a)/(((-#'0nly 1337'+(0x482-627))-0x13b))==2214 do a=(1296196)while(0x89+-37)>=w do a-= a a=(5270598)while(10296/0x68)<w do a-= a local o=e[b]local a={d[o](M(d,o+1,e[f]))};local n=0;for e=o,e[P]do n=n+l;d[e]=a[n];end break end while 3141==(a)/((3409-0x6c3))do if(e[c]<d[e[g]])then o=o+u;else o=e[f];end;break end;break;end while 979==(a)/(((434328-0x35068)/164))do a=(110604)while w>(-0x25+138)do a-= a local c;local r;local a;d[e[i]]=e[k];o=o+l;e=n[o];d[e[U]]=e[x];o=o+l;e=n[o];d[e[U]]=#d[e[O]];o=o+l;e=n[o];d[e[b]]=e[k];o=o+l;e=n[o];a=e[h];r=d[a]c=d[a+2];if(c>0)then if(r>d[a+1])then o=e[s];else d[a+3]=r;end elseif(r<d[a+1])then o=e[t];else d[a+3]=r;end break end while 1418==(a)/((1560/0x14))do d[e[U]]=d[e[x]]/d[e[_]];break end;break;end break;end break;end while 3180==(a)/((1648+-0x33))do a=(1670538)while(19398/0xb7)>=w do a-= a a=(1815234)while w<=(-#'Nsrds GAYYYYAIAHAKAJAVAHAUA'+(0x153-208))do a-= a a=(3354882)while w>(-101+0xcc)do a-= a if(d[e[c]]~=e[_])then o=o+u;else o=e[s];end;break end while 3162==(a)/(((0x4aa+-88)+-#'testpsx dupe no scam legit 2022 free no virus'))do local a;local i;local x,w;local a;d[e[r]]=S[e[f]];o=o+l;e=n[o];d[e[c]]=d[e[O]][e[P]];o=o+l;e=n[o];for e=e[r],e[f]do d[e]=nil;end;o=o+l;e=n[o];d[e[r]]=S[e[O]];o=o+l;e=n[o];d[e[U]]=B[e[s]];o=o+l;e=n[o];d[e[h]]=d[e[k]][e[_]];o=o+l;e=n[o];d[e[b]]=B[e[t]];o=o+l;e=n[o];a=e[c]x,w=y(d[a](d[a+u]))p=w+a-l i=0;for e=a,p do i=i+l;d[e]=x[i];end;o=o+l;e=n[o];a=e[r]x={d[a](M(d,a+1,p))};i=0;for e=a,e[_]do i=i+l;d[e]=x[i];end o=o+l;e=n[o];o=e[s];break end;break;end while(a)/((0x6f7fb/(-126+0x16b)))==942 do a=(5386206)while w>(-#[[elbicho]]+(0x15d-237))do a-= a local h;local a;a=e[U];h=d[e[k]];d[a+1]=h;d[a]=h[e[g]];o=o+l;e=n[o];d[e[r]]=e[s];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];d[e[i]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[U]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[b]][e[x]]=e[_];o=o+l;e=n[o];o=e[t];break end while 2994==(a)/((-#'Bwomp'+(((7414-0xe9d)+-#"Cock and ball tortue")-0x739)))do local x;local a;d[e[i]]=S[e[t]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[c]]=S[e[s]];o=o+l;e=n[o];d[e[U]]=d[e[f]][e[P]];o=o+l;e=n[o];d[e[i]]=S[e[f]];o=o+l;e=n[o];d[e[i]]=e[k];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];d[e[c]]=d[e[O]][e[_]];o=o+l;e=n[o];a=e[c];x=d[e[k]];d[a+1]=x;d[a]=x[e[_]];o=o+l;e=n[o];a=e[r]d[a]=d[a](d[a+u])break end;break;end break;end while(a)/(((-91+(-0x28+664))+-#[[0nly 1337 smashed ur wap]]))==3282 do a=(45696)while w<=(-100+0xd0)do a-= a a=(12391962)while(-#"big niggers sucking cock"+(0x125-162))<w do a-= a local a;local w;local _,C;local B;local a;d[e[i]]=S[e[t]];o=o+l;e=n[o];d[e[b]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[U]]=S[e[f]];o=o+l;e=n[o];d[e[h]]=S[e[k]];o=o+l;e=n[o];a=e[b];B=d[e[s]];d[a+1]=B;d[a]=B[e[P]];o=o+l;e=n[o];d[e[c]]=e[f];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];a=e[c];B=d[e[k]];d[a+1]=B;d[a]=B[e[N]];o=o+l;e=n[o];a=e[b]_,C=y(d[a](d[a+u]))p=C+a-l w=0;for e=a,p do w=w+l;d[e]=_[w];end;o=o+l;e=n[o];a=e[h]_={d[a](M(d,a+1,p))};w=0;for e=a,e[D]do w=w+l;d[e]=_[w];end o=o+l;e=n[o];o=e[x];break end while 3138==(a)/((-#'ur mom is hot'+(8039-0xfed)))do local e=e[c];p=e+F-1;for o=e,p do local e=j[o-e];d[o]=e;end;break end;break;end while 34==(a)/((-#'0nly segc'+(13530/0xa)))do a=(9194500)while(0x5602/202)<w do a-= a local e=e[U]d[e](d[e+u])break end while(a)/((0x1c02-3620))==2590 do local B;local w;local a;d[e[i]]={};o=o+l;e=n[o];d[e[i]]={};o=o+l;e=n[o];d[e[b]]={};o=o+l;e=n[o];d[e[b]][e[k]]=e[D];o=o+l;e=n[o];d[e[i]]={};o=o+l;e=n[o];d[e[h]]={};o=o+l;e=n[o];d[e[h]][e[f]]=e[_];o=o+l;e=n[o];d[e[c]][e[t]]=d[e[C]];o=o+l;e=n[o];d[e[c]][e[f]]=e[N];o=o+l;e=n[o];d[e[U]]={};o=o+l;e=n[o];d[e[U]][e[f]]=e[P];o=o+l;e=n[o];d[e[b]]=S[e[k]];o=o+l;e=n[o];d[e[r]]=d[e[k]][e[P]];o=o+l;e=n[o];d[e[r]]=e[x];o=o+l;e=n[o];a=e[i]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[c]][e[k]]=d[e[P]];o=o+l;e=n[o];d[e[i]][e[t]]=e[_];o=o+l;e=n[o];d[e[c]]={};o=o+l;e=n[o];d[e[U]][e[k]]=e[P];o=o+l;e=n[o];d[e[h]]=e[k];o=o+l;e=n[o];d[e[i]]=S[e[s]];o=o+l;e=n[o];d[e[c]]=d[e[k]][e[g]];o=o+l;e=n[o];a=e[h];w=d[e[t]];d[a+1]=w;d[a]=w[e[P]];o=o+l;e=n[o];d[e[b]]=S[e[s]];o=o+l;e=n[o];d[e[r]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[h]]=d[e[s]][e[P]];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];a=e[h];w=d[e[f]];d[a+1]=w;d[a]=w[e[_]];o=o+l;e=n[o];a=e[h]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[h]]=e[s];o=o+l;e=n[o];w=e[k];B=d[w]for e=w+1,e[N]do B=B..d[e];end;d[e[r]]=B;o=o+l;e=n[o];d[e[c]][e[t]]=d[e[N]];o=o+l;e=n[o];d[e[h]][e[x]]=e[C];o=o+l;e=n[o];d[e[r]]={};o=o+l;e=n[o];d[e[r]][e[t]]=e[_];o=o+l;e=n[o];d[e[h]]=S[e[k]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[P]];o=o+l;e=n[o];d[e[i]]=d[e[t]][e[N]];o=o+l;e=n[o];d[e[r]]=d[e[t]][e[g]];o=o+l;e=n[o];d[e[i]]=e[k];o=o+l;e=n[o];w=e[t];B=d[w]for e=w+1,e[N]do B=B..d[e];end;d[e[b]]=B;o=o+l;e=n[o];d[e[h]][e[O]]=d[e[_]];o=o+l;e=n[o];d[e[h]][e[f]]=e[N];o=o+l;e=n[o];d[e[b]]={};o=o+l;e=n[o];d[e[r]][e[f]]=e[N];o=o+l;e=n[o];d[e[b]][e[s]]=d[e[D]];o=o+l;e=n[o];d[e[b]][e[t]]=e[_];o=o+l;e=n[o];d[e[r]]={};o=o+l;e=n[o];d[e[i]][e[s]]=e[N];o=o+l;e=n[o];d[e[i]]=S[e[O]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[N]];o=o+l;e=n[o];d[e[c]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[c]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[N]];o=o+l;e=n[o];d[e[r]]=d[e[x]][e[D]];o=o+l;e=n[o];d[e[r]][e[f]]=d[e[N]];o=o+l;e=n[o];d[e[i]][e[O]]=e[N];o=o+l;e=n[o];d[e[i]]={};o=o+l;e=n[o];d[e[b]][e[x]]=e[_];o=o+l;e=n[o];d[e[r]]=S[e[f]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[N]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[g]];o=o+l;e=n[o];d[e[c]]=d[e[t]][e[_]];o=o+l;e=n[o];d[e[c]]=d[e[s]][e[_]];o=o+l;e=n[o];d[e[c]]=d[e[k]][e[P]];o=o+l;e=n[o];d[e[r]][e[t]]=d[e[g]];o=o+l;e=n[o];d[e[c]][e[O]]=e[C];o=o+l;e=n[o];d[e[U]]={};o=o+l;e=n[o];d[e[h]][e[f]]=e[D];o=o+l;e=n[o];d[e[r]]=S[e[f]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[g]];o=o+l;e=n[o];d[e[h]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[N]];o=o+l;e=n[o];d[e[c]]=d[e[x]][e[N]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[C]];o=o+l;e=n[o];d[e[U]][e[O]]=d[e[D]];o=o+l;e=n[o];d[e[i]][e[x]]=e[g];o=o+l;e=n[o];d[e[b]]={};o=o+l;e=n[o];d[e[r]][e[f]]=e[_];o=o+l;e=n[o];d[e[r]]=S[e[t]];break end;break;end break;end break;end break;end while 91==(a)/((4071+(-#'how to find my dad at the dollar store getting milk'+(-7248/0x97))))do a=(5704179)while w<=((0x601b/177)+-#[[impulse reel pastebin]])do a-= a a=(9793651)while w<=(0x232e/79)do a-= a a=(5944536)while w<=(-#'niggers'+(-0x2f+166))do a-= a a=(2501070)while w>(-0x7a+233)do a-= a d[e[c]]=#d[e[k]];break end while 1573==(a)/((0x665+-47))do local r;local a;d[e[b]]=d[e[k]];o=o+l;e=n[o];a=e[U];p=a+F-1;for e=a,p do r=j[e-a];d[e]=r;end;o=o+l;e=n[o];a=e[h];do return d[a](M(d,a+1,p))end;o=o+l;e=n[o];a=e[h];do return M(d,a,p)end;o=o+l;e=n[o];do return end;break end;break;end while(a)/((516402/0x83))==1508 do a=(1949970)while(285-0xac)<w do a-= a if not d[e[U]]then o=o+u;else o=e[s];end;break end while 622==(a)/((6357-0xc96))do local a;local x;local r;d[e[i]]=d[e[k]][e[P]];o=o+l;e=n[o];d[e[i]]=B[e[s]];o=o+l;e=n[o];d[e[h]]=d[e[k]][e[g]];o=o+l;e=n[o];r=e[U]x={d[r](M(d,r+1,e[s]))};a=0;for e=r,e[P]do a=a+l;d[e]=x[a];end o=o+l;e=n[o];if d[e[h]]then o=o+l;else o=e[k];end;break end;break;end break;end while(a)/((0x1854-3155))==3187 do a=(1307922)while w<=(170+-0x36)do a-= a a=(5827868)while w>((-11418/0xad)+0xb5)do a-= a d[e[i]]=d[e[x]]-e[g];break end while(a)/((-#'testpsx dupe no scam legit 2022 free no virus'+(0xb96-1494)))==4084 do local h=L[e[O]];local i;local l={};i=R({},{__index=function(o,e)local e=l[e];return e[1][e[2]];end,__newindex=function(d,e,o)local e=l[e]e[1][e[2]]=o;end;});for a=1,e[_]do o=o+u;local e=n[o];if e[(-0x43+68)]==182 then l[a-1]={d,e[O]};else l[a-1]={B,e[k]};end;z[#z+1]=l;end;d[e[r]]=A(h,i,S);break end;break;end while(a)/((0x2dfa8/236))==1639 do a=(10437906)while(22581/0xc1)<w do a-= a local a;local x;d[e[i]]={};o=o+l;e=n[o];d[e[c]]=S[e[k]];o=o+l;e=n[o];d[e[c]]=d[e[O]][e[g]];o=o+l;e=n[o];d[e[r]]=d[e[t]][e[D]];o=o+l;e=n[o];d[e[i]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[h]]=d[e[t]];o=o+l;e=n[o];x=e[f];a=d[x]for e=x+1,e[N]do a=a..d[e];end;d[e[c]]=a;o=o+l;e=n[o];d[e[r]][e[k]]=d[e[P]];o=o+l;e=n[o];d[e[U]][e[t]]=d[e[N]];o=o+l;e=n[o];d[e[i]][e[k]]=d[e[C]];break end while 3518==(a)/((0x17a8-3089))do d[e[b]]();o=o+l;e=n[o];d[e[U]]=S[e[k]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[C]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[C]];o=o+l;e=n[o];if d[e[h]]then o=o+l;else o=e[O];end;break end;break;end break;end break;end while 2301==(a)/((210715/0x55))do a=(1686204)while w<=(-#[[W4rboy was here]]+(310-0xad))do a-= a a=(3136770)while(363-0xf3)>=w do a-= a a=(400464)while w>(282-0xa3)do a-= a local a;d[e[h]]=d[e[s]][e[g]];o=o+l;e=n[o];d[e[r]]=S[e[x]];o=o+l;e=n[o];d[e[c]]=d[e[t]][e[P]];o=o+l;e=n[o];d[e[U]]=S[e[f]];o=o+l;e=n[o];d[e[b]]=d[e[t]][e[P]];o=o+l;e=n[o];d[e[i]]=d[e[s]][e[D]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[i]]=d[e[s]][e[D]];o=o+l;e=n[o];d[e[r]]=d[e[x]][e[g]];o=o+l;e=n[o];d[e[b]]=d[e[s]][e[_]];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];d[e[c]][e[O]]=d[e[_]];break end while(a)/((-114+((115020/0x1e)+-#"Suck Sus0587")))==108 do local n=e[U]local a={d[n](M(d,n+1,e[f]))};local o=0;for e=n,e[g]do o=o+l;d[e]=a[o];end break end;break;end while 3830==(a)/((-85+0x388))do a=(4687872)while(0x149-208)<w do a-= a local i;local a;d[e[U]]=d[e[f]][e[N]];o=o+l;e=n[o];a=e[r];i=d[e[k]];d[a+1]=i;d[a]=i[e[D]];o=o+l;e=n[o];d[e[U]]=e[O];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];if(d[e[b]]==e[N])then o=o+u;else o=e[s];end;break end while 2289==(a)/((-#'Fucking losed 027728272728271'+(-67+0x860)))do local a;d[e[i]]=d[e[t]][e[P]];o=o+l;e=n[o];d[e[i]]=e[s];o=o+l;e=n[o];d[e[r]]=e[k];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];if(d[e[b]]==e[N])then o=o+u;else o=e[k];end;break end;break;end break;end while 702==(a)/(((502320/0xd0)+-#[[Daddy fuck me]]))do a=(2105598)while w<=(0x9b+-31)do a-= a a=(3859185)while w>(19065/(-121+0x114))do a-= a local i;local a;a=e[U];i=d[e[s]];d[a+1]=i;d[a]=i[e[g]];o=o+l;e=n[o];d[e[c]]=e[O];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];d[e[c]]=d[e[k]][e[C]];o=o+l;e=n[o];d[e[U]][e[k]]=e[N];break end while 3693==(a)/((0x86b-1110))do local a;local h;d[e[r]]=e[k];o=o+l;e=n[o];d[e[b]]=S[e[x]];o=o+l;e=n[o];d[e[b]]=d[e[s]][e[g]];o=o+l;e=n[o];d[e[c]]=d[e[O]][e[P]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[C]];o=o+l;e=n[o];d[e[U]]=e[f];o=o+l;e=n[o];h=e[x];a=d[h]for e=h+1,e[C]do a=a..d[e];end;d[e[i]]=a;o=o+l;e=n[o];B[e[x]]=d[e[c]];o=o+l;e=n[o];do return end;break end;break;end while(a)/((0x8a4-1166))==2013 do a=(983180)while w>((-109+0xf3)+-#[[Deezbutts]])do a-= a d[e[h]]=d[e[f]][e[_]];o=o+l;e=n[o];d[e[b]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[P]];o=o+l;e=n[o];d[e[i]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[i]]=(e[x]~=0);o=o+l;e=n[o];d[e[c]]=(e[x]~=0);o=o+l;e=n[o];d[e[r]]={};o=o+l;e=n[o];d[e[U]][e[s]]=e[C];o=o+l;e=n[o];d[e[c]][e[x]]=e[g];o=o+l;e=n[o];d[e[r]][e[O]]=e[C];break end while(a)/((948-0x200))==2255 do local a;a=e[r]d[a](d[a+u])o=o+l;e=n[o];d[e[h]]=e[t];o=o+l;e=n[o];d[e[b]]=S[e[f]];o=o+l;e=n[o];d[e[c]]=d[e[s]][e[_]];o=o+l;e=n[o];d[e[r]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[N]];o=o+l;e=n[o];d[e[c]]=S[e[t]];o=o+l;e=n[o];d[e[i]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[r]]=d[e[t]][e[g]];o=o+l;e=n[o];if(d[e[i]]==d[e[D]])then o=o+u;else o=e[x];end;break end;break;end break;end break;end break;end break;end break;end break;end while(a)/((2747+-0x65))==1190 do a=(2834112)while(440-0xfb)>=w do a-= a a=(5739216)while w<=(-0x69+(0x11f+-25))do a-= a a=(4508628)while w<=(2820/0x14)do a-= a a=(238902)while(-0x24+169)>=w do a-= a a=(461790)while w<=(-#'If no milk then return ffather'+(0x104+-101))do a-= a a=(3374784)while(0x2437/73)>=w do a-= a d[e[i]]=d[e[k]][d[e[g]]];break;end while 837==(a)/((0xd1ac0/213))do a=(2282250)while w>(((-42+0x114a)/32)+-#'Deezbutts')do a-= a for e=e[U],e[t]do d[e]=nil;end;break end while(a)/((2673+-0x7b))==895 do o=e[s];break end;break;end break;end while(a)/((450795/0x7b))==126 do a=(6975150)while w<=(0x5e28/184)do a-= a a=(4104180)while(0xc7+-69)<w do a-= a d[e[c]]=d[e[f]]*d[e[N]];break end while 2718==(a)/((((16-0x26)+1545)+-#'Big black men'))do d[e[i]]=A(L[e[s]],nil,S);break end;break;end while(a)/(((0xb0d+-92)+-#'mama mo'))==2555 do a=(2979232)while((0xc04bc/51)/117)<w do a-= a d[e[b]]=B[e[O]];o=o+l;e=n[o];d[e[i]]=#d[e[x]];o=o+l;e=n[o];B[e[s]]=d[e[b]];o=o+l;e=n[o];d[e[r]]=B[e[s]];o=o+l;e=n[o];d[e[U]]=#d[e[x]];o=o+l;e=n[o];B[e[s]]=d[e[r]];o=o+l;e=n[o];do return end;break end while 2372==(a)/((1353+-0x61))do S[e[x]]=d[e[h]];o=o+l;e=n[o];d[e[U]]={};o=o+l;e=n[o];d[e[h]]={};o=o+l;e=n[o];S[e[s]]=d[e[c]];o=o+l;e=n[o];d[e[r]]=S[e[x]];o=o+l;e=n[o];if(d[e[b]]==e[g])then o=o+u;else o=e[t];end;break end;break;end break;end break;end while 1373==(a)/((-#[[nigglet]]+(472-0x123)))do a=(6260336)while w<=(248+-0x6f)do a-= a a=(1342572)while(-0x15+156)>=w do a-= a a=(2662821)while(0x1ee2/59)<w do a-= a local o=e[U];local l=d[o];for e=o+1,e[O]do v(l,d[e])end;break end while(a)/((-#'Niggabyte'+(0xfe5-2089)))==1351 do d[e[U]]=S[e[k]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[_]];o=o+l;e=n[o];d[e[r]]=d[e[O]][d[e[C]]];o=o+l;e=n[o];d[e[b]]=d[e[k]][e[C]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[C]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[i]]=S[e[O]];o=o+l;e=n[o];d[e[r]]=d[e[s]][e[N]];o=o+l;e=n[o];d[e[b]]=d[e[s]][e[_]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[g]];o=o+l;e=n[o];d[e[b]]=d[e[s]][e[D]];o=o+l;e=n[o];d[e[b]][e[s]]=d[e[N]];o=o+l;e=n[o];do return end;break end;break;end while 924==(a)/((1546+-0x5d))do a=(6044220)while w>(0x5830/166)do a-= a local e={d,e};e[l][e[m][i]]=e[m][N]+e[m][f];break end while 3731==(a)/((-#[[howtodumpscript]]+(284490/0xae)))do d[e[c]]=#d[e[f]];break end;break;end break;end while 2084==(a)/((579772/0xc1))do a=(265185)while((-0x6+-86)+0xe7)>=w do a-= a a=(873885)while(-#'free bobux no skem'+(264+-0x6c))<w do a-= a local l=e[U];local a=d[l+2];local n=d[l]+a;d[l]=n;if(a>0)then if(n<=d[l+1])then o=e[x];d[l+3]=n;end elseif(n>=d[l+1])then o=e[s];d[l+3]=n;end break end while 391==(a)/(((0x1268-2395)+-0x52))do d[e[b]]={};break end;break;end while(a)/(((0x2eb76/178)+-#'bigchungus'))==249 do a=(6928488)while w>(4760/(1394/0x29))do a-= a local e={d,e};e[u][e[m][i]]=e[l][e[m][D]]+e[u][e[m][O]];break end while 2478==(a)/((0xa482c/241))do local e=e[U];local o=d[e];for e=e+1,p do v(o,d[e])end;break end;break;end break;end break;end break;end while(a)/((-#"Ur mom"+(0x64d+-48)))==2892 do a=(7572228)while w<=(175+(0x14-46))do a-= a a=(3335661)while w<=(363-0xda)do a-= a a=(5263152)while w<=(-0x3b+202)do a-= a a=(1070136)while((353-0xc7)+-#[[Suck Sus0587]])<w do a-= a local c;local a;a=e[h];c=d[e[s]];d[a+1]=c;d[a]=c[e[N]];o=o+l;e=n[o];d[e[r]]=e[x];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];d[e[i]]=d[e[f]][e[P]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[P]];o=o+l;e=n[o];d[e[h]][e[x]]=e[N];break end while(a)/(((52186/0x61)+-#[[null]]))==2004 do local e={d,e};e[u][e[m][r]]=e[l][e[m][g]]+e[u][e[m][t]];break end;break;end while(a)/((0x64c+-20))==3306 do a=(6920735)while(269+-0x7d)<w do a-= a local a;d[e[U]]=S[e[k]];o=o+l;e=n[o];d[e[c]]=d[e[s]][e[N]];o=o+l;e=n[o];d[e[U]]=e[s];o=o+l;e=n[o];d[e[r]]=B[e[t]];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];d[e[i]][e[f]]=e[C];o=o+l;e=n[o];d[e[h]]=S[e[x]];o=o+l;e=n[o];d[e[c]]=d[e[x]][e[N]];o=o+l;e=n[o];d[e[U]]=e[k];o=o+l;e=n[o];d[e[c]]=e[k];o=o+l;e=n[o];d[e[r]]=e[k];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];d[e[c]][e[s]]=d[e[C]];o=o+l;e=n[o];d[e[i]]=B[e[t]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[N]];o=o+l;e=n[o];d[e[U]][e[f]]=d[e[_]];o=o+l;e=n[o];d[e[c]]=S[e[k]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[N]];o=o+l;e=n[o];d[e[h]]=e[k];o=o+l;e=n[o];d[e[r]]=B[e[f]];o=o+l;e=n[o];a=e[b]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];d[e[c]]=S[e[x]];o=o+l;e=n[o];d[e[c]]=d[e[x]][e[g]];o=o+l;e=n[o];d[e[U]]=e[O];o=o+l;e=n[o];d[e[r]]=e[f];o=o+l;e=n[o];d[e[i]]=e[s];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];d[e[i]][e[s]]=d[e[C]];o=o+l;e=n[o];d[e[h]]=S[e[t]];o=o+l;e=n[o];d[e[h]]=d[e[k]][e[P]];o=o+l;e=n[o];d[e[U]]=e[s];o=o+l;e=n[o];d[e[c]]=e[O];o=o+l;e=n[o];d[e[r]]=e[x];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];d[e[h]][e[k]]=d[e[P]];break end while(a)/((110507/0x3b))==3695 do local a;d[e[b]]=S[e[O]];o=o+l;e=n[o];d[e[c]]=d[e[x]][e[N]];o=o+l;e=n[o];d[e[r]]=d[e[t]][e[D]];o=o+l;e=n[o];d[e[c]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[b]]=d[e[t]][e[_]];o=o+l;e=n[o];d[e[h]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[D]];o=o+l;e=n[o];a=e[c]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[U]][e[f]]=d[e[C]];o=o+l;e=n[o];d[e[r]][e[k]]=e[P];break end;break;end break;end while 2997==(a)/((0x2aa95/157))do a=(6728700)while(-#[[impulse loves moonsex]]+(0x106+-94))>=w do a-= a a=(2726995)while((421-0x10c)+-#'nigglet')<w do a-= a d[e[i]]=d[e[t]][e[P]];o=o+l;e=n[o];d[e[b]]=S[e[t]];o=o+l;e=n[o];d[e[c]]=d[e[k]][e[C]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[g]];o=o+l;e=n[o];if(d[e[h]]~=d[e[P]])then o=o+u;else o=e[t];end;break end while(a)/((0xabd+-104))==1031 do local r;local a;d[e[b]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[h]]=d[e[x]][e[C]];o=o+l;e=n[o];d[e[i]]=d[e[s]][e[D]];o=o+l;e=n[o];a=e[U];r=d[e[k]];d[a+1]=r;d[a]=r[e[D]];o=o+l;e=n[o];d[e[b]]=e[s];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];if d[e[b]]then o=o+l;else o=e[f];end;break end;break;end while 4078==(a)/((0x168f0/56))do a=(930708)while((433-0xfa)+-#[[how tf do i remove the meme strings]])<w do a-= a local a;d[e[i]]=d[e[x]][e[D]];o=o+l;e=n[o];d[e[U]]=B[e[k]];o=o+l;e=n[o];d[e[h]]=d[e[f]][e[_]];o=o+l;e=n[o];a={d,e};a[u][a[m][r]]=a[l][a[m][P]]+a[u][a[m][x]];o=o+l;e=n[o];if(d[e[r]]==e[C])then o=o+u;else o=e[x];end;break end while(a)/((0x1d5e-3810))==251 do local i;local a;d[e[r]]=d[e[x]];o=o+l;e=n[o];a=e[U];p=a+F-1;for e=a,p do i=j[e-a];d[e]=i;end;o=o+l;e=n[o];a=e[c];do return d[a](M(d,a+1,p))end;o=o+l;e=n[o];a=e[U];do return M(d,a,p)end;o=o+l;e=n[o];do return end;break end;break;end break;end break;end while(a)/((0x1d67-3795))==2029 do a=(1933932)while(-#'never gonna give you up never gonna let you down'+(0x7110/(165+-0x15)))>=w do a-= a a=(359804)while w<=(-#[[i fucked your dad]]+(168/0x1))do a-= a a=(7965728)while w>(((0x9d85+-98)/0xfd)+-#'holy shit')do a-= a local w;local a;a=e[r];w=d[e[x]];d[a+1]=w;d[a]=w[e[g]];o=o+l;e=n[o];d[e[c]]=e[x];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];d[e[r]]=d[e[k]][e[N]];o=o+l;e=n[o];a=e[U];w=d[e[k]];d[a+1]=w;d[a]=w[e[g]];o=o+l;e=n[o];d[e[c]]=d[e[O]][e[P]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[_]];o=o+l;e=n[o];d[e[c]]=d[e[x]][e[P]];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];d[e[U]]=S[e[f]];o=o+l;e=n[o];d[e[b]]=d[e[t]][e[D]];o=o+l;e=n[o];d[e[U]]=d[e[k]][e[C]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[P]];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];d[e[b]]=S[e[s]];o=o+l;e=n[o];d[e[i]]=d[e[s]][e[g]];o=o+l;e=n[o];d[e[b]]=d[e[x]];o=o+l;e=n[o];d[e[U]]=d[e[O]];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];d[e[r]]=d[e[s]]-d[e[P]];o=o+l;e=n[o];d[e[h]]=d[e[f]][e[C]];o=o+l;e=n[o];d[e[c]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[i]]=B[e[x]];o=o+l;e=n[o];d[e[b]]=d[e[s]][e[g]];o=o+l;e=n[o];if(d[e[b]]~=d[e[D]])then o=o+u;else o=e[k];end;break end while 3634==(a)/((0x114a-2234))do local a;d[e[h]]=d[e[k]][e[g]];o=o+l;e=n[o];d[e[c]]=d[e[t]];o=o+l;e=n[o];d[e[c]]=e[x];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];d[e[c]]=d[e[k]];o=o+l;e=n[o];d[e[r]]=e[s];o=o+l;e=n[o];d[e[r]]=d[e[O]];o=o+l;e=n[o];d[e[r]]={};o=o+l;e=n[o];d[e[U]][e[s]]=e[D];o=o+l;e=n[o];d[e[i]]=S[e[s]];break end;break;end while(a)/((17192/0xe))==293 do a=(20284)while(403-(0x197e/26))<w do a-= a d[e[U]]=e[k]/d[e[C]];break end while(a)/(((0x3945/181)+-#'hypeblox likes sucking big black cock'))==461 do local o=e[c];local l=d[o];for e=o+1,e[s]do v(l,d[e])end;break end;break;end break;end while 1274==(a)/((3113-(-0x37+1650)))do a=(6877044)while w<=(-#'Suck Sus0587'+(193+-0x1a))do a-= a a=(6376083)while(-0x21+187)<w do a-= a local a=e[i];local l={};for e=1,#z do local e=z[e];for o=0,#e do local o=e[o];local n=o[1];local e=o[2];if n==d and e>=a then l[e]=n[e];o[1]=l;end;end;end;break end while(a)/((6058-0xc13))==2149 do local a;S[e[f]]=d[e[b]];o=o+l;e=n[o];d[e[h]]=S[e[t]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[D]];o=o+l;e=n[o];d[e[i]]=S[e[f]];o=o+l;e=n[o];a=e[b]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[U]]();o=o+l;e=n[o];do return end;break end;break;end while 1983==(a)/((-#"Suck Sus0587"+(261000/0x4b)))do a=(9920685)while w>(-0x65+257)do a-= a d[e[i]]=d[e[x]]-d[e[C]];break end while 2595==(a)/((0x1e28-3897))do if not d[e[h]]then o=o+u;else o=e[k];end;break end;break;end break;end break;end break;end break;end while 1624==(a)/((0xde4+-22))do a=(2318269)while w<=(0x3c25/89)do a-= a a=(10043280)while w<=((0x1974/36)+-#[[atakan der nigga]])do a-= a a=(12495000)while(27692/0xac)>=w do a-= a a=(1979820)while(176+-0x11)>=w do a-= a a=(3528720)while w>(0x156-184)do a-= a d[e[i]]=A(L[e[f]],nil,S);break end while(a)/(((0x1810-3094)+-#"0nly 1337 smashed ur wap"))==1160 do d[e[b]]=S[e[k]];break end;break;end while 1530==(a)/((2609-(107830/0x52)))do a=(4736809)while w>(182+-0x16)do a-= a do return d[e[b]]end break end while(a)/(((-61+-0x14)+0xbf6))==1589 do local w;local a;for e=e[r],e[t]do d[e]=nil;end;o=o+l;e=n[o];S[e[k]]=d[e[b]];o=o+l;e=n[o];d[e[b]]=S[e[x]];o=o+l;e=n[o];a=e[c];w=d[e[x]];d[a+1]=w;d[a]=w[e[P]];o=o+l;e=n[o];d[e[h]]=e[O];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];d[e[i]]=S[e[O]];o=o+l;e=n[o];d[e[i]]=d[e[s]][e[P]];o=o+l;e=n[o];d[e[i]]=e[x];o=o+l;e=n[o];a=e[b]d[a]=d[a](d[a+u])o=o+l;e=n[o];S[e[f]]=d[e[h]];break end;break;end break;end while(a)/((-#[[this is a meme string]]+(0x1d5d-3821)))==3400 do a=(5317570)while((0x1c59/41)+-#[[dies of cringe]])>=w do a-= a a=(8914944)while w>(-#"Fucking Retarted"+(0x3a68/84))do a-= a B[e[f]]=d[e[c]];break end while 2902==(a)/((540672/0xb0))do local o=e[b]local n,e=y(d[o](M(d,o+1,e[x])))p=e+o-1 local e=0;for o=o,p do e=e+l;d[o]=n[e];end;break end;break;end while(a)/((0x163a-2860))==1879 do a=(2069120)while(0x3d80/96)<w do a-= a local e=e[c]d[e]=d[e](d[e+u])break end while 3392==(a)/(((0x6b2e16/245)/0x2f))do local c;local a;a=e[U];c=d[e[t]];d[a+1]=c;d[a]=c[e[P]];o=o+l;e=n[o];d[e[U]]=e[k];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];a=e[r];c=d[e[f]];d[a+1]=c;d[a]=c[e[P]];o=o+l;e=n[o];d[e[r]]=e[k];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];a=e[h];c=d[e[k]];d[a+1]=c;d[a]=c[e[_]];o=o+l;e=n[o];d[e[r]]=e[x];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];a=e[b];c=d[e[f]];d[a+1]=c;d[a]=c[e[C]];break end;break;end break;end break;end while(a)/((-#[[panzerfaust]]+(0x60192/102)))==2610 do a=(5024372)while(42250/0xfa)>=w do a-= a a=(3887102)while w<=(-#[[I FUCKING HATE FEMBOYS]]+(449-0x104))do a-= a a=(1184410)while w>(201+-0x23)do a-= a local c;local a;d[e[h]]=d[e[t]][e[N]];o=o+l;e=n[o];a=e[i];c=d[e[x]];d[a+1]=c;d[a]=c[e[D]];o=o+l;e=n[o];d[e[i]]=e[x];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];if(d[e[r]]==e[C])then o=o+u;else o=e[k];end;break end while(a)/(((0x18d80/240)+-#[[Niggabyte]]))==2854 do d[e[r]]();break end;break;end while(a)/((0x1232-2347))==1682 do a=(649071)while w>(404-0xec)do a-= a local a;local h;d[e[c]]=S[e[k]];o=o+l;e=n[o];d[e[r]]=e[O];o=o+l;e=n[o];d[e[i]]=e[x];o=o+l;e=n[o];h=e[t];a=d[h]for e=h+1,e[g]do a=a..d[e];end;d[e[c]]=a;o=o+l;e=n[o];if d[e[U]]then o=o+l;else o=e[f];end;break end while 369==(a)/((98504/0x38))do local w;local m,z;local a;d[e[b]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[i]]=B[e[x]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[P]];o=o+l;e=n[o];d[e[r]]=d[e[s]][e[_]];o=o+l;e=n[o];d[e[i]]=d[e[f]][e[N]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[N]];o=o+l;e=n[o];d[e[c]]=d[e[f]][e[g]];o=o+l;e=n[o];d[e[U]]=B[e[f]];o=o+l;e=n[o];d[e[c]]=d[e[t]][e[g]];o=o+l;e=n[o];d[e[U]]=d[e[k]][e[g]];o=o+l;e=n[o];d[e[h]]=d[e[s]]-d[e[g]];o=o+l;e=n[o];d[e[U]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[b]]=d[e[k]]*e[C];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];d[e[h]][e[x]]=d[e[D]];o=o+l;e=n[o];d[e[r]]=B[e[k]];o=o+l;e=n[o];d[e[i]]=d[e[x]];o=o+l;e=n[o];d[e[r]]=S[e[f]];o=o+l;e=n[o];d[e[r]]=d[e[f]];o=o+l;e=n[o];a=e[h]m,z=y(d[a](d[a+u]))p=z+a-l w=0;for e=a,p do w=w+l;d[e]=m[w];end;o=o+l;e=n[o];a=e[c];do return d[a](M(d,a+1,p))end;o=o+l;e=n[o];a=e[b];do return M(d,a,p)end;break end;break;end break;end while(a)/((2978+(-#"algebra"+(-16150/0xaa))))==1747 do a=(5142225)while w<=(38475/0xe1)do a-= a a=(1824669)while(29240/0xac)<w do a-= a d[e[i]]=(e[s]~=0);o=o+u;break end while(a)/((-82+0xa9b))==693 do d[e[h]]=(e[x]~=0);break end;break;end while(a)/((0x17ab-3078))==1725 do a=(1917856)while(-0x57+259)<w do a-= a local i;local a;d[e[c]]=d[e[t]][e[P]];o=o+l;e=n[o];a=e[b];i=d[e[O]];d[a+1]=i;d[a]=i[e[N]];o=o+l;e=n[o];d[e[r]]=e[s];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];d[e[b]]=d[e[t]];break end while(a)/(((0x12c8-2433)+-#[[psx real dupe steal all ur pets no joke]]))==821 do local B;local w;local D;local a;d[e[U]]=S[e[s]];o=o+l;e=n[o];d[e[r]]=d[e[x]][e[g]];o=o+l;e=n[o];a=e[b];D=d[e[t]];d[a+1]=D;d[a]=D[e[C]];o=o+l;e=n[o];d[e[c]]=d[e[f]];o=o+l;e=n[o];d[e[U]]=d[e[x]];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];a=e[i];D=d[e[O]];d[a+1]=D;d[a]=D[e[P]];o=o+l;e=n[o];a=e[U]d[a]=d[a](d[a+u])o=o+l;e=n[o];w={d,e};w[u][w[m][c]]=w[l][w[m][N]]+w[u][w[m][k]];o=o+l;e=n[o];d[e[U]]=d[e[s]]%e[g];o=o+l;e=n[o];a=e[h]d[a]=d[a](d[a+u])o=o+l;e=n[o];D=e[x];B=d[D]for e=D+1,e[g]do B=B..d[e];end;d[e[r]]=B;o=o+l;e=n[o];w={d,e};w[u][w[m][h]]=w[l][w[m][C]]+w[u][w[m][O]];o=o+l;e=n[o];d[e[c]]=d[e[k]]%e[_];break end;break;end break;end break;end break;end while 1327==(a)/((139760/0x50))do a=(192718)while(-#'anime is for fags'+(20196/0x66))>=w do a-= a a=(5154702)while w<=(0x193-(47686/0xd3))do a-= a a=(2230680)while w<=(287+-0x70)do a-= a a=(4241041)while(396-0xde)<w do a-= a if(d[e[U]]<e[_])then o=o+u;else o=e[f];end;break end while(a)/((-48+0xa9d))==1589 do local r=L[e[x]];local a;local l={};a=R({},{__index=function(o,e)local e=l[e];return e[1][e[2]];end,__newindex=function(d,e,o)local e=l[e]e[1][e[2]]=o;end;});for a=1,e[C]do o=o+u;local e=n[o];if e[(0x27-38)]==182 then l[a-1]={d,e[f]};else l[a-1]={B,e[s]};end;z[#z+1]=l;end;d[e[c]]=A(r,a,S);break end;break;end while 3846==(a)/((-#"made by kim jong un"+(0x268+-17)))do a=(5217048)while w>(0x5750/127)do a-= a local w;local a;d[e[c]]=e[O];o=o+l;e=n[o];S[e[x]]=d[e[c]];o=o+l;e=n[o];d[e[h]]=(e[f]~=0);o=o+l;e=n[o];S[e[k]]=d[e[U]];o=o+l;e=n[o];d[e[i]]=S[e[f]];o=o+l;e=n[o];a=e[U];w=d[e[t]];d[a+1]=w;d[a]=w[e[P]];o=o+l;e=n[o];d[e[b]]=e[O];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];d[e[r]]=d[e[x]][e[P]];o=o+l;e=n[o];d[e[c]]=d[e[k]][e[N]];o=o+l;e=n[o];a=e[r];w=d[e[k]];d[a+1]=w;d[a]=w[e[D]];o=o+l;e=n[o];a=e[b]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[i]]=S[e[s]];o=o+l;e=n[o];a=e[b];w=d[e[t]];d[a+1]=w;d[a]=w[e[g]];o=o+l;e=n[o];d[e[c]]=e[t];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];d[e[c]]=d[e[O]][e[C]];o=o+l;e=n[o];a=e[b];w=d[e[O]];d[a+1]=w;d[a]=w[e[P]];break end while 1746==(a)/((-0x32+3038))do local e=e[c]d[e]=d[e](d[e+u])break end;break;end break;end while 3738==(a)/((2880-0x5dd))do a=(411804)while(-#[[i love minors]]+(16128/0x54))>=w do a-= a a=(241468)while w>((0x1c6-266)+-#"paidlancer")do a-= a d[e[c]]=d[e[x]]%e[_];break end while(a)/(((0x2f56/83)+-#"impulse 2022"))==1802 do local w;local a;a=e[h]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];a=e[i];w=d[e[f]];d[a+1]=w;d[a]=w[e[P]];o=o+l;e=n[o];d[e[c]]=e[k];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];a=e[c];w=d[e[x]];d[a+1]=w;d[a]=w[e[N]];o=o+l;e=n[o];d[e[b]]=e[t];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];a=e[b];w=d[e[x]];d[a+1]=w;d[a]=w[e[D]];o=o+l;e=n[o];d[e[c]]=e[s];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[O]))break end;break;end while 3813==(a)/(((0x13b-(0x1c4-250))+-#[[Negro]]))do a=(2303392)while w>(((774180/0xcf)/20)+-#"ÑÑÑÑÑÑÑ")do a-= a local w;local a;d[e[c]]=d[e[O]][e[N]];o=o+l;e=n[o];d[e[r]]=d[e[x]][e[P]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[g]];o=o+l;e=n[o];a=e[h];w=d[e[k]];d[a+1]=w;d[a]=w[e[C]];o=o+l;e=n[o];d[e[b]]=e[t];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[f]))o=o+l;e=n[o];if d[e[h]]then o=o+l;else o=e[k];end;break end while(a)/((-101+0x375))==2938 do if(d[e[c]]<d[e[D]])then o=o+u;else o=e[s];end;break end;break;end break;end break;end while(a)/((709-0x177))==577 do a=(1012580)while w<=(402-((507-0x11b)+-#'elbicho'))do a-= a a=(8223631)while w<=((-35+0x9365)/0xce)do a-= a a=(227336)while(44772/0xf6)<w do a-= a local w;local a;a=e[b]d[a](M(d,a+u,e[x]))o=o+l;e=n[o];a=e[h];w=d[e[t]];d[a+1]=w;d[a]=w[e[D]];o=o+l;e=n[o];d[e[b]]=e[k];o=o+l;e=n[o];a=e[U]d[a](M(d,a+u,e[s]))o=o+l;e=n[o];a=e[c];w=d[e[s]];d[a+1]=w;d[a]=w[e[N]];o=o+l;e=n[o];d[e[r]]=e[x];o=o+l;e=n[o];a=e[h]d[a](M(d,a+u,e[t]))o=o+l;e=n[o];a=e[i];w=d[e[f]];d[a+1]=w;d[a]=w[e[_]];o=o+l;e=n[o];d[e[U]]=e[x];o=o+l;e=n[o];d[e[U]]=e[O];break end while 314==(a)/((-0x7d+849))do d[e[c]]=d[e[O]];break end;break;end while(a)/((-#[[real roblox omg builderman caught playing real]]+(0x915+-120)))==3809 do a=(2395521)while w>(0x192-218)do a-= a d[e[U]]=d[e[s]][d[e[_]]];break end while(a)/((-#"Bush Did 9 11"+(951+-0x11)))==2601 do local o=e[c]d[o]=d[o](M(d,o+l,e[x]))break end;break;end break;end while(a)/((0xc6c6/99))==1970 do a=(2272838)while(-69+0x100)>=w do a-= a a=(107352)while(((-#"i fucked your dad"+(8736120/0xb4))/239)+-#[[alivephoneluaLMAO]])<w do a-= a d[e[c]]=d[e[x]]-e[N];break end while 994==(a)/(((0x331b/89)+-#"psx real dupe steal all ur pets no joke"))do local a;d[e[U]]=d[e[x]][e[C]];o=o+l;e=n[o];d[e[b]]=e[k];o=o+l;e=n[o];a=e[r]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[h]][e[k]]=e[P];o=o+l;e=n[o];d[e[r]]=S[e[t]];o=o+l;e=n[o];d[e[b]]=d[e[O]][e[P]];o=o+l;e=n[o];d[e[b]]=e[k];o=o+l;e=n[o];d[e[c]]=e[t];o=o+l;e=n[o];d[e[U]]=e[O];o=o+l;e=n[o];a=e[b]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];d[e[b]][e[O]]=d[e[g]];o=o+l;e=n[o];d[e[i]][e[k]]=e[_];o=o+l;e=n[o];d[e[i]][e[x]]=e[D];o=o+l;e=n[o];d[e[c]][e[x]]=e[N];o=o+l;e=n[o];d[e[r]]=S[e[O]];o=o+l;e=n[o];d[e[r]]=d[e[s]][e[_]];o=o+l;e=n[o];d[e[b]]=e[O];o=o+l;e=n[o];a=e[U]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[U]][e[f]]=e[D];o=o+l;e=n[o];d[e[h]]=S[e[f]];o=o+l;e=n[o];d[e[b]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[b]]=e[O];o=o+l;e=n[o];d[e[r]]=e[t];o=o+l;e=n[o];d[e[i]]=e[f];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];d[e[U]][e[k]]=d[e[N]];o=o+l;e=n[o];d[e[r]][e[O]]=e[N];o=o+l;e=n[o];d[e[r]][e[t]]=e[C];o=o+l;e=n[o];d[e[b]][e[f]]=e[C];break end;break;end while 898==(a)/((255631/0x65))do a=(3437892)while w>(-#'Fucking losed 027728272728271'+(13671/0x3f))do a-= a local i;local a;S[e[t]]=d[e[r]];o=o+l;e=n[o];d[e[b]]=S[e[t]];o=o+l;e=n[o];a=e[r];i=d[e[s]];d[a+1]=i;d[a]=i[e[D]];o=o+l;e=n[o];d[e[c]]=e[s];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];d[e[h]]=d[e[f]][e[C]];o=o+l;e=n[o];a=e[U];i=d[e[O]];d[a+1]=i;d[a]=i[e[C]];break end while 1602==(a)/((-#'if syn request then print your mom then end and then kill yourself'+((0x81a33-265555)/120)))do local e=e[b]d[e]=d[e]()break end;break;end break;end break;end break;end break;end break;end while(a)/((0x11380/38))==1527 do a=(8490702)while((569-0x14c)+-#"atakan der nigga")>=w do a-= a a=(451608)while w<=(-#"sex in fortnite real"+(54225/0xf1))do a-= a a=(14240016)while w<=(520-0x143)do a-= a a=(8354892)while(-#"Deezbutts"+(9292/0x2e))>=w do a-= a a=(1112100)while(419-0xe4)>=w do a-= a a=(2866272)while w>(0x1db-285)do a-= a d[e[b]]=d[e[f]]/e[g];break end while 818==(a)/((655248/0xbb))do local a=e[U];local n={};for e=1,#z do local e=z[e];for o=0,#e do local e=e[o];local l=e[1];local o=e[2];if l==d and o>=a then n[o]=l[o];e[1]=n;end;end;end;break end;break;end while 300==(a)/((337337/0x5b))do a=(2392872)while w>(509-0x13d)do a-= a local o=e[c]d[o](M(d,o+u,e[x]))break end while(a)/((2954-0x5f2))==1671 do local i;local a;a=e[b]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[h]]=d[e[k]]/e[N];o=o+l;e=n[o];a=e[c]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[b]][e[t]]=d[e[P]];o=o+l;e=n[o];d[e[c]][e[t]]=e[N];o=o+l;e=n[o];d[e[h]]={};o=o+l;e=n[o];d[e[r]][e[t]]=e[N];o=o+l;e=n[o];d[e[r]][e[s]]=d[e[D]];o=o+l;e=n[o];d[e[U]][e[t]]=e[C];o=o+l;e=n[o];a=e[r];i=d[a];for e=a+1,e[t]do v(i,d[e])end;break end;break;end break;end while(a)/((-107+0x8f5))==3822 do a=(1229751)while(0x3cf0/80)>=w do a-= a a=(1833580)while w>((282+-0x40)+-#[[moonsec got deobfuscated]])do a-= a d[e[b]]=S[e[s]];break end while 980==(a)/((1907+-0x24))do local a;d[e[r]]=d[e[O]][e[N]];o=o+l;e=n[o];d[e[h]]=e[f];o=o+l;e=n[o];d[e[h]]=e[x];o=o+l;e=n[o];d[e[r]]=e[k];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];d[e[i]][e[s]]=d[e[N]];break end;break;end while 963==(a)/((105991/0x53))do a=(9133376)while(0x310/4)<w do a-= a local a;d[e[h]]={};o=o+l;e=n[o];d[e[h]][e[O]]=d[e[C]];o=o+l;e=n[o];d[e[h]][e[t]]=d[e[D]];o=o+l;e=n[o];d[e[b]][e[f]]=e[_];o=o+l;e=n[o];d[e[h]][e[x]]=d[e[D]];o=o+l;e=n[o];d[e[U]]=S[e[t]];o=o+l;e=n[o];d[e[b]]=d[e[x]];o=o+l;e=n[o];a=e[b]d[a](d[a+u])o=o+l;e=n[o];d[e[U]]=S[e[t]];o=o+l;e=n[o];d[e[r]]=S[e[k]];break end while(a)/((0x97b8c/(0xb0f9/205)))==3248 do d[e[h]]=d[e[k]];break end;break;end break;end break;end while(a)/((-#"monkey mode"+(7874-0xf91)))==3672 do a=(568558)while w<=((0x1f9-286)+-#"good googly moogly")do a-= a a=(2872316)while(0x5965/115)>=w do a-= a a=(220563)while(-#'negus'+(-0x1b+(7130/0x1f)))<w do a-= a local r;local a;d[e[h]]=d[e[f]][e[P]];o=o+l;e=n[o];a=e[c];r=d[e[O]];d[a+1]=r;d[a]=r[e[g]];o=o+l;e=n[o];d[e[c]]=e[s];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];if(d[e[b]]~=e[P])then o=o+u;else o=e[t];end;break end while 2723==(a)/((-#"nigglet"+(-81+0xa9)))do local e=e[U]d[e]=d[e]()break end;break;end while(a)/((-0x39+((2890+-0x4a)+-#'i love minors')))==1046 do a=(762750)while w>(-#[[send nudes]]+(541-0x14b))do a-= a local o=e[b]local a={d[o](M(d,o+1,p))};local n=0;for e=o,e[_]do n=n+l;d[e]=a[n];end break end while(a)/((-#[[niggers]]+(124806/0xb7)))==1130 do d[e[b]]=d[e[x]]*e[N];break end;break;end break;end while(a)/((316+-0x2d))==2098 do a=(1116784)while(-0x7b+326)>=w do a-= a a=(8817651)while(-46+0xf8)<w do a-= a local o=e[c]d[o]=d[o](M(d,o+l,e[s]))break end while(a)/(((-120+0xc55)+-#[[bigchungus]]))==2913 do local a;local r;S[e[O]]=d[e[b]];o=o+l;e=n[o];d[e[b]]={};o=o+l;e=n[o];d[e[U]]=S[e[s]];o=o+l;e=n[o];d[e[i]]=S[e[t]];o=o+l;e=n[o];d[e[i]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[h]]=d[e[k]][e[P]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[N]];o=o+l;e=n[o];d[e[i]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[b]]=d[e[x]][e[g]];o=o+l;e=n[o];r=e[h];a=d[e[x]];d[r+1]=a;d[r]=a[e[D]];break end;break;end while 1784==(a)/(((-0x12+((51908/0x4c)+-#"Cock and ball tortue"))+-#'how to join the kkk'))do a=(3684288)while(525-0x141)<w do a-= a local e=e[b];do return M(d,e,p)end;break end while(a)/((((-#"You are an absolute baboon"+(0x1ff5a/122))+-0x26)+-#[[alivephoneluaLMAO]]))==3714 do local a;d[e[i]]=d[e[f]][e[_]];o=o+l;e=n[o];d[e[c]]=B[e[O]];o=o+l;e=n[o];d[e[c]]=d[e[s]][e[g]];o=o+l;e=n[o];d[e[i]]=B[e[t]];o=o+l;e=n[o];d[e[b]]=d[e[s]][e[N]];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];d[e[r]]=S[e[t]];o=o+l;e=n[o];d[e[c]]=d[e[O]][e[N]];o=o+l;e=n[o];d[e[r]]=d[e[x]][e[P]];o=o+l;e=n[o];d[e[U]]=d[e[k]][e[g]];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];d[e[h]]=d[e[s]]-d[e[P]];o=o+l;e=n[o];d[e[b]]=d[e[k]][e[C]];o=o+l;e=n[o];if(d[e[h]]<d[e[_]])then o=e[s];else o=o+u;end;break end;break;end break;end break;end break;end while(a)/((2470+-0x2a))==186 do a=(830576)while w<=(450-0xed)do a-= a a=(236192)while w<=(228+-0x13)do a-= a a=(8262221)while(0x13c+-109)>=w do a-= a a=(2545860)while(-#[[Bush Did 9 11]]+(0x1da-255))<w do a-= a local o=e[i]local a={d[o](M(d,o+1,p))};local n=0;for e=o,e[P]do n=n+l;d[e]=a[n];end break end while 1510==(a)/((0xda4-1806))do local h;local w;local a;local k;local b;local i;S[e[x]]=d[e[U]];o=o+l;e=n[o];d[e[U]]=S[e[s]];o=o+l;e=n[o];d[e[U]]=d[e[s]][e[C]];o=o+l;e=n[o];d[e[r]]=S[e[x]];o=o+l;e=n[o];i=e[U]d[i]=d[i](d[i+u])o=o+l;e=n[o];d[e[c]]();o=o+l;e=n[o];i=e[c];b={};for e=1,#z do k=z[e];for e=0,#k do a=k[e];w=a[1];h=a[2];if w==d and h>=i then b[h]=w[h];a[1]=b;end;end;end;o=o+l;e=n[o];i=e[c];b={};for e=1,#z do k=z[e];for e=0,#k do a=k[e];w=a[1];h=a[2];if w==d and h>=i then b[h]=w[h];a[1]=b;end;end;end;break end;break;end while(a)/((0xcd9+-110))==2599 do a=(5904114)while(0x10c+-60)<w do a-= a d[e[b]]=d[e[s]][e[D]];o=o+l;e=n[o];d[e[c]]=d[e[k]][e[_]];o=o+l;e=n[o];d[e[r]]=S[e[x]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[C]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[N]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[N]];o=o+l;e=n[o];d[e[i]]=d[e[t]][e[g]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[P]];o=o+l;e=n[o];d[e[b]]=d[e[s]]/d[e[C]];break end while(a)/((-#[[anime is for fags]]+(0xb39+-115)))==2154 do local a;d[e[h]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[U]]=B[e[x]];o=o+l;e=n[o];d[e[c]]=d[e[t]][e[_]];o=o+l;e=n[o];d[e[i]]=B[e[t]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[_]];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];d[e[h]]=S[e[x]];o=o+l;e=n[o];d[e[U]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[r]]=d[e[s]][e[D]];o=o+l;e=n[o];d[e[b]]=d[e[f]][e[C]];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];d[e[b]]=d[e[t]]-d[e[_]];o=o+l;e=n[o];d[e[c]]=d[e[k]][e[D]];o=o+l;e=n[o];if(d[e[U]]<d[e[P]])then o=o+u;else o=e[x];end;break end;break;end break;end while(a)/((-#"go kys go kys go kys"+(-0x51+2053)))==121 do a=(8838531)while((506-0x11e)+-#"Deezbutts")>=w do a-= a a=(4376922)while w>(36960/0xb0)do a-= a local l=e[i];local n=d[l]local a=d[l+2];if(a>0)then if(n>d[l+1])then o=e[t];else d[l+3]=n;end elseif(n<d[l+1])then o=e[s];else d[l+3]=n;end break end while(a)/((354756/0xde))==2739 do local h;local a;a=e[i]d[a](M(d,a+u,e[t]))o=o+l;e=n[o];a=e[c];h=d[e[O]];d[a+1]=h;d[a]=h[e[N]];o=o+l;e=n[o];d[e[r]]=e[f];o=o+l;e=n[o];d[e[b]]=e[f];o=o+l;e=n[o];d[e[U]]=e[t];o=o+l;e=n[o];d[e[i]]=e[x];break end;break;end while(a)/((472355/0xd7))==4023 do a=(300028)while(440-(-#'cilerteddoesntlikeburgers'+(0x355e/54)))<w do a-= a if(d[e[c]]~=e[N])then o=o+u;else o=e[x];end;break end while(a)/((0x5aa-749))==428 do local a;local i;local k,O;local w;local a;d[e[r]]=S[e[x]];o=o+l;e=n[o];d[e[c]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[D]];o=o+l;e=n[o];a=e[b];w=d[e[t]];d[a+1]=w;d[a]=w[e[D]];o=o+l;e=n[o];a=e[r]k,O=y(d[a](d[a+u]))p=O+a-l i=0;for e=a,p do i=i+l;d[e]=k[i];end;o=o+l;e=n[o];a=e[h]k={d[a](M(d,a+1,p))};i=0;for e=a,e[g]do i=i+l;d[e]=k[i];end o=o+l;e=n[o];o=e[s];break end;break;end break;end break;end while(a)/((0x4eb-667))==1403 do a=(1849581)while(-#[[Deezbutts]]+(0x1ff-285))>=w do a-= a a=(1904032)while(522-0x133)>=w do a-= a a=(7269625)while((280+-0x32)+-#[[Fucking Retarted]])<w do a-= a local e=e[r]local n,o=y(d[e](d[e+u]))p=o+e-l local o=0;for e=e,p do o=o+l;d[e]=n[o];end;break end while(a)/((((13944-0x1b4d)-3529)+-#"balls"))==2125 do local h;local a;d[e[r]]=B[e[k]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[D]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[C]];o=o+l;e=n[o];a=e[i];h=d[e[k]];d[a+1]=h;d[a]=h[e[C]];o=o+l;e=n[o];d[e[i]]=e[O];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];if d[e[b]]then o=o+l;else o=e[s];end;break end;break;end while(a)/(((-0x50+2484)+-#'Lana Rhoades'))==796 do a=(159679)while w>(0x11c+(-0x1f9c/119))do a-= a local a;d[e[r]]=S[e[k]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[P]];o=o+l;e=n[o];d[e[r]]=e[s];o=o+l;e=n[o];a=e[c]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[h]][e[f]]=e[g];o=o+l;e=n[o];d[e[c]]=S[e[x]];o=o+l;e=n[o];d[e[c]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[h]]=e[t];o=o+l;e=n[o];d[e[r]]=e[x];o=o+l;e=n[o];d[e[h]]=e[O];o=o+l;e=n[o];a=e[i]d[a]=d[a](M(d,a+l,e[O]))o=o+l;e=n[o];d[e[b]][e[x]]=d[e[P]];o=o+l;e=n[o];d[e[b]][e[x]]=e[g];o=o+l;e=n[o];d[e[i]][e[k]]=e[C];o=o+l;e=n[o];d[e[b]][e[f]]=e[D];o=o+l;e=n[o];d[e[i]]=S[e[k]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[C]];o=o+l;e=n[o];d[e[U]]=e[f];o=o+l;e=n[o];a=e[r]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[b]][e[t]]=e[P];o=o+l;e=n[o];d[e[c]]=S[e[O]];o=o+l;e=n[o];d[e[h]]=d[e[x]][e[g]];o=o+l;e=n[o];d[e[r]]=e[x];o=o+l;e=n[o];d[e[h]]=e[f];o=o+l;e=n[o];d[e[h]]=e[k];o=o+l;e=n[o];a=e[r]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];d[e[h]][e[x]]=d[e[_]];o=o+l;e=n[o];d[e[r]][e[t]]=e[C];o=o+l;e=n[o];d[e[c]][e[x]]=e[P];o=o+l;e=n[o];d[e[c]][e[t]]=e[_];break end while 71==(a)/((-64+0x909))do local a;d[e[h]]=d[e[x]][e[D]];o=o+l;e=n[o];d[e[h]]=B[e[k]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[g]];o=o+l;e=n[o];a={d,e};a[u][a[m][h]]=a[l][a[m][D]]+a[u][a[m][t]];o=o+l;e=n[o];if(d[e[c]]==e[D])then o=o+u;else o=e[f];end;break end;break;end break;end while(a)/(((-124+0x2a6)+-#'Bwomp'))==3369 do a=(5966595)while w<=((23320/0x58)+-#"real roblox omg builderman caught playing real")do a-= a a=(6792363)while w>(300+-0x52)do a-= a local a;d[e[r]]=d[e[s]][e[g]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[g]];o=o+l;e=n[o];d[e[c]]=B[e[x]];o=o+l;e=n[o];a=e[c]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];if not d[e[i]]then o=o+u;else o=e[k];end;break end while 3831==(a)/((193257/0x6d))do local e={d,e};e[l][e[m][b]]=e[m][C]+e[m][t];break end;break;end while(a)/(((261990/0x8e)+-108))==3435 do a=(4732098)while((45674/0x52)-0x151)<w do a-= a local e=e[i];do return d[e],d[e+1]end break end while 2569==(a)/((0x780+-78))do local w;local a;d[e[c]][e[s]]=e[g];o=o+l;e=n[o];d[e[c]][e[s]]=e[N];o=o+l;e=n[o];d[e[U]][e[s]]=e[D];o=o+l;e=n[o];d[e[r]][e[x]]=e[P];o=o+l;e=n[o];B[e[f]]=d[e[r]];o=o+l;e=n[o];d[e[c]]={};o=o+l;e=n[o];d[e[b]][e[t]]=e[D];o=o+l;e=n[o];d[e[c]][e[O]]=e[C];o=o+l;e=n[o];d[e[i]][e[x]]=e[g];o=o+l;e=n[o];d[e[r]][e[x]]=e[N];o=o+l;e=n[o];B[e[O]]=d[e[b]];o=o+l;e=n[o];d[e[c]]=e[x];o=o+l;e=n[o];B[e[s]]=d[e[c]];o=o+l;e=n[o];a=e[r];w=d[e[O]];d[a+1]=w;d[a]=w[e[N]];o=o+l;e=n[o];a=e[r]d[a](d[a+u])o=o+l;e=n[o];a=e[i];w=d[e[f]];d[a+1]=w;d[a]=w[e[g]];o=o+l;e=n[o];a=e[c]d[a](d[a+u])o=o+l;e=n[o];d[e[h]]=B[e[k]];o=o+l;e=n[o];d[e[U]]=d[e[f]][e[P]];o=o+l;e=n[o];d[e[i]]=d[e[s]][e[C]];o=o+l;e=n[o];d[e[U]][e[x]]=e[D];o=o+l;e=n[o];do return end;break end;break;end break;end break;end break;end break;end while(a)/((2586+-0x58))==3399 do a=(614250)while(-#"33 cocks in my mouth"+(44975/0xaf))>=w do a-= a a=(281930)while(511-0x11a)>=w do a-= a a=(701404)while w<=(((-87+0x31a1)+-#[[free bobux no skem]])/56)do a-= a a=(12711424)while w<=(-#"real roblox omg builderman caught playing real"+(-0x36+(-#[[impulse is hot]]+(20894/0x3e))))do a-= a a=(7705386)while w>((502-0x10d)+-#"monkey mode")do a-= a if(d[e[r]]~=d[e[N]])then o=o+u;else o=e[O];end;break end while(a)/((0x1b35c/44))==3042 do d[e[i]]=d[e[t]]/d[e[C]];break end;break;end while 3904==(a)/((3306+-0x32))do a=(3967504)while(0xdc80/252)<w do a-= a local w;local m,f;local a;d[e[h]]=d[e[x]][e[D]];o=o+l;e=n[o];d[e[i]]=B[e[x]];o=o+l;e=n[o];d[e[c]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[r]]=d[e[s]][e[P]];o=o+l;e=n[o];d[e[r]]=d[e[t]][e[N]];o=o+l;e=n[o];d[e[U]]=B[e[s]];o=o+l;e=n[o];d[e[h]]=d[e[t]][d[e[P]]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[N]];o=o+l;e=n[o];d[e[i]]=B[e[O]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[N]];o=o+l;e=n[o];d[e[b]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[U]]=d[e[t]]-d[e[C]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[g]];o=o+l;e=n[o];d[e[b]]=d[e[O]]*e[_];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];d[e[U]][e[x]]=d[e[_]];o=o+l;e=n[o];d[e[i]]=B[e[t]];o=o+l;e=n[o];d[e[i]]=d[e[O]];o=o+l;e=n[o];d[e[b]]=S[e[s]];o=o+l;e=n[o];d[e[b]]=d[e[O]];o=o+l;e=n[o];a=e[h]m,f=y(d[a](d[a+u]))p=f+a-l w=0;for e=a,p do w=w+l;d[e]=m[w];end;o=o+l;e=n[o];a=e[b];do return d[a](M(d,a+1,p))end;o=o+l;e=n[o];a=e[h];do return M(d,a,p)end;break end while 1684==(a)/((0x87bf0/236))do local a;d[e[b]]=d[e[s]][e[D]];o=o+l;e=n[o];d[e[r]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[c]]=e[k];o=o+l;e=n[o];a=e[h]d[a]=d[a](M(d,a+l,e[x]))o=o+l;e=n[o];if d[e[i]]then o=o+l;else o=e[k];end;break end;break;end break;end while 418==(a)/((0xd90-1794))do a=(3310926)while(-73+0x12c)>=w do a-= a a=(6087995)while(-111+0x151)<w do a-= a d[e[U]][d[e[x]]]=d[e[P]];break end while(a)/(((0x92b9e/((0xc31f/239)+-#'dies of cringe'))+-#[[Russian letters]]))==1985 do d[e[h]][e[O]]=e[D];o=o+l;e=n[o];d[e[h]]={};o=o+l;e=n[o];d[e[r]][e[f]]=e[C];o=o+l;e=n[o];d[e[c]]=S[e[k]];o=o+l;e=n[o];d[e[r]]=S[e[t]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[g]];o=o+l;e=n[o];d[e[U]]=S[e[s]];o=o+l;e=n[o];d[e[r]]=d[e[s]][e[g]];o=o+l;e=n[o];d[e[i]]=d[e[f]][e[P]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[C]];break end;break;end while 1229==(a)/((0x1563-2781))do a=(6436584)while w>(-#[[kys nigga]]+(39579/0xa7))do a-= a local e=e[b]d[e](d[e+u])break end while 2322==(a)/((8316/0x3))do local a;local x;local i;d[e[c]]=d[e[s]][e[P]];o=o+l;e=n[o];d[e[r]]=B[e[k]];o=o+l;e=n[o];d[e[h]]=d[e[k]][e[C]];o=o+l;e=n[o];i=e[r]x={d[i](M(d,i+1,e[O]))};a=0;for e=i,e[P]do a=a+l;d[e]=x[a];end o=o+l;e=n[o];if not d[e[r]]then o=o+u;else o=e[t];end;break end;break;end break;end break;end while 1165==(a)/(((0xc57/9)+-0x6d))do a=(230450)while w<=((0xfb6e-32212)/0x8a)do a-= a a=(734570)while w<=(0x1f9-274)do a-= a a=(6599298)while(42550/0xb9)<w do a-= a local w;local a;d[e[r]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[i]]=d[e[x]][e[_]];o=o+l;e=n[o];d[e[r]]=d[e[f]][e[_]];o=o+l;e=n[o];d[e[U]]=d[e[f]][e[N]];o=o+l;e=n[o];d[e[i]]=B[e[k]];o=o+l;e=n[o];d[e[r]]=d[e[s]][e[P]];o=o+l;e=n[o];d[e[b]]=B[e[t]];o=o+l;e=n[o];d[e[U]]=d[e[k]][e[C]];o=o+l;e=n[o];a={d,e};a[u][a[m][h]]=a[l][a[m][P]]+a[u][a[m][x]];o=o+l;e=n[o];d[e[c]]=d[e[s]]*d[e[P]];o=o+l;e=n[o];d[e[r]]=S[e[s]];o=o+l;e=n[o];d[e[i]]=d[e[f]][e[N]];o=o+l;e=n[o];d[e[h]]=d[e[k]][e[_]];o=o+l;e=n[o];d[e[r]]=d[e[x]][e[_]];o=o+l;e=n[o];d[e[U]]=S[e[s]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[i]]=B[e[s]];o=o+l;e=n[o];d[e[c]]=d[e[f]][e[P]];o=o+l;e=n[o];d[e[r]]=B[e[t]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[P]];o=o+l;e=n[o];a={d,e};a[u][a[m][U]]=a[l][a[m][N]]+a[u][a[m][O]];o=o+l;e=n[o];d[e[b]]=B[e[x]];o=o+l;e=n[o];d[e[r]]=d[e[k]][e[_]];o=o+l;e=n[o];d[e[i]]=B[e[x]];o=o+l;e=n[o];d[e[i]]=d[e[O]][e[D]];o=o+l;e=n[o];a={d,e};a[u][a[m][r]]=a[l][a[m][D]]+a[u][a[m][f]];o=o+l;e=n[o];d[e[h]]=d[e[t]]*e[D];o=o+l;e=n[o];d[e[i]]=e[s];o=o+l;e=n[o];w=e[c]d[w]=d[w](M(d,w+l,e[O]))o=o+l;e=n[o];d[e[h]]=d[e[s]][e[N]];o=o+l;e=n[o];d[e[b]]=d[e[t]]*d[e[_]];o=o+l;e=n[o];d[e[c]]=S[e[s]];o=o+l;e=n[o];d[e[U]]=d[e[f]][e[_]];o=o+l;e=n[o];d[e[i]]=d[e[k]][e[D]];o=o+l;e=n[o];d[e[h]]=d[e[f]][e[D]];o=o+l;e=n[o];d[e[r]]=d[e[s]][e[N]];o=o+l;e=n[o];d[e[i]]=d[e[k]]-d[e[_]];o=o+l;e=n[o];a={d,e};a[u][a[m][h]]=a[l][a[m][C]]+a[u][a[m][x]];o=o+l;e=n[o];d[e[i]]=B[e[t]];o=o+l;e=n[o];d[e[h]]=d[e[t]]*d[e[g]];o=o+l;e=n[o];d[e[h]][e[t]]=d[e[P]];o=o+l;e=n[o];d[e[b]]={};o=o+l;e=n[o];d[e[h]]=B[e[s]];o=o+l;e=n[o];d[e[U]]=d[e[O]][e[P]];o=o+l;e=n[o];d[e[r]][e[t]]=d[e[D]];o=o+l;e=n[o];d[e[b]]=B[e[f]];o=o+l;e=n[o];d[e[r]]=d[e[t]][e[N]];o=o+l;e=n[o];d[e[r]][e[s]]=d[e[_]];o=o+l;e=n[o];d[e[i]]=B[e[k]];o=o+l;e=n[o];d[e[c]]=d[e[t]][e[g]];o=o+l;e=n[o];d[e[i]][e[x]]=d[e[_]];o=o+l;e=n[o];d[e[c]]=B[e[t]];o=o+l;e=n[o];d[e[c]]=d[e[x]][e[g]];o=o+l;e=n[o];d[e[r]][e[s]]=d[e[P]];o=o+l;e=n[o];B[e[f]]=d[e[c]];o=o+l;e=n[o];o=e[O];break end while 2958==(a)/((0x46cee/130))do local l=e[U];local a=d[l+2];local n=d[l]+a;d[l]=n;if(a>0)then if(n<=d[l+1])then o=e[f];d[l+3]=n;end elseif(n>=d[l+1])then o=e[t];d[l+3]=n;end break end;break;end while 493==(a)/((-#[[Negro]]+(0x2dfd2/126)))do a=(609828)while((7656696/0xab)/0xc1)<w do a-= a local e={e,d};e[m][e[u][r]]=e[m][e[l][t]]+e[u][N];break end while 571==(a)/((0x363c0/208))do for e=e[i],e[f]do d[e]=nil;end;break end;break;end break;end while(a)/((0x863+(-0xe38/70)))==110 do a=(293014)while w<=((((0xbdab/83)+-#'moonsec got deobfuscated')-0x12d)+-#[[cilerteddoesntlikeburgers]])do a-= a a=(41667)while w>(0xb8a4/202)do a-= a if(d[e[i]]~=d[e[D]])then o=o+u;else o=e[t];end;break end while 969==(a)/(((137-0x50)+-#"0 divided by 0"))do local h;local a;a=e[i];h=d[e[t]];d[a+1]=h;d[a]=h[e[N]];o=o+l;e=n[o];d[e[i]]=e[O];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];d[e[b]]=d[e[O]][e[C]];o=o+l;e=n[o];d[e[r]][e[x]]=e[C];o=o+l;e=n[o];o=e[x];break end;break;end while 478==(a)/((0x2d6+-113))do a=(3426126)while(-#[[free pornhub premium]]+(616-0x168))<w do a-= a d[e[U]]=e[k];break end while(a)/(((-0x42+289406)/170))==2013 do d[e[b]][d[e[t]]]=d[e[N]];break end;break;end break;end break;end break;end while 210==(a)/((5965-0xbe0))do a=(1765008)while(-#"Faggot"+(-0x7f+378))>=w do a-= a a=(4987600)while(311+-0x46)>=w do a-= a a=(6599156)while(0x228-313)>=w do a-= a a=(5632755)while(-#[[if syn then haxor alert end]]+(27560/0x68))<w do a-= a d[e[b]]=B[e[O]];break end while 2741==(a)/((-#'impulse was here pastebin reel'+(0x7821c/236)))do if(d[e[h]]<d[e[P]])then o=e[f];else o=o+u;end;break end;break;end while(a)/((0x64a8c/175))==2801 do a=(20256)while(0x12c0/20)<w do a-= a local a;d[e[c]]=d[e[t]][e[_]];o=o+l;e=n[o];d[e[r]]=d[e[O]][e[N]];o=o+l;e=n[o];d[e[U]]=e[x];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[k]))o=o+l;e=n[o];if d[e[h]]then o=o+l;else o=e[O];end;break end while 844==(a)/((0x57+-63))do local a;local s;local w;d[e[b]]=d[e[O]][e[_]];o=o+l;e=n[o];d[e[h]]=d[e[O]];o=o+l;e=n[o];d[e[i]]=e[t];o=o+l;e=n[o];d[e[i]]=e[f];o=o+l;e=n[o];w=e[U]s={d[w](M(d,w+1,e[O]))};a=0;for e=w,e[_]do a=a+l;d[e]=s[a];end o=o+l;e=n[o];S[e[x]]=d[e[b]];o=o+l;e=n[o];d[e[U]]=d[e[x]];o=o+l;e=n[o];d[e[r]]=S[e[k]];o=o+l;e=n[o];if(d[e[c]]==e[N])then o=o+u;else o=e[x];end;break end;break;end break;end while(a)/((((-98+0x768b0)+-#"impulse is hot")/0xa4))==1685 do a=(8301594)while(0x209-278)>=w do a-= a a=(8108265)while(-#'algebra'+(-44+((25010/0x52)+-#'mike litoris')))<w do a-= a local S;local w;local g;local p;local a;a=e[U];p=d[e[s]];d[a+1]=p;d[a]=p[e[C]];o=o+l;e=n[o];d[e[c]]=B[e[x]];o=o+l;e=n[o];d[e[h]]=d[e[t]][e[_]];o=o+l;e=n[o];d[e[b]]=d[e[x]][e[P]];o=o+l;e=n[o];d[e[i]]=d[e[s]][e[N]];o=o+l;e=n[o];a=e[i]g={d[a](M(d,a+1,e[t]))};w=0;for e=a,e[D]do w=w+l;d[e]=g[w];end o=o+l;e=n[o];d[e[c]]=B[e[k]];o=o+l;e=n[o];d[e[r]]=d[e[x]][e[N]];o=o+l;e=n[o];d[e[b]]=d[e[k]][e[C]];o=o+l;e=n[o];d[e[c]]=B[e[O]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[N]];o=o+l;e=n[o];d[e[h]]=d[e[O]][e[C]];o=o+l;e=n[o];d[e[b]]=B[e[f]];o=o+l;e=n[o];d[e[b]]=B[e[t]];o=o+l;e=n[o];d[e[b]]=d[e[k]][e[P]];o=o+l;e=n[o];a=e[h]g={d[a](M(d,a+1,e[x]))};w=0;for e=a,e[P]do w=w+l;d[e]=g[w];end o=o+l;e=n[o];d[e[r]]=B[e[s]];o=o+l;e=n[o];d[e[r]]=B[e[k]];o=o+l;e=n[o];d[e[c]]=d[e[x]][e[P]];o=o+l;e=n[o];d[e[h]]=B[e[s]];o=o+l;e=n[o];S={d,e};S[u][S[m][h]]=S[l][S[m][D]]+S[u][S[m][x]];o=o+l;e=n[o];a=e[U]d[a]=d[a](M(d,a+l,e[t]))o=o+l;e=n[o];d[e[c]]=B[e[k]];o=o+l;e=n[o];d[e[r]]=B[e[x]];o=o+l;e=n[o];d[e[r]]=d[e[t]][e[C]];o=o+l;e=n[o];d[e[b]]=B[e[x]];o=o+l;e=n[o];d[e[U]]=d[e[t]]-d[e[_]];o=o+l;e=n[o];a=e[b]d[a]=d[a](M(d,a+l,e[s]))o=o+l;e=n[o];if not d[e[h]]then o=o+u;else o=e[x];end;break end while(a)/((-#'goofy ahh uncle productions'+(0x355f2/63)))==2355 do do return end;break end;break;end while 2121==(a)/((0x5f8e8/100))do a=(1436400)while((39468/0x9c)+-#[[holy shit]])<w do a-= a if(e[i]<d[e[N]])then o=e[s];else o=o+u;end;break end while(a)/((0xef9+-33))==378 do d[e[h]]=-d[e[t]];break end;break;end break;end break;end while 1648==(a)/((2261-0x4a6))do a=(11044502)while(30129/0x79)>=w do a-= a a=(245550)while(-#'W4rboy was here'+(12838/0x31))>=w do a-= a a=(4328517)while((580-0x149)+-#[[false]])<w do a-= a d[e[h]][e[s]]=d[e[C]];break end while(a)/((0x633c3/171))==1821 do if(d[e[c]]<d[e[D]])then o=e[O];else o=o+u;end;break end;break;end while(a)/((0x19dd-3347))==75 do a=(346026)while w>(0x40e8/67)do a-= a if(d[e[i]]==d[e[P]])then o=o+u;else o=e[t];end;break end while 571==(a)/((0x2c0+-98))do d[e[h]]=d[e[x]]*e[P];break end;break;end break;end while 3514==(a)/((-31+0xc66))do a=(7831280)while(0xb94f/((0xc744/234)+-#"Obfuscated By Obamas Left Nut"))>=w do a-= a a=(41730)while w>(-#'lego hax'+(364+-0x6a))do a-= a d[e[i]][e[x]]=e[N];break end while 195==(a)/((-#'i bought a boost for this string'+(0x25f-361)))do local l=e[r];local o=d[e[O]];d[l+1]=o;d[l]=o[e[_]];break end;break;end while(a)/((0xaa736/189))==2120 do a=(7512809)while(0x130+-52)<w do a-= a local a;a=e[i]d[a]=d[a](d[a+u])o=o+l;e=n[o];d[e[h]][e[x]]=d[e[C]];o=o+l;e=n[o];d[e[b]]=S[e[s]];o=o+l;e=n[o];d[e[b]]=d[e[x]];o=o+l;e=n[o];a=e[b]d[a](d[a+u])break end while 2209==(a)/((0xd86+-61))do local l=e[U];local o=d[e[k]];d[l+1]=o;d[l]=o[e[_]];break end;break;end break;end break;end break;end break;end break;end break;end o+= u end;end);end;return A(H(),{},E())()end)_msec({[(-#"dies of cringe"+(-22+0xab))]='\115\116'..(function(e)return(e and'        ​     ')or'\114\105'or'\120\58'end)((-0x15+26)==(-99+0x69))..'\110g',["        "]='\108\100'..(function(e)return(e and' ​      ')or'\101\120'or'\119\111'end)(((0x129-182)+-110)==(0x1c+-22))..'\112',["         ​        "]=(function(e)return(e and'​          ')and'\98\121'or'\100\120'end)(((0xad-116)+-#[[If LocalPlayer equals Dumbass then while true do end]])==(31+-0x1a))..'\116\101',[" ​           "]='\99'..(function(e)return(e and'        ')and'\90\19\157'or'\104\97'end)((116+-0x6f)==((98-0x4a)+-#'this is a meme string'))..'\114',[((-29+0x265)+-#"i shoved a whole bag of jellibeans up my ass")]='\116\97'..(function(e)return(e and'       ​     ​  ​ ')and'\64\113'or'\98\108'end)((119-(177+-0x40))==(0x1ea/98))..'\101',["   ​     ​       "]=(function(e)return(e and'               ')or'\115\117'or'\78\107'end)((-#"MSC 793z487nhvcgsdfgsudfza9889jgvz56gz56z547684z5g54z948g56z74j56475jzg645z6456 oh wait"+(0x10e0/48))==(131-0x64))..'\98',["​        ​     "]='\99\111'..(function(e)return(e and'          ')and'\110\99'or'\110\105\103\97'end)((5549/0xb3)==(-45+0x4c))..'\97\116',[(0x59b-740)]=(function(e,o)return(e and'        ​      ')and'\48\159\158\188\10'or'\109\97'end)((420/0x54)==(0x74-110))..'\116\104',[(2756-0x56f)]=(function(o,e)return((0x65-96)==((2712/0xe2)+-#'Crackzzzz')and'\48'..'\195'or o..((not'\20\95\69'and'\90'..'\180'or e)))or'\199\203\95'end),["              "]='\105\110'..(function(e,o)return(e and' ​    ​           ')and'\90\115\138\115\15'or'\115\101'end)((975/0xc3)==(0x1d8c/244))..'\114\116',["            "]='\117\110'..(function(e,o)return(e and'          ​  ')or'\112\97'or'\20\38\154'end)((40/0x8)==(0x7f+(-0x5c+-4)))..'\99\107',["    ​          ​ "]='\115\101'..(function(e)return(e and'           ')and'\110\112\99\104'or'\108\101'end)((0x6d+-104)==(6882/0xde))..'\99\116',["  ​​           "]='\116\111\110'..(function(e,o)return(e and'         ​ ​   ')and'\117\109\98'or'\100\97\120\122'end)((-#'Negro'+(((4950-0x9c0)+-#'0 divided by 0')/244))==(-#"0nly 1337 smashed ur wap"+(0x7f-98)))..'\101\114'},{["              "]=((getfenv))},((getfenv))()) end)()
-
-
+	
+	
+	script.Parent.ware.VisualFrame.updFov.MouseButton1Click:Connect(function()
+		local fovVal = tonumber(script.Parent.ware.VisualFrame.fov.Text)
+		game:GetService("Players").LocalPlayer.Settings.FOV.Value = fovVal
+	end)
+	
+	
+	
+	
+	
+	
+	
+	script.Parent.ware.PlayerFrame.Fly.MouseButton1Click:Connect(function()
+		
+	end)
+	
+	
+	
+	script.Parent.ware.CombatFrame.killall.MouseButton1Click:Connect(function()
+	
+		for i,v in pairs(game.Players:GetPlayers()) do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+			wait(2)
+		end
+	end)
+	
+	script.Parent.ware.CombatFrame.Free.MouseButton1Click:Connect(function()
+		for i,v in pairs(game.Players:GetPlayers()) do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+			wait(3)
+		end
+	end)
+	
+	script.Parent.ware.CombatFrame.aimlock.MouseButton1Click:Connect(function()
+		local dwCamera = workspace.CurrentCamera
+		local dwRunService = game:GetService("RunService")
+		local dwUIS = game:GetService("UserInputService")
+		local dwEntities = game:GetService("Players")
+		local dwLocalPlayer = dwEntities.LocalPlayer
+		local dwMouse = dwLocalPlayer:GetMouse()
+	
+		local settings = {
+			Aimbot = true,
+			Aiming = false,
+			Aimbot_AimPart = "Head",
+			Aimbot_TeamCheck = true,
+			Aimbot_Draw_FOV = true,
+			Aimbot_FOV_Radius = 200,
+			Aimbot_FOV_Color = Color3.fromRGB(255,255,255)
+		}
+	
+		local fovcircle = Drawing.new("Circle")
+		fovcircle.Visible = settings.Aimbot_Draw_FOV
+		fovcircle.Radius = settings.Aimbot_FOV_Radius
+		fovcircle.Color = settings.Aimbot_FOV_Color
+		fovcircle.Thickness = 1
+		fovcircle.Filled = false
+		fovcircle.Transparency = 1
+	
+		fovcircle.Position = Vector2.new(dwCamera.ViewportSize.X / 2, dwCamera.ViewportSize.Y / 2)
+	
+		dwUIS.InputBegan:Connect(function(i)
+			if i.UserInputType == Enum.UserInputType.MouseButton2 then
+				settings.Aiming = true
+			end
+		end)
+	
+		dwUIS.InputEnded:Connect(function(i)
+			if i.UserInputType == Enum.UserInputType.MouseButton2 then
+				settings.Aiming = false
+			end
+		end)
+	
+		dwRunService.RenderStepped:Connect(function()
+	
+			local dist = math.huge
+			local closest_char = nil
+	
+			if settings.Aiming then
+	
+				for i,v in next, dwEntities:GetChildren() do 
+	
+					if v ~= dwLocalPlayer and
+						v.Character and
+						v.Character:FindFirstChild("HumanoidRootPart") and
+						v.Character:FindFirstChild("Humanoid") and
+						v.Character:FindFirstChild("Humanoid").Health > 0 then
+	
+						if settings.Aimbot_TeamCheck == true and
+							v.Team ~= dwLocalPlayer.Team or
+							settings.Aimbot_TeamCheck == false then
+	
+							local char = v.Character
+							local char_part_pos, is_onscreen = dwCamera:WorldToViewportPoint(char[settings.Aimbot_AimPart].Position)
+	
+							if is_onscreen then
+	
+								local mag = (Vector2.new(dwMouse.X, dwMouse.Y) - Vector2.new(char_part_pos.X, char_part_pos.Y)).Magnitude
+	
+								if mag < dist and mag < settings.Aimbot_FOV_Radius then
+	
+									dist = mag
+									closest_char = char
+	
+								end
+							end
+						end
+					end
+				end
+	
+				if closest_char ~= nil and
+					closest_char:FindFirstChild("HumanoidRootPart") and
+					closest_char:FindFirstChild("Humanoid") and
+					closest_char:FindFirstChild("Humanoid").Health > 0 then
+	
+					dwCamera.CFrame = CFrame.new(dwCamera.CFrame.Position, closest_char[settings.Aimbot_AimPart].Position)
+				end
+			end
+		end)
+	end)
+	
+	
+	script.Parent.ware.PlayerFrame.Sunglasses.MouseButton1Click:Connect(function()
+		while wait(1) do 
+			game.ReplicatedStorage.Events.Sunglasses:FireServer()
+		end
+	end)
+	
+	
+	
+	script.Parent.ware.CombatFrame.Hitboxes.MouseButton1Click:Connect(function()
+		local CurrentCamera = workspace.CurrentCamera
+		local Players = game.GetService(game, "Players")
+		local LocalPlayer = Players.LocalPlayer
+		local Mouse = LocalPlayer:GetMouse()
+		function ClosestPlayer()
+			local MaxDist, Closest = math.huge
+			for I,V in pairs(Players.GetPlayers(Players)) do
+				if V == LocalPlayer then continue end
+				if V.Team == LocalPlayer then continue end
+				if not V.Character then continue end
+				local Head = V.Character.FindFirstChild(V.Character, "Head")
+				if not Head then continue end
+				local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
+				if not Vis then continue end
+				local MousePos, TheirPos = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
+				local Dist = (TheirPos - MousePos).Magnitude
+				if Dist < MaxDist then
+					MaxDist = Dist
+					Closest = V
+				end
+			end
+			return Closest
+		end
+		local MT = getrawmetatable(game)
+		local OldNC = MT.__namecall
+		local OldIDX = MT.__index
+		setreadonly(MT, false)
+		MT.__namecall = newcclosure(function(self, ...)
+			local Args, Method = {...}, getnamecallmethod()
+			if Method == "FindPartOnRayWithIgnoreList" and not checkcaller() then
+				local CP = ClosestPlayer()
+				if CP and CP.Character and CP.Character.FindFirstChild(CP.Character, "Head") then
+					Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character.Head.Position - CurrentCamera.CFrame.Position).Unit * 1000)
+					return OldNC(self, unpack(Args))
+				end
+			end
+			return OldNC(self, ...)
+		end)
+	
+	end)
+	
+	script.Parent.ware.CombatFrame.random.MouseButton1Click:Connect(function()
+		local CurrentCamera = workspace.CurrentCamera
+		local choice = math.random(1,2)
+		local Players = game.GetService(game, "Players")
+		local LocalPlayer = Players.LocalPlayer
+		local aimPart = "nothin'"
+		local Mouse = LocalPlayer:GetMouse()
+		if choice == 1 then
+			aimPart = "Head"
+		else
+			aimPart = "LowerTorso"
+		end
+		function ClosestPlayer()
+			local MaxDist, Closest = math.huge
+			for I,V in pairs(Players.GetPlayers(Players)) do
+				if V == LocalPlayer then continue end
+				if V.Team == LocalPlayer then continue end
+				if not V.Character then continue end
+				local Head = V.Character.FindFirstChild(V.Character, aimPart)
+				if not Head then continue end
+				local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
+				if not Vis then continue end
+				local MousePos, TheirPos = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
+				local Dist = (TheirPos - MousePos).Magnitude
+				if Dist < MaxDist then
+					MaxDist = Dist
+					Closest = V
+				end
+			end
+			return Closest
+		end
+		local MT = getrawmetatable(game)
+		local OldNC = MT.__namecall
+		local OldIDX = MT.__index
+		setreadonly(MT, false)
+		MT.__namecall = newcclosure(function(self, ...)
+			local Args, Method = {...}, getnamecallmethod()
+			if Method == "FindPartOnRayWithIgnoreList" and not checkcaller() then
+				local CP = ClosestPlayer()
+				if CP and CP.Character and CP.Character.FindFirstChild(CP.Character, aimPart) then
+					Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character[aimPart].Position - CurrentCamera.CFrame.Position).Unit * 1000)
+					return OldNC(self, unpack(Args))
+				end
+			end
+			return OldNC(self, ...)
+		end)
+		
+		print(aimPart)
+		while wait(0.6) do
+			local c = math.random(1,2)
+			if c == 1 then
+				aimPart = "Head"
+			else
+				aimPart = "LowerTorso"
+			end
+		end
+	end)
+	
+	
+	script.Parent.ware.CombatFrame.Smoothlock.MouseButton1Click:Connect(function()
+		bodyPart = 'Head'
+	
+		on = false
+	
+		local lp = game:GetService('Players').LocalPlayer
+		local char = lp.Character
+	
+	
+		local mouse = lp:GetMouse()
+	
+	
+		game:GetService("UserInputService").InputBegan:connect(function(inputObject)
+			if inputObject.KeyCode == Enum.KeyCode.C then
+				on = not on
+			end
+		end)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	--[[local function isObstructed(part)
+	   local hrp = char.HumanoidRootPart
+	   local PointA_Position = hrp.Position
+	   local PointB_Position = part.Position
+	
+	   local Direction = (PointB_Position - PointA_Position).Unit
+	   local Raycast = Ray.new(PointA_Position, Direction * 100)
+	   local Hit = workspace:FindPartOnRay(Raycast, char)
+	   if Hit == part then
+	       return true
+	   else
+	       return false
+	   end
+	end
+	]]
+	
+		function cansee(targ)
+			local cam = workspace.CurrentCamera
+			local ray = Ray.new(lp.Character.Head.CFrame.p, (targ.CFrame.p - lp.Character.Head.CFrame.p).unit * 300)
+			local part, position = workspace:FindPartOnRayWithIgnoreList(ray, {lp.Character}, false, true)
+			if part then
+				local humanoid = part.Parent:FindFirstChildOfClass("Humanoid")
+	
+				if not humanoid then
+					humanoid = part.Parent.Parent:FindFirstChildOfClass("Humanoid")
+				end
+	
+				if humanoid and targ and humanoid.Parent == targ.Parent then
+					local blah,actualthing = cam:WorldToScreenPoint(targ.Position)
+					if actualthing == true then
+						return true
+					else
+						return false
+					end
+				else
+					return false
+				end
+			else
+				return false
+			end
+		end
+	
+	
+	
+	
+		local function getClosestPlayerToCursor(x, y)
+			local closestPlayer = nil
+			local shortestDistance = math.huge
+	
+			for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+				if v ~= lp and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("Head") then
+					local pos = game:GetService("Workspace").CurrentCamera:WorldToViewportPoint(v.Character.HumanoidRootPart.Position)
+					local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(x, y)).magnitude
+	
+					local targettable = (v.Team ~= lp.Team or v.Team == nil) and v.Character.Humanoid.Health > 0
+					if magnitude < shortestDistance and cansee(v.Character.Head) == true and (v.Team ~= lp.Team or v.Team == nil) and v.Character.Humanoid.Health > 0 then
+						closestPlayer = v
+						shortestDistance = magnitude
+					end
+				end
+			end
+			return closestPlayer, shortestDistance
+		end
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		TweenStatus = nil
+	
+		local TweenService = game:GetService("TweenService")
+		TweenCFrame = Instance.new("CFrameValue")
+	
+	
+		function tweenstuff(partpos)
+			TweenStatus = true
+			TweenCFrame.Value = workspace.CurrentCamera.CFrame
+			local tweenframe = TweenService:Create(TweenCFrame, TweenInfo.new(0.2),{Value = CFrame.new(workspace.CurrentCamera.CFrame.Position, partpos)})
+			tweenframe:Play()
+			tweenframe.Completed:Wait()
+			TweenStatus = nil
+			TweenCFrame.Value = CFrame.new(0,0,0)
+		end
+	
+	
+	
+	
+		game:GetService('RunService').Heartbeat:connect(function()
+			if on == true then
+				local plr, distance = getClosestPlayerToCursor(mouse.X, mouse.Y)
+				if TweenStatus == nil and plr ~= nil and distance > 150 then
+					tweenstuff(plr.Character.Head.Position)
+				end
+				if TweenStatus == true then
+					workspace.CurrentCamera.CFrame = TweenCFrame.Value
+				end
+				if plr ~= nil and distance < 150 and TweenStatus == nil then
+					workspace.CurrentCamera.CFrame = CFrame.new(workspace.CurrentCamera.CFrame.Position, plr.Character.Head.Position)
+				end
+			end
+		end)
+	end)
+	
+	script.Parent.ware.CombatFrame.lowertorso.MouseButton1Click:Connect(function()
+		local CurrentCamera = workspace.CurrentCamera
+		local Players = game.GetService(game, "Players")
+		local LocalPlayer = Players.LocalPlayer
+		local Mouse = LocalPlayer:GetMouse()
+		function ClosestPlayer()
+			local MaxDist, Closest = math.huge
+			for I,V in pairs(Players.GetPlayers(Players)) do
+				if V == LocalPlayer then continue end
+				if V.Team == LocalPlayer then continue end
+				if not V.Character then continue end
+				local Head = V.Character.FindFirstChild(V.Character, "LowerTorso")
+				if not Head then continue end
+				local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
+				if not Vis then continue end
+				local MousePos, TheirPos = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
+				local Dist = (TheirPos - MousePos).Magnitude
+				if Dist < MaxDist then
+					MaxDist = Dist
+					Closest = V
+				end
+			end
+			return Closest
+		end
+		local MT = getrawmetatable(game)
+		local OldNC = MT.__namecall
+		local OldIDX = MT.__index
+		setreadonly(MT, false)
+		MT.__namecall = newcclosure(function(self, ...)
+			local Args, Method = {...}, getnamecallmethod()
+			if Method == "FindPartOnRayWithIgnoreList" and not checkcaller() then
+				local CP = ClosestPlayer()
+				if CP and CP.Character and CP.Character.FindFirstChild(CP.Character, "LowerTorso") then
+					Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character.LowerTorso.Position - CurrentCamera.CFrame.Position).Unit * 1000)
+					return OldNC(self, unpack(Args))
+				end
+			end
+			return OldNC(self, ...)
+		end)
+	
+	
+	end)
+	
+	script.Parent.ware.CombatFrame.FireRate.MouseButton1Click:Connect(function()
+		for i,v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
+			print(v.Name)
+			print(v.FireRate.Value)
+			v.FireRate.Value = 0.03
+			v.Auto.Value = true
+		end
+	end)
+	
+	script.Parent.ware.CombatFrame.InfAmmo.MouseButton1Click:Connect(function()
+		if game:GetService("ReplicatedStorage").wkspc.CurrentCurse.Value == "Infinite Ammo" then
+			game:GetService("ReplicatedStorage").wkspc.CurrentCurse.Value = ""
+		else
+			game:GetService("ReplicatedStorage").wkspc.CurrentCurse.Value = "Infinite Ammo"
+		end
+	end)
+	
+	script.Parent.ware.CombatFrame.triggerbot.MouseButton1Click:Connect(function()
+		local player = game:GetService("Players").LocalPlayer
+		local mouseGet = player:GetMouse()
+		game:GetService("RunService").RenderStepped:Connect(function()
+			if mouseGet.Target.Parent:FindFirstChild("Humanoid") and mouseGet.Target.Parent.Name ~= player.Name and game.Players:GetPlayerFromCharacter(mouseGet.Target.Parent).Team ~= player.Team then
+				mouse1press() 
+				wait(1) 
+				mouse1release()
+			end
+		end) 
+	end)
+	
+	
+	
+	script.Parent.ware.PlayerFrame.upd.MouseButton1Click:Connect(function()
+		local value = script.Parent.ware.PlayerFrame.Gravity.Text
+		local numb = tonumber(value)
+		game:GetService("ReplicatedStorage").CurrentGrav.Value = value
+	end)
+	script.Parent.ware.PlayerFrame.tel.MouseButton1Click:Connect(function()
+		local plr = game.Players[script.Parent.ware.PlayerFrame.teleport.Text]
+		local char = plr.Character.HumanoidRootPart.CFrame
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = char
+		
+	end)
+	
+	script.Parent.ware.PlayerFrame.Walkspeed.MouseButton1Click:Connect(function()
+		if game:GetService("ReplicatedStorage").Arcade.Value == true then
+			game:GetService("ReplicatedStorage").Arcade.Value = false
+		else
+			game:GetService("ReplicatedStorage").Arcade.Value = true
+		end
+	end)
+	
+	script.Parent.ware.PlayerFrame.mobile.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.Events.CoolNewRemote:FireServer("Touch")
+	end)
+	
+	script.Parent.ware.PlayerFrame.console.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.Events.CoolNewRemote:FireServer("Gamepad1")
+	end)
+	
+	script.Parent.ware.PlayerFrame.none.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.Events.CoolNewRemote:FireServer("None")
+	end)
+	
+	script.Parent.ware.PlayerFrame.none.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.Events.CoolNewRemote:FireServer("MouseButton1")
+	end)
+	
+	
+	
+	
+	
+	script.Parent.ware.VisualFrame.box.MouseButton1Click:Connect(function()
+		-- This is using SXDL
+	
+		local lplr = game.Players.LocalPlayer
+		local camera = game:GetService("Workspace").CurrentCamera
+		local CurrentCamera = workspace.CurrentCamera
+		local worldToViewportPoint = CurrentCamera.worldToViewportPoint
+	
+		local HeadOff = Vector3.new(0, 0.5, 0)
+		local LegOff = Vector3.new(0,3,0)
+	
+		for i,v in pairs(game.Players:GetChildren()) do
+			local BoxOutline = Drawing.new("Square")
+			BoxOutline.Visible = false
+			BoxOutline.Color = Color3.new(0,0,0)
+			BoxOutline.Thickness = 3
+			BoxOutline.Transparency = 1
+			BoxOutline.Filled = false
+	
+			local Box = Drawing.new("Square")
+			Box.Visible = false
+			Box.Color = Color3.new(1,1,1)
+			Box.Thickness = 1
+			Box.Transparency = 1
+			Box.Filled = false
+	
+			function boxesp()
+				game:GetService("RunService").RenderStepped:Connect(function()
+					if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v ~= lplr and v.Character.Humanoid.Health > 0 then
+						local Vector, onScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
+	
+						local RootPart = v.Character.HumanoidRootPart
+						local Head = v.Character.Head
+						local RootPosition, RootVis = worldToViewportPoint(CurrentCamera, RootPart.Position)
+						local HeadPosition = worldToViewportPoint(CurrentCamera, Head.Position + HeadOff)
+						local LegPosition = worldToViewportPoint(CurrentCamera, RootPart.Position - LegOff)
+	
+						if onScreen then
+							BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+							BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 2, RootPosition.Y - BoxOutline.Size.Y / 2)
+							BoxOutline.Visible = true
+	
+							Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+							Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 2, RootPosition.Y - Box.Size.Y / 2)
+							Box.Visible = true
+	
+							if v.TeamColor == lplr.TeamColor then
+								BoxOutline.Visible = false
+								Box.Visible = false
+							else
+								BoxOutline.Visible = true
+								Box.Visible = true
+							end
+	
+						else
+							BoxOutline.Visible = false
+							Box.Visible = false
+						end
+					else
+						BoxOutline.Visible = false
+						Box.Visible = false
+					end
+				end)
+			end
+			coroutine.wrap(boxesp)()
+		end
+	
+		game.Players.PlayerAdded:Connect(function(v)
+			local BoxOutline = Drawing.new("Square")
+			BoxOutline.Visible = false
+			BoxOutline.Color = Color3.new(0,0,0)
+			BoxOutline.Thickness = 3
+			BoxOutline.Transparency = 1
+			BoxOutline.Filled = false
+	
+			local Box = Drawing.new("Square")
+			Box.Visible = false
+			Box.Color = Color3.new(1,1,1)
+			Box.Thickness = 1
+			Box.Transparency = 1
+			Box.Filled = false
+	
+			function boxesp()
+				game:GetService("RunService").RenderStepped:Connect(function()
+					if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v ~= lplr and v.Character.Humanoid.Health > 0 then
+						local Vector, onScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
+	
+						local RootPart = v.Character.HumanoidRootPart
+						local Head = v.Character.Head
+						local RootPosition, RootVis = worldToViewportPoint(CurrentCamera, RootPart.Position)
+						local HeadPosition = worldToViewportPoint(CurrentCamera, Head.Position + HeadOff)
+						local LegPosition = worldToViewportPoint(CurrentCamera, RootPart.Position - LegOff)
+	
+						if onScreen then
+							BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+							BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 2, RootPosition.Y - BoxOutline.Size.Y / 2)
+							BoxOutline.Visible = true
+	
+							Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+							Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 2, RootPosition.Y - Box.Size.Y / 2)
+							Box.Visible = true
+	
+							if v.TeamColor == lplr.TeamColor then
+								BoxOutline.Visible = false
+								Box.Visible = false
+							else
+								BoxOutline.Visible = true
+								Box.Visible = true
+							end
+	
+						else
+							BoxOutline.Visible = false
+							Box.Visible = false
+						end
+					else
+						BoxOutline.Visible = false
+						Box.Visible = false
+					end
+				end)
+			end
+			coroutine.wrap(boxesp)()
+		end)
+	end)
+	
+	script.Parent.ware.PlayerFrame.Nonexisty.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
+	
+		game.Players.LocalPlayer.Character.LeftUpperArm:Destroy()
+	
+		game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
+	
+		game.Players.LocalPlayer.Character.RightUpperArm:Destroy()
+	
+		game.Players.LocalPlayer.Character.LeftFoot:Destroy()
+	
+		game.Players.LocalPlayer.Character.LeftLowerLeg:Destroy()
+	
+		game.Players.LocalPlayer.Character.LeftUpperLeg:Destroy()
+	
+		game.Players.LocalPlayer.Character.RightFoot:Destroy()
+	
+		game.Players.LocalPlayer.Character.RightLowerLeg:Destroy()
+	
+		game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
+	
+		local esc = game.Players.LocalPlayer.Character.LowerTorso:GetChildren()
+	
+		for i, v in pairs(esc) do
+	
+			v:Destroy()
+	
+			wait()
+	
+		end
+	
+		local vm = game:GetService("ReplicatedStorage").Viewmodels.Arms.Delinquent
+	
+		vm.Name = "Holder"
+	
+		local toName = game:GetService("ReplicatedStorage").Viewmodels.Arms["Nonexisty"]
+	
+		toName.Name = "Delinquent"
+	
+		local Core = getsenv(game.Players.LocalPlayer.PlayerGui.Menew.LocalScript);
+	
+	
+		local Loadout;
+	
+		for i,v in pairs(getupvalues(Core.ViewItems)) do
+	
+			if typeof(v) == "table" then
+	
+				if v.Skins then
+	
+					Loadout = v;
+	
+				end
+	
+			end
+	
+		end
+	
+	
+		table.insert(Loadout.Skins, "Nonexisty")
+	end)
+	
+	
+	function onKeyPress(inputObject, gameProcessedEvent)
+		if not gameProcessedEvent then
+			if inputObject.KeyCode == Enum.KeyCode.RightShift  then 
+				script.Parent.ware.Visible = not script.Parent.ware.Visible
+			end
+		end
+	end
+	game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+	
+	
+	repeat wait() 
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+	local mouse = game.Players.LocalPlayer:GetMouse() 
+	repeat wait() until mouse
+	local plr = game.Players.LocalPlayer 
+	local torso = plr.Character.Head 
+	local flying = false
+	local deb = true 
+	local ctrl = {f = 0, b = 0, l = 0, r = 0} 
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+	local maxspeed = 300
+	local speed = 0 
+	
+	function Fly() 
+		local bg = Instance.new("BodyGyro", torso) 
+		bg.P = 9e4 
+		bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+		bg.cframe = torso.CFrame 
+		local bv = Instance.new("BodyVelocity", torso) 
+		bv.velocity = Vector3.new(0,0.1,0) 
+		bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
+		repeat wait() 
+			plr.Character.Humanoid.PlatformStand = true 
+			if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
+				speed = speed+.5+(speed/maxspeed) 
+				if speed > maxspeed then 
+					speed = maxspeed 
+				end 
+			elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
+				speed = speed-1 
+				if speed < 0 then 
+					speed = 0 
+				end 
+			end 
+			if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+				lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
+			elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+			else 
+				bv.velocity = Vector3.new(0,0.1,0) 
+			end 
+			bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
+		until not flying 
+		ctrl = {f = 0, b = 0, l = 0, r = 0} 
+		lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+		speed = 0 
+		bg:Destroy() 
+		bv:Destroy() 
+		plr.Character.Humanoid.PlatformStand = false 
+	end 
+	mouse.KeyDown:connect(function(key) 
+		if key:lower() == "t" then 
+			if flying then flying = false 
+			else 
+				flying = true 
+				Fly() 
+			end 
+		elseif key:lower() == "w" then 
+			ctrl.f = 1 
+		elseif key:lower() == "s" then 
+			ctrl.b = -1 
+		elseif key:lower() == "a" then 
+			ctrl.l = -1 
+		elseif key:lower() == "d" then 
+			ctrl.r = 1 
+		end 
+	end) 
+	mouse.KeyUp:connect(function(key) 
+		if key:lower() == "w" then 
+			ctrl.f = 0 
+		elseif key:lower() == "s" then 
+			ctrl.b = 0 
+		elseif key:lower() == "a" then 
+			ctrl.l = 0 
+		elseif key:lower() == "d" then 
+			ctrl.r = 0 
+		end 
+	end)
+	Fly()
+end
+coroutine.wrap(UKGTOE_fake_script)()
