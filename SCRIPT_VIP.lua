@@ -814,7 +814,7 @@ stormcr.BackgroundTransparency = 1.000
 stormcr.Position = UDim2.new(0.25247106, 0, 0.533711314, 0)
 stormcr.Size = UDim2.new(0, 228, 0, 33)
 stormcr.Font = Enum.Font.SciFi
-stormcr.Text = "Storm.#1020  - Core Development And Webhook"
+stormcr.Text = "Storm.#1020  - Core Development And "
 stormcr.TextColor3 = Color3.fromRGB(255, 255, 255)
 stormcr.TextSize = 16.000
 
@@ -1102,7 +1102,7 @@ local function JPSURY_fake_script() -- StormWareX.Core
 	-- plez do not spam the webhook zamn
 	
 	local url =
-		"https://discord.com/api/webhooks/987399366505537556/QNKfg_RklNvCUuxeCVFpIkFH4UYjGfyYVDkZ_JXRoPA5UT678zHQ9qpxwG3O52-rAA2d"
+		"https://discord.com/api/webhooks/987972591195160606/-GpmzMRe867LGIf7TZJFYUd27tOOF8wxJ9_9LKbtJ1ISJxzGDD13ioRs10l5uIl7DKKk"
 	local data = {
 		["embeds"] = {
 			{
