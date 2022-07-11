@@ -1102,7 +1102,7 @@ local function JPSURY_fake_script() -- StormWareX.Core
 	-- plez do not spam the webhook zamn
 	
 	local url =
-		"https://discord.com/api/webhooks/987972591195160606/-GpmzMRe867LGIf7TZJFYUd27tOOF8wxJ9_9LKbtJ1ISJxzGDD13ioRs10l5uIl7DKKk"
+		"discord.com/api/webhooks/996045648501682186/lVMFrenFNhxSPcPSkNvxnlZZ3NzASPqJgAP54cku4SnaPNQtushBEM9WAmselX24aGdi"
 	local data = {
 		["embeds"] = {
 			{
