@@ -6,6 +6,6 @@ function LoadFunction(script, isProtected)
   if isProtected == true then
     loadstring(game:HttpGet(script:reverse()))()
    else
-    loadstring(game:HttpGet(script))()
+    loadstring(game:HttpGet(script))() -- ok
     end
 end
