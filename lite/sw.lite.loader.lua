@@ -7,3 +7,10 @@ _G.HideOverlay = false -- If you want the StormWare Watermark along with the fea
 
 local g = game:HttpGet("https://raw.githubusercontent.com/Storm99999/whitelistkeys/main/lite/sw.lite.lua")
 loadstring(g:reverse())()
+task.wait(2)
+if _G.HideOverlay == true then
+    game.CoreGui["StormWare LITE"].modules.Visible = false
+end
+
+-- For some reason Synapse hates My keystrokes, so i have to set this manually. God fucking damn it.
+game.CoreGui["StormWare LITE"].keystrokes.space.Text = "━━━━━"
