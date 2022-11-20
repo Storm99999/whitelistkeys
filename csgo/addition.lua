@@ -19,6 +19,13 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.KnifeFrame.ScrollingF
                 __.Value = "rbxassetid://7027975606"
                 __.Parent = v
             end
+            
+            if string.find(v.Text, "Victorious") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://3414427562"
+                __.Parent = v
+            end
         end
         
         if v.Name == "Karambit" then
@@ -53,6 +60,20 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.KnifeFrame.ScrollingF
                 local __ = Instance.new("StringValue")
                 __.Name = "Skin"
                 __.Value = "rbxassetid://9843197312"
+                __.Parent = v
+            end
+            
+            if string.find(v.Text, "Saphire") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://3086628858"
+                __.Parent = v
+            end
+            
+             if string.find(v.Text, "Ciro") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://4839304004"
                 __.Parent = v
             end
             
