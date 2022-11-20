@@ -121,7 +121,7 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.GunFrame.ScrollingFra
             
         end
         
-        if v.Name == "SSG08" then
+        if v.Name == "Scout" then
             local __ = Instance.new("StringValue")
             __.Name = "Knife"
             __.Value = "SSG08"
