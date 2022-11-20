@@ -49,6 +49,13 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.KnifeFrame.ScrollingF
                 __.Parent = v
             end
             
+            if string.find(v.Text, "Cosmic") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://9843197312"
+                __.Parent = v
+            end
+            
         end
     end
 end
@@ -68,12 +75,49 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.GunFrame.ScrollingFra
                 __.Parent = v
             end
             
-            if string.find(v.Text, "Tiger") then
+            if string.find(v.Text, "Emotions") then
                 local __ = Instance.new("StringValue")
                 __.Name = "Skin"
-                __.Value = "rbxassetid://7027975606"
+                __.Value = "rbxassetid://7777132397"
                 __.Parent = v
             end
+        end
+        
+        if v.Name == "AK47" then
+            local __ = Instance.new("StringValue")
+            __.Name = "Knife"
+            __.Value = "AK47"
+            __.Parent = v
+            
+            if string.find(v.Text, "Vulcan") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://7776765174"
+                __.Parent = v
+            end
+            
+            if string.find(v.Text, "ASIIMOV") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://7624879540"
+                __.Parent = v
+            end
+        end
+        
+        if v.Name == "AUG" then
+            local __ = Instance.new("StringValue")
+            __.Name = "Knife"
+            __.Value = "AUG"
+            __.Parent = v
+            
+            if string.find(v.Text, "REDUX") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://11110928977"
+                __.Parent = v
+            end
+            
+           
         end
         
         if v.Name == "AWP" then
