@@ -41,6 +41,13 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.KnifeFrame.ScrollingF
                 __.Parent = v
             end
             
+            if string.find(v.Text, "gang.cc") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://11622648970"
+                __.Parent = v
+            end
+            
         end
         
          if v.Name == "Butterfly" then
