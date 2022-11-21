@@ -356,10 +356,10 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.GunFrame.ScrollingFra
             __.Value = "M4A1-S"
             __.Parent = v
             
-            if string.find(v.Text, "Galaxy") then
+             if string.find(v.Text, "Gold") then
                 local __ = Instance.new("StringValue")
                 __.Name = "Skin"
-                __.Value = "rbxassetid://11627980878"
+                __.Value = "rbxassetid://11628146767"
                 __.Parent = v
             end
             
