@@ -50,6 +50,26 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.KnifeFrame.ScrollingF
             
         end
         
+        
+        
+        
+        
+         if v.Name == "CSS Classic" then
+            local __ = Instance.new("StringValue")
+            __.Name = "Knife"
+            __.Value = "CSS Classic"
+            __.Parent = v
+            
+            if string.find(v.Text, "Fade") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://7027748727"
+                __.Parent = v
+            end
+            
+        end
+        
+        
          if v.Name == "Butterfly" then
             local __ = Instance.new("StringValue")
             __.Name = "Knife"
@@ -77,10 +97,17 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.KnifeFrame.ScrollingF
                 __.Parent = v
             end
             
-             if string.find(v.Text, "Ciro") then
+            if string.find(v.Text, "Ciro") then
                 local __ = Instance.new("StringValue")
                 __.Name = "Skin"
                 __.Value = "rbxassetid://4839304004"
+                __.Parent = v
+            end
+        
+            if string.find(v.Text, "HyperBeast") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://513739362"
                 __.Parent = v
             end
             
@@ -90,6 +117,38 @@ end
 
 for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.GunFrame.ScrollingFrame:GetChildren()) do
     if v:IsA("TextButton") then
+        
+        if v.Name == "Galil" then
+            local __ = Instance.new("StringValue")
+            __.Name = "Knife"
+            __.Value = "Galil"
+            __.Parent = v
+            
+            if string.find(v.Text, "HyperBeast") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://513739362"
+                __.Parent = v
+            end
+            
+        end
+        
+        if v.Name == "MP9" then
+            local __ = Instance.new("StringValue")
+            __.Name = "Knife"
+            __.Value = "MP9"
+            __.Parent = v
+            
+            if string.find(v.Text, "HyperBeast") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://513739362"
+                __.Parent = v
+            end
+            
+        end
+        
+        
         if v.Name == "Deagle" then
             local __ = Instance.new("StringValue")
             __.Name = "Knife"
@@ -107,6 +166,13 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.GunFrame.ScrollingFra
                 local __ = Instance.new("StringValue")
                 __.Name = "Skin"
                 __.Value = "rbxassetid://7777132397"
+                __.Parent = v
+            end
+            
+            if string.find(v.Text, "HyperBeast") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://513739362"
                 __.Parent = v
             end
         end
@@ -145,6 +211,13 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.GunFrame.ScrollingFra
                 __.Parent = v
             end
             
+            if string.find(v.Text, "HyperBeast") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://513739362"
+                __.Parent = v
+            end
+            
            
         end
         
@@ -158,6 +231,13 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.GunFrame.ScrollingFra
                 local __ = Instance.new("StringValue")
                 __.Name = "Skin"
                 __.Value = "rbxassetid://1888432391"
+                __.Parent = v
+            end
+            
+            if string.find(v.Text, "HyperBeast") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://513739362"
                 __.Parent = v
             end
             
@@ -176,6 +256,26 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.GunFrame.ScrollingFra
                 __.Parent = v
             end
             
+            if string.find(v.Text, "Cosmic") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://9843197312"
+                __.Parent = v
+            end
+            
+            if string.find(v.Text, "Ruby") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://10719558546"
+                __.Parent = v
+            end
+            
+            if string.find(v.Text, "HyperBeast") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://513739362"
+                __.Parent = v
+            end
          end
     
         if v.Name == "M4A1-S" then
@@ -203,6 +303,13 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.GunFrame.ScrollingFra
                 local __ = Instance.new("StringValue")
                 __.Name = "Skin"
                 __.Value = "rbxassetid://531798377"
+                __.Parent = v
+            end
+            
+            if string.find(v.Text, "HyperBeast") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://513739362"
                 __.Parent = v
             end
             
