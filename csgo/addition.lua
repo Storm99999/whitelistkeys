@@ -13,6 +13,13 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.KnifeFrame.ScrollingF
                 __.Parent = v
             end
             
+            if string.find(v.Text, "Cosmic") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://9843197312"
+                __.Parent = v
+            end
+            
             if string.find(v.Text, "Tiger") then
                 local __ = Instance.new("StringValue")
                 __.Name = "Skin"
