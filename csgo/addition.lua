@@ -12,6 +12,28 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.KnifeFrame.ScrollingF
                 __.Value = "rbxassetid://7027748727"
                 __.Parent = v
             end
+            
+            if string.find(v.Text, "Emerald") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://9529091765"
+                __.Parent = v
+            end
+            
+            if string.find(v.Text, "Saphire") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://9529085691"
+                __.Parent = v
+            end
+            
+            if string.find(v.Text, "Phase") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://9529095127"
+                __.Parent = v
+            end
+            
             if string.find(v.Text, "Gold") then
                 local __ = Instance.new("StringValue")
                 __.Name = "Skin"
@@ -61,6 +83,20 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.KnifeFrame.ScrollingF
                 __.Parent = v
             end
             
+            if string.find(v.Text, "James") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://10462332278"
+                __.Parent = v
+            end
+            
+            if string.find(v.Text, "Gamma") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://686492193"
+                __.Parent = v
+            end
+            
             if string.find(v.Text, "gang.cc") then
                 local __ = Instance.new("StringValue")
                 __.Name = "Skin"
@@ -107,6 +143,20 @@ for _, v in pairs(game.CoreGui.StormSwapper_csgo.CoreEntry.KnifeFrame.ScrollingF
                 local __ = Instance.new("StringValue")
                 __.Name = "Skin"
                 __.Value = "rbxassetid://11628146767"
+                __.Parent = v
+            end
+            
+            if string.find(v.Text, "Bloodwidow") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://841613162"
+                __.Parent = v
+            end
+            
+            if string.find(v.Text, "Twitch") then
+                local __ = Instance.new("StringValue")
+                __.Name = "Skin"
+                __.Value = "rbxassetid://10199564304"
                 __.Parent = v
             end
             
