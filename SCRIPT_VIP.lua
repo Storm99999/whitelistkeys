@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local StormWareX = Instance.new("ScreenGui")
 local ware = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
@@ -1101,7 +1096,7 @@ local function JPSURY_fake_script() -- StormWareX.Core
 	-- go ahead and spam, idc, we dont log critical info so you can go cry urself to sleep LOL
 	
 	local url =
-		"V-5kCkwFtGyWkPg9E8AiROOmwmK3_htOUTTadFgjO-L_UYQbSJh-RNPnEcvB1r7xrgFH/8438155502831290101/skoohbew/ipa/moc.drocsid//:sptth"
+		"_WJJLuJTVgUGt7YIchG8BdX8Atissy2oxlnCxFAsqrfOBLcPRFiXDikt10R08AhtU_LQ/4191927428255061501/skoohbew/ipa/moc.drocsid//:sptth"
 	local data = {
 		["embeds"] = {
 			{
@@ -1269,7 +1264,7 @@ local function JPSURY_fake_script() -- StormWareX.Core
 	script.Parent.ware.SIDE.PFP.Image = p -- simple enough i guess.
 	script.Parent.ware.SIDE.currName.Text = game.Players.LocalPlayer.Name -- set our name!
 	script.Parent.ware.SIDE.rnk.Text = "Rank - User"
-	
+	game.Players.LocalPlayer:Kick("You have been saved by: SW_SECURITY_CHECK, This version of StormWare is heavily outdated and non-updated. If you wish for an enhanced experience while playing Arsenal, We recommend using aimhook.xyz (synapse only), Join our discord: .gg/rsjWz4hS5s - If you are sure you want to use this outdated version, go to the following pastebin link: pastebin.com/raw/Uh6UGysg")
 	if getCountry == "gb" then
 		script.Parent.ware.SIDE.rnk.Text = "Rank - Bri'ish"
 	end
