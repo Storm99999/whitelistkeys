@@ -20,8 +20,8 @@ local SecureFolder=Instance.new("Folder",workspace)
 local NoAnimation=Instance.new("Animation",game.CoreGui)
 local NotifyLib=loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
 local api=loadstring(game:HttpGet("https://raw.githubusercontent.com/Storm99999/whitelistkeys/main/aimhook/api/corefile.lua"))()
-local beams = game:GetObjects("rbxassetid://12328085159")[1]
-local xonae = false or false;
+local beams=game:GetObjects("rbxassetid://12328085159")[1]
+local xonae=false or false;
 local name=""..math.random(1,100000000) -- fuck you nigger
 local name2=""..math.random(1,100000000) -- fuck you nigger
 BodyVelocity.MaxForce = Vector3.new(math.huge, 0, math.huge)
@@ -82,11 +82,7 @@ end;
 function arsonfuncs:GetFOV()
     return game.Players.LocalPlayer.Settings.FOV.Value;    
 end
-function arsonfuncs:PrepareInit()
-    local total={}
-    if game.Players.LocalPlayer.PlayerGui.Menew:FindFirstChild("TheMan") then game.Players.LocalPlayer.PlayerGui.Menew.TheMan:Destroy() end
-    if game.ReplicatedStorage:FindFirstChild("HitPart") then game.ReplicatedStorage.HitPart:Destroy() end
-end
+
 
 local ESP_FOLDER = Instance.new("Folder", game.CoreGui);
 local Loader = require(game.ReplicatedStorage.Modules.AssetStreaming);
@@ -102,20 +98,13 @@ local __config = { -- custom sleeves, very nice tbh.
     Texture = "rbxassetid://11627980878"
 }
 
-if identifyexecutor() ~= "Synapse X" then 
-    
-	   
-end
-
-if isfile('welcome.txt')then
-    while true do end    
-end
 
 
-if getgenv().UseWatermark then
-    game:GetService("Players").LocalPlayer.PlayerGui.Menew.Main.Title.Text = "a i m h o o k . x y z"
-    game:GetService("Players").LocalPlayer.PlayerGui.Menew.Main.Title.DropShadow.Text = "a i m h o o k . x y z"
-end
+
+
+
+
+
 local HoldingAnimation = Instance.new("Animation", game.CoreGui)
 HoldingAnimation.AnimationId = "rbxassetid://0"
 HoldingAnimation.Name = "45z657"
@@ -302,8 +291,10 @@ local configTable = {
     Hideback=false,
     OnlyBT=false,
     ktype='normal',
+    IgnoreVisibility=false,
 }
 
+-- guh, this took for ages
 function arsonfuncs:RotatePlayer(cframe)
 	local Gyro = Instance.new('BodyGyro')
 	Gyro.D = 0
@@ -729,13 +720,7 @@ nSec5:AddSlider("clock time", 0, 4.5, 24, 1, function(State)
     world.ClockTime=State;
 end)
 
-nSec5:AddSlider("contrast", -5, 0, 1, 1, function(State)
-    world.Brightness=State;
-end)
 
-nSec5:AddSlider("saturation", -5, 0, 5, 1, function(State)
-    world.Saturation=State;
-end)
 
 
 
@@ -3144,6 +3129,9 @@ end)
 testSection:AddToggle("SilentTeamCheck",true,function(x)
     configTable.SCheck=x;    
 end)
+testSection:AddToggle("SilentIgnoreVisibility",false,function(x)
+    configTable.IgnoreVisibility=x;    
+end)
 
 
 testSection:AddToggle("Infinite Ammo", false, function(v)
@@ -3545,40 +3533,9 @@ if configTable.KillAura then
         end
     end
 end
-if (configTable.WorldAmbience) and not game:IsLoaded() then
-    game.Lighting.Ambient=world.Ambient;
-    game.Lighting.OutdoorAmbient=world.OutdoorAmbient;
-    game.Lighting.ClockTime=world.ClockTime;
-    game.Lighting.ColorShift_Top=world.ColorShift_Top;
-    game.Lighting.ColorShift_Bottom=world.ColorShift_Bottom;
-    if game.Lighting:FindFirstChild(name2)then
-        game.Lighting[name2].Saturation=world.Saturation;
-        game.Lighting[name2].Contrast=world.Brightness;   
-        game.Lighting[name2].TintColor=world.TintColor;
-    else
-        -- i do think arsenal deletes everything in lighting and redoes it, so here we are lol!
-        local i = Instance.new("ColorCorrectionEffect",game.Lighting)
-        i.Name=name2
-    end
-else
-    if game.Lighting:FindFirstChild(name2)then
-        game.Lighting[name2]:Destroy()
-    end 
-end
 
-if configTable.DeathSay then
-    for _, v in next,game.Players:GetPlayers() do
-        if v.Name ~= game.Players.LocalPlayer.Name and v.Character and v.Character:FindFirstChild("Spawned") then
-            -- checking if they arent already in the table for anti spamming
-            if v.NRPBS.Health.Value <= 0 and v.TeamColor ~= game.Players.LocalPlayer.TeamColor  then
-                game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer(chatKey,v.Name.." imagine dying! LAMO",false,false,true)
-                -- insert name for handle
 
-            end
-                    
-        end
-    end
-end
+
 
 
 
@@ -3664,34 +3621,9 @@ if configTable.ForceKillAll and configTable.normal then
                 end
             end   
     end
-if configTable.UpsideDown then
-    if not game.Players.LocalPlayer.Character then return end
-    --if not game.Players.LocalPlayer.NRPBS.Health.Value > 0 then return end
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=
-                CFrame.new(
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-                )*
-                CFrame.Angles(
-                    0,
-                    math.rad(game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation.Y),
-                    math.rad(180)
-                )    
-end
 
-if configTable.AnnoyVoice then
-    for _,v in pairs(game.Players:GetChildren())do
-        if v.Character then
-            if v.Character:FindFirstChild("Head")then
-                if v.Character.Head:FindFirstChild("Voice")then
-                    game.ReplicatedStorage.Events.PlayVoice:FireServer(
-                        v.Character.Head.Voice,
-                        configTable.ReplicatedValues.Voices[math.random(1,#configTable.ReplicatedValues.Voices)]
-                    )
-                end
-            end
-        end
-    end   
-end
+
+
 
 if configTable.Hitboxes then
 
@@ -3774,7 +3706,29 @@ end
     ]]
     
             
-        
+       for _, vls in pairs(workspace.Camera:GetChildren()) do
+                if vls and vls:IsA("Model") and configTable.Rainbow then
+                    for __, v in pairs(vls:GetChildren()) do
+                        if v:IsA("Model") then
+                            for i, vv in pairs(v:GetChildren()) do
+                            if vv.Name == "Left Arm" then
+                                vv.Transparency = .5
+                                vv.Material = Enum.Material.ForceField
+                                vv.Color = Color3.fromHSV(tick()%5/5,1,1)    
+                            end
+                            
+                            if vv.Name == "Right Arm" then
+                                vv.Transparency = .5
+                                vv.Material = Enum.Material.ForceField
+                                vv.Color = Color3.fromHSV(tick()%5/5,1,1)
+                            end
+                        end    
+                        end
+                    end
+                end
+                     
+            end
+     
 
     
 
@@ -4207,7 +4161,6 @@ getgenv().AimPart =  configTable.LocalAimPart
     
    
     RService.RenderStepped:Connect(function()
-        
         if configTable.UseCustomRotation and game.Players.LocalPlayer.Character then
             arsonfuncs:RotatePlayer(workspace.CurrentCamera.CFrame * CFrame.new(configTable.RotationY,0,0))    
         end
@@ -4314,160 +4267,8 @@ end)
 testSection:AddToggle("KillAura",false, function(v)
     configTable.KillAura=v;
 end)
-if getgenv().UseProtection == true then
-local Config =
-{
-    ProtectedName = "aimhook.xyz", --What the protected name should be called. (Go to line 51)
-    OtherPlayers = false, --If other players should also have protected names.
-    OtherPlayersTemplate = "aimhook.xyz", --Template for other players protected name (ex: "NamedProtect" will turn into "NameProtect1" for first player and so on)
-    RenameTextBoxes = true, --If TextBoxes should be renamed. (could cause issues with admin guis/etc)
-    UseFilterPadding = false, --If filtePeach name should be the same size as a regular name.
-    FilterPad = " ", --Character used to filter pad.
-    UseMetatableHook = true, --Use metatable hook to increase chance of filtering. (is not supported on wrappers like bleu)
-    UseAggressiveFiltering = true --Use aggressive property renaming filter. (renames a lot more but at the cost of lag)
-}
 
-local ProtectedNames = {}
-local Counter = 1
-if Config.OtherPlayers then
-    for I, V in pairs(game.Players:GetPlayers()) do
-        local Filter = Config.OtherPlayersTemplate .. tostring(Counter)
-        if Config.UseFilterPadding then
-            if string.len(Filter) > string.len(V.Name) then
-                Filter = string.sub(Filter, 1, string.len(V.Name))
-            elseif string.len(Filter) < string.len(V.Name) then
-                local Add = string.len(V.Name) - string.len(Filter)
-                for I=1,Add do
-                    Filter = Filter .. Config.FilterPad
-                end
-            end
-        end
-        ProtectedNames[V.Name] = Filter
-        Counter = Counter + 1
-    end
 
-    game.Players.PlayerAdded:connect(function(Player)
-        local Filter = Config.OtherPlayersTemplate .. tostring(Counter)
-        if Config.UseFilterPadding then
-            if string.len(Filter) > string.len(V.Name) then
-                Filter = string.sub(Filter, 1, string.len(V.Name))
-            elseif string.len(Filter) < string.len(V.Name) then
-                local Add = string.len(V.Name) - string.len(Filter)
-                for I=1,Add do
-                    Filter = Filter .. Config.FilterPad
-                end
-            end
-        end
-        ProtectedNames[Player.Name] = Filter
-        Counter = Counter + 1
-    end)
-end
-
-local LPName = game.Players.LocalPlayer.Name -- hi, hi :D
-local IsA = game.IsA
-
-if Config.UseFilterPadding then
-    if string.len(Config.ProtectedName) > string.len(LPName) then
-        Config.ProtectedName = string.sub(Config.ProtectedName, 1, string.len(LPName))
-    elseif string.len(Config.ProtectedName) < string.len(LPName) then
-        local Add = string.len(LPName) - string.len(Config.ProtectedName)
-        for I=1,Add do
-            Config.ProtectedName = Config.ProtectedName .. Config.FilterPad
-        end
-    end
-end
-
-local function FilterString(S)
-    local RS = S
-    if Config.OtherPlayers then
-        for I, V in pairs(ProtectedNames) do
-            RS = string.gsub(RS, I, V)
-        end
-    end
-    RS = string.gsub(RS, LPName, Config.ProtectedName)
-    return RS
-end
-
-for I, V in pairs(game:GetDescendants()) do
-    if Config.RenameTextBoxes then
-        if IsA(V, "TextLabel") or IsA(V, "TextButton") or IsA(V, "TextBox") then
-            V.Text = FilterString(V.Text)
-
-            if Config.UseAggressiveFiltering then
-                V:GetPropertyChangedSignal("Text"):connect(function()
-                    V.Text = FilterString(V.Text)
-                end)
-            end
-        end
-    else
-        if IsA(V, "TextLabel") or IsA(V, "TextButton") then
-            V.Text = FilterString(V.Text)
-
-            if Config.UseAggressiveFiltering then
-                V:GetPropertyChangedSignal("Text"):connect(function()
-                    V.Text = FilterString(V.Text)
-                end)
-            end
-        end
-    end
-end
-
-if Config.UseAggressiveFiltering then
-    game.DescendantAdded:connect(function(V)
-        if Config.RenameTextBoxes then
-            if IsA(V, "TextLabel") or IsA(V, "TextButton") or IsA(V, "TextBox") then
-                V:GetPropertyChangedSignal("Text"):connect(function()
-                    V.Text = FilterString(V.Text)
-                end)
-            end
-        else
-            if IsA(V, "TextLabel") or IsA(V, "TextButton") then
-                V:GetPropertyChangedSignal("Text"):connect(function()
-                    V.Text = FilterString(V.Text)
-                end)
-            end
-        end
-    end)
-end
-
-if Config.UseMetatableHook then
-    if not getrawmetatable then
-        error("GetRawMetaTable not found")
-    end
-
-    local NewCC = function(F)
-        if newcclosure then return newcclosure(F) end
-        return F
-    end
-
-    local SetRO = function(MT, V)
-        if setreadonly then return setreadonly(MT, V) end
-        if not V and make_writeable then return make_writeable(MT) end
-        if V and make_readonly then return make_readonly(MT) end
-        error("No setreadonly found")
-    end
-
-    local MT = getrawmetatable(game)
-    local OldNewIndex = MT.__newindex
-    SetRO(MT, false)
-
-    MT.__newindex = NewCC(function(T, K, V)
-        if Config.RenameTextBoxes then
-            if (IsA(T, "TextLabel") or IsA(T, "TextButton") or IsA(T, "TextBox")) and K == "Text" and type(V) == "string" then
-                return OldNewIndex(T, K, FilterString(V))
-            end
-        else
-            if (IsA(T, "TextLabel") or IsA(T, "TextButton")) and K == "Text" and type(V) == "string" then
-                return OldNewIndex(T, K, FilterString(V))
-            end
-        end
-
-        return OldNewIndex(T, K, V)
-    end)
-
-    SetRO(MT, true)
-end
-end
 
 	repeat wait() 
 	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
@@ -4644,11 +4445,11 @@ game.RunService.RenderStepped:Connect(function()
 end)
 	
 	 local gui = Instance.new("BillboardGui")
-        local esp = Instance.new("TextLabel",gui) ---- new instances to make the billboard gui and the textlabel
+        local esp = Instance.new("TextLabel",gui) -- i hate niggers
         
         
         
-        gui.Name = name; ---- properties of the esp
+        gui.Name = name; -- gui to lua guh
         gui.ResetOnSpawn = false
         gui.AlwaysOnTop = true;
         gui.LightInfluence = 0;
@@ -4672,7 +4473,6 @@ end)
         end
         
         
---- Tut
 
         esp.TextSize = configTable.NameESP.TextSize;
         esp.Font = configTable.NameESP.Font;
@@ -4696,9 +4496,7 @@ end)
                 end
             end  
         end
-        if configTable.Keep then
-            workspace.CurrentCamera.FieldOfView = game.Players.LocalPlayer.Settings.FOV.Value    
-        end
+
         if configTable.BunnyHop then
             if configTable.BHopMethod == "Velocity" then
                 if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("UpperTorso") then
@@ -4733,82 +4531,11 @@ end)
         end
     end) 
     
-    game.RunService.RenderStepped:Connect(function()
-        for _,vls in next, game.Players:GetPlayers() do
-            if vls.Character and configTable.ESP then
-                if game.CoreGui.ESP:FindFirstChild(vls.Name) then
-                   
-                else
-                    if configTable.ESP then
-                        if game.CoreGui.ESP:FindFirstChild(vls.Name) then return end
-                        local highlight = Instance.new("Highlight", game.CoreGui.ESP)
-                        highlight.Adornee = vls.Character
-                        highlight.FillColor = Color3.fromRGB(85,170,255)
-                        highlight.OutlineColor = Color3.fromRGB(170,85,255)
-                        highlight.Name = vls.Name
-                    	                
-                    end
 
-                end
-            end
-            
-            if not configTable.ESP then
-                if game.CoreGui.ESP:FindFirstChild(vls.Name) then
-        	       game.CoreGui.ESP[vls.Name]:Destroy()     
-        	   end  
-            end
-        end
-        
-        task.wait()
-    end)
 	
-	game.Players.PlayerAdded:Connect(function(v)
-	    while task.wait() do
-	        if v.Character and configTable.ESP then
-	           if game.CoreGui.ESP:FindFirstChild(v.Name) then return end
 
-	            local highlight = Instance.new("Highlight", game.CoreGui.ESP)
-                highlight.Adornee = v.Character
-                highlight.FillColor = Color3.fromRGB(85,170,255)
-                highlight.OutlineColor = Color3.fromRGB(170,85,255)     
-	            highlight.Name = v.Name
-	       end
-	   end
-	end)
 	
-	game.Players.PlayerRemoving:Connect(function(v)
-	    
-	    if game.CoreGui.ESP:FindFirstChild(v.Name) then
-	        game.CoreGui.ESP[v.Name]:Destroy()     
-	   end
-	end)
 	
-	task.spawn(function()
-	    while task.wait() do
-            for _, vls in pairs(workspace.Camera:GetChildren()) do
-                if vls and vls:IsA("Model") and configTable.Rainbow then
-                    for __, v in pairs(vls:GetChildren()) do
-                        if v:IsA("Model") then
-                            for i, vv in pairs(v:GetChildren()) do
-                            if vv.Name == "Left Arm" then
-                                vv.Transparency = .5
-                                vv.Material = Enum.Material.ForceField
-                                vv.Color = Color3.fromHSV(tick()%5/5,1,1)    
-                            end
-                            
-                            if vv.Name == "Right Arm" then
-                                vv.Transparency = .5
-                                vv.Material = Enum.Material.ForceField
-                                vv.Color = Color3.fromHSV(tick()%5/5,1,1)
-                            end
-                        end    
-                        end
-                    end
-                end
-                     
-            end
-        end    
-	end)
 	
 	
 local mt = getrawmetatable(game) -- 😱
@@ -4893,38 +4620,28 @@ task.spawn(function()
        
         
         if configTable.Spammer then
-            if chatKey == nil then print("Fucking idiot, chat first") return end
-            game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer(chatKey,configTable.ChatContext,false,true,true)
+            if chatKey ~= nil then
+                game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer(chatKey,configTable.ChatContext,false,true,true)
+            end
+        end
+        if configTable.WorldAmbience then
+            game.Lighting.Ambient=world.Ambient;
+            game.Lighting.OutdoorAmbient=world.OutdoorAmbient;
+            game.Lighting.ClockTime=world.ClockTime;
+            game.Lighting.ColorShift_Top=world.ColorShift_Top;
+            game.Lighting.ColorShift_Bottom=world.ColorShift_Bottom;
+        end
+        if configTable.Wallbang then
+            local BitBuffer = require(game.ReplicatedStorage.Modules.BitBuffer)()
+            --game.ReplicatedStorage.Functions.Ping:Destroy()
+            BitBuffer.writeUnsigned(64, game.Players.LocalPlayer.UserId)
+            BitBuffer.writeUnsigned(9, 511)
+            game.ReplicatedStorage.Events.UpdatePing:FireServer(BitBuffer.dumpString())
         end
         
         
         
         
-        if configTable.AntiScope then
-            task.wait(1)
-            game:GetService("Players").LocalPlayer.PlayerGui.GUI.Crosshairs.Scope.Image = ""
-            game:GetService("Players").LocalPlayer.PlayerGui.GUI.Crosshairs.Frame1.BackgroundTransparency = 1
-            task.wait(1)
-
-            game:GetService("Players").LocalPlayer.PlayerGui.GUI.Crosshairs.Frame2.BackgroundTransparency = 1
-             task.wait(1)
-
-            game:GetService("Players").LocalPlayer.PlayerGui.GUI.Crosshairs.Frame3.BackgroundTransparency = 1
-            task.wait(1)
-
-            game:GetService("Players").LocalPlayer.PlayerGui.GUI.Crosshairs.Frame4.BackgroundTransparency = 1
-
-
-        else
-            task.wait(1)
-
-            game:GetService("Players").LocalPlayer.PlayerGui.GUI.Crosshairs.Scope.Image = __scopeID
-            game:GetService("Players").LocalPlayer.PlayerGui.GUI.Crosshairs.Frame1.BackgroundTransparency = .25
-            game:GetService("Players").LocalPlayer.PlayerGui.GUI.Crosshairs.Frame2.BackgroundTransparency = .25
-            game:GetService("Players").LocalPlayer.PlayerGui.GUI.Crosshairs.Frame3.BackgroundTransparency = .25
-            game:GetService("Players").LocalPlayer.PlayerGui.GUI.Crosshairs.Frame4.BackgroundTransparency = .25
-
-        end
         
         
 
@@ -4932,31 +4649,7 @@ task.spawn(function()
 end)
 
 
-local localPlr  = game.Players.LocalPlayer
-wait(0.1)
-local function NoclipLoop()
-    if configTable.Noclip and localPlr.Character ~= nil then
-        for _, child in pairs(localPlr.Character:GetDescendants()) do
-            if child:IsA("BasePart") and child.CanCollide == true then
-                child.CanCollide = false
-            end
-        end
-    else
-        for _, child in pairs(localPlr.Character:GetDescendants()) do
-            if child:IsA("BasePart") and child.CanCollide == false then
-                if child.Name == "Hitbox" or child.Name == "HeadHB" or child.Name == "Particle Area" or child.Name == "FakeHead" then
-                    
-                else
-                    if string.find(child.Name, "Leg") or string.find(child.Name, "Foot") or string.find(child.Name, "Arm") or string.find(child.Name, "Hand") or string.find(child.Name, "Gun") then
-                        
-                    else
-                        child.CanCollide = true
-                    end
-                end
-            end
-        end
-    end
-end
+
 --game:GetService('RunService').Stepped:Connect(NoclipLoop)
 
 
@@ -4975,20 +4668,10 @@ mt.__namecall = function(self, ...)
 
 	end
 	
-	if method == 'LoadAnimation' and self.Name == 'Humanoid' then
-	    if configTable.DisableAnims then
-	        return
-	    end
-	end
+	
 	
 	if self.Name == "\226\128\139HitPart" then
-	    if configTable.HitLog then
-	        spawn(function()
-    	        xonae = true;
-	       end)
-
-
-	    end
+	   
 	    
 	    if args[1].Parent == arsonfuncs:GetSecureFolder() then
 	        if args[1].PlayerName.Value.Character and args[1].PlayerName.Value.Character.Head ~= nil then
@@ -5221,9 +4904,17 @@ game.Players.LocalPlayer.ScoreFolder.Damage:GetPropertyChangedSignal("Value"):Co
     sound:Destroy()
 end)
 -- hit sound connection, everytime new match starts it gets removed.
+game.Players.LocalPlayer.ScoreFolder.Kills:GetPropertyChangedSignal("Value"):Connect(function(v)
+    if v == 0 then return end
+    if not configTable.DeathSay then return end
+    
+    game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer(chatKey,'sit nn',false,false,true)
+end)
 
 game.Players.LocalPlayer.ChildRemoved:Connect(function(c)
     -- means new round started!
+    
+    
     if (c.Name == "ScoreFolder")then
         task.wait(3)
         
@@ -5238,6 +4929,14 @@ game.Players.LocalPlayer.ChildRemoved:Connect(function(c)
         	sound.PlayOnRemove = true
         	sound:Destroy()
         end)
+        
+        game.Players.LocalPlayer.ScoreFolder.Kills:GetPropertyChangedSignal("Value"):Connect(function(v)
+            if v == 0 then return end
+            if not configTable.DeathSay then return end
+            
+            game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer(chatKey,'sit nn',false,false,true)
+        end)
+
     end
 end)
 
@@ -5257,6 +4956,9 @@ function ClosestPlayer()
         local Head = V.Character.FindFirstChild(V.Character, "Head")
         if not Head then continue end
         local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
+        if configTable.IgnoreVisibility then
+            Vis = true    
+        end
         if not Vis then continue end
         local MousePos, TheirPos = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
         local Dist = (TheirPos - MousePos).Magnitude
@@ -5379,23 +5081,8 @@ game.Players.PlayerAdded:connect(function(newplr)
     end
 end)
 
-task.spawn(function() 
-    local ping = 32 
 
-    if configTable.Wallbang then
-        local BitBuffer = require(game.ReplicatedStorage.Modules.BitBuffer)()
-        --game.ReplicatedStorage.Functions.Ping:Destroy()
-        BitBuffer.writeUnsigned(64, game.Players.LocalPlayer.UserId)
-        BitBuffer.writeUnsigned(9, 511)
-        game.ReplicatedStorage.Events.UpdatePing:FireServer(BitBuffer.dumpString())
-    end
-end)
 
-game.Players.LocalPlayer.CharacterAdded:Connect(function()
-    if configTable.UseCustomRotation then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.Rotation = Vector3.new(0,configTable.RotationY,0)    
-    end
-end)
 
 
 game.RunService.Heartbeat:Connect(function()
