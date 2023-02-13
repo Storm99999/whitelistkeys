@@ -192,10 +192,8 @@ function random_plr()
     return v
 end
 
-if getgenv().UseWatermark then
-
-Library:CreateWatermark("aimhook.xyz | {fps} | {game} | B$"..game:GetService("Players").LocalPlayer.PlayerGui.Menew.ShopButtons.Bucks.Bucks.Text)
-end
+local watermark = Library:CreateWatermark("aimhook.xyz | {fps} | v4.2 | legit")
+watermark.Visible = false
 
 getgenv().HumSize = Vector3.new(2,2,2)
 getgenv().HeadSize = Vector3.new(1.4497, 1.3017, 1.3017)
@@ -2293,7 +2291,9 @@ nCol:AddColorpicker(Color3.fromRGB(255,0,255),function(x)
     configTable.NameESP.Color=x;    
 end)
 
-
+local sillyGoose69 = hSec:AddToggle("Watermark", false, function(x)
+    watermark.Visible = x
+end)
 local sillyGoose = hSec:AddToggle("Fake Lag Chams", false, function(x)
     configTable.FakeLag = x
 end)
@@ -3124,7 +3124,12 @@ testSection:AddToggle("Only Target Backtrack",false,function(x)
 end)
 
 testSection:AddToggle("SilentAimV2",false,function(x)
-    configTable.S2=x;    
+    configTable.S2=x;
+    if x then
+        watermark.text = 'aimhook.xyz | {fps} | v4.2 | rage'    
+    else
+        watermark.text = 'aimhook.xyz | {fps} | v4.2 | legit'
+    end
 end)
 testSection:AddToggle("SilentTeamCheck",true,function(x)
     configTable.SCheck=x;    
