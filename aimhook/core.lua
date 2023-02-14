@@ -328,7 +328,7 @@ local vSec = plrTab:CreateSector("utility", "left")
 local charMods = plrTab:CreateSector("character utility","right")
 local aaSec = aaTab:CreateSector("anti aim","left")
 
-local kSec = skinTab:CreateSector("melees", "left")
+local kSec = skinTab:CreateSector("melees (PATCHED)", "left")
 local k2Sec = skinTab:CreateSector("gun names", "right")
 local k3Sec = skinTab:CreateSector("announcers", "left")
 local k8Sec = skinTab:CreateSector("emotes", "right")
