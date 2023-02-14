@@ -292,6 +292,7 @@ local configTable = {
     OnlyBT=false,
     ktype='normal',
     IgnoreVisibility=false,
+    Farmhearts=false,
 }
 
 -- guh, this took for ages
@@ -3291,6 +3292,9 @@ end)
 local ToggleBind = vSec:AddToggle("Fly [T]", false, function(e)
     configTable.Fly = e
 end)
+local ToggleBin34643634666666666664d = vSec:AddToggle("Autofarm Hearts", false, function(e)
+    configTable.Farmhearts = e
+end)
 local ToggleBin45654654654d = vSec:AddToggle("AntiMod", false, function(e)
     configTable.Mods = e
 end)
@@ -3463,6 +3467,15 @@ for _, vls in pairs(workspace.Camera:GetChildren()) do
         end
 end
 shared.Settings=configTable
+
+if configTable.Farmhearts then
+    for _, v in next, workspace.Debris:GetChildren() do 
+        if v.Name == 'Heart'then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame    
+        end
+    end    
+end
+
 if configTable.Racc then
     if game.Players.LocalPlayer.Character then
                 for _, v in pairs(game.Players.LocalPlayer.Character:GetChildren())do
@@ -4648,11 +4661,7 @@ task.spawn(function()
         
         
         
-        
-        
-        
-
-    end
+    end 
 end)
 
 
