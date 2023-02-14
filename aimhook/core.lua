@@ -77,7 +77,9 @@ function arsonfuncs:KillPlayer(charact)
     newbuffer.writeUnsigned(1, 0)
     newbuffer.writeVector3(charact.Character.HumanoidRootPart.Position)
     newbuffer.writeVector3(charact.Character.HumanoidRootPart.Position)
-    return game.ReplicatedStorage.Events["" .. "\226\128\139HitPart"]:FireServer(charact.Character.HumanoidRootPart, newbuffer.dumpString(), "swaggg")
+    if not game:GetService("ReplicatedStorage").wkspc.Status.RoundOver.Value then 
+        return game.ReplicatedStorage.Events["" .. "\226\128\139HitPart"]:FireServer(charact.Character.HumanoidRootPart, newbuffer.dumpString(), "swaggg")
+    end;
 end;
 function arsonfuncs:GetFOV()
     return game.Players.LocalPlayer.Settings.FOV.Value;    
