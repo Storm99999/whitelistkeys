@@ -293,6 +293,7 @@ local configTable = {
     ktype='normal',
     IgnoreVisibility=false,
     Farmhearts=false,
+    ftype='tp',
 }
 
 -- guh, this took for ages
@@ -3295,6 +3296,9 @@ end)
 local ToggleBin34643634666666666664d = vSec:AddToggle("Autofarm Hearts", false, function(e)
     configTable.Farmhearts = e
 end)
+vSec:AddDropdown("Auto Farm Type", {"tp", "force"}, "force",false, function(x)
+    configTable.ftype=x;
+end)
 local ToggleBin45654654654d = vSec:AddToggle("AntiMod", false, function(e)
     configTable.Mods = e
 end)
@@ -3471,7 +3475,14 @@ shared.Settings=configTable
 if configTable.Farmhearts then
     for _, v in next, workspace.Debris:GetChildren() do 
         if v.Name == 'Heart'then
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame    
+            if configTable.ftype == 'tp'then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+            else
+                local savedPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+                task.wait(.000000000000000000000000000000000001)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savedPos
+            end
         end
     end    
 end
