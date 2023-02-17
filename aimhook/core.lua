@@ -5,11 +5,8 @@
 --getgenv().AutoExec = true
 
 repeat task.wait() until game:IsLoaded();
-for x, v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
-	v:Disable()
-end;
-hookfunction(game.Players.LocalPlayer.Kick,function(...)
-    return nil    
+hookfunction(game.Stats.GetMemoryUsageMbForTag, function()
+    coroutine.yield()
 end)
 local arsonfuncs={}
 local sent={}
@@ -26,10 +23,10 @@ local name=""..math.random(1,100000000) -- fuck you nigger
 local name2=""..math.random(1,100000000) -- fuck you nigger
 BodyVelocity.MaxForce = Vector3.new(math.huge, 0, math.huge)
 NoAnimation.AnimationId = "rbxassetid://0"
-SecureFolder.Name="AimhookSecureFolder"
+SecureFolder.Name="4564694893204234890234802948293482094820934820985092757873687984376893476893476983476983454"
 shared.Settings={}
 shared.Notifier=NotifyLib
-shared.ThirdPerson=false
+--shared.ThirdPerson=false
 
 function arsonfuncs:RotationY(cframe)
     local x, y, z = cframe:ToOrientation()
@@ -63,26 +60,22 @@ end
 function arsonfuncs:GetVolume()
     return game.SoundService.WeaponDischarge.Volume;
 end
-function arsonfuncs:KillPlayer(charact)
-    if game:GetService("ReplicatedStorage").wkspc.Status.RoundOver.Value then return end;
-    if not game.Players.LocalPlayer.Character:FindFirstChild("Spawned") then return end;
-    local newbuffer = require(game:GetService("ReplicatedStorage").Modules.BitBuffer)()
-    newbuffer.writeString(game:GetService("Players").LocalPlayer.NRPBS.EquippedTool.Value)
-    newbuffer.writeUnsigned(2, 1)
-    newbuffer.writeUnsigned(2, 0)
-    newbuffer.writeInt8(1 + 0)
-    newbuffer.writeFloat16(50)
-    newbuffer.writeInt8(1)
-    newbuffer.writeUnsigned(1 + 0, 0)
-    newbuffer.writeUnsigned(1, 0)
-    newbuffer.writeVector3(charact.Character.HumanoidRootPart.Position)
-    newbuffer.writeVector3(charact.Character.HumanoidRootPart.Position)
-    if not game:GetService("ReplicatedStorage").wkspc.Status.RoundOver.Value then 
-        return game.ReplicatedStorage.Events["" .. "\226\128\139HitPart"]:FireServer(charact.Character.HumanoidRootPart, newbuffer.dumpString(), "swaggg")
-    end;
-end;
-function arsonfuncs:GetFOV()
-    return game.Players.LocalPlayer.Settings.FOV.Value;    
+function arsonfuncs:KillPlayer(Player)
+    if (not Player.Character or not Player.Character:FindFirstChild('HumanoidRootPart')) then
+        return
+    end
+    local v162 = require(game.ReplicatedStorage.Modules.BitBuffer)();
+    v162.writeString(game.Players.LocalPlayer.NRPBS.EquippedTool.Value);
+    v162.writeUnsigned(2, 1);
+    v162.writeUnsigned(2, 0); 
+    v162.writeInt8(0);
+    v162.writeFloat16((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Player.Character.HumanoidRootPart.Position).Magnitude); 
+    v162.writeInt8(1);
+    v162.writeUnsigned(1, 0);
+    v162.writeUnsigned(1, 0);
+    v162.writeVector3(Player.Character.HumanoidRootPart.Position); 
+    v162.writeVector3(Player.Character.HumanoidRootPart.Position);
+    return game.ReplicatedStorage.Events["\226\128\139HitPart"]:FireServer(Player.Character.HumanoidRootPart, v162.dumpString(), 'swaggg', nil)
 end
 
 
@@ -99,8 +92,6 @@ local __config = { -- custom sleeves, very nice tbh.
     Color = Color3.fromRGB(255,255,255);
     Texture = "rbxassetid://11627980878"
 }
-
-
 
 
 
@@ -132,41 +123,20 @@ for _, v in next, game.ReplicatedStorage.Weapons:GetDescendants() do
     
 end
 
-local mt = getrawmetatable(game)
 
-make_writeable(mt)
-local oldmt=mt.__namecall
+local oldNewMt
 
-mt.__namecall = newcclosure(function(self,...)
-  local method = getnamecallmethod()
-
-    if method == 'Kick' then
-         wait(9e9)
-         return nil
-    end
-  
-    if self.Name == "Peep" then
-        wait(9e9)
-        return nil
-    end
-    if self.Name == "Ban" then
-        wait(9e9)
-        return nil
-    end
-    if self.Name == "Ban2" then
-        wait(9e9)
-        return nil
-    end
-    if self.Name == "e" and method == 'FireServer' then
-        return
-    end
-    if self.Name == "NewYear" and method == 'FireServer' then
-        wait(9e9)
+oldNewMt = hookmetamethod(game, "__namecall", function(self, ...)
+    local meth = getnamecallmethod()
+    
+    if meth == 'Kick' then
+        task.wait(9e9)
         return nil
     end
 
-   return oldmt(self,...)
+    return oldNewMt(self, ...)
 end)
+
 
 -- collect data for further use of skin.cc
 for _,v in pairs(game.ReplicatedStorage.Viewmodels["v_Classic Sword"]:GetChildren()) do 
@@ -3318,9 +3288,7 @@ end)
 vSec:AddSlider("Gravity", 0, 56, 100, 1, function(State)
     game.ReplicatedStorage.CurrentGrav.Value=State
 end)
-vSec:AddToggle("Voice Annoy", false, function(c)
-    configTable.AnnoyVoice=c;
-end)
+
 
 charMods:AddToggle("Upside Down Character", false, function(c)
     configTable.UpsideDown=c;
@@ -3398,9 +3366,6 @@ vSec:AddDropdown("sound", {"aimhook", "skeet.cc", "neverlose", "rust", "bag", "s
     print(configTable.configTable.Hitsound);
 end)
 
-local ToggleBindz5454 = vSec:AddToggle("Noclip", false, function(e)
-    configTable.Noclip = e
-end)
 
 local ToggleBindv = vSec:AddToggle("CFrame Speed", false, function(e)
     configTable.Speed = e
@@ -3423,7 +3388,9 @@ task.spawn(function()
                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45 -- im just testing
     end
     
-
+if game.ReplicatedStorage:FindFirstChild('Blank') then
+    game.ReplicatedStorage.Blank:Destroy()    
+end
 
 for _, vls in pairs(workspace.Camera:GetChildren()) do
         if vls and vls:IsA("Model") and configTable.CS_SLEEVES then
@@ -4030,7 +3997,7 @@ mouse2.Button1Down:connect(
 
 
 local ToggleBinder = vSec:AddToggle("ThirdPerson", false, function(e)
-    shared.ThirdPerson=e;
+    --shared.ThirdPerson=e;
 end)
 
 ToggleBinder:AddKeybind()
@@ -4056,9 +4023,7 @@ vSec:AddDropdown("Kill All Type", {"normal", "heartbeat"}, "normal",false, funct
     else configTable.normal=false end
     configTable.ktype=x;
 end)
-vSec:AddToggle("Hit Log",false,function(x)
-    configTable.HitLog=x;    
-end)
+
 
 newbinde:AddKeybind()
 
@@ -4277,20 +4242,18 @@ getgenv().AimPart =  configTable.LocalAimPart
      
 end)
 
-local mt = getrawmetatable(game)
-local namecallold = mt.__namecall
-local index = mt.__index
-setreadonly(mt, false)
-mt.__namecall = newcclosure(function(self, ...)
+
+local hah
+hah = hookmetamethod(game, "__namecall", function(self, ...)
     local Args = {...}
     NamecallMethod = getnamecallmethod()
-    if tostring(NamecallMethod) == "FindPartOnRayWithIgnoreList" and configTable.Wallbang then
+    if tostring(NamecallMethod) == "FindPartOnRayWithIgnoreList" and configTable.Wallbang and not checkcaller() then
         table.insert(Args[2], workspace.Map)
     end
    
-    return namecallold(self, ...)
+    return hah(self, ...)
 end)
-setreadonly(mt, true)
+
 
 testSection:AddToggle("Wallbang",false, function(v)
     configTable.Wallbang=v;
@@ -4533,6 +4496,7 @@ end)
                 if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("UpperTorso") then
                     BodyVelocity:Destroy()
             		BodyVelocity = Instance.new("BodyVelocity")
+            		BodyVelocity.Name = '()()'
             		BodyVelocity.MaxForce = Vector3.new(math.huge,0,math.huge)
             		if UserInputService:IsKeyDown("Space") then
             			local add = 0
@@ -4577,7 +4541,7 @@ setreadonly(mt, false)
 mt.__namecall = newcclosure(function(self, ...)
     local Args = {...}
     NamecallMethod = getnamecallmethod()
-    if tostring(NamecallMethod) == "FireServer" and tostring(self) == "ControlTurn" then
+    if tostring(NamecallMethod) == "FireServer" and tostring(self) == "ControlTurn" and not checkcaller() then
         --print("The tables have turned! muhahahhahaha 🤣😱😥🥵🤓📣💀🤩😀😎")
         if configTable.AntiAim then
             if configTable.AA_METHOD == "Mental" then
@@ -4618,22 +4582,13 @@ mt.__namecall = newcclosure(function(self, ...)
         end
     end
     
-    if self.Name == "Filter" and configTable.NoFilter then
+    if self.Name == "Filter" and configTable.NoFilter and not checkcaller() then
         return Args[1]
     end
     
-    if tostring(NamecallMethod) == 'LoadAnimation' and self.Name == 'Humanoid'then
-        task.spawn(function()
-            if game.Players.LocalPlayer.Character:FindFirstChild('Spawned') then
-                print(Args[1], ' fired, spoofing') 
-                Args[1] = NoAnimation
-            else
-                print("bad")    
-            end
-        end)
-    end
     
-    if tostring(NamecallMethod) == "FireServer" and tostring(self) == "PlayerChatted" then
+    
+    if tostring(NamecallMethod) == "FireServer" and tostring(self) == "PlayerChatted" and not checkcaller() then
         chatKey = tostring(Args[1]); -- auto chat key grabber
         --print(chatKey)
         return namecallold(self, ...)
@@ -4662,6 +4617,7 @@ task.spawn(function()
             game.Lighting.ColorShift_Top=world.ColorShift_Top;
             game.Lighting.ColorShift_Bottom=world.ColorShift_Bottom;
         end
+        --[[
         if configTable.Wallbang then
             local BitBuffer = require(game.ReplicatedStorage.Modules.BitBuffer)()
             --game.ReplicatedStorage.Functions.Ping:Destroy()
@@ -4669,7 +4625,7 @@ task.spawn(function()
             BitBuffer.writeUnsigned(9, 511)
             game.ReplicatedStorage.Events.UpdatePing:FireServer(BitBuffer.dumpString())
         end
-        
+        ]]
         
         
     end 
@@ -4682,22 +4638,20 @@ end)
 
 local ArsoniaFunctionLib={}
 function ArsoniaFunctionLib:Tween(...) game:GetService("TweenService"):Create(...):Play() end
-local mt = getrawmetatable(game)
-local oldNamecall = mt.__namecall
-local oldIndex = mt.__index
-setreadonly(mt,false)
-mt.__namecall = function(self, ...)
-	local method = tostring(getnamecallmethod())
-    local args = {...}
+local oldNew
 
-	if method == "SetPrimaryPartCFrame" and self.Name == "Arms" and configTable.VMChange then
+oldNew = hookmetamethod(game, "__namecall", function(self, ...)
+    local method = getnamecallmethod()
+    local args = {...}
+    
+    if method == "SetPrimaryPartCFrame" and self.Name == "Arms" and configTable.VMChange then
 		args[1] = args[1] * CFrame.new(VMOffsets.X,VMOffsets.Y,VMOffsets.Z);
 
 	end
 	
 	
 	
-	if self.Name == "\226\128\139HitPart" then
+	if self.Name == "\226\128\139HitPart" and not checkcaller() then
 	   
 	    
 	    if args[1].Parent == arsonfuncs:GetSecureFolder() then
@@ -4714,7 +4668,7 @@ mt.__namecall = function(self, ...)
             		local beam = Instance.new("Part")
             		
             		 beam.Parent = workspace.Debris;
-            
+                    beam.Name = 'U()()()()()()+45+52432+42+423+423+423+42+3423+42+3/(3+3)'
                             beam.Anchored = true
                             beam.CanCollide = false
                             beam.Material = configTable.BMaterial
@@ -4728,6 +4682,7 @@ mt.__namecall = function(self, ...)
                             
                 else
                     local beam = beams:Clone()
+                    beam.Name = 'U()()()()()()+45+52432+42+423+423+423+42+3423+42+3/(3+3)'
                     beam.FaceCamera = true;
                     beam.TextureLength = 2;
                     beam.LightInfluence = 0;
@@ -4779,6 +4734,7 @@ mt.__namecall = function(self, ...)
                     beam.Attachment0 = A1
                     beam.Attachment1 = A2
                     local ViewPoint = Instance.new("Part",workspace.Ray_Ignore)
+                    ViewPoint.Name = '()+goofballllll'
                     ViewPoint.Transparency = 1
                     ViewPoint.Anchored = true;
                     ViewPoint.CanCollide = false; -- oops, messed up there ! 
@@ -4829,18 +4785,13 @@ mt.__namecall = function(self, ...)
 	            end
 	        end)     
 	    end
-    
-        return oldNamecall(self, unpack(args))
-
 	end
-	
-	return oldNamecall(self, unpack(args))
-end	
+    return oldNew(self, ...)
+end)
+
+
 	
 --arsonfuncs.PrepareInit()--:trollface:
-local ArsoniaFunctionLib={}
-function ArsoniaFunctionLib:Tween(...) game:GetService("TweenService"):Create(...):Play() end
-
 
 
 
@@ -4996,12 +4947,9 @@ function ClosestPlayer()
     end
     return Closest
 end
-local MT = getrawmetatable(game)
-local OldNC = MT.__namecall
-local OldIDX = MT.__index
-setreadonly(MT, false)
-MT.__namecall = newcclosure(function(self, ...)
-    local Args, Method = {...}, getnamecallmethod()
+local OldNC
+OldNC = hookmetamethod(game, "__namecall", function(self, ...)
+   local Args, Method = {...}, getnamecallmethod()
     if Method == "FindPartOnRayWithIgnoreList" and not checkcaller() then
         local CP = ClosestPlayer()
         
@@ -5044,6 +4992,7 @@ MT.__namecall = newcclosure(function(self, ...)
         end
     
     end
+    
     return OldNC(self, ...)
 end)
 
