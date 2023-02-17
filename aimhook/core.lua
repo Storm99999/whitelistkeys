@@ -61,6 +61,7 @@ function arsonfuncs:GetVolume()
     return game.SoundService.WeaponDischarge.Volume;
 end
 function arsonfuncs:KillPlayer(Player)
+    if game:GetService("ReplicatedStorage").wkspc.Status.RoundOver.Value then return end;
     if (not Player.Character or not Player.Character:FindFirstChild('HumanoidRootPart')) then
         return
     end
@@ -75,6 +76,7 @@ function arsonfuncs:KillPlayer(Player)
     v162.writeUnsigned(1, 0);
     v162.writeVector3(Player.Character.HumanoidRootPart.Position); 
     v162.writeVector3(Player.Character.HumanoidRootPart.Position);
+    if game:GetService("ReplicatedStorage").wkspc.Status.RoundOver.Value then return end;
     return game.ReplicatedStorage.Events["\226\128\139HitPart"]:FireServer(Player.Character.HumanoidRootPart, v162.dumpString(), 'swaggg', nil)
 end
 
@@ -3623,6 +3625,7 @@ if configTable.ForceKillAll and configTable.normal then
 
 
 
+--[[
 
 if configTable.Hitboxes then
 
@@ -3662,6 +3665,7 @@ end
 end
 end    
 end
+]]
     if configTable.BunnyHop and configTable.BHopMethod == "Humanoid"then
         if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.Space) and game.Players.LocalPlayer.Character then
             game.Players.LocalPlayer.Character.Humanoid.Jump=true
@@ -5067,13 +5071,13 @@ game.RunService.Heartbeat:Connect(function()
     if configTable.ktype == 'heartbeat'and configTable.ForceKillAll then
         for _,v in next, game.Players:GetPlayers() do
                 if game:GetService("ReplicatedStorage").wkspc.FFA.Value then
-                    if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("Spawned") then
+                    if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("Spawned")and gun~='Rocket Launcher' and gun~='Concussion Rifle'and gun~='Arm Cannon'and gun~='RPG'and gun~='Firework Launcher' then
                         for i = 1, 10 do 
                             arsonfuncs:KillPlayer(v)
                         end
                     end
                 else
-                    if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("Spawned") and v.TeamColor ~= game.Players.LocalPlayer.TeamColor then
+                    if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("Spawned") and v.TeamColor ~= game.Players.LocalPlayer.TeamColor and gun~='Rocket Launcher' and gun~='Concussion Rifle'and gun~='Arm Cannon'and gun~='RPG'and gun~='Firework Launcher' then
                         for i = 1, 10 do 
                             arsonfuncs:KillPlayer(v)
                         end
@@ -5082,7 +5086,7 @@ game.RunService.Heartbeat:Connect(function()
             end   
     end
     if configTable.Revive then
-        getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Client).reviveme=true    
+        --getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Client).reviveme=true    
     end  
 end)
 
