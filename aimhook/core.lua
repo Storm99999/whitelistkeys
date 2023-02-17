@@ -3606,7 +3606,7 @@ if configTable.ForceKillAll and configTable.normal then
         for _,v in next, game.Players:GetPlayers() do
                 if game:GetService("ReplicatedStorage").wkspc.FFA.Value then
                     local gun = game.Players.LocalPlayer.NRPBS.EquippedTool.Value
-                    if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("Spawned") and gun~='Rocket Launcher' or gun~='Concussion Rifle'or gun~='Arm Cannon'or gun~='RPG'or gun~='Firework Launcher' then
+                    if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("Spawned") and gun~='Rocket Launcher' and gun~='Concussion Rifle'and gun~='Arm Cannon'and gun~='RPG'and gun~='Firework Launcher' then
                         for i = 1, 10 do 
                             arsonfuncs:KillPlayer(v)
                         end
@@ -4979,7 +4979,7 @@ OldNC = hookmetamethod(game, "__namecall", function(self, ...)
             if CP and CP.Character and CP.Name ~= game.Players.LocalPlayer.Name and CP.Character.FindFirstChild(CP.Character, "Head") and configTable.S2 then
                 if configTable.SCheck then
                     local gun = game.Players.LocalPlayer.NRPBS.EquippedTool.Value
-                    if CP.TeamColor ~= game.Players.LocalPlayer.TeamColor and gun~='Rocket Launcher' or gun~='Concussion Rifle'or gun~='Arm Cannon'or gun~='RPG'or gun~='Firework Launcher' then
+                    if CP.TeamColor ~= game.Players.LocalPlayer.TeamColor and gun~='Rocket Launcher' and gun~='Concussion Rifle'and gun~='Arm Cannon'and gun~='RPG'and gun~='Firework Launcher' then
                         for i=0,5 do
                             arsonfuncs:KillPlayer(CP)
                         end
