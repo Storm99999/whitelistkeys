@@ -16,11 +16,17 @@ local BodyVelocity=Instance.new("BodyVelocity")
 local SecureFolder=Instance.new("Folder",workspace)
 local NoAnimation=Instance.new("Animation",game.CoreGui)
 local NotifyLib=loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
-local api=loadstring(game:HttpGet("https://raw.githubusercontent.com/Storm99999/whitelistkeys/main/aimhook/api/corefile.lua"))()
+local api=loadstring(game:HttpGet("https://raw.githubusercontent.com/Storm99999/whitelistkeys/main/aimhook/api/newcore.lua"))()
 local beams=game:GetObjects("rbxassetid://12328085159")[1]
 local xonae=false or false;
 local name=""..math.random(1,100000000) -- fuck you nigger
 local name2=""..math.random(1,100000000) -- fuck you nigger
+local FOVCircle = Drawing.new("Circle")
+FOVCircle.Thickness = 2
+FOVCircle.Filled = false
+FOVCircle.Transparency = 0.6
+FOVCircle.Radius = 90
+FOVCircle.Color = Color3.new(255,0,255)
 BodyVelocity.MaxForce = Vector3.new(math.huge, 0, math.huge)
 NoAnimation.AnimationId = "rbxassetid://0"
 SecureFolder.Name="4564694893204234890234802948293482094820934820985092757873687984376893476893476983476983454"
@@ -266,6 +272,9 @@ local configTable = {
     IgnoreVisibility=false,
     Farmhearts=false,
     ftype='tp',
+    FRadius=90,
+    FColor=Color3.fromRGB(255,0,255),
+    FCircle=false,
 }
 
 -- guh, this took for ages
@@ -3110,10 +3119,18 @@ end)
 testSection:AddToggle("SilentTeamCheck",true,function(x)
     configTable.SCheck=x;    
 end)
+local nigg = testSection:AddToggle("SilentUseFOV",false,function(x)
+    configTable.FCircle=x;    
+end)
+nigg:AddColorpicker(Color3.fromRGB(75, 0,130), function(ztx)
+    configTable.FColor=ztx;
+end)
 testSection:AddToggle("SilentIgnoreVisibility",false,function(x)
     configTable.IgnoreVisibility=x;    
 end)
-
+testSection:AddSlider("FOV Radius", 1, 80, 1000, 1, function(State)
+    configTable.FRadius=State;
+end)
 
 testSection:AddToggle("Infinite Ammo", false, function(v)
     if not v then
@@ -3135,6 +3152,7 @@ testSection:AddButton("No Spread", function(v)
 		end
 end)
 
+--[[
 
 testSection:AddButton("HitBox: Head", function(v)
     aimPart = "Head"
@@ -3145,7 +3163,7 @@ end)
 testSection:AddButton("HitBox: LeftHand", function(v)
     aimPart = "LeftHand"
 end)
-
+]]
 
 testSection:AddButton("No Recoil", function(v)
     for i,v in next, game.ReplicatedStorage.Weapons:GetChildren() do
@@ -4162,6 +4180,10 @@ getgenv().AimPart =  configTable.LocalAimPart
     
    
     RService.RenderStepped:Connect(function()
+        FOVCircle.Radius = configTable.FRadius
+        FOVCircle.Color = configTable.FColor
+        FOVCircle.Visible = configTable.FCircle
+        FOVCircle.Position = game:GetService('UserInputService'):GetMouseLocation() -- guh?
         if configTable.UseCustomRotation and game.Players.LocalPlayer.Character then
             arsonfuncs:RotatePlayer(workspace.CurrentCamera.CFrame * CFrame.new(configTable.RotationY,0,0))    
         end
@@ -4967,7 +4989,13 @@ OldNC = hookmetamethod(game, "__namecall", function(self, ...)
                                 Args[1] = Ray.new(CurrentCamera.CFrame.Position, (SecureFolder[CP.Name][1].Position - CurrentCamera.CFrame.Position).Unit * 1000)
                                 
                             else
-                                Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character[aimPart].Position - CurrentCamera.CFrame.Position).Unit * 1000)
+                                if configTable.FCircle then
+                                    if(Vector2.new(workspace.CurrentCamera:WorldToScreenPoint(CP.Character.Head.Position).X,workspace.CurrentCamera:WorldToScreenPoint(CP.Character.Head.Position).Y)-Vector2.new(game.Players.LocalPlayer:GetMouse().X,game.Players.LocalPlayer:GetMouse().Y)).Magnitude<=configTable.FRadius then
+                                        Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character[aimPart].Position - CurrentCamera.CFrame.Position).Unit * 1000)    
+                                    end
+                                else
+                                    Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character[aimPart].Position - CurrentCamera.CFrame.Position).Unit * 1000)
+                                end
                             end
                         else
                             Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character[aimPart].Position - CurrentCamera.CFrame.Position).Unit * 1000)
@@ -4984,14 +5012,30 @@ OldNC = hookmetamethod(game, "__namecall", function(self, ...)
                 if configTable.SCheck then
                     local gun = game.Players.LocalPlayer.NRPBS.EquippedTool.Value
                     if CP.TeamColor ~= game.Players.LocalPlayer.TeamColor and gun~='Rocket Launcher' and gun~='Concussion Rifle'and gun~='Arm Cannon'and gun~='RPG'and gun~='Firework Launcher' then
-                        for i=0,5 do
-                            arsonfuncs:KillPlayer(CP)
+                        if configTable.FCircle then
+                            if(Vector2.new(workspace.CurrentCamera:WorldToScreenPoint(CP.Character.Head.Position).X,workspace.CurrentCamera:WorldToScreenPoint(CP.Character.Head.Position).Y)-Vector2.new(game.Players.LocalPlayer:GetMouse().X,game.Players.LocalPlayer:GetMouse().Y)).Magnitude<=configTable.FRadius then
+                                for i=0,5 do
+                                    arsonfuncs:KillPlayer(CP)
+                                end
+                            end
+                        else
+                            for i=0,5 do
+                                arsonfuncs:KillPlayer(CP)
+                            end
                         end
                     end
                 else
-                    for i=0,5 do
-                        arsonfuncs:KillPlayer(CP)
-                    end
+                    if configTable.FCircle then
+                            if(Vector2.new(workspace.CurrentCamera:WorldToScreenPoint(CP.Character.Head.Position).X,workspace.CurrentCamera:WorldToScreenPoint(CP.Character.Head.Position).Y)-Vector2.new(game.Players.LocalPlayer:GetMouse().X,game.Players.LocalPlayer:GetMouse().Y)).Magnitude<=configTable.FRadius then
+                                for i=0,5 do
+                                    arsonfuncs:KillPlayer(CP)
+                                end
+                            end
+                        else
+                            for i=0,5 do
+                                arsonfuncs:KillPlayer(CP)
+                            end
+                        end
                 end
                 
             end
