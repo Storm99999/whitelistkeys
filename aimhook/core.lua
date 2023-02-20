@@ -293,7 +293,8 @@ local configTable = {
     FColor=Color3.fromRGB(255,0,255),
     FCircle=false,
     NRcoil=false,
-    NSpread=false
+    NSpread=false,
+    KillAura2=false,
 }
 
 -- guh, this took for ages
@@ -3408,7 +3409,7 @@ local ToggleBindv = vSec:AddToggle("CFrame Speed", false, function(e)
 end)
 
 coroutine.wrap(function()
-    while task.wait(0.2) do
+    while task.wait(0.1) do
         if configTable.NRcoil then
             getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Client.Functions.Weapons).recoil = 0
         end
@@ -3483,7 +3484,19 @@ for _, vls in pairs(workspace.Camera:GetChildren()) do
         end
 end
 shared.Settings=configTable
-
+if configTable.KillAura2 then
+            for i,v in pairs(game.Players:GetPlayers()) do
+                    if v and v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Head") and v.Character:FindFirstChild("Spawned") and v.TeamColor ~= game.Players.LocalPlayer.TeamColor then    
+                        local Distance = (game.Players.LocalPlayer.Character.PrimaryPart.Position - v.Character.PrimaryPart.Position).magnitude 
+                        if Distance <= 700 then
+                            for i=0,5 do -- best possible damage :)
+                                arsonfuncs:KillPlayer(v)
+                            end
+                        end
+                    end
+                end
+        
+        end
 if configTable.Farmhearts then
     for _, v in next, workspace.Debris:GetChildren() do 
         if v.Name == 'Heart'then
@@ -4205,6 +4218,7 @@ getgenv().AimPart =  configTable.LocalAimPart
     
    
     RService.RenderStepped:Connect(function()
+        
         FOVCircle.Radius = configTable.FRadius
         FOVCircle.Color = configTable.FColor
         FOVCircle.Visible = configTable.FCircle
@@ -4319,7 +4333,23 @@ end)
 testSection:AddToggle("KillAura",false, function(v)
     configTable.KillAura=v;
 end)
-
+local newfirst = false
+local dogCrap = testSection:AddToggle("*OP* TP Killaura",false, function(v)
+    if not newfirst then -- cattoware always executes codes inside toggles so we have to make a check if it is caused by cw!
+        newfirst = true
+        return
+    end
+    configTable.KillAura2=v;
+    if v then
+        for _, v in next, game.Players:GetPlayers() do
+            if v.TeamColor ~= game.Players.LocalPlayer.TeamColor and v.Character:FindFirstChild('Spawned') then
+                game.Players.LocalPlayer.Character:PivotTo(v.Character.HumanoidRootPart.CFrame)
+                task.wait(.5)
+            end
+        end    
+    end
+end)
+dogCrap:AddKeybind()
 
 
 	repeat wait() 
@@ -5160,7 +5190,11 @@ game.RunService.Heartbeat:Connect(function()
                 end
             end   
     end
+    
     if configTable.Revive then
+        if game.Players.LocalPlayer.NRPBS.Health.Value <= 0 and game.Players.LocalPlayer.Status.Team.Value ~= "Spectator" then
+            getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Client).reviveme = true
+        end
         --getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Client).reviveme=true    
     end  
 end)
