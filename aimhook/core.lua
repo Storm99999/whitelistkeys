@@ -66,24 +66,35 @@ end
 function arsonfuncs:GetVolume()
     return game.SoundService.WeaponDischarge.Volume;
 end
+local NiggerWeapons = {'Rocket Launcher', 'Arm Canon', 'Firework Launcher', 'RPG', 'Concussion Rifle'} -- fuck you, Concussion Rifle!
 function arsonfuncs:KillPlayer(Player)
-    if game:GetService("ReplicatedStorage").wkspc.Status.RoundOver.Value then return end;
-    if (not Player.Character or not Player.Character:FindFirstChild('HumanoidRootPart')) then
-        return
+    if table.find(NiggerWeapons, game.Players.LocalPlayer.NRPBS.EquippedTool.Value) then
+        game.ReplicatedStorage.Events.CreateProjectile:FireServer("Rocket", 6300, Vector3.new(), CFrame.new(), 50, 50, 1, 35, game.Players.LocalPlayer.NRPBS.EquippedTool.Value, Vector3.new(), false, nil,{
+            [1] = workspace.Map.Clips,
+            [2] = workspace.Debris,
+            [3] = game.Players.LocalPlayer.Character,
+            [4] = workspace["Ray_Ignore"],
+            [5] = workspace.Map.Spawns }, nil, {[1] = Player.Character}, Player.Character.Head, Player.Character.Head.Position)
+        return nil
     end
-    local v162 = require(game.ReplicatedStorage.Modules.BitBuffer)();
-    v162.writeString(game.Players.LocalPlayer.NRPBS.EquippedTool.Value);
-    v162.writeUnsigned(2, 1);
-    v162.writeUnsigned(2, 0); 
-    v162.writeInt8(0);
-    v162.writeFloat16((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Player.Character.HumanoidRootPart.Position).Magnitude); 
-    v162.writeInt8(1);
-    v162.writeUnsigned(1, 0);
-    v162.writeUnsigned(1, 0);
-    v162.writeVector3(Player.Character.HumanoidRootPart.Position); 
-    v162.writeVector3(Player.Character.HumanoidRootPart.Position);
+    
     if game:GetService("ReplicatedStorage").wkspc.Status.RoundOver.Value then return end;
-    return game.ReplicatedStorage.Events["\226\128\139HitPart"]:FireServer(Player.Character.HumanoidRootPart, v162.dumpString(), 'swaggg', nil)
+        if (not Player.Character or not Player.Character:FindFirstChild('HumanoidRootPart')) then
+            return
+        end
+        local v162 = require(game.ReplicatedStorage.Modules.BitBuffer)();
+        v162.writeString(game.Players.LocalPlayer.NRPBS.EquippedTool.Value);
+        v162.writeUnsigned(2, 1);
+        v162.writeUnsigned(2, 0); 
+        v162.writeInt8(0);
+        v162.writeFloat16((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Player.Character.HumanoidRootPart.Position).Magnitude); 
+        v162.writeInt8(1);
+        v162.writeUnsigned(1, 0);
+        v162.writeUnsigned(1, 0);
+        v162.writeVector3(Player.Character.HumanoidRootPart.Position); 
+        v162.writeVector3(Player.Character.HumanoidRootPart.Position);
+        if game:GetService("ReplicatedStorage").wkspc.Status.RoundOver.Value then return end;
+        return game.ReplicatedStorage.Events["\226\128\139HitPart"]:FireServer(Player.Character.HumanoidRootPart, v162.dumpString(), 'swaggg', nil)
 end
 
 
@@ -141,6 +152,9 @@ oldNewMt = hookmetamethod(game, "__namecall", function(self, ...)
         task.wait(9e9)
         return nil
     end
+    
+    
+    
 
     return oldNewMt(self, ...)
 end)
@@ -180,6 +194,9 @@ getgenv().HeadSize = Vector3.new(1.4497, 1.3017, 1.3017)
 
 local configTable = {
     ReplicatedValues = {Voices=(function()local a={}for _,v in pairs(game:GetService("ReplicatedFirst").Voices:GetDescendants())do if v:FindFirstChild("Looped")and v:FindFirstChild("Volume")and v:FindFirstChild("PlaybackSpeed")then table.insert(a,v)end end return a end)(),},
+    ReplicatedFireRate = {},
+    ReplicatedAuto = {},
+    NiggerWeapons = {'Rocket Launcher', 'Arm Canon', 'Firework Launcher', 'RPG', 'Concussion Rifle'}, -- fuck you, Concussion Rifle!
     AimBot = true,
     AimBotSm = 0.08,
     Skin = "Monky With Drip",
@@ -275,6 +292,8 @@ local configTable = {
     FRadius=90,
     FColor=Color3.fromRGB(255,0,255),
     FCircle=false,
+    NRcoil=false,
+    NSpread=false
 }
 
 -- guh, this took for ages
@@ -287,6 +306,20 @@ function arsonfuncs:RotatePlayer(cframe)
 	Gyro.CFrame = CFrame.new(Gyro.Parent.Position, cframe.Position)
     task.wait()
 	Gyro:Destroy()
+end
+
+for _,vls in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
+	if vls:FindFirstChild("FireRate") then
+		table.insert(configTable.ReplicatedFireRate, vls.Name)
+		configTable[vls.Name] = vls.FireRate.Value
+	end
+end
+
+for _,vls in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
+	if vls:FindFirstChild("Auto") then
+		table.insert(configTable.ReplicatedAuto, vls.Name)
+		configTable[vls.Name] = vls.Auto.Value
+	end
 end
 
 local world={Ambient=Color3.fromRGB(255,0,255),OutdoorAmbient=Color3.fromRGB(255,0,255),ColorShift_Top=Color3.fromRGB(255,0,255),ColorShift_Bottom=Color3.fromRGB(255,0,255),ClockTime=4.5,Saturation=0,Brightness=0,TintColor=Color3.fromRGB(255,255,255)};
@@ -2403,7 +2436,7 @@ bSec:AddButton("Delinquent With Drip", function(l)
 end)
 
 bSec:AddButton("Infinite Bucks", function(l)
-    game:GetService("Players").LocalPlayer.PlayerGui.Menew.ShopButtons.Bucks.Bucks.Text = "      ∞"
+    game:GetService("Players").LocalPlayer.PlayerGui.Menew.ShopButtons.Bucks.Bucks.Text = "      âˆž"
 
 end)
 
@@ -3072,24 +3105,7 @@ testSection:AddToggle("TriggerBot", false, function(first)
     configTable.Trigger = first
 end)
 
-testSection:AddButton("Rapid Fire", function(v)
-    for _, v in pairs(game.ReplicatedStorage.Weapons:GetDescendants()) do
-        if v.Name == "FireRate" then
-            if true then
-                v.Value = 0.02 -- Fast Firerate
-            else
-                return -- v.Value = 0.8
-            end
-        end
-        
-        if v.Name == "Auto" then
-            if true then
-                v.Value = true;
-            else
-            end
-        end
-    end
-end)
+
 
 local aimPart = "Head"
 
@@ -3131,7 +3147,23 @@ end)
 testSection:AddSlider("FOV Radius", 1, 80, 1000, 1, function(State)
     configTable.FRadius=State;
 end)
-
+local first=false
+testSection:AddToggle("Rapid Fire", false, function(guh)
+    if not first then
+        first = true
+        return
+    end
+    
+    for _,v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
+        if v:FindFirstChild("FireRate") then
+            v.FireRate.Value = guh and 0.02 or configTable.ReplicatedFireRate[v.Name]
+        end
+        
+        if v:FindFirstChild("Auto") then
+            v.Auto.Value = guh and true or configTable.ReplicatedAuto[v.Name] 
+        end
+    end
+end)
 testSection:AddToggle("Infinite Ammo", false, function(v)
     if not v then
 		game:GetService("ReplicatedStorage").wkspc.CurrentCurse.Value = ""
@@ -3139,18 +3171,7 @@ testSection:AddToggle("Infinite Ammo", false, function(v)
 		game:GetService("ReplicatedStorage").wkspc.CurrentCurse.Value = "Infinite Ammo"
 	end
 end)
-testSection:AddButton("No Spread", function(v)
-    for i,v in next, game.ReplicatedStorage.Weapons:GetChildren() do
-			for i,c in next, v:GetChildren() do 
-				for i,x in next, getconnections(c.Changed) do
-					x:Disable() -- probably not needed
-				end
-				if c.Name == "Spread" then
-					c.Value = 0 -- very gamer
-				end
-			end
-		end
-end)
+
 
 --[[
 
@@ -3165,20 +3186,15 @@ testSection:AddButton("HitBox: LeftHand", function(v)
 end)
 ]]
 
-testSection:AddButton("No Recoil", function(v)
-    for i,v in next, game.ReplicatedStorage.Weapons:GetChildren() do
-			for i,c in next, v:GetChildren() do 
-				for i,x in next, getconnections(c.Changed) do
-					x:Disable() -- probably not needed
-				end
-				if c.Name == "RecoilControl" then
-					c.Value = 0 -- very gamer
-				end
-			end
-		end
+
+
+testSection:AddToggle('No Recoil', false, function(new)
+    configTable.NRcoil=new;    
 end)
 
-
+testSection:AddToggle('No Spread', false, function(new)
+    configTable.NSpread=new;    
+end)
 
 
 
@@ -3391,7 +3407,16 @@ local ToggleBindv = vSec:AddToggle("CFrame Speed", false, function(e)
     configTable.Speed = e
 end)
 
-
+coroutine.wrap(function()
+    while task.wait(0.2) do
+        if configTable.NRcoil then
+            getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Client.Functions.Weapons).recoil = 0
+        end
+        if configTable.NSpread then
+            getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Client.Functions.Weapons).currentspread = { ["Value"] = 0 }
+        end    
+    end
+end)()
 
 task.spawn(function()
     while task.wait() do
@@ -3626,7 +3651,7 @@ if configTable.ForceKillAll and configTable.normal then
         for _,v in next, game.Players:GetPlayers() do
                 if game:GetService("ReplicatedStorage").wkspc.FFA.Value then
                     local gun = game.Players.LocalPlayer.NRPBS.EquippedTool.Value
-                    if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("Spawned") and gun~='Rocket Launcher' and gun~='Concussion Rifle'and gun~='Arm Cannon'and gun~='RPG'and gun~='Firework Launcher' then
+                    if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("Spawned") then
                         for i = 1, 10 do 
                             arsonfuncs:KillPlayer(v)
                         end
@@ -4274,14 +4299,20 @@ local hah
 hah = hookmetamethod(game, "__namecall", function(self, ...)
     local Args = {...}
     NamecallMethod = getnamecallmethod()
-    if tostring(NamecallMethod) == "FindPartOnRayWithIgnoreList" and configTable.Wallbang and not checkcaller() then
-        table.insert(Args[2], workspace.Map)
-    end
+    
    
     return hah(self, ...)
 end)
 
+local notFunny
 
+notFunny = hookmetamethod(game, "__index",function(self, xonaeKys)
+    if tostring(xonaeKys) == ("Clips") and configTable.Wallbang then
+        return workspace.Map -- hahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+    end
+    
+    return notFunny(self, xonaeKys)
+end)
 testSection:AddToggle("Wallbang",false, function(v)
     configTable.Wallbang=v;
 end)
@@ -4560,7 +4591,7 @@ end)
 	
 	
 	
-local mt = getrawmetatable(game) -- 😱
+local mt = getrawmetatable(game) -- ðŸ˜±
 local namecallold = mt.__namecall
 local index = mt.__index
 setreadonly(mt, false)
@@ -4569,7 +4600,7 @@ mt.__namecall = newcclosure(function(self, ...)
     local Args = {...}
     NamecallMethod = getnamecallmethod()
     if tostring(NamecallMethod) == "FireServer" and tostring(self) == "ControlTurn" and not checkcaller() then
-        --print("The tables have turned! muhahahhahaha 🤣😱😥🥵🤓📣💀🤩😀😎")
+        --print("The tables have turned! muhahahhahaha ðŸ¤£ðŸ˜±ðŸ˜¥ðŸ¥µðŸ¤“ðŸ“£ðŸ’€ðŸ¤©ðŸ˜€ðŸ˜Ž")
         if configTable.AntiAim then
             if configTable.AA_METHOD == "Mental" then
                 Args[1] = 1.3962564026167
@@ -4621,7 +4652,7 @@ mt.__namecall = newcclosure(function(self, ...)
         return namecallold(self, ...)
     end
     
-    return namecallold(self, ...) -- i le forgoré to put this haehaeahea
+    return namecallold(self, ...) -- i le forgorÃ© to put this haehaeahea
 end)
 
 
@@ -5011,7 +5042,7 @@ OldNC = hookmetamethod(game, "__namecall", function(self, ...)
             if CP and CP.Character and CP.Name ~= game.Players.LocalPlayer.Name and CP.Character.FindFirstChild(CP.Character, "Head") and configTable.S2 then
                 if configTable.SCheck then
                     local gun = game.Players.LocalPlayer.NRPBS.EquippedTool.Value
-                    if CP.TeamColor ~= game.Players.LocalPlayer.TeamColor and gun~='Rocket Launcher' and gun~='Concussion Rifle'and gun~='Arm Cannon'and gun~='RPG'and gun~='Firework Launcher' then
+                    if CP.TeamColor ~= game.Players.LocalPlayer.TeamColor then
                         if configTable.FCircle then
                             if(Vector2.new(workspace.CurrentCamera:WorldToScreenPoint(CP.Character.Head.Position).X,workspace.CurrentCamera:WorldToScreenPoint(CP.Character.Head.Position).Y)-Vector2.new(game.Players.LocalPlayer:GetMouse().X,game.Players.LocalPlayer:GetMouse().Y)).Magnitude<=configTable.FRadius then
                                 for i=0,5 do
@@ -5115,13 +5146,13 @@ game.RunService.Heartbeat:Connect(function()
     if configTable.ktype == 'heartbeat'and configTable.ForceKillAll then
         for _,v in next, game.Players:GetPlayers() do
                 if game:GetService("ReplicatedStorage").wkspc.FFA.Value then
-                    if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("Spawned")and gun~='Rocket Launcher' and gun~='Concussion Rifle'and gun~='Arm Cannon'and gun~='RPG'and gun~='Firework Launcher' then
+                    if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("Spawned")then
                         for i = 1, 10 do 
                             arsonfuncs:KillPlayer(v)
                         end
                     end
                 else
-                    if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("Spawned") and v.TeamColor ~= game.Players.LocalPlayer.TeamColor and gun~='Rocket Launcher' and gun~='Concussion Rifle'and gun~='Arm Cannon'and gun~='RPG'and gun~='Firework Launcher' then
+                    if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("Spawned") and v.TeamColor ~= game.Players.LocalPlayer.TeamColor then
                         for i = 1, 10 do 
                             arsonfuncs:KillPlayer(v)
                         end
@@ -5133,4 +5164,3 @@ game.RunService.Heartbeat:Connect(function()
         --getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Client).reviveme=true    
     end  
 end)
-
