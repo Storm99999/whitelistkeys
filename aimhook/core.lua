@@ -4698,6 +4698,14 @@ task.spawn(function()
                 game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer(chatKey,configTable.ChatContext,false,true,true)
             end
         end
+        
+        if configTable.Wallbang then
+            local BitBuffer = require(game.ReplicatedStorage.Modules.BitBuffer)()
+            BitBuffer.writeUnsigned(64, game.Players.LocalPlayer.UserId)
+            BitBuffer.writeUnsigned(9, 511, 0, 511)
+            game.ReplicatedStorage.Events.UpdatePing:FireServer(BitBuffer.dumpString(), nil)    
+        end
+        
         if configTable.WorldAmbience then
             game.Lighting.Ambient=world.Ambient;
             game.Lighting.OutdoorAmbient=world.OutdoorAmbient;
