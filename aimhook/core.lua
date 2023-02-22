@@ -295,6 +295,10 @@ local configTable = {
     NRcoil=false,
     NSpread=false,
     KillAura2=false,
+    JP=false,
+    JPow=50,
+    WS=false,
+    WSpeed=50,
 }
 
 -- guh, this took for ages
@@ -2437,7 +2441,7 @@ bSec:AddButton("Delinquent With Drip", function(l)
 end)
 
 bSec:AddButton("Infinite Bucks", function(l)
-    game:GetService("Players").LocalPlayer.PlayerGui.Menew.ShopButtons.Bucks.Bucks.Text = "      âˆž"
+    game:GetService("Players").LocalPlayer.PlayerGui.Menew.ShopButtons.Bucks.Bucks.Text = "      Ã¢Ë†Å¾"
 
 end)
 
@@ -3920,6 +3924,18 @@ end)
 charMods:AddToggle("Instant Respawn",false,function(x)
     configTable.Revive=x;    
 end)
+charMods:AddToggle("Jump Power",false,function(x)
+    configTable.JP=x;    
+end)
+charMods:AddToggle("Speed Boost",false,function(x)
+    configTable.WS=x;    
+end)
+charMods:AddSlider("JumpPower", 1, 1, 500, 1, function(State)
+    configTable.JPow=State;
+end)
+charMods:AddSlider("SpeedBoost", 1, 1, 500, 1, function(State)
+    configTable.WSpeed=State;
+end)
 
 local ToggleBind53 = charMods:AddButton("Top G Glasses", function(e)
     while task.wait() do
@@ -4036,6 +4052,19 @@ local UIS = game:GetService'UserInputService';
 			end)
 		end
 	end)
+game.UserInputService.JumpRequest:Connect(function()
+     
+	
+
+	Action(player.Character.Humanoid, function(self)
+	    if configTable.JP then
+				Action(self.Parent.HumanoidRootPart, function(self)
+						self.Velocity = Vector3.new(0, configTable.JPow, 0);
+				end)
+				
+		end
+	end)
+end)
 
 local mouse2 = game.Players.LocalPlayer:GetMouse()
 mouse2.Button1Down:connect(
@@ -4321,6 +4350,11 @@ end)
 local notFunny
 
 notFunny = hookmetamethod(game, "__index",function(self, xonaeKys)
+    
+    if tostring(self)=='Humanoid'and tostring(xonaeKys)=='WalkSpeed' and configTable.WS then
+        return configTable.WSpeed
+    end
+    
     if tostring(xonaeKys) == ("Clips") and configTable.Wallbang then
         return workspace.Map -- hahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     end
@@ -4621,7 +4655,7 @@ end)
 	
 	
 	
-local mt = getrawmetatable(game) -- ðŸ˜±
+local mt = getrawmetatable(game) -- Ã°Å¸ËœÂ±
 local namecallold = mt.__namecall
 local index = mt.__index
 setreadonly(mt, false)
@@ -4630,7 +4664,7 @@ mt.__namecall = newcclosure(function(self, ...)
     local Args = {...}
     NamecallMethod = getnamecallmethod()
     if tostring(NamecallMethod) == "FireServer" and tostring(self) == "ControlTurn" and not checkcaller() then
-        --print("The tables have turned! muhahahhahaha ðŸ¤£ðŸ˜±ðŸ˜¥ðŸ¥µðŸ¤“ðŸ“£ðŸ’€ðŸ¤©ðŸ˜€ðŸ˜Ž")
+        --print("The tables have turned! muhahahhahaha Ã°Å¸Â¤Â£Ã°Å¸ËœÂ±Ã°Å¸ËœÂ¥Ã°Å¸Â¥ÂµÃ°Å¸Â¤â€œÃ°Å¸â€œÂ£Ã°Å¸â€™â‚¬Ã°Å¸Â¤Â©Ã°Å¸Ëœâ‚¬Ã°Å¸ËœÅ½")
         if configTable.AntiAim then
             if configTable.AA_METHOD == "Mental" then
                 Args[1] = 1.3962564026167
@@ -4682,7 +4716,7 @@ mt.__namecall = newcclosure(function(self, ...)
         return namecallold(self, ...)
     end
     
-    return namecallold(self, ...) -- i le forgorÃ© to put this haehaeahea
+    return namecallold(self, ...) -- i le forgorÃƒÂ© to put this haehaeahea
 end)
 
 
@@ -5024,16 +5058,16 @@ local Mouse = LocalPlayer:GetMouse()
 function ClosestPlayer()
     local MaxDist, Closest = math.huge
     for I,V in pairs(Players.GetPlayers(Players)) do
-        if V == LocalPlayer then continue end
-        if V.Team == LocalPlayer then continue end
-        if not V.Character then continue end
+        if V == LocalPlayer then  end
+        if V.Team == LocalPlayer then  end
+        if not V.Character then  end
         local Head = V.Character.FindFirstChild(V.Character, "Head")
-        if not Head then continue end
+        if not Head then  end
         local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
         if configTable.IgnoreVisibility then
             Vis = true    
         end
-        if not Vis then continue end
+        if not Vis then  end
         local MousePos, TheirPos = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
         local Dist = (TheirPos - MousePos).Magnitude
         if Dist < MaxDist then
