@@ -18,9 +18,9 @@ for _, v in next, UI.SideBar.Frame:GetChildren()do
 		v:Destroy()
 	end
 end
-shared.toggles={Aimbot={},bypasses={},player={},misc={}}
-shared.buttons={Aimbot={},bypasses={},player={},misc={}}
-shared.sliders={Aimbot={},bypasses={},player={},misc={}}
+--shared.toggles={Aimbot={},bypasses={},player={},misc={}}
+--shared.buttons={Aimbot={},bypasses={},player={},misc={}}
+--shared.sliders={Aimbot={},bypasses={},player={},misc={}}
 
 function aimhook:SetTitle(t)
 	UI.SideBar.LibTitle.Text = t
@@ -40,4 +40,4 @@ function aimhook:Add(cfg, section)
 	end
 end
 
-return(aimhook);
+return aimhook
