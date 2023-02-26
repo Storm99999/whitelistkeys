@@ -7,6 +7,7 @@ local elements={
 	Slider=game:GetObjects('')[1];
 }
 local UI = elements.UI:Clone()
+UI.Parent = game.CoreGui
 for _, v in next, UI.Container.Aimbot.Toggles:GetChildren()do
 	v:Destroy()
 end
