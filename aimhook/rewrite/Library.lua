@@ -1,43 +1,62 @@
-local aimhook={}
-local elements={
-	UI=game:GetObjects('rbxassetid://12617059698')[1];
-	Button=game:GetObjects('rbxassetid://12616965131')[1];
-	Toggle=game:GetObjects('rbxassetid://12616963389')[1];
-	Tab=game:GetObjects('rbxassetid://12616968797')[1];
+local file = {} -- base
+file.__index = file
+
+local functions = { -- buttons (UI)
+	--[[[ "examplesection" = { all buttons as strings in here}  ]]
+	["Aimbot"] = {}
 }
-local UI = elements.UI:Clone()
-UI.Parent = game.CoreGui
-for _, v in next, UI.Canvas.Container.Aimbot.Toggles:GetChildren()do
-	v:Destroy()
-end
-for _, v in next, UI.Canvas.Container.Aimbot.Sliders:GetChildren()do
-	v:Destroy()
-end
-for _, v in next, UI.Canvas.SideBar.Frame:GetChildren()do
-	if v:IsA('Button') then
-		v:Destroy()
-	end
-end
---shared.toggles={Aimbot={},bypasses={},player={},misc={}}
---shared.buttons={Aimbot={},bypasses={},player={},misc={}}
---shared.sliders={Aimbot={},bypasses={},player={},misc={}}
+local _functions = { -- functions (executable)
+	["togglena"]=function()
+		
+	end,
+}
 
-function aimhook:SetTitle(t)
-	UI.SideBar.LibTitle.Text = t
-end
 
-function aimhook:Add(cfg, section)
-	local e = cfg.Type
-	local n = cfg.Name
-	local f = cfg.Function
+--// variables \\--
+local player = game.Players.LocalPlayer
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local InputService = game:GetService("UserInputService")
+local Http = game:GetService("HttpService")
+local TweenService = game:GetService("TweenService")
+local PlayerGui = player.PlayerGui
+
+-- // programming \\--
+
+local parent = PlayerGui -- or coregui
+
+local _objs = {}
+
+local function Add_Obj(obj, parent) if not parent then assert(obj and obj.Name ~= nil or obj.Name ~= "", "no name") _objs[obj.Name] = obj end end
+
+local GUI = PlayerGui:WaitForChild("aimhook")
+
+function file.init()
+	for i,v in pairs(script:GetChildren()) do if string.find(v.Name, ("Init" or "init")) then if string.split(v.Name, "/")[2]=="Modules" then for _,module in pairs(v:GetChildren()) do require(module)() end end end	end
 	
-	if e:lower() == 'toggle' then
-		local new = elements.Toggle:Clone()
-		new.Name = n
-		new.Interact.MouseButton1Down:Connect(f)
-		new.Parent = UI.Canvas.Container[section]
-		--table.insert(shared.toggles[section], {Name=n,Function=f})
+	-- ^^ init for scripts
+	
+	for i,v in pairs(GUI.Canvas.Container.Aimbot.Toggles:GetChildren()) do
+		if string.find(v.Name, ("Example" or "example" or "EX")) then return end
+		
+		table.insert(functions.Aimbot, v.Name)
 	end
 end
 
-return aimhook
+
+return file
+
+
+--[[
+SUPER COOL GUIDE:
+
+
+ - functions (table) will auto update each section to include each 'toggle' in 'Toggles'. have to manually add the sections.
+ 
+ - _functions (table) houses all functions for TOGGLES ONLY. then just when the toggle is pressed to like _functions[togglename]( ) or something like that.
+ 
+ - _objs for housing all objects in your script including scripts and UI manually add or use Add_Obj function.
+
+ - NEED TO FIRE THE INIT FUNCTION WHEN THE SCRIPT STARTS UP OR IT NOT GOOD AND PROBABLY A GOOD CHANCE IT WILL BREAK!!!
+
+
+]]
