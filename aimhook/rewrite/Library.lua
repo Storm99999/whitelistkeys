@@ -1,13 +1,16 @@
 local aimhook={}
 local elements={
-	UI=game:GetObjects('rbxassetid://12616954775')[1];
+	UI=game:GetObjects('rbxassetid://12617059698')[1];
 	Button=game:GetObjects('rbxassetid://12616965131')[1];
 	Toggle=game:GetObjects('rbxassetid://12616963389')[1];
 	Tab=game:GetObjects('rbxassetid://12616968797')[1];
 	Slider=game:GetObjects('')[1];
 }
 local UI = elements.UI:Clone()
-for _, v in next, UI.Container:GetChildren()do
+for _, v in next, UI.Container.Aimbot.Toggles:GetChildren()do
+	v:Destroy()
+end
+for _, v in next, UI.Container.Aimbot.Sliders:GetChildren()do
 	v:Destroy()
 end
 for _, v in next, UI.SideBar.Frame:GetChildren()do
