@@ -7,13 +7,13 @@ local elements={
 }
 local UI = elements.UI:Clone()
 UI.Parent = game.CoreGui
-for _, v in next, UI.Container.Aimbot.Toggles:GetChildren()do
+for _, v in next, UI.Canvas.Container.Aimbot.Toggles:GetChildren()do
 	v:Destroy()
 end
-for _, v in next, UI.Container.Aimbot.Sliders:GetChildren()do
+for _, v in next, UI.Canvas.Container.Aimbot.Sliders:GetChildren()do
 	v:Destroy()
 end
-for _, v in next, UI.SideBar.Frame:GetChildren()do
+for _, v in next, UI.Canvas.SideBar.Frame:GetChildren()do
 	if v:IsA('Button') then
 		v:Destroy()
 	end
