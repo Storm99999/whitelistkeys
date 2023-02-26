@@ -4,7 +4,6 @@ local elements={
 	Button=game:GetObjects('rbxassetid://12616965131')[1];
 	Toggle=game:GetObjects('rbxassetid://12616963389')[1];
 	Tab=game:GetObjects('rbxassetid://12616968797')[1];
-	Slider=game:GetObjects('')[1];
 }
 local UI = elements.UI:Clone()
 UI.Parent = game.CoreGui
