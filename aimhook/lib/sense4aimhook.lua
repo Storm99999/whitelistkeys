@@ -699,9 +699,11 @@ end
 -- game specific functions
 function EspInterface.getWeapon(player)
 	if player.Character and player.Character:FindFirstChild('Humanoid') and player.Character.Humanoid.Health > 0 then
-      local weapon = player.Character:FindFirstChildOfClass('Tool').Name
-      return (weapon)
-  end
+      		local weapon = player.Character:FindFirstChildOfClass('Tool')
+		if weapon then 
+      			return (weapon).Name
+		end
+  	end
   
   return 'Unknown'
 end
