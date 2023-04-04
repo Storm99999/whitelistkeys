@@ -151,7 +151,7 @@ local function OJNS_fake_script() -- health.LocalScript
 	local connection_maxhealth
 	
 	local function update()
-		filler:TweenSize(UDim2.new(math.clamp(humanoid.Health / humanoid.MaxHealth, 0, 1), 0, 1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.5, true)
+		filler:TweenSize(UDim2.new(math.clamp(player.NRPBS.Health.Value / player.NRPBS.MaxHealth.Value, 0, 1), 0, 1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.5, true)
 		--amount.Text = math.floor(humanoid.Health)
 	end
 	
