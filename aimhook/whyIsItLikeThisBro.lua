@@ -4,14 +4,16 @@
 -- Instances:
 
 local Main = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
+local health = Instance.new("Frame")
+health.Visible = false
 local UIGradient = Instance.new("UIGradient")
-local Frame_2 = Instance.new("Frame")
+local filler = Instance.new("Frame")
 local ImageLabel = Instance.new("ImageLabel")
-local Frame_3 = Instance.new("Frame")
+local stats = Instance.new("Frame")
+stats.Visible = false
 local UIGradient_2 = Instance.new("UIGradient")
 local UICorner = Instance.new("UICorner")
-local Frame_4 = Instance.new("Frame")
+local Topper = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local UIListLayout = Instance.new("UIListLayout")
@@ -19,30 +21,34 @@ local TextLabel = Instance.new("TextLabel")
 local battlebucks9100 = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 local mem = Instance.new("TextLabel")
-
+getgenv().HealthFrame = health
+getgenv().StatsFrame = stats
 --Properties:
-
-Main.Name = "Main"
-Main.Parent = game:WaitForChild("CoreGui")
-Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = Main
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0.0182149354, 0, 0.839152098, 0)
-Frame.Size = UDim2.new(0, 392, 0, 38)
-
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.00, Color3.fromRGB(20, 20, 20)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(20, 20, 20)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))}
-UIGradient.Parent = Frame
-
-Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.fromRGB(69, 0, 207)
-Frame_2.BorderSizePixel = 0
-Frame_2.Position = UDim2.new(0.000142856516, 0, -0.00310476194, 0)
-Frame_2.Size = UDim2.new(0, 392, 0, 38)
-local i = Instance.new('UIStroke',Frame)
+local i = Instance.new('UIStroke',health)
 i.Color = Color3.fromRGB(52,52,52)
 i.Thickness = 2.5
-ImageLabel.Parent = Frame
+
+Main.Name = "Main"
+Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+health.Name = "health"
+health.Parent = Main
+health.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+health.Position = UDim2.new(0.0182149354, 0, 0.839152098, 0)
+health.Size = UDim2.new(0, 392, 0, 38)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.00, Color3.fromRGB(20, 20, 20)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(20, 20, 20)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))}
+UIGradient.Parent = health
+
+filler.Name = "filler"
+filler.Parent = health
+filler.BackgroundColor3 = Color3.fromRGB(69, 0, 207)
+filler.BorderSizePixel = 0
+filler.Position = UDim2.new(0.000142856516, 0, -0.00310476194, 0)
+filler.Size = UDim2.new(0, 392, 0, 38)
+
+ImageLabel.Parent = health
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BackgroundTransparency = 1.000
 ImageLabel.Position = UDim2.new(0.446428567, 0, 0, 0)
@@ -50,24 +56,26 @@ ImageLabel.Size = UDim2.new(0, 42, 0, 38)
 ImageLabel.Image = "http://www.roblox.com/asset/?id=6680686532"
 ImageLabel.ScaleType = Enum.ScaleType.Fit
 
-Frame_3.Parent = Main
-Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_3.Position = UDim2.new(0.0182149354, 0, 0.159601003, 0)
-Frame_3.Size = UDim2.new(0, 163, 0, 177)
+stats.Name = "stats"
+stats.Parent = Main
+stats.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+stats.Position = UDim2.new(0.0182149354, 0, 0.159601003, 0)
+stats.Size = UDim2.new(0, 163, 0, 177)
 
 UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.00, Color3.fromRGB(20, 20, 20)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(20, 20, 20)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))}
-UIGradient_2.Parent = Frame_3
+UIGradient_2.Parent = stats
 
-UICorner.Parent = Frame_3
+UICorner.Parent = stats
 
-Frame_4.Parent = Frame_3
-Frame_4.BackgroundColor3 = Color3.fromRGB(69, 0, 207)
-Frame_4.Size = UDim2.new(0, 163, 0, 7)
+Topper.Name = "Topper"
+Topper.Parent = stats
+Topper.BackgroundColor3 = Color3.fromRGB(69, 0, 207)
+Topper.Size = UDim2.new(0, 163, 0, 7)
 
 UICorner_2.CornerRadius = UDim.new(0, 15)
-UICorner_2.Parent = Frame_4
+UICorner_2.Parent = Topper
 
-ScrollingFrame.Parent = Frame_3
+ScrollingFrame.Parent = stats
 ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ScrollingFrame.BackgroundTransparency = 1.000
@@ -111,9 +119,7 @@ TextLabel_2.Text = "players: 16"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 14.000
 TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
-getgenv().bucks = battlebucks9100
-getgenv().playerCount = TextLabel_2
-getgenv().damage = TextLabel
+
 mem.Name = "mem"
 mem.Parent = ScrollingFrame
 mem.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -125,11 +131,15 @@ mem.Text = "mem: 14%"
 mem.TextColor3 = Color3.fromRGB(255, 255, 255)
 mem.TextSize = 14.000
 mem.TextXAlignment = Enum.TextXAlignment.Left
+getgenv().bucks = battlebucks9100
+getgenv().playerCount = TextLabel_2
+getgenv().damage = TextLabel
 getgenv().mem = mem
+
 -- Scripts:
 
-local function HYLUT_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
+local function OJNS_fake_script() -- health.LocalScript 
+	local script = Instance.new('LocalScript', health)
 
 	local players = game:GetService("Players")
 	local player = players.LocalPlayer
@@ -137,7 +147,7 @@ local function HYLUT_fake_script() -- Frame.LocalScript
 	local character = player.Character
 	local humanoid = character:WaitForChild("Humanoid")
 	local top = script.Parent.Frame
-	local amount = script.Parent.TextLabel
+	--local amount = script.Parent.TextLabel
 	local connection_health
 	local connection_maxhealth
 	
@@ -163,13 +173,15 @@ local function HYLUT_fake_script() -- Frame.LocalScript
 	connections()
 	
 end
-coroutine.wrap(HYLUT_fake_script)()
-local function YEXR_fake_script() -- Frame_3.LocalScript 
-	local script = Instance.new('LocalScript', Frame_3)
+coroutine.wrap(OJNS_fake_script)()
+local function DCDXRFZ_fake_script() -- stats.LocalScript 
+	local script = Instance.new('LocalScript', stats)
+
+	
 end
-coroutine.wrap(YEXR_fake_script)()
-local function MYAUDXM_fake_script() -- Frame_3.Smooth GUI Dragging 
-	local script = Instance.new('LocalScript', Frame_3)
+coroutine.wrap(DCDXRFZ_fake_script)()
+local function DCHQ_fake_script() -- stats.Smooth GUI Dragging 
+	local script = Instance.new('LocalScript', stats)
 
 	local UserInputService = game:GetService("UserInputService")
 	local runService = (game:GetService("RunService"));
@@ -225,4 +237,4 @@ local function MYAUDXM_fake_script() -- Frame_3.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(MYAUDXM_fake_script)()
+coroutine.wrap(DCHQ_fake_script)()
