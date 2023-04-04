@@ -29,7 +29,7 @@ i.Color = Color3.fromRGB(52,52,52)
 i.Thickness = 2.5
 
 Main.Name = "Main"
-Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Main.Parent = game:WaitForChild("CoreGui")
 Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 health.Name = "health"
@@ -146,13 +146,12 @@ local function OJNS_fake_script() -- health.LocalScript
 	repeat wait() until player.Character
 	local character = player.Character
 	local humanoid = character:WaitForChild("Humanoid")
-	local top = script.Parent.Frame
 	--local amount = script.Parent.TextLabel
 	local connection_health
 	local connection_maxhealth
 	
 	local function update()
-		top:TweenSize(UDim2.new(math.clamp(humanoid.Health / humanoid.MaxHealth, 0, 1), 0, 1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.5, true)
+		filler:TweenSize(UDim2.new(math.clamp(humanoid.Health / humanoid.MaxHealth, 0, 1), 0, 1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.5, true)
 		--amount.Text = math.floor(humanoid.Health)
 	end
 	
