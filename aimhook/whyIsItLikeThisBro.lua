@@ -69,7 +69,7 @@ UICorner.Parent = stats
 
 Topper.Name = "Topper"
 Topper.Parent = stats
-Topper.BackgroundColor3 = Color3.fromRGB(69, 0, 207)
+Topper.BackgroundColor3 = Color3.fromRGB(255,179,25)
 Topper.Size = UDim2.new(0, 163, 0, 7)
 
 UICorner_2.CornerRadius = UDim.new(0, 15)
