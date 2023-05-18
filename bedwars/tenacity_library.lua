@@ -397,77 +397,74 @@ function library:Finish()
     end
 end
 
-function library:CreateSlider(name, frame, constant)
+function library:CreateSlider(namer, frame, constant)
     local succ, err = pcall(function()
         library.Constants[constant]=0
         local WorkSlider = Instance.new("Frame")
+        local name = Instance.new("TextLabel")
+        local value = Instance.new("TextLabel")
+        local fill = Instance.new("Frame")
+        local UICorner = Instance.new("UICorner")
+        local Frame = Instance.new("Frame")
+        local UICorner_2 = Instance.new("UICorner")
+        local TextButton = Instance.new("TextButton")
+        local UIGradient = Instance.new("UIGradient")
+        local UICorner_3 = Instance.new("UICorner")
+        local UIGradient_2 = Instance.new("UIGradient")
         WorkSlider.Name = "WorkSlider"
         WorkSlider.Parent = library.Settings[frame]:FindFirstChild('main').main2.Items;
         WorkSlider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         WorkSlider.Position = UDim2.new(0.494812608, 0, 0.433330983, 0)
         WorkSlider.Size = UDim2.new(0, 120, 0, 2)
-        local UIGradient_23 = Instance.new("UIGradient")
-        UIGradient_23.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(166, 166, 166)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-        UIGradient_23.Rotation = 270
-        UIGradient_23.Parent = WorkSlider
-        local name_16 = Instance.new("TextLabel")
-        local value_4 = Instance.new("TextLabel")
-        local fill_4 = Instance.new("Frame")
-        local Frame_5 = Instance.new("Frame")
-        Frame_5.Parent = fill_4
-        Frame_5.AnchorPoint = Vector2.new(0.5, 0.5)
-        Frame_5.BackgroundColor3 = Color3.fromRGB(61, 133, 224)
-        Frame_5.Position = UDim2.new(1.00999999, 0, 0.5, 0)
-        Frame_5.Size = UDim2.new(0, 8, 0, 8)
-        local UICorner_13 = Instance.new("UICorner")
-        UICorner_13.CornerRadius = UDim.new(1, 0)
-        UICorner_13.Parent = Frame_5
-        local UICorner_12 = Instance.new("UICorner")
-        local UIGradient_24 = Instance.new("UIGradient")
-        name_16.Name = "name"
-        name_16.Parent = WorkSlider
-        name_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        name_16.BackgroundTransparency = 1.000
-        name_16.Position = UDim2.new(1.31000006, 0, -2.8469696, 0)
-        name_16.Size = UDim2.new(0, 45, 0, 13)
-        name_16.Font = Enum.Font.Code
-        name_16.Text = name
-        name_16.TextColor3 = Color3.fromRGB(255, 255, 255)
-        name_16.TextScaled = true
-        name_16.TextSize = 12.000
-        name_16.TextWrapped = true
-        name_16.TextXAlignment = Enum.TextXAlignment.Left
-        
-        value_4.Name = "value"
-        value_4.Parent = WorkSlider
-        value_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        value_4.BackgroundTransparency = 1.000
-        value_4.Position = UDim2.new(1.04866672, 0, -2.79999995, 0)
-        value_4.Size = UDim2.new(0, 23, 0, 12)
-        value_4.FontFace = Font.fromId(11702779409)
-        value_4.Text = "100"
-        value_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-        value_4.TextScaled = true
-        value_4.TextSize = 12.000
-        value_4.TextStrokeTransparency = 0.000
-        value_4.TextTransparency = 0.500
-        value_4.TextWrapped = true
-        
-        fill_4.Name = "fill"
-        fill_4.Parent = WorkSlider
-        fill_4.BackgroundColor3 = Color3.fromRGB(61, 133, 224)
-        fill_4.Size = UDim2.new(0, 120, 0, 2)
-        fill_4.ZIndex = 0
-        
-        UICorner_12.CornerRadius = UDim.new(1, 0)
-        UICorner_12.Parent = fill_4
-        
-        UIGradient_24.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 85, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(85, 170, 255))}
 
-        UIGradient_24.Rotation = 0
-        UIGradient_24.Parent = fill_4
-        local TextButton = Instance.new('TextButton')
-        TextButton.Parent = Frame_5
+        name.Name = "name"
+        name.Parent = WorkSlider
+        name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        name.BackgroundTransparency = 1.000
+        name.Position = UDim2.new(1.31000006, 0, -2.8469696, 0)
+        name.Size = UDim2.new(0, 45, 0, 13)
+        name.Font = Enum.Font.Code
+        name.Text = namer
+        name.TextColor3 = Color3.fromRGB(255, 255, 255)
+        name.TextScaled = true
+        name.TextSize = 12.000
+        name.TextWrapped = true
+        name.TextXAlignment = Enum.TextXAlignment.Left
+
+        value.Name = "value"
+        value.Parent = WorkSlider
+        value.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        value.BackgroundTransparency = 1.000
+        value.Position = UDim2.new(1.04866672, 0, -2.79999995, 0)
+        value.Size = UDim2.new(0, 23, 0, 12)
+        value.FontFace = Font.fromId(11702779409)
+        value.Text = "100"
+        value.TextColor3 = Color3.fromRGB(255, 255, 255)
+        value.TextScaled = true
+        value.TextSize = 12.000
+        value.TextStrokeTransparency = 0.000
+        value.TextTransparency = 0.500
+        value.TextWrapped = true
+
+        fill.Name = "fill"
+        fill.Parent = WorkSlider
+        fill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        fill.Size = UDim2.new(0, 120, 0, 2)
+        fill.ZIndex = 0
+
+        UICorner.CornerRadius = UDim.new(1, 0)
+        UICorner.Parent = fill
+
+        Frame.Parent = fill
+        Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+        Frame.BackgroundColor3 = Color3.fromRGB(61, 133, 224)
+        Frame.Position = UDim2.new(1.00999999, 0, 0.5, 0)
+        Frame.Size = UDim2.new(0, 8, 0, 8)
+
+        UICorner_2.CornerRadius = UDim.new(1, 0)
+        UICorner_2.Parent = Frame
+
+        TextButton.Parent = Frame
         TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         TextButton.BackgroundTransparency = 1.000
         TextButton.Position = UDim2.new(0, 0, -0.211742401, 0)
@@ -476,6 +473,17 @@ function library:CreateSlider(name, frame, constant)
         TextButton.Text = ""
         TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
         TextButton.TextSize = 14.000
+
+        UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 85, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(85, 170, 255))}
+        UIGradient.Parent = fill
+
+        local uh = UIGradient:Clone();
+        uh.Parent = WorkSlider
+
+        UICorner_3.CornerRadius = UDim.new(1, 0)
+        UICorner_3.Parent = WorkSlider
+
+
         
         local UserInputService = game:GetService("UserInputService")
         local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
@@ -492,8 +500,8 @@ function library:CreateSlider(name, frame, constant)
         end
         
         local slider = WorkSlider
-        local slide = fill_4
-        local slideButton = fill_4
+        local slide = fill
+        local slideButton = fill
         local slideButtonSize = slideButton.Size.X.Scale
         
         local buttonDown = false
@@ -508,7 +516,7 @@ function library:CreateSlider(name, frame, constant)
         
             local abspos = OffsetToScale(Mouse.X - slider.AbsolutePosition.X, slider)
             local pos = math.clamp(abspos, slideButtonSize / 2, 1 - slideButtonSize / 2)
-            value_4.Text = tostring(math.floor(slide.Size.X.Scale * 100))
+            value.Text = tostring(math.floor(slide.Size.X.Scale * 100))
             library.Constants[constant]=math.floor(slide.Size.X.Scale * 100)
             slide:TweenSize(UDim2.new(pos, 0, slide.Size.Y.Scale, 2), "Out", "Sine", .1, true)
             --ConvertRange(slideButtonSize / 2, 1 - slideButtonSize / 2, pos)
