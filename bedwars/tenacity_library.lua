@@ -1,7 +1,3 @@
---[[
-    Tenacity 4.0 Library - Made By Cat Generator#7235
-]]
-
 local library = {}
 library.Windows = {}
 library.Constants = {}
