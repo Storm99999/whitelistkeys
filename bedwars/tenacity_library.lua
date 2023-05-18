@@ -3,17 +3,21 @@ library.Windows = {}
 library.Constants = {}
 library.Controls = {}
 library.MainWindow = nil
+getgenv().library = library;--global, so custom modules and stuff can be added !!!!
 
 function library:Setup()
     local Tenacity = Instance.new("ScreenGui",game.CoreGui)
     local Arraylist = Instance.new("Folder")
+	local Sample = Instance.new("TextLabel")
     local Settings = Instance.new("Folder")
     local SettingFrame = Instance.new("Folder")
     local Sample_2 = Instance.new("Frame")
     local Frame_3 = Instance.new("Frame")
     local TextLabel_10 = Instance.new("TextLabel")
     local ImageLabel_2 = Instance.new("ImageLabel")
+	local UIGradient_9 = Instance.new("UIGradient")
 
+	Tenacity.Name = "Tenacity"
     library.MainWindow = Tenacity;
 
     Arraylist.Name = "Arraylist"
@@ -58,7 +62,7 @@ function library:Setup()
     TextLabel_10.Position = UDim2.new(-0.00039768219, 0, -0.111516438, 0)
     TextLabel_10.Size = UDim2.new(0, 347, 0, 50)
     TextLabel_10.Font = Enum.Font.GothamBold
-    TextLabel_10.Text = "Killaura Settings"
+    TextLabel_10.Text = "aura Settings"
     TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextLabel_10.TextSize = 32.000
     TextLabel_10.TextXAlignment = Enum.TextXAlignment.Left
@@ -74,8 +78,7 @@ function library:Setup()
 
 end
 
--- Fuck G2L, It doesn't even create strokes!
-function library:CreateStroke(c, t, p)--im pretty sure this is only needed for Stats frame right now but uhh sex!
+function library:CreateStroke(c, t, p)--i
     local stroke = Instance.new('UIStroke',p)
     stroke.Color = c
     stroke.Thickness = t
@@ -99,8 +102,34 @@ function library:CreateWindow(tab_name, icon, position)--UDim2.new(0.344741702, 
     ScrollingFrame.Position = UDim2.new(0, 0, 0.112328768, 0)
     ScrollingFrame.Size = UDim2.new(0, 240, 0, 322)
     ScrollingFrame.ScrollBarThickness = 0
+    local Frame_2 = Instance.new("Frame")
+    Frame_2.Parent = modern
+    Frame_2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    Frame_2.BorderSizePixel = 0
+    Frame_2.Size = UDim2.new(0, 239, 0, 41)
+    local TextLabel_8 = Instance.new("TextLabel")
+
+    TextLabel_8.Parent = Frame_2
+    TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel_8.BackgroundTransparency = 1.000
+    TextLabel_8.Position = UDim2.new(-0.00039761886, 0, -0.111516438, 0)
+    TextLabel_8.Size = UDim2.new(0, 129, 0, 50)
+    TextLabel_8.Font = Enum.Font.GothamBold
+    TextLabel_8.Text = tab_name;-- nvm
+    TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel_8.TextSize = 32.000
+    local ImageLabel = Instance.new("ImageLabel")
+
+    ImageLabel.Parent = Frame_2
+    ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    ImageLabel.BackgroundTransparency = 1.000
+    ImageLabel.BorderSizePixel = 0
+    ImageLabel.Position = UDim2.new(0.809520006, 0, 0.107995749, 0)
+    ImageLabel.Size = UDim2.new(0, 45, 0, 32)
+    ImageLabel.Image = "http://www.roblox.com/asset/?id=13470361277"
+    ImageLabel.ScaleType = Enum.ScaleType.Fit
     -- so we can add stuff to this thing
-    library.Controls[tab_name] = ScrollingFrame;--i fucking despise table.insert :grr:
+    library.Controls[tab_name] = ScrollingFrame;
     --[[
         table.insert(library.Controls, {
             [tab_name] = {
@@ -110,4 +139,4 @@ function library:CreateWindow(tab_name, icon, position)--UDim2.new(0.344741702, 
     ]]
 end
 
-return library;--buttsex
+return library;--b
