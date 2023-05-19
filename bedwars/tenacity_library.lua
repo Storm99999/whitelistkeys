@@ -21,6 +21,7 @@ function library:Setup()
 	local Sample = Instance.new("TextLabel")
     local Settings = Instance.new("Folder")
     local SettingFrame = Instance.new("Folder")
+    local ColorPickers = Instance.new("Folder")
     local Sample_2 = Instance.new("Frame")
     local Frame_3 = Instance.new("Frame")
     local TextLabel_10 = Instance.new("TextLabel")
@@ -98,6 +99,8 @@ function library:Setup()
     Settings.Parent = Tenacity
     SettingFrame.Name = "SettingFrame"
     SettingFrame.Parent = Tenacity
+    ColorPickers.Name = "ColorPickers"
+    ColorPickers.Parent = Tenacity
 
     local Sample = Instance.new("Frame")
     local Frame = Instance.new("Frame")
@@ -419,15 +422,218 @@ function library:Finish()
     end
 end
 
+function library:CreateColorpicker(name, constant, default, frame)
+    --color label
+    local object = game:GetObjects("rbxassetid://13485400307")[1]
+    object.Parent = library.Settings[frame]:FindFirstChild('main').main2.Items;
+    object.Name = name;
+    object.name.Text = name;
+
+    --color picker frame
+    local ColorEditor = Instance.new("Frame")
+    local ValueSelector = Instance.new("TextButton")
+    local UIGradient = Instance.new("UIGradient")
+    local Cursor = Instance.new("Frame")
+    local ColorWheel = Instance.new("ImageButton")
+    local Cursor_2 = Instance.new("ImageLabel")
+    local Frame = Instance.new("Frame")
+    local UICorner = Instance.new("UICorner")
+
+    --Properties:
+    library.Constants[constant] = default;
+
+    ColorEditor.Name = name
+    ColorEditor.Parent = library.MainWindow.ColorPickers
+    ColorEditor.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    ColorEditor.Position = UDim2.new(0.768539846, 0, 0.217089117, 0)
+    ColorEditor.Size = UDim2.new(0, 373, 0, 253)
+    ColorEditor.Visible = false--only open if clicked 
+
+    ValueSelector.Name = "ValueSelector"
+    ValueSelector.Parent = ColorEditor
+    ValueSelector.Active = false
+    ValueSelector.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    ValueSelector.Position = UDim2.new(0.0346398875, 0, 0.0927347392, 0)
+    ValueSelector.Selectable = false
+    ValueSelector.Size = UDim2.new(0, 30, 0, 200)
+    ValueSelector.Visible = false
+    ValueSelector.AutoButtonColor = false
+    ValueSelector.Text = ""
+
+    UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+    UIGradient.Rotation = -90
+    UIGradient.Parent = ValueSelector
+
+    Cursor.Name = "Cursor"
+    Cursor.Parent = ValueSelector
+    Cursor.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    Cursor.BorderSizePixel = 0
+    Cursor.Position = UDim2.new(0.233333334, 0, 0, 0)
+    Cursor.Size = UDim2.new(0.5, 0, 0.0149289705, 5)
+
+    ColorWheel.Name = "ColorWheel"
+    ColorWheel.Parent = ColorEditor
+    ColorWheel.AnchorPoint = Vector2.new(0.5, 0.5)
+    ColorWheel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    ColorWheel.BackgroundTransparency = 1.000
+    ColorWheel.Position = UDim2.new(0.334494412, 0, 0.473557562, 0)
+    ColorWheel.Size = UDim2.new(0, 200, 0, 200)
+    ColorWheel.Image = "rbxassetid://11224004075"
+
+    Cursor_2.Name = "Cursor"
+    Cursor_2.Parent = ColorWheel
+    Cursor_2.AnchorPoint = Vector2.new(0.5, 0.5)
+    Cursor_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Cursor_2.BackgroundTransparency = 1.000
+    Cursor_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Cursor_2.Size = UDim2.new(0, 15, 0, 15)
+    Cursor_2.ZIndex = 4
+    Cursor_2.Image = "rbxassetid://11226149359"
+
+    Frame.Parent = ColorEditor
+    Frame.BackgroundColor3 = default;
+    Frame.Position = UDim2.new(0.754579782, 0, 0.368141979, 0)
+    Frame.Size = UDim2.new(0, 57, 0, 55)
+
+    UICorner.Parent = ColorEditor
+    object.ColorPicker.BackgroundColor3 = default
+    local abs, pi, sin, asin, acos, sign, deg, rad, clamp = math.abs, math.pi, math.sin, math.asin, math.acos, math.sign, math.deg, math.rad, math.clamp 
+
+    local startAxis = Vector2.new(1, 0)
+    local barOffset = 36
+    
+    local Frame = Frame
+    local ColorWheelO = ColorWheel
+    local ColorWheel_Radius = ColorWheelO.AbsoluteSize/2
+    local ColorWheel_Cursor = ColorWheelO.Cursor
+    local ValueSelectorX = ValueSelector
+    
+    function setColor(newColor)
+    	Frame.BackgroundColor3 = newColor
+    end
+    
+    local function updateValueSelector(newColor)
+    	ValueSelectorX.BackgroundColor3 = newColor
+    end
+    
+    local function getValue()
+    	return ValueSelectorX:GetAttribute("Value") or 1
+    end
+    
+    local function getColorbyVector(vector)
+    	
+    	local cosVector, sinVector = startAxis:Dot(vector.Unit), startAxis:Cross(vector.Unit)
+    	local arcCosVector, arcSinVector = acos(cosVector), asin(sinVector)
+    	
+    	if sign(arcSinVector) <= 0 then
+    		arcCosVector = rad(deg(2*pi) - deg(arcCosVector))
+    	end
+    	
+    	local hue = deg(arcCosVector)/360
+    	
+    	local saturation = clamp((vector.Magnitude/(ColorWheel_Radius.Magnitude))/sin(rad(45)), 0, 1)
+    	
+    	local value = getValue()
+    	
+    	local color = Color3.fromHSV(hue, saturation, value)
+    	library.Constants[constant] = color
+    	object.ColorPicker.BackgroundColor3 = color
+        Frame.BackgroundColor3 = color;
+    	return color
+    end
+    
+    local function selectNewColor(x, y)
+    	local SizeOffet = ColorWheel.AbsoluteSize/2
+    	local ColorWheelOffset = ColorWheel.AbsolutePosition + SizeOffet
+    
+    	local position = (Vector2.new(x, y - barOffset) - ColorWheelOffset)
+    	
+    	local relativePosition = position + ColorWheel_Radius
+    	
+    	if position.Magnitude >= ColorWheel_Radius.X then
+    		position = position.Unit * ColorWheel_Radius.X
+    		relativePosition = position + ColorWheel_Radius
+    	end
+    	
+    	local rx, ry = relativePosition.X, relativePosition.Y
+    	ColorWheel_Cursor.Position = UDim2.fromOffset(rx, ry)
+    	
+    	position = Vector2.new(position.X, -position.Y)
+    	
+    	setColor(getColorbyVector(position))
+    	ColorWheel:SetAttribute("LastVector", position)
+    end
+    
+    ColorWheel.MouseButton1Down:Connect(function(x, y)
+    	local movedConnection
+    	local leaveConnection
+    	local upConnection
+    	
+    	movedConnection = ColorWheel.MouseMoved:Connect(selectNewColor)
+    	
+    	local function disconnect(x, y)
+    		selectNewColor(x, y)
+    		
+    		movedConnection:Disconnect()
+    		leaveConnection:Disconnect()
+    		upConnection:Disconnect()
+    	end
+    	leaveConnection = ColorWheel.MouseLeave:Connect(disconnect)
+    	upConnection = ColorWheel.MouseButton1Up:Connect(disconnect)
+    	
+    	selectNewColor(x, y)
+    end)
+    
+    
+    local function setNewValue(_,y)
+    	local ratio = (y - ValueSelector.AbsolutePosition.Y - 36)/ValueSelector.AbsoluteSize.Y
+    	ratio = math.clamp(ratio, 0, 1)
+    	ValueSelector:SetAttribute("Value", 1-ratio)
+    	ColorWheel.ImageColor3 = Color3.fromRGB(255 * (1-ratio), 255 * (1-ratio), 255 * (1-ratio))
+    	
+    	local lastVector = ColorWheel:GetAttribute("LastVector")
+    	if lastVector then
+    		setColor(getColorbyVector(lastVector))
+    	end
+    	
+    	ValueSelector.Cursor.Position = UDim2.new(0, 0, ratio, 0)
+    end
+    
+    ValueSelector.MouseButton1Down:Connect(function(_, y)
+    	
+    	local movedConnection
+    	local leaveConnection
+    	local upConnection
+    	
+    	movedConnection = ValueSelector.MouseMoved:Connect(setNewValue)
+    	
+    	local function disconnect(_, y)
+    		setNewValue(nil, y)
+    		
+    		movedConnection:Disconnect()
+    		leaveConnection:Disconnect()
+    		upConnection:Disconnect()
+    	end
+    	leaveConnection = ValueSelector.MouseLeave:Connect(disconnect)
+    	upConnection = ValueSelector.MouseButton1Up:Connect(disconnect)
+    	
+    	setNewValue(nil, y)
+    end)
+    
+    object.ColorPicker.TextButton.MouseButton1Click:Connect(function()
+        library.MainWindow.ColorPickers[name].Visible = not library.MainWindow.ColorPickers[name].Visible
+    end)
+end
+
+
 function library:CreateDropdown(items, constant, frame)
     library.Constants[constant] = items[1];
     local object = game:GetObjects("rbxassetid://13481020329")[1]
     object.Parent = library.Settings[frame]:FindFirstChild('main').main2.Items;
     local Sample = object.dropFrame.dropScroll.Sample:Clone()
     object.name.Text = items[1];
-    
-   
-    
+    object.dropFrame.ZIndex = 9
+    Sample.ZIndex = 10
 
     for _, v in next, items do 
         local item = Sample:Clone()
