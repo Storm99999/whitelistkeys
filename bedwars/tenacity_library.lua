@@ -895,7 +895,7 @@ function library:CreateButton(feature_name, tab_name, constant, func, is_customi
 			--Killaura.BackgroundTransparency = 0
 		end
     end)
-    task.spawn(func);
+    if func then task.spawn(func); end
 end
 
 return library;--b
