@@ -625,6 +625,17 @@ function library:CreateColorpicker(name, constant, default, frame)
     end)
 end
 
+function library:CreateTextbox(text, constant, frame)
+    local object = game:GetObjects("rbxassetid://13486819202")[1]
+    object.Parent = library.Settings[frame]:FindFirstChild('main').main2.Items;
+    library.Constants[constant] = text;
+    object.TextBox.Text = text;
+
+    object.TextBox.FocusLost:Connect(function()
+        library.Constants[constant] = object.TextBox.Text;
+    end)
+end
+
 
 function library:CreateDropdown(items, constant, frame)
     library.Constants[constant] = items[1];
@@ -655,7 +666,7 @@ function library:CreateDropdown(items, constant, frame)
     object.dropFrame.dropScroll.Sample:Destroy();
 end
 
-function library:CreateSlider(namer, frame, constant)
+function library:CreateSlider(namer, constant, frame)
     local succ, err = pcall(function()
         library.Constants[constant]=0
         local WorkSlider = Instance.new("Frame")
