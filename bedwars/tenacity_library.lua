@@ -169,7 +169,7 @@ function library:Setup()
 
     main2.Name = "main2"
     main2.Parent = main
-    main2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    main2.BackgroundColor3 = Color3.fromRGB(14,14,14)
     main2.BorderSizePixel = 0
     main2.Position = UDim2.new(0.0162338652, 0, 0.0242130756, 0)
     main2.Size = UDim2.new(0, 390, 0, 235)
@@ -392,9 +392,54 @@ function library:Finish()
                 frame.Parent = library.Settings
                 frame.Visible = false
                 frame.Name = val:FindFirstChildOfClass('TextButton').Name;
+                frame.BackgroundColor3 = Color3.fromRGB(29,30,32)
+                --[[local PenumbraShadow_2 = Instance.new("ImageLabel")
+                PenumbraShadow_2.Name = "PenumbraShadow"
+                PenumbraShadow_2.Parent = frame
+                PenumbraShadow_2.AnchorPoint = Vector2.new(0.5, 0.5)
+                PenumbraShadow_2.BackgroundTransparency = 1.000
+                PenumbraShadow_2.Position = UDim2.new(0.5, 0, 0.496830046, 1)
+                PenumbraShadow_2.Size = UDim2.new(1, 18, 0.993660092, 18)
+                PenumbraShadow_2.ZIndex = 0
+                PenumbraShadow_2.Image = "rbxassetid://1316045217"
+                PenumbraShadow_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+                PenumbraShadow_2.ImageTransparency = 0.700
+                PenumbraShadow_2.ScaleType = Enum.ScaleType.Slice
+                PenumbraShadow_2.SliceCenter = Rect.new(10, 10, 118, 118)
+                ]]
             end
         end
     end
+end
+
+function library:CreateDropdown(items, constant, frame)
+    library.Constants[constant] = items[1];
+    local object = game:GetObjects("rbxassetid://13481020329")[1]
+    object.Parent = library.Settings[frame]:FindFirstChild('main').main2.Items;
+    local Sample = object.dropFrame.dropScroll.Sample:Clone()
+    object.name.Text = items[1];
+    
+   
+    
+
+    for _, v in next, items do 
+        local item = Sample:Clone()
+        item.Name = v
+        item.Text = v
+        item.Parent = object.dropFrame.dropScroll
+        
+        
+        item.MouseButton1Click:Connect(function()
+            object.name.Text = item.Name
+            object.dropFrame.Visible = false
+            library.Constants[constant] = item.Name    
+        end)
+    end
+    
+    object.Interact.MouseButton1Click:Connect(function()
+        object.dropFrame.Visible = not object.dropFrame.Visible
+    end)
+    object.dropFrame.dropScroll.Sample:Destroy();
 end
 
 function library:CreateSlider(namer, frame, constant)
