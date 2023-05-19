@@ -802,7 +802,7 @@ end
 
 
 
-function library:CreateButton(feature_name, tab_name, constant, is_customizable)
+function library:CreateButton(feature_name, tab_name, constant, func, is_customizable)
     local Killaura = Instance.new("Frame")
     Killaura.Name = feature_name
     Killaura.Parent = library.Controls[tab_name];
@@ -895,6 +895,7 @@ function library:CreateButton(feature_name, tab_name, constant, is_customizable)
 			--Killaura.BackgroundTransparency = 0
 		end
     end)
+    task.spawn(func);
 end
 
 return library;--b
