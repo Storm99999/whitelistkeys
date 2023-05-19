@@ -243,6 +243,13 @@ function library:Setup()
     library.SettingSample = SettingFrame
     library.Settings = Settings
     library.Watermark = Watermark
+    game:GetService'UserInputService'.InputBegan:Connect(function(input, gameProcessed)
+        if input.KeyCode == Enum.KeyCode.V then
+            for _,v in next, library.Controls do
+                v.Parent.Visible = not v.Parent.Visible
+            end
+        end
+    end)
 end
 
 function library:CreateStroke(c, t, p)--i
