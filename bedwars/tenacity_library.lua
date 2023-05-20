@@ -429,7 +429,7 @@ function library:CreateNotification(text, time)
 
             )
 
-            local Tween = game:GetService('TweenService'):Create(library.MainWindow.Notification.UIStroke, Info, Goal)
+            local Tween = game:GetService('TweenService'):Create(library.MainWindow.Notifications.Notification.UIStroke, Info, Goal)
 
             Tween:Play()
             Tween.Completed:Wait()
@@ -453,7 +453,7 @@ function library:CreateNotification(text, time)
 
             )
 
-            local Tween = game:GetService('TweenService'):Create(library.MainWindow.Notification.UIStroke, Info, Goal)
+            local Tween = game:GetService('TweenService'):Create(library.MainWindow.Notifications.Notification.UIStroke, Info, Goal)
 
             Tween:Play()
             Tween.Completed:Wait()
