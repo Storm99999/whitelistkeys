@@ -460,6 +460,7 @@ function library:CreateNotification(text, time)
     end)()
     task.wait(time)
     running = false -- kills coroutine
+    object:Destroy();
 end
 
 function library:Finish()
