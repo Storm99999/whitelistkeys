@@ -399,6 +399,7 @@ end
 function library:CreateNotification(text, time)
     if library.MainWindow.Notifications:FindFirstChild('Notification') then library.MainWindow.Notifications:ClearAllChildren() end
     local object = game:GetObjects("rbxassetid://13495131110")[1]
+    object.TextLabel.Text = text;
     object.Parent = library.MainWindow.Notifications
     local ea = game:GetService('TweenService'):Create(object, TweenInfo.new(.25), {Size=UDim2.new(0,323,0,44)}):Play()
     task.wait(.25)
