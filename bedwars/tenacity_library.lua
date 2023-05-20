@@ -397,7 +397,7 @@ function library:CreateWindow(tab_name, icon, position)--UDim2.new(0.344741702, 
 end
 
 function library:CreateNotification(text, time)
-    if library.MainWindow.Notifications:FindFirstChild('Notification') then library.MainWindow.Notifications:ClearAllChildren() end
+    if library.MainWindow.Notifications:FindFirstChild('Notification') then for _,v in next, library.MainWindow.Notifications:GetChildren()do v.Visible = false end end
     local object = game:GetObjects("rbxassetid://13495131110")[1]
     object.TextLabel.Text = text;
     object.Parent = library.MainWindow.Notifications
