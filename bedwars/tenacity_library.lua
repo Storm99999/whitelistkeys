@@ -395,15 +395,15 @@ function library:CreateWindow(tab_name, icon, position)--UDim2.new(0.344741702, 
         })--debugging
     ]]
 end
-
+local eee
 function library:CreateNotification(text, time)
     if library.MainWindow.Notifications:FindFirstChild('Notification') then for _,v in next, library.MainWindow.Notifications:GetChildren()do v.Visible = false end end
-    local object = game:GetObjects("rbxassetid://13495131110")[1]
-    object.TextLabel.Text = text;
-    object.Parent = library.MainWindow.Notifications
-    local ea = game:GetService('TweenService'):Create(object, TweenInfo.new(.25), {Size=UDim2.new(0,323,0,44)}):Play()
+    eee = game:GetObjects("rbxassetid://13495131110")[1]
+    eee.TextLabel.Text = text;
+    eee.Parent = library.MainWindow.Notifications
+    local ea = game:GetService('TweenService'):Create(eee, TweenInfo.new(.25), {Size=UDim2.new(0,323,0,44)}):Play()
     task.wait(.25)
-    local eae = game:GetService('TweenService'):Create(object.TextLabel, TweenInfo.new(.25), {TextTransparency = 0}):Play()
+    local eae = game:GetService('TweenService'):Create(eee.TextLabel, TweenInfo.new(.25), {TextTransparency = 0}):Play()
     task.wait(.25)
     local running = true
     local e = coroutine.wrap(function()
@@ -429,7 +429,7 @@ function library:CreateNotification(text, time)
 
             )
 
-            local Tween = game:GetService('TweenService'):Create(object:FindFirstChildOfClass('UIStroke'), Info, Goal)
+            local Tween = game:GetService('TweenService'):Create(eee:FindFirstChildOfClass('UIStroke'), Info, Goal)
 
             Tween:Play()
             Tween.Completed:Wait()
@@ -453,7 +453,7 @@ function library:CreateNotification(text, time)
 
             )
 
-            local Tween = game:GetService('TweenService'):Create(object:FindFirstChildOfClass('UIStroke'), Info, Goal)
+            local Tween = game:GetService('TweenService'):Create(eee:FindFirstChildOfClass('UIStroke'), Info, Goal)
 
             Tween:Play()
             Tween.Completed:Wait()
@@ -461,7 +461,7 @@ function library:CreateNotification(text, time)
     end)()
     task.wait(time)
     running = false -- kills coroutine
-    object:Destroy();
+    eee:Destroy();
 end
 
 function library:Finish()
