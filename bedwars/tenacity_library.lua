@@ -967,7 +967,7 @@ function library:CreateButton(feature_name, tab_name, constant, func, is_customi
 			--Killaura.BackgroundTransparency = 0
 		end
 
-        library:CreateNotification(Killaura.Name .. ' was '.. (isEnabled() and 'Enabled' or 'Disabled'), 1);
+        library:CreateNotification(Killaura.Name .. ' was '.. (isEnabled() and 'Disabled' or 'Enabled'), 1);
     end)
     if func then task.spawn(func); end
 end
