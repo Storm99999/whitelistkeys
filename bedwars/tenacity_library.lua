@@ -22,6 +22,7 @@ function library:Setup()
     local Settings = Instance.new("Folder")
     local SettingFrame = Instance.new("Folder")
     local ColorPickers = Instance.new("Folder")
+    local Notifications = Instance.new("Folder")
     local Sample_2 = Instance.new("Frame")
     local Frame_3 = Instance.new("Frame")
     local TextLabel_10 = Instance.new("TextLabel")
@@ -101,6 +102,8 @@ function library:Setup()
     SettingFrame.Parent = Tenacity
     ColorPickers.Name = "ColorPickers"
     ColorPickers.Parent = Tenacity
+    Notifications.Name = "Notifications"
+    Notifications.Parent = Tenacity
 
     local Sample = Instance.new("Frame")
     local Frame = Instance.new("Frame")
@@ -391,6 +394,72 @@ function library:CreateWindow(tab_name, icon, position)--UDim2.new(0.344741702, 
             }
         })--debugging
     ]]
+end
+
+function library:CreateNotification(text, time)
+    if library.MainWindow.Notifications:FindFirstChild('Notification') then library.MainWindow.Notifications:ClearAllChildren() end
+    local object = game:GetObjects("rbxassetid://13495131110")[1]
+    object.Parent = library.MainWindow.Notifications
+    local ea = game:GetService('TweenService'):Create(object, TweenInfo.new(.25), {Size=UDim2.new(0,323,0,44)}):Play()
+    task.wait(.25)
+    local eae = game:GetService('TweenService'):Create(object.TextLabel, TweenInfo.new(.25), {TextTransparency = 0}):Play()
+    task.wait(.25)
+    local running = true
+    local e = coroutine.wrap(function()
+        
+        while running do
+            task.wait();
+            local Players = game:GetService("Players")
+
+            local Goal = {
+
+
+                Color = Color3.new(1, 0.666667, 1)
+
+            }
+
+            local Info = TweenInfo.new(
+
+                1,
+
+                Enum.EasingStyle.Sine,
+
+                Enum.EasingDirection.InOut
+
+            )
+
+            local Tween = game:GetService('TweenService'):Create(object.UIStroke, Info, Goal)
+
+            Tween:Play()
+            Tween.Completed:Wait()
+
+            local Players = game:GetService("Players")
+
+            Goal = {
+
+
+                Color = Color3.fromRGB(76,153,229)
+
+            }
+
+            local Info = TweenInfo.new(
+
+                1,
+
+                Enum.EasingStyle.Sine,
+
+                Enum.EasingDirection.InOut
+
+            )
+
+            local Tween = game:GetService('TweenService'):Create(object.UIStroke, Info, Goal)
+
+            Tween:Play()
+            Tween.Completed:Wait()
+        end
+    end)()
+    task.wait(time)
+    running = false -- kills coroutine
 end
 
 function library:Finish()
@@ -895,6 +964,8 @@ function library:CreateButton(feature_name, tab_name, constant, func, is_customi
             Tween:Play()
 			--Killaura.BackgroundTransparency = 0
 		end
+
+        library:CreateNotification(Killaura.Name .. ' was '.. (isEnabled() and 'Enabled' or 'Disabled'), 1);
     end)
     if func then task.spawn(func); end
 end
