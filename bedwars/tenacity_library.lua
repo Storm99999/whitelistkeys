@@ -783,7 +783,7 @@ function library:CreateDropdown(items, constant, frame)
     object.Parent = library.Settings[frame]:FindFirstChild('main').main2.Items;
     object.dropFrame.dropScroll.AutomaticCanvasSize = "Y"
     object.Name = items[1];
-    object.dropFrame.name.ZIndex = 99999;--fuck, took me long enough...
+    object.name.ZIndex = 99999;--fuck, took me long enough...
     local Sample = object.dropFrame.dropScroll.Sample:Clone()
     object.name.Text = items[1];
     object.dropFrame.ZIndex = 9
