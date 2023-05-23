@@ -395,6 +395,75 @@ function library:CreateWindow(tab_name, icon, position)--UDim2.new(0.344741702, 
         })--debugging
     ]]
 end
+
+function library:HookConfigSystem()
+    -- Instances
+    local CFG_FOLDER = Instance.new'Folder'
+    CFG_FOLDER.Name = 'ConfigSystem'
+    CFG_FOLDER.Parent = library.MainWindow
+    local CFG_SYSTEM = game:GetObjects'rbxassetid://13462901963'[1]
+    CFG_SYSTEM.ZIndex = 9e9;
+    CFG_SYSTEM.Parent = library.MainWindow.ConfigSystem
+    CFG_SYSTEM.Visible = false
+    -- Hook/Connection
+    -- i was too lazy to add a button for this
+    game:GetService('Players').LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if(string.lower(key) == 'l') then
+            library.MainWindow.ConfigSystem.Cfg.Visible = not library.MainWindow.ConfigSystem.Cfg.Visible
+        end
+    end)
+
+    -- Functionality
+    CFG_SYSTEM.createCfg.MouseButton1Click:Connect(function()
+        local oldConfig = library.Constants;
+        local config = {}
+
+        for _,v in next, oldConfig do
+            if (v ~= nil and v ~= "") then
+                if (typeof(v) == "Color3") then
+                    config[_] = { v.R, v.G, v.B }
+                elseif (tostring(v):find("Enum.KeyCode")) then
+                    config[_] = v.Name
+                elseif (typeof(v) == "table") then
+                    config[_] = { v }
+                else
+                    config[_] = v
+                end
+            end
+        end
+        
+        setclipboard(game:GetService('HttpService'):JSONEncode(config))--done
+    end)
+
+    CFG_SYSTEM.loadCfg.MouseButton1Click:Connect(function()
+        if(CFG_SYSTEM.ConfigBox.Config.Text=='') then return end
+        local function loadConfig(x)
+            local ReadConfig = game:GetService('HttpService'):JSONDecode(x)
+            local NewConfig = {}
+
+            for i,v in pairs(ReadConfig) do
+                if (typeof(v) == "table") then
+                    if (typeof(v[1]) == "number") then
+                        NewConfig[i] = Color3.new(v[1], v[2], v[3])
+                    elseif (typeof(v[1]) == "table") then
+                        NewConfig[i] = v[1]
+                    end
+                elseif (tostring(v):find("Enum.KeyCode.")) then
+                    NewConfig[i] = Enum.KeyCode[tostring(v):gsub("Enum.KeyCode.", "")]
+                else
+                    NewConfig[i] = v
+                end
+            end
+
+            return NewConfig;
+        end
+
+        local new_constants = loadConfig(CFG_SYSTEM.ConfigBox.Config.Text);
+        task.wait(0.45)
+        library.Constants = new_constants;
+    end)
+end
+
 local eee
 function library:CreateNotification(text, time)
     if library.MainWindow.Notifications:FindFirstChild('Notification') then for _,v in next, library.MainWindow.Notifications:GetChildren()do v.Visible = false end end
@@ -474,6 +543,7 @@ function library:Finish()
                 frame.Visible = false
                 frame.Name = val:FindFirstChildOfClass('TextButton').Name;
                 frame.BackgroundColor3 = Color3.fromRGB(29,30,32)
+                frame.ZIndex = 9e9;
                 --[[local PenumbraShadow_2 = Instance.new("ImageLabel")
                 PenumbraShadow_2.Name = "PenumbraShadow"
                 PenumbraShadow_2.Parent = frame
