@@ -781,9 +781,6 @@ function library:CreateDropdown(items, constant, frame)
     library.Constants[constant] = items[1];
     local object = game:GetObjects("rbxassetid://13481020329")[1]
     object.Parent = library.Settings[frame]:FindFirstChild('main').main2.Items;
-    object.dropFrame.dropScroll.AutomaticCanvasSize = "Y"
-    object.dropFrame.dropScroll.ScrollBarThickness = 3
-    object.dropFrame.dropScroll.ScrollBarImageColor3 = Color3.fromRGB(255,255,255)
     local Sample = object.dropFrame.dropScroll.Sample:Clone()
     object.name.Text = items[1];
     object.dropFrame.ZIndex = 9
