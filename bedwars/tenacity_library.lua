@@ -401,7 +401,7 @@ function library:HookConfigSystem()
     local CFG_FOLDER = Instance.new'Folder'
     CFG_FOLDER.Name = 'ConfigSystem'
     CFG_FOLDER.Parent = library.MainWindow
-    local CFG_SYSTEM = game:GetObjects'rbxassetid://13462901963'[1]
+    local CFG_SYSTEM = game:GetObjects('rbxassetid://13477815993')[1]
     CFG_SYSTEM.ZIndex = 9e9;
     CFG_SYSTEM.Parent = library.MainWindow.ConfigSystem
     CFG_SYSTEM.Visible = false
