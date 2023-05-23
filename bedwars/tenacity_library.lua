@@ -791,6 +791,7 @@ function library:CreateDropdown(items, constant, frame)
     object.dropFrame.dropScroll.BorderSizePixel = 0
     object.dropFrame.dropScroll.ScrollBarThickness = 3
     object.dropFrame.dropScroll.ScrollBarImageColor3 = Color3.fromRGB(255,255,255)
+    object.dropFrame.dropScroll.ZIndex = 9999999
 
     for _, v in next, items do 
         local item = Sample:Clone()
