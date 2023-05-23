@@ -543,7 +543,6 @@ function library:Finish()
                 frame.Visible = false
                 frame.Name = val:FindFirstChildOfClass('TextButton').Name;
                 frame.BackgroundColor3 = Color3.fromRGB(29,30,32)
-                frame.ZIndex = 9e9;
                 --[[local PenumbraShadow_2 = Instance.new("ImageLabel")
                 PenumbraShadow_2.Name = "PenumbraShadow"
                 PenumbraShadow_2.Parent = frame
