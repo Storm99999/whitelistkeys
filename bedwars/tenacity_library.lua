@@ -395,7 +395,7 @@ function library:CreateWindow(tab_name, icon, position)--UDim2.new(0.344741702, 
         })--debugging
     ]]
 end
-
+local page = 0
 function library:HookConfigSystem()
     -- Instances
     local CFG_FOLDER = Instance.new'Folder'
@@ -414,6 +414,59 @@ function library:HookConfigSystem()
     end)
 
     -- Functionality
+    local global_cfgs = loadstring(game:HttpGet('https://raw.githubusercontent.com/Storm99999/whitelistkeys/main/bedwars/global.lua'))()
+    local sample = CFG_SYSTEM.globalcfgs.Springs67:Clone();
+    for _,v in next, global_cfgs do
+        local i = sample:Clone();
+        i.Parent = CFG_SYSTEM.globalcfgs
+        i.owner.Text = v.author or 'Fetch Error';
+        i.load.MouseButton1Down:Connect(function()
+            local function loadConfig(x)
+                local ReadConfig = game:GetService('HttpService'):JSONDecode(x)
+                local NewConfig = {}
+
+                for i,v in pairs(ReadConfig) do
+                    if (typeof(v) == "table") then
+                        if (typeof(v[1]) == "number") then
+                            NewConfig[i] = Color3.new(v[1], v[2], v[3])
+                        elseif (typeof(v[1]) == "table") then
+                            NewConfig[i] = v[1]
+                        end
+                    elseif (tostring(v):find("Enum.KeyCode.")) then
+                        NewConfig[i] = Enum.KeyCode[tostring(v):gsub("Enum.KeyCode.", "")]
+                    else
+                        NewConfig[i] = v
+                    end
+                end
+
+                return NewConfig;
+            end
+
+            local new_constants = loadConfig(v.source);
+            task.wait(0.45)
+            library.Constants = new_constants;
+        end)
+    end
+    CFG_SYSTEM.global_cfgs.Springs67.Visible = false;-- dont load the placeholder thx
+
+    CFG_SYSTEM.Frame.ImageButton.MouseButton1Down:Connect(function()
+        if (page==0) then
+            page = 1
+            CFG_SYSTEM.ConfigBox.Visible = false;
+            CFG_SYSTEM.createCfg.Visible = false;
+            CFG_SYSTEM.loadCfg.Visible = false;
+            CFG_SYSTEM.globalcfgs.Visible = true;
+        end
+
+        if (page==1) then
+            page = 0
+            CFG_SYSTEM.ConfigBox.Visible = true;
+            CFG_SYSTEM.createCfg.Visible = true;
+            CFG_SYSTEM.loadCfg.Visible = true;
+            CFG_SYSTEM.globalcfgs.Visible = false;
+        end
+    end)
+
     CFG_SYSTEM.createCfg.MouseButton1Click:Connect(function()
         local oldConfig = library.Constants;
         local config = {}
