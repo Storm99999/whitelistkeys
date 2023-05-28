@@ -449,7 +449,7 @@ function library:HookConfigSystem()
     end
     CFG_SYSTEM.globalcfgs.Springs67.Visible = false;-- dont load the placeholder thx
 
-    CFG_SYSTEM.Frame.ImageButton.MouseButton1Down:Connect(function()
+    CFG_SYSTEM.Frame.ImageButton.MouseButton1Click:Connect(function()
         print('Page changed')
         if (page==0) then
             page = 1
