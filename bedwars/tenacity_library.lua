@@ -395,8 +395,8 @@ function library:CreateWindow(tab_name, icon, position)--UDim2.new(0.344741702, 
         })--debugging
     ]]
 end
-local page = 0
 function library:HookConfigSystem()
+    local page = 0
     -- Instances
     local CFG_FOLDER = Instance.new'Folder'
     CFG_FOLDER.Name = 'ConfigSystem'
@@ -450,6 +450,7 @@ function library:HookConfigSystem()
     CFG_SYSTEM.globalcfgs.Springs67.Visible = false;-- dont load the placeholder thx
 
     CFG_SYSTEM.Frame.ImageButton.MouseButton1Down:Connect(function()
+        print('Page changed')
         if (page==0) then
             page = 1
             CFG_SYSTEM.ConfigBox.Visible = false;
