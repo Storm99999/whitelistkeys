@@ -442,7 +442,7 @@ function library:HookConfigSystem()
                 return NewConfig;
             end
 
-            local new_constants = loadConfig(v.source);
+            local new_constants = loadConfig(game:HttpGet(v.source));
             task.wait(0.45)
             library.Constants = new_constants;
         end)
@@ -453,6 +453,7 @@ function library:HookConfigSystem()
         print('Page changed')
         if (page==0) then
             page = 1
+            print('page is now', "1");
             CFG_SYSTEM.ConfigBox.Visible = false;
             CFG_SYSTEM.createCfg.Visible = false;
             CFG_SYSTEM.loadCfg.Visible = false;
@@ -461,6 +462,7 @@ function library:HookConfigSystem()
 
         if (page==1) then
             page = 0
+            print('page is now', "0");
             CFG_SYSTEM.ConfigBox.Visible = true;
             CFG_SYSTEM.createCfg.Visible = true;
             CFG_SYSTEM.loadCfg.Visible = true;
