@@ -458,9 +458,7 @@ function library:HookConfigSystem()
             CFG_SYSTEM.createCfg.Visible = false;
             CFG_SYSTEM.loadCfg.Visible = false;
             CFG_SYSTEM.globalcfgs.Visible = true;
-        end
-
-        if (page==1) then
+        else
             page = 0
             print('page is now', "0");
             CFG_SYSTEM.ConfigBox.Visible = true;
@@ -468,6 +466,7 @@ function library:HookConfigSystem()
             CFG_SYSTEM.loadCfg.Visible = true;
             CFG_SYSTEM.globalcfgs.Visible = false;
         end
+
     end)
 
     CFG_SYSTEM.createCfg.MouseButton1Click:Connect(function()
