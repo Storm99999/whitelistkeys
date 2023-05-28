@@ -447,7 +447,7 @@ function library:HookConfigSystem()
             library.Constants = new_constants;
         end)
     end
-    CFG_SYSTEM.global_cfgs.Springs67.Visible = false;-- dont load the placeholder thx
+    CFG_SYSTEM.globalcfgs.Springs67.Visible = false;-- dont load the placeholder thx
 
     CFG_SYSTEM.Frame.ImageButton.MouseButton1Down:Connect(function()
         if (page==0) then
