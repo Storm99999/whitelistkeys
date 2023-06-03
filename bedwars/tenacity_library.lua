@@ -1048,6 +1048,7 @@ function library:CreateButton(feature_name, tab_name, constant, func, is_customi
     end
 
     Killaura_2.MouseButton1Click:Connect(function()
+	if func then task.spawn(func); end
         local function isEnabled()
 			return (Killaura.BackgroundTransparency == 0 and true or false)
 		end
@@ -1098,7 +1099,6 @@ function library:CreateButton(feature_name, tab_name, constant, func, is_customi
 		end
 
         library:CreateNotification(Killaura.Name .. ' was '.. (isEnabled() and 'Disabled' or 'Enabled'), 1);
-	if func then task.spawn(func); end
     end)
 end
 
