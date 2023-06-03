@@ -1098,8 +1098,8 @@ function library:CreateButton(feature_name, tab_name, constant, func, is_customi
 		end
 
         library:CreateNotification(Killaura.Name .. ' was '.. (isEnabled() and 'Disabled' or 'Enabled'), 1);
+	if func then task.spawn(func); end
     end)
-    if func then task.spawn(func); end
 end
 
 return library;--b
