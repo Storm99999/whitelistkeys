@@ -249,10 +249,16 @@ function library:Setup()
     library.SettingSample = SettingFrame
     library.Settings = Settings
     library.Watermark = Watermark
+
     game:GetService'UserInputService'.InputBegan:Connect(function(input, gameProcessed)
         if input.KeyCode == Enum.KeyCode.V then
             for _,v in next, library.Controls do
                 v.Parent.Visible = not v.Parent.Visible
+            end
+            for _,v in next, library.Settings:GetChildren() do
+                if v:IsA('Frame') then
+                    v.Visible = false
+                end
             end
         end
     end)
