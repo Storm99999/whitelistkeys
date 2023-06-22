@@ -135,10 +135,9 @@ function mod.new(ui)
 	local parents = {}
 	do
 		local function add(child)
-			if child:IsA'GuiObject' then
-				parents[#parents + 1] = child
-				add(child.Parent)
-			end
+			parents[#parents + 1] = child
+			add(child.Parent)
+			print(child.ClassName, child.Name)
 		end
 		add(frame)
 	end
