@@ -136,6 +136,7 @@ function mod.new(ui)
 	do
 		local function add(child)
 			parents[#parents + 1] = child
+			print(child.ClassName, child.Name)
 			add(child.Parent)
 			print(child.ClassName, child.Name)
 		end
