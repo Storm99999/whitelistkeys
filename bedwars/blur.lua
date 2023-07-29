@@ -1,4 +1,4 @@
---Thanks to @ImSnox for the original script--
+-- wearish gave me this thanks
 
 local mod = {}
 local DepthOfField = Instance.new('DepthOfFieldEffect', game:GetService('Lighting'))
